@@ -53,7 +53,7 @@ while fruit != "yes" and fruit != "no":
     print("Invalid response! Please try again: ")
     fruit = input("Would you like any fruit toppings? ")
 if fruit == "yes":
-    topping = input("Would you like strawberries (50c) or bananas ($1)? ")
+    topping = input("Would you like strawberries (50c), bananas ($1), or both ($1.50)? ")
     while topping != "strawberries" and topping != "bananas":
         print("Invalid response! Please try again: ")
         topping = input("Would you like strawberries or bananas? ")
@@ -61,6 +61,8 @@ if fruit == "yes":
         topping = 0.5
     elif topping == "bananas":
         topping = 1
+    elif topping == "both":
+        topping = 1.5
 elif fruit == "no":
     topping = 0
 
