@@ -12,7 +12,7 @@ b3 = " 0000  "
 b4 = " 0   0 "
 b5 = " 0000  "
 #-------
-c1 = " +000  "
+c1 = "  000  "
 c2 = " 0   0 "
 c3 = " 0     "
 c4 = " 0   0 "
@@ -49,9 +49,7 @@ h4 = " 0   0 "
 h5 = " 0   0 "
 #-------
 i1 = " 00000 "
-i2 = "   0   "
-i3 = "   0   "
-i4 = "   0   "
+
 i5 = " 00000 "
 #-------
 j1 = "  00000"
@@ -115,10 +113,7 @@ s4 = "     0 "
 s5 = " 0000  "
 #-------
 t1 = " 00000 "
-t2 = "   0   "
-t3 = "   0   "
-t4 = "   0   "
-t5 = "   0   "
+
 #-------
 u1 = " 0   0 "
 u2 = " 0   0 "
@@ -130,7 +125,6 @@ v1 = " 0   0 "
 v2 = " 0   0 "
 v3 = " 0   0 "
 v4 = "  0 0  "
-v5 = "   0   "
 #-------
 w1 = "0     0"
 w2 = "0     0"
@@ -140,25 +134,21 @@ w5 = " 0   0 "
 #-------
 x1 = " 0   0 "
 x2 = "  0 0  "
-x3 = "   0   "
+
 x4 = "  0 0  "
 x5 = " 0   0 "
 #-------
 y1 = " 0   0 "
 y2 = "  0 0  "
-y3 = "   0   "
-y4 = "   0   "
-y5 = "   0   "
+
 #-------
 z1 = " 00000 "
 z2 = "    0  "
-z3 = "   0   "
+
 z4 = "  0    "
 z5 = " 00000 "
 
 init1 = input("What is your first initial? ")
-if init1 == "can you give me a blowjob?" or init1 == "Can you give me a blowjob?":
-    print("Yes! Hawk tuah!")
 while len(init1) != 1 or not init1.isalpha():
     print("That is not an initial. Please try again.")
     init1 = input("What is your first initial? ")
@@ -212,9 +202,9 @@ elif init1 == "H" or init1 == "h":
     row15 = h5
 elif init1 == "I" or init1 == "i":
     row11 = i1
-    row12 = i2
-    row13 = i3
-    row14 = i4
+    row12 = a1
+    row13 = a1
+    row14 = a1
     row15 = i5
 elif init1 == "J" or init1 == "j":
     row11 = j1
@@ -278,10 +268,10 @@ elif init1 == "S" or init1 == "s":
     row15 = s5
 elif init1 == "T" or init1 == "t":
     row11 = t1
-    row12 = t2
-    row13 = t3
-    row14 = t4
-    row15 = t5
+    row12 = a1
+    row13 = a1
+    row14 = a1
+    row15 = a1
 elif init1 == "U" or init1 == "u":
     row11 = u1
     row12 = u2
@@ -293,7 +283,7 @@ elif init1 == "V" or init1 == "v":
     row12 = v2
     row13 = v3
     row14 = v4
-    row15 = v5
+    row15 = a1
 elif init1 == "W" or init1 == "w":
     row11 = w1
     row12 = w2
@@ -303,19 +293,19 @@ elif init1 == "W" or init1 == "w":
 elif init1 == "X" or init1 == "x":
     row11 = x1
     row12 = x2
-    row13 = x3
+    row13 = a1
     row14 = x4
     row15 = x5
 elif init1 == "Y" or init1 == "y":
     row11 = y1
     row12 = y2
-    row13 = y3
-    row14 = y4
-    row15 = y5
+    row13 = a1
+    row14 = a1
+    row15 = a1
 elif init1 == "Z" or init1 == "z":
     row11 = z1
     row12 = z2
-    row13 = z3
+    row13 = a1
     row14 = z4
     row15 = z5
 
@@ -373,9 +363,9 @@ elif init2 == "H" or init2 == "h":
     row25 = h5
 elif init2 == "I" or init2 == "i":
     row21 = i1
-    row22 = i2
-    row23 = i3
-    row24 = i4
+    row22 = a1
+    row23 = a1
+    row24 = a1
     row25 = i5
 elif init2 == "J" or init2 == "j":
     row21 = j1
@@ -439,10 +429,10 @@ elif init2 == "S" or init2 == "s":
     row25 = s5
 elif init2 == "T" or init2 == "t":
     row21 = t1
-    row22 = t2
-    row23 = t3
-    row24 = t4
-    row25 = t5
+    row22 = a1
+    row23 = a1
+    row24 = a1
+    row25 = a1
 elif init2 == "U" or init2 == "u":
     row21 = u1
     row22 = u2
@@ -454,7 +444,7 @@ elif init2 == "V" or init2 == "v":
     row22 = v2
     row23 = v3
     row24 = v4
-    row25 = v5
+    row25 = a1
 elif init2 == "W" or init2 == "w":
     row21 = w1
     row22 = w2
@@ -464,19 +454,19 @@ elif init2 == "W" or init2 == "w":
 elif init2 == "X" or init2 == "x":
     row21 = x1
     row22 = x2
-    row23 = x3
+    row23 = a1
     row24 = x4
     row25 = x5
 elif init2 == "Y" or init2 == "y":
     row21 = y1
     row22 = y2
-    row23 = y3
-    row24 = y4
-    row25 = y5
+    row23 = a1
+    row24 = a1
+    row25 = a1
 elif init2 == "Z" or init2 == "z":
     row21 = z1
     row22 = z2
-    row23 = z3
+    row23 = a1
     row24 = z4
     row25 = z5
 
