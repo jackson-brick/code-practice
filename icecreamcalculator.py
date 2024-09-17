@@ -20,17 +20,17 @@ if container == "cup":
     container = 2
 elif container == "cone":
     container = 3.5
-scoops = input("How many scoops would you like (You may have up to four) (*You must write out number as a word*)? ")
-while scoops != "one" and scoops != "two" and scoops != "three" and scoops != "four":
+scoops = input("How many scoops would you like (You may have up to four)? ")
+while scoops != "1" and scoops != "2" and scoops != "3" and scoops != "4":
     print("Invalid response! Please try again: ")
-    scoops = input("How many scoops would you like (You may have up to four) (*You must write out number as a word*)? ")
-if scoops == "one":
+    scoops = input("How many scoops would you like (You may have up to four)? ")
+if scoops == "1":
     scoops = 1
-elif scoops == "two":
+elif scoops == "2":
     scoops = 1.5
-elif scoops == "three":
+elif scoops == "3":
     scoops = 2
-elif scoops == "four":
+elif scoops == "4":
     scoops = 2.5
 flake = input("Would you like to add coconut flakes? ")
 while flake != "yes" and flake != "no":
@@ -66,8 +66,12 @@ elif fruit == "no":
 
 
 total = float(container) + float(scoops) + float(flake) + float(sprinkle) + float(topping)
-
-print(f"Your total is ${total}!")
+intTotal = int(total)
+cents = int((total - intTotal) * 100)
+if cents != 0:
+    print(f"Your total is ${intTotal}.{cents}!")
+else:
+    print(f"Your total is ${intTotal}.00!")
 
     
 
