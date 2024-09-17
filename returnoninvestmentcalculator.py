@@ -18,10 +18,17 @@ print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+")
 
 print("\n")
 
-spent = int(input("How much money have you invested in the business? "))
-raised = int(input("How much money has your business earned? "))
+spent = input("How much money have you invested in your business? ")
+while not spent.isdigit():
+    print("That is an invalid response. Please try again.")
+    spent = input("How much money have you invested in your business? ")
 
-profit = raised - spent
+raised = input("How much money has your business earned? ")
+while not raised.isdigit():
+    print("That is an invalid response. Please try again.")
+    raised = input("How much money has your business earned? ")
+
+profit = int(raised) - int(spent)
 if profit > 0:
     print(f"You have made a profit of ${profit}.")
 elif profit < 0:
@@ -30,5 +37,5 @@ elif profit < 0:
 elif profit == 0:
     print(f"You have not made any profit or any loss.")
 
-roi = profit / spent
-print(f"Your return on investment is {roi}%.")
+roi = profit / int(spent)
+print(f"Your return on investment is {int(roi)}%.")
