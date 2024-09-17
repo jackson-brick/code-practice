@@ -16,8 +16,8 @@ slyt = 0
 
 
 
-brave = input("If you were in an unfamiliar place or situation, would you feel confident in knowing what to do to get to a better place?\n")
-while brave.lower() != "yes" and brave.lower != "no":
+brave = input("If you found yourself lost, are you confident you could find your way back? (Physically or mentally)\n")
+while brave.lower() != "yes" and brave.lower() != "no":
     print("That is not a valid response. Please try again.")
     brave = input("If you were in an unfamiliar place or situation, would you feel confident in knowing what to do to get to a better place?\n")
 if brave.lower() == "yes":
@@ -45,7 +45,7 @@ elif loyal.lower() == "no":
     huff = huff + 1
     slyt = slyt + 1
 chival = input("If someone else was in trouble, would you help them?\n")
-while chival.lower() != "yes" and chival.lower != "no":
+while chival.lower() != "yes" and chival.lower() != "no":
     print("That is not a valid response. Please try again.")
     chival = input("If someone else was in trouble, would you help them?\n")
 if chival.lower() == "yes":
@@ -59,7 +59,7 @@ elif chival.lower() == "no":
     huff = huff + 1
     slyt = slyt + 1
 curious = input("Does the world around you and the way it works strike you as interesting?\n")
-while curious.lower() != "yes" and curious.lower != "no":
+while curious.lower() != "yes" and curious.lower() != "no":
     print("That is not a valid response. Please try again.")
     curious = input("Does the world around you and the way it works strike you as interesting?\n")
 if curious.lower() == "yes":
@@ -73,7 +73,7 @@ elif curious.lower() == "no":
     huff = huff - 1
     slyt = slyt + 1
 create = input("Do you enjoy creating new things unseen or heard of before?\n")
-while create.lower() != "yes" and create.lower != "no":
+while create.lower() != "yes" and create.lower() != "no":
     print("That is not a valid response. Please try again.")
     create = input("Do you enjoy creating new things unseen or heard of before?\n")
 if create.lower() == "yes":
@@ -87,7 +87,7 @@ elif create.lower() == "no":
     huff = huff - 1
     slyt = slyt + 1
 kind = input("Do you like helping others in need even when not asked or compelled to do so?\n")
-while kind.lower() != "yes" and kind.lower != "no":
+while kind.lower() != "yes" and kind.lower() != "no":
     print("That is not a valid response. Please try again.")
     kind = input("Do you like helping others in need even when not asked or compelled to do so?\n")
 if kind.lower() == "yes":
@@ -101,7 +101,7 @@ elif kind.lower() == "no":
     huff = huff - 1
     slyt = slyt + 1
 friend = input("Do you find yourself constantly making new friends and easily talking to strangers?\n")
-while friend.lower() != "yes" and friend.lower != "no":
+while friend.lower() != "yes" and friend.lower() != "no":
     print("That is not a valid response. Please try again.")
     friend = input("Do you find yourself constantly making new friends and easily talking to strangers?\n")
 if friend.lower() == "yes":
@@ -115,7 +115,7 @@ elif friend.lower() == "no":
     huff = huff + 1
     slyt = slyt + 1
 pati = input("When others do things you do not like, are you usually able to keep your cool?\n")
-while pati.lower() != "yes" and pati.lower != "no":
+while pati.lower() != "yes" and pati.lower() != "no":
     print("That is not a valid response. Please try again.")
     pati = input("When others do things you do not like, are you usually able to keep your cool?\n")
 if pati.lower() == "yes":
@@ -129,7 +129,7 @@ elif pati.lower() == "no":
     huff = huff + 1
     slyt = slyt + 1
 ambi = input("Are you willing to do anything to achieve your goals?\n")
-while ambi.lower() != "yes" and ambi.lower != "no":
+while ambi.lower() != "yes" and ambi.lower() != "no":
     print("That is not a valid response. Please try again.")
     ambi = input("Are you willing to do anything to achieve your goals?\n")
 if ambi.lower() == "yes":
@@ -143,7 +143,7 @@ elif ambi.lower() == "no":
     huff = huff + 1
     slyt = slyt - 1
 comp = input("When someone is better than you at something does that upset you?\n")
-while comp.lower() != "yes" and comp.lower != "no":
+while comp.lower() != "yes" and comp.lower() != "no":
     print("That is not a valid response. Please try again.")
     comp = input("When someone is better than you at something does that upset you?\n")
 if comp.lower() == "yes":
