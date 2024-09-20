@@ -40,16 +40,16 @@ row4 = "-----------"
 row5 = f" {bl} | {bot} | {br} "
 
 
-print(f"\n\n{row1}")
-print(f"{row2}")
-print(f"{row3}")
-print(f"{row4}")
-print(f"{row5}\n\n")
+print(f" {tl} | {top} | {tr} ")
+print("-----------")
+print(f" {left} | {mid} | {right} ")
+print("-----------")
+print(f" {bl} | {bot} | {br} ")
 
-move1 = input("What is your first move? ")
-while move1.lower() != "left" or move1.lower() != "right" or move1.lower() != "middle" or move1.lower() != "top mid" or move1.lower() != "top right" or move1.lower() != "top left" or move1.lower() != "bot mid" or move1.lower() != "bot right" or move1.lower() != "bot left" or not move1.isalpha():
+move1 = input("Player 1's move: ")
+while move1.lower() != "left" and move1.lower() != "right" and move1.lower() != "middle" and move1.lower() != "top mid" and move1.lower() != "top right" and move1.lower() != "top left" and move1.lower() != "bot mid" and move1.lower() != "bot right" and move1.lower() != "bot left" and not move1.isalpha():
     print("That is not a valid move!")
-    move1 = input("What is your first move? ")
+    move1 = input("Player 1's move: ")
 if move1.lower() == "top left":
     tl = "X"
 elif move1.lower() == "top mid":
@@ -69,17 +69,41 @@ elif move1.lower() == "bot mid":
 elif move1.lower() == "bot right":
     br = "X"
 
-print(tl)
 
-print(f"\n\n{row1}")
-print(f"{row2}")
-print(f"{row3}")
-print(f"{row4}")
-print(f"{row5}\n\n")
+print(f" {tl} | {top} | {tr} ")
+print("-----------")
+print(f" {left} | {mid} | {right} ")
+print("-----------")
+print(f" {bl} | {bot} | {br} ")
 
+move2 = input("Player 2's move: ")
+while move2.lower() != "left" and move2.lower() != "right" and move2.lower() != "middle" and move2.lower() != "top mid" and move2.lower() != "top right" and move2.lower() != "top left" and move2.lower() != "bot mid" and move2.lower() != "bot right" and move2.lower() != "bot left" and not move2.isalpha():
+    print("That is not a valid move!")
+    move2 = input("Player 2's move: ")
+if move2.lower() == "top left":
+    tl = "O"
+elif move2.lower() == "top mid":
+    top = "O"
+elif move2.lower() == "top right":
+    tr = "O"
+elif move2.lower() == "left":
+    left = "O"
+elif move2.lower() == "middle":
+    mid = "O"
+elif move2.lower() == "right":
+    right = "O"
+elif move2.lower() == "bot left":
+    bl = "O"
+elif move2.lower() == "bot mid":
+    bot = "O"
+elif move2.lower() == "bot right":
+    br = "O"
 
-
-
+print(f" {tl} | {top} | {tr} ")
+print("-----------")
+print(f" {left} | {mid} | {right} ")
+print("-----------")
+print(f" {bl} | {bot} | {br} ")
 
 
 
