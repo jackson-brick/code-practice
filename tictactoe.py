@@ -125,6 +125,9 @@ while winner == 0:
     elif tr == "X" and right == "X" and br == "X":
         winner = 1
         break
+    elif tl.isalpha() and tr.isalpha() and top.isalpha() and mid.isalpha() and left.isalpha() and right.isalpha() and br.isalpha() and bl.isalpha() and bot.isalpha():
+        winner = 3
+        break
 
     move2 = input("Player 2's move: ")
     move2 = move2.lower()
@@ -215,3 +218,5 @@ if winner == 1:
     print("Player 1 wins!")
 elif winner == 2:
     print("Player 2 wins!")
+elif winner == 3:
+    print("It's a tie!")
