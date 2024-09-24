@@ -5,7 +5,14 @@ healthStat = 0
 jumpStat = 0
 strengthStat = 0
 speedStat = 0
-mainPowername = "empty"
+power1Name = " "
+power1Dam = 0
+power2Name = " "
+power2Dam = 0
+power3Name = " "
+power3Dam = 0
+power4Name = " "
+power4Dam = 0
 
 
 print("\n*You wake up in the ground. You do not remember how you got there, or why there is a cat next to you. You only remember your name. All of a sudden, a man in a horse-drawn carriage appears coming down the road.*")
@@ -48,6 +55,18 @@ while charChoice =="empty":
     charChoice = charChoice.lower()
     if charChoice == "hulkat":
         charChoice = charChoice.capitalize()
+        healthStat = 180
+        jumpStat = 50
+        strengthStat = 300
+        speedStat = 50
+        power1Name = "Hulkat Smash"
+        power1Dam = 150
+        power2Name = "Right hook, Upper cat"
+        power2Dam = 120
+        power3Name = " "
+        power3Dam = 
+        power4Name = " "
+        power4Dam = 
         break
     else:
         charChoice = "empty"
