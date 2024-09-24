@@ -15,18 +15,22 @@ else:
 print(f"Well then {name}, let me show you around!")
 print("\nI see your cat has already chosen you. That is a lucky thing you know. In this kingdom, cats can choose you as their owner, but this is something that can take a lifetime to occur. You are lucky yours chose you so early in your life. I reckon you don't know how you got here. That is very common in this place, though we do not know why. In the village, we try not to challenge the existing order because the consequences here are deadly. Though there are some scary beings out there in this forest, they only come out at night. The real worry us villagers have is the king. He is vile and ruthless, and does not like newcomers. You should really get used to the powers of your cat. Wait, did I mention your cat has powers? Have you even chosen the powers yet? No? Well, hold your hand above the cat's head, yes like that, and choose its abilities.")
 
-charChoice = input("\nChoose what abilities your cat has. Press ENTER to cycle through them. Enter the name of the ability you want at any time once you know which one you want.")
-charChoice = charChoice.upper()
-while charChoice != "STRENGTH" and charChoice != "SPEED" and charChoice != "FLIGHT" and charChoice != "ENDURANCE":
-
-
-
-
-
-
-
-
-
-
-
+charChoice = input("\nChoose what abilities your cat has. Press ENTER to cycle through them. Enter the name of the cat you want underneath its description.")
+charChoice = "empty"
+while charChoice =="empty":
+    print("Hulkat\nAbility: Strength\nWeaknesses: Poison Attacks, Speed Attacks")
+    charChoice = input()
+    charChoice = charChoice.upper()
+    if charChoice == "HULKAT":
+        break
+    else:
+        charChoice = "empty"
+    print("Speedster\nAbility: Speed\nWeaknesses: Ice Attacks, Fire Attacks")
+    charChoice =  input()
+    charChoice = charChoice.upper()
+    if charChoice == "SPEEDSTER":
+        break
+    else:
+        charChoice = "empty"
+    print("")
 
