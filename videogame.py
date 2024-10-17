@@ -1,6 +1,6 @@
 #This will be a videogame about a player and their cat who level up to fight bosses and eventually take over their kingdom
 import time
-import sys
+
 import random
 
 healthStat = 0
@@ -19,16 +19,18 @@ power4Dam = 0
 
 def intro():
     print("\n*You wake up in the ground. You do not remember how you got there, or why there is a cat next to you. You only remember your name. All of a sudden, a man in a horse-drawn carriage appears coming down the road.*")
-
+    
     name = input("\nJohn: Welcome- erm... Well, I suppose I don't know your name yet traveller. What should I call you?\n\n")
-    nameConfirm = input(f"\n{name}? Am I saying that right?\n\n")
-    nameConfirm = nameConfirm.upper()
-    while nameConfirm != "YES" and nameConfirm != "NO":
-        nameConfirm = input("I'm sorry, was that a yes or a no?\n")
-    if nameConfirm == "NO":
-        name = input("I'm sorry, for the mistake, what should I call you then?\n")
-    else:
-        pass
+    
+    nameConfirm = input(f"\n{name.capitalize()}? Am I saying that right?\n\n")
+    while True:
+        if nameConfirm.upper() == "YES":
+            break
+        elif nameConfirm.upper() == "NO":
+            name = input("\nI'm sorry, for the mistake, what should I call you then?\n\n")
+            nameConfirm = input(f"\n{name.capitalize()}? Am I saying that right?\n\n")
+        else:
+            nameConfirm = input("I'm sorry, was that a yes or a no?\n")
 
     print(f"\nWell then {name}, let me show you around!")
     time.sleep(2)
@@ -101,19 +103,11 @@ def intro():
 
     time.sleep(2)
     dial = input("\nNow that you have chosen your cat, maybe you can help our village deal with some of the monsters that have been terrorizing us. Come with me!")
+def first_fight():
+    print("John: Welcome to the villa- AHHHHHHH! ")
+
+
+
+
 
 intro()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
