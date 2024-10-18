@@ -103,6 +103,15 @@ def intro():
 
     time.sleep(2)
     dial = input("\nNow that you have chosen your cat, maybe you can help our village deal with some of the monsters that have been terrorizing us. Come with me!")
+
+def loading_sequence(seconds_to_load):
+    time.sleep(0.5)
+    print("Loading")
+    for stl in range(seconds_to_load):
+        print("   .")
+        time.sleep(1)
+
+
 def first_fight():
     print("John: Welcome to the villa- AHHHHHHH! ")
 
