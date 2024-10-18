@@ -52,18 +52,39 @@ def intro():
     time.sleep(5)
     print("\nHave you even chosen the powers yet? No? Well, hold your hand above the cat's head, yes like that, and choose its abilities.")
     time.sleep(5)
+    global charChoice
     charChoice = input("\nChoose what abilities your cat has. Press ENTER to cycle through them. Enter the name of the cat you want underneath its description.")
     charChoice = "empty"
     while charChoice =="empty":
-        print("\nHulkat\nAbility: Strength\nWeaknesses: Poison Attacks, Speed Attacks")
+        print("\nKittypool\nDescription: Made of water, the ocean is his domain. Most cats don't like baths; they fear the wrath of KittyPool\nWeaknesses: Fire Feline, oil")
         charChoice = input()
         charChoice = charChoice.lower()
-        if charChoice == "hulkat":
+        if charChoice == "kittypool":
             charChoice = charChoice.capitalize()
             healthStat = 180
             jumpStat = 50
             strengthStat = 300
             speedStat = 50
+            power1Name = "Torrent"
+            power1Dam = 150
+            power2Name = "Tsunami"
+            power2Dam = 120
+            power3Name = "Wave Dash"
+            power3Dam = 0
+            power4Name = "Barrier Reef"
+            power4Dam = 30
+            break
+        else:
+            charChoice = "empty"
+        print("\nBombocat\nAbility: This fiery hot-head can get heated pretty easily. You better not be around when the flames engulf him\nWeaknesses: Cloud Cat, rain")
+        charChoice =  input()
+        charChoice = charChoice.lower()
+        if charChoice.lower == "bombocat":
+            charChoice = charChoice.capitalize()
+            healthStat = 150
+            jumpStat = 150
+            strengthStat = 50
+            speedStat = 300
             power1Name = "Hulkat Smash"
             power1Dam = 150
             power2Name = "Right hook, Upper cat"
@@ -75,27 +96,41 @@ def intro():
             break
         else:
             charChoice = "empty"
-        print("\nSpeedster\nAbility: Speed\nWeaknesses: Ice Attacks, Fire Attacks")
-        charChoice =  input()
-        charChoice = charChoice.lower()
-        if charChoice == "speedster":
+        print("\nPicatchu\nAbility: With lightning at his fingertips, Picatchu can smite his opponents with the fury of a god\nWeaknesses: KittyPool, bad conductors")
+        charChoice = input()
+        if charChoice.lower() == "picatchu":
             charChoice = charChoice.capitalize()
+            healthStat = 130
+            jumpStat = 300
+            strengthStat = 50
+            speedStat = 100
+            power1Name = "Hulkat Smash"
+            power1Dam = 150
+            power2Name = "Right hook, Upper cat"
+            power2Dam = 120
+            power3Name = "Muscle shield"
+            power3Dam = 0
+            power4Name = "Sonic clap"
+            power4Dam = 30
             break
         else:
             charChoice = "empty"
-        print("\nHelikitty\nAbility: Flight\nWeaknesses: Water Attacks, Earth Attacks")
+        print("\nSkytty\nAbility: The skies are at Cloud Cat's whim, from the unforgiving winds of a tornado to the force of gravity that we encounter every day\nWeaknesses: Pi-cat-chu, light pollution")
         charChoice = input()
-        charChoice = charChoice.lower()
-        if charChoice == "helikitty":
+        if charChoice.lower() == "brick":
             charChoice = charChoice.capitalize()
-            break
-        else:
-            charChoice = "empty"
-        print("\nBrick\nAbility: Impenetrable Skin\nWeaknesses: Strength Attacks, Flight Attacks")
-        charChoice = input()
-        charChoice = charChoice.lower()
-        if charChoice == "brick":
-            charChoice = charChoice.capitalize()
+            healthStat = 300
+            jumpStat = 70
+            strengthStat = 150
+            speedStat = 50
+            power1Name = "Hulkat Smash"
+            power1Dam = 150
+            power2Name = "Right hook, Upper cat"
+            power2Dam = 120
+            power3Name = "Muscle shield"
+            power3Dam = 0
+            power4Name = "Sonic clap"
+            power4Dam = 30
             break
         else:
             charChoice = "empty"
@@ -112,8 +147,11 @@ def loading_sequence(seconds_to_load):
         time.sleep(1)
 
 
-def first_fight():
-    print("John: Welcome to the villa- AHHHHHHH! ")
+def fight_sequence():
+    while True:
+        used_power = input(f"Which power will {charChoice.capitalize()} use?")
+        print(f"1. {power1Name}\n2. {power2Name}\n3. {power3Name}\n4. {power4Name}")
+
 
 
 
@@ -121,3 +159,5 @@ def first_fight():
 
 intro()
 loading_sequence(3)
+
+print("John: Welcome to the villa- AHHHHHHH! ")
