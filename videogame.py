@@ -103,6 +103,16 @@ def intro():
 
     time.sleep(2)
     dial = input("\nNow that you have chosen your cat, maybe you can help our village deal with some of the monsters that have been terrorizing us. Come with me!")
+
+def loading_sequence():
+    load = ["Loading", ".", ".", "."]
+    for loading_sequence_word in load:
+        print(loading_sequence_word, end = " ")
+        time.sleep(0.5)
+
+
+
+
 def first_fight():
     print("John: Welcome to the villa- AHHHHHHH! ")
 
