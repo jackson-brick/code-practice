@@ -24,7 +24,12 @@ for word in usedParagraph:
     else:
         print(word, end = "")
     
-
+response = input()
+print(response)
+if response == "these are multiple words":
+    print("good")
+else:
+    print("bad")
 
 
 
