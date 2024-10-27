@@ -1,13 +1,65 @@
-from colorama import Style, Fore
 import os
+import time
+import random
+import math
+from colorama import Fore, Style
 
 screenSize = os.get_terminal_size()
-z = screenSize[0]
+z = int(screenSize[0])
 
-gameType = "Words"
-fontColor = "Red"
-fontEmp = "Unfinished"
+gameType = "Phrases"
+fontColor = "Default"
+fontEmp = "Finished"
 mode = "Easy"
+
+def loading_sequence(seconds_to_load):
+    loadingList = ["fun paragraphs" , "challenging words" , "all the code" , "security measures" , "eye-tracking software" , "the CIA's confidential files" , "your address" , "my shopping list" , "all the answers to the algebra test"]
+    usedLoadingList = []
+    for lcv in range(seconds_to_load):
+        usedLoadingList.append(random.choice(loadingList))
+        loadingList.remove(f"{usedLoadingList[lcv]}")
+    os.system('clear')
+    time.sleep(0.5)
+    while seconds_to_load > 0:
+        print(f"Loading {usedLoadingList[(seconds_to_load - 1)]}".center(z))
+        time.sleep(0.5)
+        os.system('clear')
+        print(f"Loading {usedLoadingList[(seconds_to_load - 1)]}  .".center(z))
+        time.sleep(0.5)
+        os.system('clear')
+        print(f"Loading {usedLoadingList[(seconds_to_load - 1)]}  .  .".center(z))
+        time.sleep(0.5)
+        os.system('clear')
+        print(f"Loading {usedLoadingList[(seconds_to_load - 1)]}  .  .  .".center(z))
+        time.sleep(1)
+        os.system('clear')
+        seconds_to_load -= 1
+    while len(usedLoadingList) > 0:
+        loadingList.append(usedLoadingList[-1])
+        usedLoadingList.pop(-1)
+
+
+
+print("Press ENTER to launch Type Racer\n\n".center(z))
+input()
+os.system('clear')
+
+loading_sequence(4)
+
+
+def welcome():
+    global playerInput
+    print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+".center(z))
+    print("+                                  +".center(z))
+    print("+            Type Racer            +".center(z))
+    print("+                                  +".center(z))
+    print("+              Welcome             +".center(z))
+    print("+                                  +".center(z))
+    print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+".center(z))
+    print("")
+    print("Welcome to Type Racer! Challenge your typing accuracy, precision, and speed with either a longer paragraph or a string of words. Visit SETTINGS to change your preferences. Type START when ready to begin!\n\n".center(z))
+    playerInput = input("")
+    os.system('clear')
 
 def settings():
     print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+".center(z))
@@ -185,6 +237,7 @@ def settings():
                     wordCounter += 1
     print("")
     while True:
+        global settingInput
         print(Fore.WHITE + f"Game type:   {gameType}".center(z))
         print("")
         print(Fore.WHITE + f"Font color:   {fontColor}".center(z))
@@ -193,12 +246,98 @@ def settings():
         print("")
         print(Fore.WHITE + f"Mode:   {mode}".center(z))
         settingInput = input(Fore.WHITE + Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n")
+        os.system('clear')
+        if settingInput.lower() == "game type":
+            if gameType.lower() == "phrases":
+                gameType = "Words"
+                break
+            elif gameType.lower() == "words":
+                gameType = "Phrases"
+                break
+        elif settingInput.lower() == "font color":
+            print(("Default   " + Fore.RED + "Red   " + Style.RESET_ALL + Fore.YELLOW + "Yellow   " + Style.RESET_ALL + Fore.GREEN + "Green   " + Style.RESET_ALL + Fore.BLUE + "Blue   " + Style.RESET_ALL + Fore.MAGENTA + "Magenta   " + Style.RESET_ALL + Fore.CYAN + "Cyan" + Style.RESET_ALL).center(z))
+            colorPreference = input()
+            if colorPreference.lower() == "red":
+                fontColor = "Red"
+                break
+            elif colorPreference.lower() == "yellow":
+                fontColor = "Yellow"
+                break
+            elif colorPreference.lower() == "green":
+                fontColor = "Green"
+                break
+            elif colorPreference.lower() == "blue":
+                fontColor = "Blue"
+                break
+            elif colorPreference.lower() == "magenta":
+                fontColor = "Magenta"
+                break
+            elif colorPreference.lower() == "cyan":
+                fontColor = "Cyan"
+                break
+            elif colorPreference.lower() == "default":
+                fontColor = "Default"
+                break
+        elif settingInput.lower() == "font emphasis":
+            if fontEmp.lower() == "finished":
+                fontEmp = "Unfinished"
+                break
+            elif fontEmp.lower() == "unfinished":
+                fontEmp = "Finished"
+                break
+        elif settingInput.lower() == "mode":
+            if mode.lower() == "easy":
+                mode = "Hard"
+                break
+            elif mode.lower() == "hard":
+                mode = "Easy"
+                break
+    
+    
+def print_paragraph():
+    global checkParagraph
+    global usedParagraph
+    paragraph = ["It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair." , "Do nothing out of selfish ambition or vain conceit. Rather, in humility value others above yourselves, not looking to your own interests but each of you to the interests of the others." , "The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars." , "And he humbled you and let you hunger and fed you with manna, which you did not know, nor did your fathers know, that he might make you know that man does not live by bread alone, but man lives by every word that comes from the mouth of the Lord." , "I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain." , "I am an invisible man. No, I am not a spook like those who haunted Edgar Allan Poe; nor am I one of your Hollywood-movie ectoplasms. I am a man of substance, of flesh and bone, fiber and liquids—and I might even be said to possess a mind. I am invisible, understand, simply because people refuse to see me." , "For whoever would save his life will lose it, but whoever loses his life for my sake and the gospel’s will save it. For what does it profit a man to gain the whole world and forfeit his soul?" , "What then shall we say to these things? If God is for us, who can be against us? He who did not spare his own Son but gave him up for us all, how will he not also with him graciously give us all things?" , "Therefore, preparing your minds for action, and being sober-minded, set your hope fully on the grace that will be brought to you at the revelation of Jesus Christ." , "For God has not destined us for wrath, but to obtain salvation through our Lord Jesus Christ, who died for us so that whether we are awake or asleep we might live with him." , "For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are,yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need." , "And without faith it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him." , "Have no fear of sudden disaster or of the ruin that overtakes the wicked, for the Lord will be at your side and will keep your foot from being snared."]
+    usedParagraph = random.choice(paragraph)
+    checkParagraph = usedParagraph  
+    usedParagraph = usedParagraph.split()
+    for word in range(len(usedParagraph)):
+        usedParagraph[word] = usedParagraph[word] + " "
+
+    wordAcrossScreen = 0
+    for word in usedParagraph:
+        wordAcrossScreen += int(len(word))
+        if wordAcrossScreen > z:
+            print("\n" + word, end = "")
+            wordAcrossScreen = 0 + len(word)
+        else:
+            print(word, end = "")
+
+while True:
+    welcome()
+    if playerInput.lower() == "start":
+        print_paragraph()
+        global timeStart
+        timeStart = time.time()
+        print("\n")
+        response = input()
+        if response == checkParagraph:
+            break
+        else:
+            print("You've made a mistake! Try again. Press ENTER to start.")
+            input()
+    elif playerInput.lower() == "settings":
+        while True:
+            settings()
+            if settingInput.lower() == "back":
+                break
+        
+    timeEnd = time.time()
+    #timeDeltaTime = timeEnd - timeStart
+    #wpm = (len(usedParagraph) * 60) / timeDeltaTime
+    print(f"You correctly typed the paragraph with  words per minute")
 
 
-#print(Fore.RED + "hello")
-settings()
+ 
 
-(                                                                                          )
-(                                                                                          )
-(                                                                                   )
-(                                                                                   )
+
