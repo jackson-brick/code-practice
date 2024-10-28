@@ -136,49 +136,49 @@ def settings():
                     if word == len(settingWord) - 1:
                         print(Style.BRIGHT + settingWord[0].center(z) + Style.RESET_ALL)
                     else: 
-                        print((settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                        print(settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "red":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
                         print(Style.BRIGHT + Fore.RED + settingWord[0].center(z) + Style.RESET_ALL)
                     else: 
-                        print((Fore.RED + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                        print(Fore.RED + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "green":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
                         print(Style.BRIGHT + Fore.GREEN + settingWord[0].center(z) + Style.RESET_ALL)
                     else: 
-                        print((Fore.GREEN + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                        print(Fore.GREEN + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "yellow":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
                         print(Style.BRIGHT + Fore.YELLOW + settingWord[0].center(z) + Style.RESET_ALL)
                     else: 
-                        print((Fore.YELLOW + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                        print(Fore.YELLOW + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "blue":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
                         print(Style.BRIGHT + Fore.BLUE + settingWord[0].center(z) + Style.RESET_ALL)
                     else: 
-                        print((Fore.BLUE + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                        print(Fore.BLUE + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "magenta":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
                         print(Style.BRIGHT + Fore.MAGENTA + settingWord[0].center(z) + Style.RESET_ALL)
                     else: 
-                        print((Fore.MAGENTA + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                        print(Fore.MAGENTA + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "cyan":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
                         print(Style.BRIGHT + Fore.CYAN + settingWord[0].center(z) + Style.RESET_ALL)
                     else: 
-                        print((Fore.CYAN + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                        print(Fore.CYAN + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
         elif fontEmp.lower() == "unfinished":
             if fontColor.lower() == "default":
@@ -191,104 +191,106 @@ def settings():
             elif fontColor.lower() == "red":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
-                        print(Style.RESET_ALL + (Fore.RED + settingWord[0]).center(z))
+                        print(Style.RESET_ALL + Fore.RED + settingWord[0].center(z))
                     else: 
                         print(Style.BRIGHT + Fore.RED + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "green":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
-                        print(Style.RESET_ALL + (Fore.GREEN + settingWord[0]).center(z))
+                        print(Style.RESET_ALL + Fore.GREEN + settingWord[0].center(z))
                     else: 
                         print(Style.BRIGHT + Fore.GREEN + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "yellow":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
-                        print(Style.RESET_ALL + (Fore.YELLOW + settingWord[0]).center(z))
+                        print(Style.RESET_ALL + Fore.YELLOW + settingWord[0].center(z))
                     else: 
                         print(Style.BRIGHT + Fore.YELLOW + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "blue":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
-                        print(Style.RESET_ALL + (Fore.BLUE + settingWord[0]).center(z))
+                        print(Style.RESET_ALL + Fore.BLUE + settingWord[0].center(z))
                     else: 
                         print(Style.BRIGHT + Fore.BLUE + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "magenta":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
-                        print(Style.RESET_ALL + (Fore.MAGENTA + settingWord[0]).center(z))
+                        print(Style.RESET_ALL + Fore.MAGENTA + settingWord[0].center(z))
                     else: 
                         print(Style.BRIGHT + Fore.MAGENTA + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "cyan":
                 for word in range(len(settingWord)):
                     if word == len(settingWord) - 1:
-                        print(Style.RESET_ALL + (Fore.CYAN + settingWord[0]).center(z))
+                        print(Style.RESET_ALL + Fore.CYAN + settingWord[0].center(z))
                     else: 
                         print(Style.BRIGHT + Fore.CYAN + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
                     wordCounter += 1
     print("")
-    while True:
-        global settingInput
-        print(Fore.WHITE + f"Game type:   {gameType}".center(z))
-        print("")
-        print(Fore.WHITE + f"Font color:   {fontColor}".center(z))
-        print("")
-        print(Fore.WHITE + f"Font emphasis:   {fontEmp}".center(z))
-        print("")
-        print(Fore.WHITE + f"Mode:   {mode}".center(z))
-        print("dogs".center(z))
-        settingInput = input(Fore.WHITE + Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n" + Style.RESET_ALL)
-        os.system('clear')
-        if settingInput.lower() == "game type":
-            if gameType.lower() == "phrases":
-                gameType = "Words"
-                break
-            elif gameType.lower() == "words":
-                gameType = "Phrases"
-                break
-        elif settingInput.lower() == "font color":
-            print(("Default   " + Fore.RED + "Red   " + Style.RESET_ALL + Fore.YELLOW + "Yellow   " + Style.RESET_ALL + Fore.GREEN + "Green   " + Style.RESET_ALL + Fore.BLUE + "Blue   " + Style.RESET_ALL + Fore.MAGENTA + "Magenta   " + Style.RESET_ALL + Fore.CYAN + "Cyan" + Style.RESET_ALL).center(z))
-            colorPreference = input()
-            if colorPreference.lower() == "red":
-                fontColor = "Red"
-                break
-            elif colorPreference.lower() == "yellow":
-                fontColor = "Yellow"
-                break
-            elif colorPreference.lower() == "green":
-                fontColor = "Green"
-                break
-            elif colorPreference.lower() == "blue":
-                fontColor = "Blue"
-                break
-            elif colorPreference.lower() == "magenta":
-                fontColor = "Magenta"
-                break
-            elif colorPreference.lower() == "cyan":
-                fontColor = "Cyan"
-                break
-            elif colorPreference.lower() == "default":
-                fontColor = "Default"
-                break
-        elif settingInput.lower() == "font emphasis":
-            if fontEmp.lower() == "finished":
-                fontEmp = "Unfinished"
-                break
-            elif fontEmp.lower() == "unfinished":
-                fontEmp = "Finished"
-                break
-        elif settingInput.lower() == "mode":
-            if mode.lower() == "easy":
-                mode = "Hard"
-                break
-            elif mode.lower() == "hard":
-                mode = "Easy"
-                break
     
+    global settingInput
+    print(Fore.WHITE + f"Game type:   {gameType}".center(z))
+    print("")
+    print(Fore.WHITE + f"Font color:   {fontColor}".center(z))
+    print("")
+    print(Fore.WHITE + f"Font emphasis:   {fontEmp}".center(z))
+    print("")
+    print(Fore.WHITE + f"Mode:   {mode}".center(z))
+
+    settingInput = input(Fore.WHITE + Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n" + Style.RESET_ALL)
+    os.system('clear')
+    if settingInput.lower() == "game type":
+        if gameType.lower() == "phrases":
+            gameType = "Words"
+            
+        elif gameType.lower() == "words":
+            gameType = "Phrases"
+            
+    elif settingInput.lower() == "font color":
+        print(("Default   " + Fore.RED + "Red   " + Style.RESET_ALL + Fore.YELLOW + "Yellow   " + Style.RESET_ALL + Fore.GREEN + "Green   " + Style.RESET_ALL + Fore.BLUE + "Blue   " + Style.RESET_ALL + Fore.MAGENTA + "Magenta   " + Style.RESET_ALL + Fore.CYAN + "Cyan" + Style.RESET_ALL).center(z))
+        colorPreference = input()
+        if colorPreference.lower() == "red":
+            fontColor = "Red"
+            os.system('clear')
+        elif colorPreference.lower() == "yellow":
+            fontColor = "Yellow"
+            os.system('clear')
+        elif colorPreference.lower() == "green":
+            fontColor = "Green"
+            os.system('clear')
+        elif colorPreference.lower() == "blue":
+            fontColor = "Blue"
+            os.system('clear')
+        elif colorPreference.lower() == "magenta":
+            fontColor = "Magenta"
+            os.system('clear')
+        elif colorPreference.lower() == "cyan":
+            fontColor = "Cyan"
+            os.system('clear')
+        elif colorPreference.lower() == "default":
+            fontColor = "Default"
+            os.system('clear')
+    elif settingInput.lower() == "font emphasis":
+        if fontEmp.lower() == "finished":
+            fontEmp = "Unfinished"
+            
+        elif fontEmp.lower() == "unfinished":
+            fontEmp = "Finished"
+            
+    elif settingInput.lower() == "mode":
+        if mode.lower() == "easy":
+            mode = "Hard"
+            
+        elif mode.lower() == "hard":
+            mode = "Easy"
+            
+        else:
+            pass
+            
     
 def print_paragraph():
     global checkParagraph
@@ -314,7 +316,7 @@ print("Press ENTER to launch Type Racer\n\n".center(z))
 input()
 os.system('clear')
 
-#loading_sequence(4)
+loading_sequence(4)
 
 while True:
     welcome()
@@ -336,11 +338,10 @@ while True:
                 break
         
     timeEnd = time.time()
-    #timeDeltaTime = timeEnd - timeStart
-    #wpm = (len(usedParagraph) * 60) / timeDeltaTime
+    timeDeltaTime = timeEnd - timeStart
+    wpm = (len(usedParagraph) * 60) / timeDeltaTime
     print(f"You correctly typed the paragraph with  words per minute")
 
 
  
-
 
