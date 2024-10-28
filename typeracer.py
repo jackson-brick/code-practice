@@ -150,7 +150,7 @@ def settings():
                     if word == len(settingWord) - 1:
                         print(Style.BRIGHT + Fore.GREEN + settingWord[0].center(z) + Style.RESET_ALL)
                     else: 
-                        print(Fore.GREEN + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
+                        print(Fore.GREEN + settingWord[ele].center(z) + Style.RESET_ALL)
                     wordCounter += 1
             elif fontColor.lower() == "yellow":
                 for word in range(len(settingWord)):
@@ -295,28 +295,119 @@ def settings():
 def print_paragraph():
     global checkParagraph
     global usedParagraph
-    paragraph = ["It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair." , "Do nothing out of selfish ambition or vain conceit. Rather, in humility value others above yourselves, not looking to your own interests but each of you to the interests of the others." , "The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars." , "And he humbled you and let you hunger and fed you with manna, which you did not know, nor did your fathers know, that he might make you know that man does not live by bread alone, but man lives by every word that comes from the mouth of the Lord." , "I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain." , "I am an invisible man. No, I am not a spook like those who haunted Edgar Allan Poe; nor am I one of your Hollywood-movie ectoplasms. I am a man of substance, of flesh and bone, fiber and liquids—and I might even be said to possess a mind. I am invisible, understand, simply because people refuse to see me." , "For whoever would save his life will lose it, but whoever loses his life for my sake and the gospel’s will save it. For what does it profit a man to gain the whole world and forfeit his soul?" , "What then shall we say to these things? If God is for us, who can be against us? He who did not spare his own Son but gave him up for us all, how will he not also with him graciously give us all things?" , "Therefore, preparing your minds for action, and being sober-minded, set your hope fully on the grace that will be brought to you at the revelation of Jesus Christ." , "For God has not destined us for wrath, but to obtain salvation through our Lord Jesus Christ, who died for us so that whether we are awake or asleep we might live with him." , "For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are,yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need." , "And without faith it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him." , "Have no fear of sudden disaster or of the ruin that overtakes the wicked, for the Lord will be at your side and will keep your foot from being snared."]
+    paragraph = [["Do nothing out of selfish ambition or vain conceit.","Rather, in humility value others above yourselves,","not looking to your own interests","but each of you to the interests of the others."] , ["The only people for me are the mad ones,","the ones who are mad to live, mad to talk, mad to be saved,","desirous of everything at the same time, the ones who never yawn or say a commonplace thing,","but burn, burn, burn like fabulous yellow roman candles","exploding like spiders across the stars."] , ["And he humbled you and let you hunger and fed you with manna,","which you did not know, nor did your fathers know,","that he might make you know that man does not live by bread alone,","but man lives by every word that comes from the mouth of the Lord."] , ["I must not fear. Fear is the mind-killer.","Fear is the little-death that brings total obliteration. I will face my fear.","I will permit it to pass over me and through me.","And when it has gone past I will turn the inner eye to see its path.","Where the fear has gone there will be nothing. Only I will remain."] , ["I am an invisible man.","No, I am not a spook like those who haunted Edgar Allan Poe;","nor am I one of your Hollywood-movie ectoplasms.","I am a man of substance, of flesh and bone, fiber and liquids—","and I might even be said to possess a mind.","I am invisible, understand, simply because people refuse to see me."] , ["For whoever would save his life will lose it,","but whoever loses his life for my sake and the gospel’s will save it.","For what does it profit a man to gain","the whole world and forfeit his soul?"] , ["What then shall we say to these things?","If God is for us, who can be against us?","He who did not spare his own Son but gave him up for us all,","how will he not also with him graciously give us all things?"] , ["For God has not destined us for wrath,","but to obtain salvation through our Lord Jesus Christ,","who died for us so that whether we are awake or asleep we might live with him."] , ["For we do not have a high priest who is unable to sympathize with our weaknesses,","but one who in every respect has been tempted as we are, yet without sin.","Let us then with confidence draw near to the throne of grace,","that we may receive mercy and find grace to help in time of need."]]
     usedParagraph = random.choice(paragraph)
-    checkParagraph = usedParagraph  
-    usedParagraph = usedParagraph.split()
-    for word in range(len(usedParagraph)):
-        usedParagraph[word] = usedParagraph[word] + " "
-
-    wordAcrossScreen = 0
-    for word in usedParagraph:
-        wordAcrossScreen += int(len(word))
-        if wordAcrossScreen > z:
-            print("\n" + word, end = "")
-            wordAcrossScreen = 0 + len(word)
-        else:
-            print(word, end = "")
+    if fontEmp.lower() == "finished":
+        if fontColor.lower() == "default":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(usedParagraph[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "red":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.RED + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.RED + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "green":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.GREEN + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.GREEN + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "yellow":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.YELLOW + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.YELLOW + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "blue":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.BLUE + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.BLUE + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "magenta":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.MAGENTA + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.MAGENTA + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "cyan":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.CYAN + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.CYAN + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                
+    elif fontEmp.lower() == "unfinished":
+        if fontColor.lower() == "default":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + (usedParagraph[ele]).center(z))
+                else: 
+                    print(Style.BRIGHT + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "red":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.RED + usedParagraph[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.RED + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "green":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.GREEN + usedParagraph[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.GREEN + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "yellow":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.YELLOW + usedParagraph[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.YELLOW + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "blue":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.BLUE + usedParagraph[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.BLUE + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "magenta":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.MAGENTA + usedParagraph[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.MAGENTA + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "cyan":
+            for ele in range(len(usedParagraph) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.CYAN + usedParagraph[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.CYAN + usedParagraph[ele].center(z) + Style.RESET_ALL)
+                    
+    print("")
+        
+def print_wordSequence():
+    wordSequence = [["dog" , "cat" , "goat" , "cow" , "elephant" , "fish" , "giraffe" , "eagle" , "cheetah" , "chicken" , "horse" , "shark" , "dolphin" , "parrot" , "sheep" , "pig"]]
 
 
 print("Press ENTER to launch Type Racer\n\n".center(z))
 input()
 os.system('clear')
 
-loading_sequence(4)
+#loading_sequence(4)
 
 while True:
     welcome()
@@ -326,7 +417,7 @@ while True:
         timeStart = time.time()
         print("\n")
         response = input()
-        if response == checkParagraph:
+        if response == 0:
             break
         else:
             print("You've made a mistake! Try again. Press ENTER to start.")
@@ -337,10 +428,7 @@ while True:
             if settingInput.lower() == "back":
                 break
         
-    timeEnd = time.time()
-    timeDeltaTime = timeEnd - timeStart
-    wpm = (len(usedParagraph) * 60) / timeDeltaTime
-    print(f"You correctly typed the paragraph with  words per minute")
+    
 
 
  
