@@ -2,11 +2,15 @@ import os
 import time
 import random
 import math
+from colorama import Fore, Style
 
 screenSize = os.get_terminal_size()
 z = int(screenSize[0])
 
-
+gameType = "Phrases"
+fontColor = "Default"
+fontEmp = "Finished"
+mode = "Easy"
 
 def loading_sequence(seconds_to_load):
     loadingList = ["fun paragraphs" , "challenging words" , "all the code" , "security measures" , "eye-tracking software" , "the CIA's confidential files" , "your address" , "my shopping list" , "all the answers to the algebra test"]
@@ -36,30 +40,260 @@ def loading_sequence(seconds_to_load):
 
 
 
-print("Press ENTER to launch Type Racer\n\n".center(z))
-input()
-os.system('clear')
-
-loading_sequence(4)
-
-print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+".center(z))
-print("+                                  +".center(z))
-print("+            Type Racer            +".center(z))
-print("+                                  +".center(z))
-print("+              Welcome             +".center(z))
-print("+                                  +".center(z))
-print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+".center(z))
-
-print("")
-print("You will receive a prompt to type. It must be typed properly. Press ENTER to begin.\n\n".center(z))
-input()
 
 
+def welcome():
+    global playerInput
+    print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+".center(z))
+    print("+                                  +".center(z))
+    print("+            Type Racer            +".center(z))
+    print("+                                  +".center(z))
+    print("+              Welcome             +".center(z))
+    print("+                                  +".center(z))
+    print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+".center(z))
+    print("")
+    print("Welcome to Type Racer! Challenge your typing accuracy, precision, and speed with either a longer paragraph or a string of words. Visit SETTINGS to change your preferences. Type START when ready to begin!\n\n".center(z))
+    playerInput = input("")
+    os.system('clear')
 
+def settings():
+    print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+".center(z))
+    print("+                                  +".center(z))
+    print("+             Settings             +".center(z))
+    print("+                                  +".center(z))
+    print("+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+".center(z))
+    print("")
+    global gameType
+    global fontColor
+    global fontEmp
+    global mode
+    settingSentence = ["Two roads diverged in a wood, and I-" , "I took the one less traveled by," , "And that has made all the difference."]
+    settingWord = ["dogs" , "cats" , "goats" , "giraffes" , "elephants" , "groundhogs" , "killer whales" , "sharks" , "eagles" , "penguins" , "bears" , "camels"]
+    if gameType.lower() == "phrases":
+        if fontEmp.lower() == "finished":
+            if fontColor.lower() == "default":
+                print(Style.BRIGHT + settingSentence[0].center(z) + Style.RESET_ALL)
+                print(settingSentence[1].center(z) + Style.RESET_ALL)
+                print(settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "red":
+                print(Style.BRIGHT + Fore.RED + settingSentence[0].center(z) + Style.RESET_ALL)
+                print(Fore.RED + settingSentence[1].center(z) + Style.RESET_ALL)
+                print(Fore.RED + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "green":
+                print(Style.BRIGHT + Fore.GREEN + settingSentence[0].center(z) + Style.RESET_ALL)
+                print(Fore.GREEN + settingSentence[1].center(z) + Style.RESET_ALL)
+                print(Fore.GREEN + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "yellow":
+                print(Style.BRIGHT + Fore.YELLOW + settingSentence[0].center(z) + Style.RESET_ALL)
+                print(Fore.YELLOW + settingSentence[1].center(z) + Style.RESET_ALL)
+                print(Fore.YELLOW + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "blue":
+                print(Style.BRIGHT + Fore.BLUE + settingSentence[0].center(z) + Style.RESET_ALL)
+                print(Fore.BLUE + settingSentence[1].center(z) + Style.RESET_ALL)
+                print(Fore.BLUE + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "magenta":
+                print(Style.BRIGHT + Fore.MAGENTA + settingSentence[0].center(z) + Style.RESET_ALL)
+                print(Fore.MAGENTA + settingSentence[1].center(z) + Style.RESET_ALL)
+                print(Fore.MAGENTA + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "cyan":
+                print(Style.BRIGHT + Fore.CYAN + settingSentence[0].center(z) + Style.RESET_ALL)
+                print(Fore.CYAN + settingSentence[1].center(z) + Style.RESET_ALL)
+                print(Fore.CYAN + settingSentence[2].center(z) + Style.RESET_ALL)
+        elif fontEmp.lower() == "unfinished":
+            if fontColor.lower() == "default":
+                print(Style.RESET_ALL + settingSentence[0].center(z))
+                print(Style.RESET_ALL + Style.BRIGHT + settingSentence[1].center(z) + Style.RESET_ALL)
+                print(Style.RESET_ALL + Style.BRIGHT + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "red":
+                print(Style.RESET_ALL + Fore.RED + settingSentence[0].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.RED +  settingSentence[1].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.RED + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "green":
+                print(Style.RESET_ALL + Fore.GREEN + settingSentence[0].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.GREEN + settingSentence[1].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.GREEN + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "yellow":
+                print(Style.RESET_ALL + Fore.YELLOW + settingSentence[0].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.YELLOW + settingSentence[1].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.YELLOW + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "blue":
+                print(Style.RESET_ALL + Fore.BLUE + settingSentence[0].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.BLUE + settingSentence[1].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.BLUE + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "magenta":
+                print(Style.RESET_ALL + Fore.MAGENTA + settingSentence[0].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.MAGENTA + settingSentence[1].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.MAGENTA + settingSentence[2].center(z) + Style.RESET_ALL)
+            elif fontColor.lower() == "cyan":
+                print(Style.RESET_ALL + Fore.CYAN + settingSentence[0].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.CYAN + settingSentence[1].center(z) + Style.RESET_ALL)
+                print( Style.BRIGHT + Fore.CYAN + settingSentence[2].center(z) + Style.RESET_ALL)
+    elif gameType.lower() == "words":
+        wordCounter = 1
+        if fontEmp.lower() == "finished":
+            if fontColor.lower() == "default":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.BRIGHT + settingWord[0].center(z) + Style.RESET_ALL)
+                    else: 
+                        print((settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "red":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.BRIGHT + Fore.RED + settingWord[0].center(z) + Style.RESET_ALL)
+                    else: 
+                        print((Fore.RED + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "green":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.BRIGHT + Fore.GREEN + settingWord[0].center(z) + Style.RESET_ALL)
+                    else: 
+                        print((Fore.GREEN + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "yellow":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.BRIGHT + Fore.YELLOW + settingWord[0].center(z) + Style.RESET_ALL)
+                    else: 
+                        print((Fore.YELLOW + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "blue":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.BRIGHT + Fore.BLUE + settingWord[0].center(z) + Style.RESET_ALL)
+                    else: 
+                        print((Fore.BLUE + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "magenta":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.BRIGHT + Fore.MAGENTA + settingWord[0].center(z) + Style.RESET_ALL)
+                    else: 
+                        print((Fore.MAGENTA + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "cyan":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.BRIGHT + Fore.CYAN + settingWord[0].center(z) + Style.RESET_ALL)
+                    else: 
+                        print((Fore.CYAN + settingWord[-wordCounter]).center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+        elif fontEmp.lower() == "unfinished":
+            if fontColor.lower() == "default":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.RESET_ALL + (settingWord[0]).center(z))
+                    else: 
+                        print(Style.BRIGHT + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "red":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.RESET_ALL + (Fore.RED + settingWord[0]).center(z))
+                    else: 
+                        print(Style.BRIGHT + Fore.RED + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "green":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.RESET_ALL + (Fore.GREEN + settingWord[0]).center(z))
+                    else: 
+                        print(Style.BRIGHT + Fore.GREEN + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "yellow":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.RESET_ALL + (Fore.YELLOW + settingWord[0]).center(z))
+                    else: 
+                        print(Style.BRIGHT + Fore.YELLOW + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "blue":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.RESET_ALL + (Fore.BLUE + settingWord[0]).center(z))
+                    else: 
+                        print(Style.BRIGHT + Fore.BLUE + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "magenta":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.RESET_ALL + (Fore.MAGENTA + settingWord[0]).center(z))
+                    else: 
+                        print(Style.BRIGHT + Fore.MAGENTA + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+            elif fontColor.lower() == "cyan":
+                for word in range(len(settingWord)):
+                    if word == len(settingWord) - 1:
+                        print(Style.RESET_ALL + (Fore.CYAN + settingWord[0]).center(z))
+                    else: 
+                        print(Style.BRIGHT + Fore.CYAN + settingWord[-wordCounter].center(z) + Style.RESET_ALL)
+                    wordCounter += 1
+    print("")
+    while True:
+        global settingInput
+        print(Fore.WHITE + f"Game type:   {gameType}".center(z))
+        print("")
+        print(Fore.WHITE + f"Font color:   {fontColor}".center(z))
+        print("")
+        print(Fore.WHITE + f"Font emphasis:   {fontEmp}".center(z))
+        print("")
+        print(Fore.WHITE + f"Mode:   {mode}".center(z))
+        print("dogs".center(z))
+        settingInput = input(Fore.WHITE + Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n" + Style.RESET_ALL)
+        os.system('clear')
+        if settingInput.lower() == "game type":
+            if gameType.lower() == "phrases":
+                gameType = "Words"
+                break
+            elif gameType.lower() == "words":
+                gameType = "Phrases"
+                break
+        elif settingInput.lower() == "font color":
+            print(("Default   " + Fore.RED + "Red   " + Style.RESET_ALL + Fore.YELLOW + "Yellow   " + Style.RESET_ALL + Fore.GREEN + "Green   " + Style.RESET_ALL + Fore.BLUE + "Blue   " + Style.RESET_ALL + Fore.MAGENTA + "Magenta   " + Style.RESET_ALL + Fore.CYAN + "Cyan" + Style.RESET_ALL).center(z))
+            colorPreference = input()
+            if colorPreference.lower() == "red":
+                fontColor = "Red"
+                break
+            elif colorPreference.lower() == "yellow":
+                fontColor = "Yellow"
+                break
+            elif colorPreference.lower() == "green":
+                fontColor = "Green"
+                break
+            elif colorPreference.lower() == "blue":
+                fontColor = "Blue"
+                break
+            elif colorPreference.lower() == "magenta":
+                fontColor = "Magenta"
+                break
+            elif colorPreference.lower() == "cyan":
+                fontColor = "Cyan"
+                break
+            elif colorPreference.lower() == "default":
+                fontColor = "Default"
+                break
+        elif settingInput.lower() == "font emphasis":
+            if fontEmp.lower() == "finished":
+                fontEmp = "Unfinished"
+                break
+            elif fontEmp.lower() == "unfinished":
+                fontEmp = "Finished"
+                break
+        elif settingInput.lower() == "mode":
+            if mode.lower() == "easy":
+                mode = "Hard"
+                break
+            elif mode.lower() == "hard":
+                mode = "Easy"
+                break
+    
+    
 def print_paragraph():
     global checkParagraph
     global usedParagraph
-    paragraph = ["It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair." , "…and Gibraltar as a girl where I was a Flower of the mountain yes when I put the rose in my hair like the Andalusian girls used or shall I wear a red yes and how he kissed me under the Moorish wall and I thought well as well him as another and then I asked him with my eyes to ask again yes and then he asked me would I yes to say yes my mountain flower and first I put my arms around him yes and drew him down to me so he could feel my breasts all perfume yes and his heart was going like mad and yes I said yes I will Yes." , "The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars." , ". . . this is how to make a good medicine for a cold; this is how to make a good medicine to throw away a child before it even becomes a child; this is how to catch a fish; this is how to throw back a fish you don't like, and that way something bad won't fall on you; this is how to bully a man; this is how a man bullies you; this is how to love a man; and if this doesn't work there are other ways, and if they don't work don't feel too bad about giving up; this is how to spit up in the air if you feel like it, and this is how to move quick so that it doesn't fall on you; this is how to make ends meet; always squeeze bread to make sure it's fresh; but what if the baker won't let me feel the bread?; you mean to say that after all you are really going to be the kind of woman who the baker won't let near the bread?" , "I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain." , "I am an invisible man. No, I am not a spook like those who haunted Edgar Allan Poe; nor am I one of your Hollywood-movie ectoplasms. I am a man of substance, of flesh and bone, fiber and liquids—and I might even be said to possess a mind. I am invisible, understand, simply because people refuse to see me." , "He who has felt the deepest grief is best able to experience supreme happiness. Live, then, and be happy, beloved children of my heart, and never forget, that until the day God will deign to reveal the future to man, all human wisdom is contained in these two words: \"Wait and Hope.\""]
+    paragraph = ["It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair." , "Do nothing out of selfish ambition or vain conceit. Rather, in humility value others above yourselves, not looking to your own interests but each of you to the interests of the others." , "The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars." , "And he humbled you and let you hunger and fed you with manna, which you did not know, nor did your fathers know, that he might make you know that man does not live by bread alone, but man lives by every word that comes from the mouth of the Lord." , "I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain." , "I am an invisible man. No, I am not a spook like those who haunted Edgar Allan Poe; nor am I one of your Hollywood-movie ectoplasms. I am a man of substance, of flesh and bone, fiber and liquids—and I might even be said to possess a mind. I am invisible, understand, simply because people refuse to see me." , "For whoever would save his life will lose it, but whoever loses his life for my sake and the gospel’s will save it. For what does it profit a man to gain the whole world and forfeit his soul?" , "What then shall we say to these things? If God is for us, who can be against us? He who did not spare his own Son but gave him up for us all, how will he not also with him graciously give us all things?" , "Therefore, preparing your minds for action, and being sober-minded, set your hope fully on the grace that will be brought to you at the revelation of Jesus Christ." , "For God has not destined us for wrath, but to obtain salvation through our Lord Jesus Christ, who died for us so that whether we are awake or asleep we might live with him." , "For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are,yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need." , "And without faith it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him." , "Have no fear of sudden disaster or of the ruin that overtakes the wicked, for the Lord will be at your side and will keep your foot from being snared."]
     usedParagraph = random.choice(paragraph)
     checkParagraph = usedParagraph  
     usedParagraph = usedParagraph.split()
@@ -75,19 +309,38 @@ def print_paragraph():
         else:
             print(word, end = "")
 
+
+print("Press ENTER to launch Type Racer\n\n".center(z))
+input()
+os.system('clear')
+
+#loading_sequence(4)
+
 while True:
-    print_paragraph()
-    timeStart = time.time()
-    response = input()
-    if response == checkParagraph:
-        break
-    else:
-        print("You've made a mistake! Try again. Press ENTER to start.")
-        input()
+    welcome()
+    if playerInput.lower() == "start":
+        print_paragraph()
+        global timeStart
+        timeStart = time.time()
+        print("\n")
+        response = input()
+        if response == checkParagraph:
+            break
+        else:
+            print("You've made a mistake! Try again. Press ENTER to start.")
+            input()
+    elif playerInput.lower() == "settings":
+        while True:
+            settings()
+            if settingInput.lower() == "back":
+                break
         
-timeEnd = time.time()
-timeDeltaTime = timeEnd - timeStart
-wpm = (len(usedParagraph) * 60) / timeDeltaTime
-print(f"You correctly typed the paragraph with {round(wpm , 1)} words per minute")
+    timeEnd = time.time()
+    #timeDeltaTime = timeEnd - timeStart
+    #wpm = (len(usedParagraph) * 60) / timeDeltaTime
+    print(f"You correctly typed the paragraph with  words per minute")
+
+
+ 
 
 
