@@ -400,8 +400,113 @@ def print_paragraph():
     print("")
         
 def print_wordSequence():
-    wordSequence = [["dog" , "cat" , "goat" , "cow" , "elephant" , "fish" , "giraffe" , "eagle" , "cheetah" , "chicken" , "horse" , "shark" , "dolphin" , "parrot" , "sheep" , "pig"]]
-
+    wordSequence = [["dog" , "cat" , "goat" , "cow" , "elephant" , "fish" , "giraffe" , "eagle" , "cheetah" , "chicken" , "horse" , "shark" , "dolphin" , "parrot" , "sheep" , "pig" , "bat" , "spider" , "turtle" , "snake"],
+                    ["apple" , "banana" , "cheese" , "gingerbread" , "hamburger" , "jellybean" , "lemonade" , "mayonnaise" , "marshmellow" , "mozzarella" , "nectarine" , "pomegranate" , "raspberry" , "sausage" , "watermelon" , "zucchini" , "asparagus" , "blueberry" , "cauliflower" , "cinnamon"],
+                   ["mustang" , "corvette" , "hyundai" , "toyota" , "tesla" , "cybertruck" , "mitsubishi" , "lincoln" , "mercedes-benz" , "lexus" , "lamborghini" , "ferrari" , "maybach" , "mclaren" , "porsche" , "bugatti" , "maserati" , "camaro" , "charger" , "supra"],
+                   ["Canada" , "Mexico" , "France" , "Mongolia" , "Denmark" , "Germany" , "Italy" , "Russia" , "Spain" , "China" , "Korea" , "Japan" , "America" , "Argentina" , "Columbia" , "South Africa" , "Zimbabwe" , "Madagascar" , "Portugal" , "Turkey"],
+                   ["soccer" , "football" , "hockey" , "snowboarding" , "skiing" , "swimming" , "basketball" , "baseball" , "cricket" , "golf" , "tennis" , "volleyball" , "lacrosse" , "wrestling" , "dancing" , "cross country" , "track and field" , "weightlifting" , "water polo" , "rugby"]]
+    usedWords = random.choice(wordSequence)
+    if fontEmp.lower() == "finished":
+        if fontColor.lower() == "default":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + usedWords[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(usedWords[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "red":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.RED + usedWords[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.RED + usedWords[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "green":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.GREEN + usedWords[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.GREEN + usedWords[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "yellow":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.YELLOW + usedWords[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.YELLOW + usedWords[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "blue":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.BLUE + usedWords[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.BLUE + usedWords[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "magenta":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.MAGENTA + usedWords[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.MAGENTA + usedWords[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "cyan":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.BRIGHT + Fore.CYAN + usedWords[ele].center(z) + Style.RESET_ALL)
+                else: 
+                    print(Fore.CYAN + usedWords[ele].center(z) + Style.RESET_ALL)
+                
+    elif fontEmp.lower() == "unfinished":
+        if fontColor.lower() == "default":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + (usedWords[ele]).center(z))
+                else: 
+                    print(Style.BRIGHT + usedWords[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "red":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.RED + usedWords[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.RED + usedWords[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "green":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.GREEN + usedWords[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.GREEN + usedWords[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "yellow":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.YELLOW + usedWords[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.YELLOW + usedWords[ele].center(z) + Style.RESET_ALL)
+                
+        elif fontColor.lower() == "blue":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.BLUE + usedWords[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.BLUE + usedWords[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "magenta":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.MAGENTA + usedWords[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.MAGENTA + usedWords[ele].center(z) + Style.RESET_ALL)
+                    
+        elif fontColor.lower() == "cyan":
+            for ele in range(len(usedWords) - 1):
+                if ele == 0:
+                    print(Style.RESET_ALL + Fore.CYAN + usedWords[ele].center(z))
+                else: 
+                    print(Style.BRIGHT + Fore.CYAN + usedWords[ele].center(z) + Style.RESET_ALL)
+                    
+    print("")
 
 print("Press ENTER to launch Type Racer\n\n".center(z))
 input()
@@ -412,7 +517,10 @@ os.system('clear')
 while True:
     welcome()
     if playerInput.lower() == "start":
-        print_paragraph()
+        if gameType.lower() == "phrases":
+            print_paragraph()
+        elif gameType.lower() == "words":
+            print_wordSequence()
         global timeStart
         timeStart = time.time()
         print("\n")
@@ -432,4 +540,5 @@ while True:
 
 
  
+
 
