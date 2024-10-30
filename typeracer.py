@@ -515,7 +515,7 @@ print("Press ENTER to launch Type Racer\n\n".center(z))
 input()
 os.system('clear')
 
-#loading_sequence(4)
+loading_sequence(4)
 
 while True:
     welcome()
