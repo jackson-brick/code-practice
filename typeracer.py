@@ -297,6 +297,7 @@ paragraph = [["Do nothing out of selfish ambition or vain conceit.","Rather, in 
 usedParagraph = random.choice(paragraph)
 
 
+
 def print_paragraph():
     if fontEmp.lower() == "finished":
         if fontColor.lower() == "default":
@@ -307,42 +308,42 @@ def print_paragraph():
                     print(usedParagraph[ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "red":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.BRIGHT + Fore.RED + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 else: 
                     print(Fore.RED + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "green":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.BRIGHT + Fore.GREEN + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 else: 
                     print(Fore.GREEN + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "yellow":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.BRIGHT + Fore.YELLOW + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 else: 
                     print(Fore.YELLOW + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "blue":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.BRIGHT + Fore.BLUE + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 else: 
                     print(Fore.BLUE + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "magenta":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.BRIGHT + Fore.MAGENTA + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 else: 
                     print(Fore.MAGENTA + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "cyan":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.BRIGHT + Fore.CYAN + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 else: 
@@ -350,49 +351,49 @@ def print_paragraph():
                 
     elif fontEmp.lower() == "unfinished":
         if fontColor.lower() == "default":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.RESET_ALL + (usedParagraph[ele]).center(z))
                 else: 
                     print(Style.BRIGHT + usedParagraph[ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "red":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.RESET_ALL + Fore.RED + usedParagraph[ele].center(z))
                 else: 
                     print(Style.BRIGHT + Fore.RED + usedParagraph[ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "green":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.RESET_ALL + Fore.GREEN + usedParagraph[ele].center(z))
                 else: 
                     print(Style.BRIGHT + Fore.GREEN + usedParagraph[ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "yellow":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.RESET_ALL + Fore.YELLOW + usedParagraph[ele].center(z))
                 else: 
                     print(Style.BRIGHT + Fore.YELLOW + usedParagraph[ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "blue":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.RESET_ALL + Fore.BLUE + usedParagraph[ele].center(z))
                 else: 
                     print(Style.BRIGHT + Fore.BLUE + usedParagraph[ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "magenta":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.RESET_ALL + Fore.MAGENTA + usedParagraph[ele].center(z))
                 else: 
                     print(Style.BRIGHT + Fore.MAGENTA + usedParagraph[ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "cyan":
-            for ele in range(len(usedParagraph)):
+            for ele in range(len(usedParagraph) - 1):
                 if ele == 0:
                     print(Style.RESET_ALL + Fore.CYAN + usedParagraph[ele].center(z))
                 else: 
@@ -423,12 +424,14 @@ def print_wordSequence():
                     print(Style.BRIGHT + Fore.RED + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
                     print(Fore.RED + usedWords[-ele].center(z) + Style.RESET_ALL)
+                    print(Fore.RED + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "green":
             for ele in range(1, len(usedWords) + 1):
                 if ele == len(usedWords):
                     print(Style.BRIGHT + Fore.GREEN + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
+                    print(Fore.GREEN + usedWords[-ele].center(z) + Style.RESET_ALL)
                     print(Fore.GREEN + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "yellow":
@@ -437,12 +440,14 @@ def print_wordSequence():
                     print(Style.BRIGHT + Fore.YELLOW + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
                     print(Fore.YELLOW + usedWords[-ele].center(z) + Style.RESET_ALL)
+                    print(Fore.YELLOW + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "blue":
             for ele in range(1, len(usedWords) + 1):
                 if ele == len(usedWords):
                     print(Style.BRIGHT + Fore.BLUE + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
+                    print(Fore.BLUE + usedWords[-ele].center(z) + Style.RESET_ALL)
                     print(Fore.BLUE + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "magenta":
@@ -451,12 +456,14 @@ def print_wordSequence():
                     print(Style.BRIGHT + Fore.MAGENTA + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
                     print(Fore.MAGENTA + usedWords[-ele].center(z) + Style.RESET_ALL)
+                    print(Fore.MAGENTA + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "cyan":
             for ele in range(1, len(usedWords) + 1):
                 if ele == len(usedWords):
                     print(Style.BRIGHT + Fore.CYAN + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
+                    print(Fore.CYAN + usedWords[-ele].center(z) + Style.RESET_ALL)
                     print(Fore.CYAN + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
     elif fontEmp.lower() == "unfinished":
@@ -466,12 +473,14 @@ def print_wordSequence():
                     print(Style.RESET_ALL + (usedWords[-ele]).center(z))
                 else: 
                     print(Style.BRIGHT + usedWords[-ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "red":
             for ele in range(1, len(usedWords) + 1):
                 if ele == len(usedWords):
                     print(Style.RESET_ALL + Fore.RED + usedWords[-ele].center(z))
                 else: 
+                    print(Style.BRIGHT + Fore.RED + usedWords[-ele].center(z) + Style.RESET_ALL)
                     print(Style.BRIGHT + Fore.RED + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "green":
@@ -480,12 +489,14 @@ def print_wordSequence():
                     print(Style.RESET_ALL + Fore.GREEN + usedWords[-ele].center(z))
                 else: 
                     print(Style.BRIGHT + Fore.GREEN + usedWords[-ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + Fore.GREEN + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "yellow":
             for ele in range(1, len(usedWords) + 1):
                 if ele == len(usedWords):
                     print(Style.RESET_ALL + Fore.YELLOW + usedWords[-ele].center(z))
                 else: 
+                    print(Style.BRIGHT + Fore.YELLOW + usedWords[-ele].center(z) + Style.RESET_ALL)
                     print(Style.BRIGHT + Fore.YELLOW + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "blue":
@@ -494,6 +505,7 @@ def print_wordSequence():
                     print(Style.RESET_ALL + Fore.BLUE + usedWords[-ele].center(z))
                 else: 
                     print(Style.BRIGHT + Fore.BLUE + usedWords[-ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + Fore.BLUE + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "magenta":
             for ele in range(1, len(usedWords) + 1):
@@ -501,12 +513,14 @@ def print_wordSequence():
                     print(Style.RESET_ALL + Fore.MAGENTA + usedWords[-ele].center(z))
                 else: 
                     print(Style.BRIGHT + Fore.MAGENTA + usedWords[-ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + Fore.MAGENTA + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "cyan":
             for ele in range(1, len(usedWords) + 1):
                 if ele == len(usedWords):
                     print(Style.RESET_ALL + Fore.CYAN + usedWords[-ele].center(z))
                 else: 
+                    print(Style.BRIGHT + Fore.CYAN + usedWords[-ele].center(z) + Style.RESET_ALL)
                     print(Style.BRIGHT + Fore.CYAN + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
     print("")
@@ -517,6 +531,7 @@ checkWords = []
 input()
 os.system('clear')
 
+loading_sequence(4)
 loading_sequence(4)
 
 while True:
@@ -565,6 +580,8 @@ minutes = (endTime - startTime) / 60
 if gameType.lower() == "phrases":
         wordCounter = 0
         for sentence in checkParagraph:
+            splitSentence = sentence.split()
+            wordCounter = wordCounter + len(splitSentence)
             splitSentence = sentence.split()
             wordCounter = wordCounter + len(splitSentence)
 elif gameType.lower() == "words":
