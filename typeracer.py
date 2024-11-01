@@ -291,10 +291,6 @@ def settings():
         else:
             pass
             
-    
-global usedParagraph
-paragraph = [["Do nothing out of selfish ambition or vain conceit.","Rather, in humility value others above yourselves,","not looking to your own interests","but each of you to the interests of the others."] , ["The only people for me are the mad ones,","the ones who are mad to live, mad to talk, mad to be saved,","desirous of everything at the same time,","the ones who never yawn or say a commonplace thing,","but burn, burn, burn like fabulous yellow roman candles","exploding like spiders across the stars."] , ["And he humbled you and let you hunger and fed you with manna,","which you did not know, nor did your fathers know,","that he might make you know that man does not live by bread alone,","but man lives by every word that comes from the mouth of the Lord."] , ["I must not fear. Fear is the mind-killer.","Fear is the little-death that brings total obliteration. I will face my fear.","I will permit it to pass over me and through me.","And when it has gone past I will turn the inner eye to see its path.","Where the fear has gone there will be nothing. Only I will remain."] , ["I am an invisible man.","No, I am not a spook like those who haunted Edgar Allan Poe;","nor am I one of your Hollywood-movie ectoplasms.","I am a man of substance, of flesh and bone, fiber and liquids-","and I might even be said to possess a mind.","I am invisible, understand, simply because people refuse to see me."] , ["For whoever would save his life will lose it,","but whoever loses his life for my sake and the gospel’s will save it.","For what does it profit a man to gain","the whole world and forfeit his soul?"] , ["What then shall we say to these things?","If God is for us, who can be against us?","He who did not spare his own Son but gave him up for us all,","how will he not also with him graciously give us all things?"] , ["For God has not destined us for wrath,","but to obtain salvation through our Lord Jesus Christ,","who died for us so that whether we are awake or asleep we might live with him."] , ["For we do not have a high priest who is unable to sympathize with our weaknesses,","but one who in every respect has been tempted as we are, yet without sin.","Let us then with confidence draw near to the throne of grace,","that we may receive mercy and find grace to help in time of need."]]
-usedParagraph = random.choice(paragraph)
 
 
 
@@ -401,12 +397,6 @@ def print_paragraph():
                     
     print("")
 
-wordSequence = [["dog" , "cat" , "goat" , "cow" , "elephant" , "fish" , "giraffe" , "eagle" , "cheetah" , "chicken" , "horse" , "shark" , "dolphin" , "parrot" , "sheep" , "pig" , "bat" , "spider" , "turtle" , "snake"],
-                ["apple" , "banana" , "cheese" , "gingerbread" , "hamburger" , "jellybean" , "lemonade" , "mayonnaise" , "marshmellow" , "mozzarella" , "nectarine" , "pomegranate" , "raspberry" , "sausage" , "watermelon" , "zucchini" , "asparagus" , "blueberry" , "cauliflower" , "cinnamon"],
-                ["mustang" , "corvette" , "hyundai" , "toyota" , "tesla" , "cybertruck" , "mitsubishi" , "lincoln" , "mercedes-benz" , "lexus" , "lamborghini" , "ferrari" , "maybach" , "mclaren" , "porsche" , "bugatti" , "maserati" , "camaro" , "charger" , "supra"],
-                ["Canada" , "Mexico" , "France" , "Mongolia" , "Denmark" , "Germany" , "Italy" , "Russia" , "Spain" , "China" , "Korea" , "Japan" , "America" , "Argentina" , "Columbia" , "South Africa" , "Zimbabwe" , "Madagascar" , "Portugal" , "Turkey"],
-                ["soccer" , "football" , "hockey" , "snowboarding" , "skiing" , "swimming" , "basketball" , "baseball" , "cricket" , "golf" , "tennis" , "volleyball" , "lacrosse" , "wrestling" , "dancing" , "cross country" , "track and field" , "weightlifting" , "water polo" , "rugby"]]
-usedWords = random.choice(wordSequence)
 
 
 def print_wordSequence():
@@ -531,68 +521,74 @@ checkWords = []
 input()
 os.system('clear')
 
-loading_sequence(4)
-loading_sequence(4)
+loading_sequence(2)
 
 while True:
-    welcome()
-    if playerInput.lower() == "start":
-        global startTime
-        startTime = time.time()
-        if gameType.lower() == "phrases":
-            while len(usedParagraph) > 0:
-                print_paragraph()
-                print("\n")
-                response = input()
-                if response == usedParagraph[0]:
-                    checkParagraph.append(usedParagraph[0])
-                    usedParagraph.pop(0)
-                    os.system('clear')
-                else:
-                    os.system('clear')
-            break
-        elif gameType.lower() == "words":
-            while len(usedWords) > 0:
-                print_wordSequence()
-                print("\n")
-                response = input()
-                if response == usedWords[0].lower():
-                    checkWords.append(usedWords[0])
-                    usedWords.pop(0)
-                    os.system('clear')
-                else:
-                    os.system('clear')
-            break
-    elif playerInput.lower() == "settings":
-        while True:
-            settings()
-            if settingInput.lower() == "back":
+    global usedParagraph
+    paragraph = [["Do nothing out of selfish ambition or vain conceit.","Rather, in humility value others above yourselves,","not looking to your own interests","but each of you to the interests of the others."] , ["The only people for me are the mad ones,","the ones who are mad to live, mad to talk, mad to be saved,","desirous of everything at the same time,","the ones who never yawn or say a commonplace thing,","but burn, burn, burn like fabulous yellow roman candles","exploding like spiders across the stars."] , ["And he humbled you and let you hunger and fed you with manna,","which you did not know, nor did your fathers know,","that he might make you know that man does not live by bread alone,","but man lives by every word that comes from the mouth of the Lord."] , ["I must not fear. Fear is the mind-killer.","Fear is the little-death that brings total obliteration. I will face my fear.","I will permit it to pass over me and through me.","And when it has gone past I will turn the inner eye to see its path.","Where the fear has gone there will be nothing. Only I will remain."] , ["I am an invisible man.","No, I am not a spook like those who haunted Edgar Allan Poe;","nor am I one of your Hollywood-movie ectoplasms.","I am a man of substance, of flesh and bone, fiber and liquids-","and I might even be said to possess a mind.","I am invisible, understand, simply because people refuse to see me."] , ["For whoever would save his life will lose it,","but whoever loses his life for my sake and the gospel’s will save it.","For what does it profit a man to gain","the whole world and forfeit his soul?"] , ["What then shall we say to these things?","If God is for us, who can be against us?","He who did not spare his own Son but gave him up for us all,","how will he not also with him graciously give us all things?"] , ["For God has not destined us for wrath,","but to obtain salvation through our Lord Jesus Christ,","who died for us so that whether we are awake or asleep we might live with him."] , ["For we do not have a high priest who is unable to sympathize with our weaknesses,","but one who in every respect has been tempted as we are, yet without sin.","Let us then with confidence draw near to the throne of grace,","that we may receive mercy and find grace to help in time of need."]]
+    usedParagraph = random.choice(paragraph)
+    wordSequence = [["dog" , "cat" , "goat" , "cow" , "elephant" , "fish" , "giraffe" , "eagle" , "cheetah" , "chicken" , "horse" , "shark" , "dolphin" , "parrot" , "sheep" , "pig" , "bat" , "spider" , "turtle" , "snake"],
+                ["apple" , "banana" , "cheese" , "gingerbread" , "hamburger" , "jellybean" , "lemonade" , "mayonnaise" , "marshmellow" , "mozzarella" , "nectarine" , "pomegranate" , "raspberry" , "sausage" , "watermelon" , "zucchini" , "asparagus" , "blueberry" , "cauliflower" , "cinnamon"],
+                ["mustang" , "corvette" , "hyundai" , "toyota" , "tesla" , "cybertruck" , "mitsubishi" , "lincoln" , "mercedes-benz" , "lexus" , "lamborghini" , "ferrari" , "maybach" , "mclaren" , "porsche" , "bugatti" , "maserati" , "camaro" , "charger" , "supra"],
+                ["Canada" , "Mexico" , "France" , "Mongolia" , "Denmark" , "Germany" , "Italy" , "Russia" , "Spain" , "China" , "Korea" , "Japan" , "America" , "Argentina" , "Columbia" , "South Africa" , "Zimbabwe" , "Madagascar" , "Portugal" , "Turkey"],
+                ["soccer" , "football" , "hockey" , "snowboarding" , "skiing" , "swimming" , "basketball" , "baseball" , "cricket" , "golf" , "tennis" , "volleyball" , "lacrosse" , "wrestling" , "dancing" , "cross country" , "track and field" , "weightlifting" , "water polo" , "rugby"]]
+    usedWords = random.choice(wordSequence)
+    while True:
+        welcome()
+        if playerInput.lower() == "start":
+            global startTime
+            startTime = time.time()
+            if gameType.lower() == "phrases":
+                while len(usedParagraph) > 0:
+                    print_paragraph()
+                    print("\n")
+                    print(len(usedParagraph))
+                    response = input()
+                    if response == usedParagraph[0]:
+                        checkParagraph.append(usedParagraph[0])
+                        usedParagraph.pop(0)
+                        os.system('clear')
+                    else:
+                        os.system('clear')
                 break
-        
-endTime = time.time()
-minutes = (endTime - startTime) / 60
+            elif gameType.lower() == "words":
+                while len(usedWords) > 0:
+                    print_wordSequence()
+                    print("\n")
+                    response = input()
+                    if response == usedWords[0].lower():
+                        checkWords.append(usedWords[0])
+                        usedWords.pop(0)
+                        os.system('clear')
+                    else:
+                        os.system('clear')
+                break
+        elif playerInput.lower() == "settings":
+            while True:
+                settings()
+                if settingInput.lower() == "back":
+                    break
 
+    endTime = time.time()
+    minutes = (endTime - startTime) / 60
 
-
-
-
-
-if gameType.lower() == "phrases":
+    if gameType.lower() == "phrases":
         wordCounter = 0
         for sentence in checkParagraph:
             splitSentence = sentence.split()
             wordCounter = wordCounter + len(splitSentence)
             splitSentence = sentence.split()
             wordCounter = wordCounter + len(splitSentence)
-elif gameType.lower() == "words":
-    wordCounter = len(checkWords)
+    elif gameType.lower() == "words":
+        wordCounter = len(checkWords)
     
+    wpm = wordCounter / minutes
+    wpm = wpm * 10
+    wpm = int(wpm)
+    wpm = wpm / 10
 
-
-wpm = wordCounter / minutes
-wpm = wpm * 10
-wpm = int(wpm)
-wpm = wpm / 10
-
-
-print(f"\nYou typed at {wpm} words per minute!")
+    print(f"\nYou typed at {wpm} words per minute!")
+    input("\nPress ENTER to go again!\n\n")
+    os.system('clear')
+    checkParagraph = []
+    checkWords = []
