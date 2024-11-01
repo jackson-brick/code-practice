@@ -293,10 +293,9 @@ def settings():
             
     
 global usedParagraph
-paragraph = [["Do nothing out of selfish ambition or vain conceit.","Rather, in humility value others above yourselves,","not looking to your own interests","but each of you to the interests of the others."] , ["The only people for me are the mad ones,","the ones who are mad to live, mad to talk, mad to be saved,","desirous of everything at the same time, the ones who never yawn or say a commonplace thing,","but burn, burn, burn like fabulous yellow roman candles","exploding like spiders across the stars."] , ["And he humbled you and let you hunger and fed you with manna,","which you did not know, nor did your fathers know,","that he might make you know that man does not live by bread alone,","but man lives by every word that comes from the mouth of the Lord."] , ["I must not fear. Fear is the mind-killer.","Fear is the little-death that brings total obliteration. I will face my fear.","I will permit it to pass over me and through me.","And when it has gone past I will turn the inner eye to see its path.","Where the fear has gone there will be nothing. Only I will remain."] , ["I am an invisible man.","No, I am not a spook like those who haunted Edgar Allan Poe;","nor am I one of your Hollywood-movie ectoplasms.","I am a man of substance, of flesh and bone, fiber and liquids—","and I might even be said to possess a mind.","I am invisible, understand, simply because people refuse to see me."] , ["For whoever would save his life will lose it,","but whoever loses his life for my sake and the gospel’s will save it.","For what does it profit a man to gain","the whole world and forfeit his soul?"] , ["What then shall we say to these things?","If God is for us, who can be against us?","He who did not spare his own Son but gave him up for us all,","how will he not also with him graciously give us all things?"] , ["For God has not destined us for wrath,","but to obtain salvation through our Lord Jesus Christ,","who died for us so that whether we are awake or asleep we might live with him."] , ["For we do not have a high priest who is unable to sympathize with our weaknesses,","but one who in every respect has been tempted as we are, yet without sin.","Let us then with confidence draw near to the throne of grace,","that we may receive mercy and find grace to help in time of need."]]
+paragraph = [["Do nothing out of selfish ambition or vain conceit.","Rather, in humility value others above yourselves,","not looking to your own interests","but each of you to the interests of the others."] , ["The only people for me are the mad ones,","the ones who are mad to live, mad to talk, mad to be saved,","desirous of everything at the same time,","the ones who never yawn or say a commonplace thing,","but burn, burn, burn like fabulous yellow roman candles","exploding like spiders across the stars."] , ["And he humbled you and let you hunger and fed you with manna,","which you did not know, nor did your fathers know,","that he might make you know that man does not live by bread alone,","but man lives by every word that comes from the mouth of the Lord."] , ["I must not fear. Fear is the mind-killer.","Fear is the little-death that brings total obliteration. I will face my fear.","I will permit it to pass over me and through me.","And when it has gone past I will turn the inner eye to see its path.","Where the fear has gone there will be nothing. Only I will remain."] , ["I am an invisible man.","No, I am not a spook like those who haunted Edgar Allan Poe;","nor am I one of your Hollywood-movie ectoplasms.","I am a man of substance, of flesh and bone, fiber and liquids-","and I might even be said to possess a mind.","I am invisible, understand, simply because people refuse to see me."] , ["For whoever would save his life will lose it,","but whoever loses his life for my sake and the gospel’s will save it.","For what does it profit a man to gain","the whole world and forfeit his soul?"] , ["What then shall we say to these things?","If God is for us, who can be against us?","He who did not spare his own Son but gave him up for us all,","how will he not also with him graciously give us all things?"] , ["For God has not destined us for wrath,","but to obtain salvation through our Lord Jesus Christ,","who died for us so that whether we are awake or asleep we might live with him."] , ["For we do not have a high priest who is unable to sympathize with our weaknesses,","but one who in every respect has been tempted as we are, yet without sin.","Let us then with confidence draw near to the throne of grace,","that we may receive mercy and find grace to help in time of need."]]
 usedParagraph = random.choice(paragraph)
-checkParagraph = usedParagraph
-print(checkParagraph)
+
 
 def print_paragraph():
     if fontEmp.lower() == "finished":
@@ -402,123 +401,123 @@ def print_paragraph():
     print("")
 
 wordSequence = [["dog" , "cat" , "goat" , "cow" , "elephant" , "fish" , "giraffe" , "eagle" , "cheetah" , "chicken" , "horse" , "shark" , "dolphin" , "parrot" , "sheep" , "pig" , "bat" , "spider" , "turtle" , "snake"],
-                    ["apple" , "banana" , "cheese" , "gingerbread" , "hamburger" , "jellybean" , "lemonade" , "mayonnaise" , "marshmellow" , "mozzarella" , "nectarine" , "pomegranate" , "raspberry" , "sausage" , "watermelon" , "zucchini" , "asparagus" , "blueberry" , "cauliflower" , "cinnamon"],
-                   ["mustang" , "corvette" , "hyundai" , "toyota" , "tesla" , "cybertruck" , "mitsubishi" , "lincoln" , "mercedes-benz" , "lexus" , "lamborghini" , "ferrari" , "maybach" , "mclaren" , "porsche" , "bugatti" , "maserati" , "camaro" , "charger" , "supra"],
-                   ["Canada" , "Mexico" , "France" , "Mongolia" , "Denmark" , "Germany" , "Italy" , "Russia" , "Spain" , "China" , "Korea" , "Japan" , "America" , "Argentina" , "Columbia" , "South Africa" , "Zimbabwe" , "Madagascar" , "Portugal" , "Turkey"],
-                   ["soccer" , "football" , "hockey" , "snowboarding" , "skiing" , "swimming" , "basketball" , "baseball" , "cricket" , "golf" , "tennis" , "volleyball" , "lacrosse" , "wrestling" , "dancing" , "cross country" , "track and field" , "weightlifting" , "water polo" , "rugby"]]
+                ["apple" , "banana" , "cheese" , "gingerbread" , "hamburger" , "jellybean" , "lemonade" , "mayonnaise" , "marshmellow" , "mozzarella" , "nectarine" , "pomegranate" , "raspberry" , "sausage" , "watermelon" , "zucchini" , "asparagus" , "blueberry" , "cauliflower" , "cinnamon"],
+                ["mustang" , "corvette" , "hyundai" , "toyota" , "tesla" , "cybertruck" , "mitsubishi" , "lincoln" , "mercedes-benz" , "lexus" , "lamborghini" , "ferrari" , "maybach" , "mclaren" , "porsche" , "bugatti" , "maserati" , "camaro" , "charger" , "supra"],
+                ["Canada" , "Mexico" , "France" , "Mongolia" , "Denmark" , "Germany" , "Italy" , "Russia" , "Spain" , "China" , "Korea" , "Japan" , "America" , "Argentina" , "Columbia" , "South Africa" , "Zimbabwe" , "Madagascar" , "Portugal" , "Turkey"],
+                ["soccer" , "football" , "hockey" , "snowboarding" , "skiing" , "swimming" , "basketball" , "baseball" , "cricket" , "golf" , "tennis" , "volleyball" , "lacrosse" , "wrestling" , "dancing" , "cross country" , "track and field" , "weightlifting" , "water polo" , "rugby"]]
 usedWords = random.choice(wordSequence)
-checkWords = usedWords
-
 
 
 def print_wordSequence():
     if fontEmp.lower() == "finished":
         if fontColor.lower() == "default":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.BRIGHT + usedWords[ele].center(z) + Style.RESET_ALL)
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.BRIGHT + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
-                    print(usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(usedWords[-ele].center(z))
                     
         elif fontColor.lower() == "red":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.BRIGHT + Fore.RED + usedWords[ele].center(z) + Style.RESET_ALL)
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.BRIGHT + Fore.RED + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
-                    print(Fore.RED + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Fore.RED + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "green":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.BRIGHT + Fore.GREEN + usedWords[ele].center(z) + Style.RESET_ALL)
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.BRIGHT + Fore.GREEN + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
-                    print(Fore.GREEN + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Fore.GREEN + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "yellow":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.BRIGHT + Fore.YELLOW + usedWords[ele].center(z) + Style.RESET_ALL)
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.BRIGHT + Fore.YELLOW + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
-                    print(Fore.YELLOW + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Fore.YELLOW + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "blue":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.BRIGHT + Fore.BLUE + usedWords[ele].center(z) + Style.RESET_ALL)
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.BRIGHT + Fore.BLUE + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
-                    print(Fore.BLUE + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Fore.BLUE + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "magenta":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.BRIGHT + Fore.MAGENTA + usedWords[ele].center(z) + Style.RESET_ALL)
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.BRIGHT + Fore.MAGENTA + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
-                    print(Fore.MAGENTA + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Fore.MAGENTA + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "cyan":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.BRIGHT + Fore.CYAN + usedWords[ele].center(z) + Style.RESET_ALL)
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.BRIGHT + Fore.CYAN + usedWords[-ele].center(z) + Style.RESET_ALL)
                 else: 
-                    print(Fore.CYAN + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Fore.CYAN + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
     elif fontEmp.lower() == "unfinished":
         if fontColor.lower() == "default":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.RESET_ALL + (usedWords[ele]).center(z))
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.RESET_ALL + (usedWords[-ele]).center(z))
                 else: 
-                    print(Style.BRIGHT + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "red":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.RESET_ALL + Fore.RED + usedWords[ele].center(z))
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.RESET_ALL + Fore.RED + usedWords[-ele].center(z))
                 else: 
-                    print(Style.BRIGHT + Fore.RED + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + Fore.RED + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "green":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.RESET_ALL + Fore.GREEN + usedWords[ele].center(z))
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.RESET_ALL + Fore.GREEN + usedWords[-ele].center(z))
                 else: 
-                    print(Style.BRIGHT + Fore.GREEN + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + Fore.GREEN + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "yellow":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.RESET_ALL + Fore.YELLOW + usedWords[ele].center(z))
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.RESET_ALL + Fore.YELLOW + usedWords[-ele].center(z))
                 else: 
-                    print(Style.BRIGHT + Fore.YELLOW + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + Fore.YELLOW + usedWords[-ele].center(z) + Style.RESET_ALL)
                 
         elif fontColor.lower() == "blue":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.RESET_ALL + Fore.BLUE + usedWords[ele].center(z))
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.RESET_ALL + Fore.BLUE + usedWords[-ele].center(z))
                 else: 
-                    print(Style.BRIGHT + Fore.BLUE + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + Fore.BLUE + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "magenta":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.RESET_ALL + Fore.MAGENTA + usedWords[ele].center(z))
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.RESET_ALL + Fore.MAGENTA + usedWords[-ele].center(z))
                 else: 
-                    print(Style.BRIGHT + Fore.MAGENTA + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + Fore.MAGENTA + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
         elif fontColor.lower() == "cyan":
-            for ele in range(len(usedWords)):
-                if ele == 0:
-                    print(Style.RESET_ALL + Fore.CYAN + usedWords[ele].center(z))
+            for ele in range(1, len(usedWords) + 1):
+                if ele == len(usedWords):
+                    print(Style.RESET_ALL + Fore.CYAN + usedWords[-ele].center(z))
                 else: 
-                    print(Style.BRIGHT + Fore.CYAN + usedWords[ele].center(z) + Style.RESET_ALL)
+                    print(Style.BRIGHT + Fore.CYAN + usedWords[-ele].center(z) + Style.RESET_ALL)
                     
     print("")
 
 print("Press ENTER to launch Type Racer\n\n".center(z))
+checkParagraph = []
+checkWords = []
 input()
 os.system('clear')
 
-#loading_sequence(4)
+loading_sequence(4)
 
 while True:
     welcome()
@@ -526,31 +525,26 @@ while True:
         global startTime
         startTime = time.time()
         if gameType.lower() == "phrases":
-            
             while len(usedParagraph) > 0:
                 print_paragraph()
                 print("\n")
                 response = input()
                 if response == usedParagraph[0]:
+                    checkParagraph.append(usedParagraph[0])
                     usedParagraph.pop(0)
                     os.system('clear')
-                elif response == "skip":
-                    break
                 else:
                     os.system('clear')
             break
         elif gameType.lower() == "words":
-        
-            print(checkWords)
             while len(usedWords) > 0:
                 print_wordSequence()
                 print("\n")
                 response = input()
-                if response == usedWords[0]:
+                if response == usedWords[0].lower():
+                    checkWords.append(usedWords[0])
                     usedWords.pop(0)
                     os.system('clear')
-                elif response == "skip":
-                    break
                 else:
                     os.system('clear')
             break
@@ -561,23 +555,27 @@ while True:
                 break
         
 endTime = time.time()
-print(startTime)
-print(endTime)
 minutes = (endTime - startTime) / 60
 
-print(checkParagraph)
-print(checkWords)
+
+
+
+
 
 if gameType.lower() == "phrases":
         wordCounter = 0
         for sentence in checkParagraph:
-            print(sentence)
-            sentence.split()
-            print(sentence)
-            wordCounter = wordCounter + len(sentence)
-            print(wordCounter)
-        print(wordCounter)
+            splitSentence = sentence.split()
+            wordCounter = wordCounter + len(splitSentence)
 elif gameType.lower() == "words":
     wordCounter = len(checkWords)
-    print(wordCounter)
+    
 
+
+wpm = wordCounter / minutes
+wpm = wpm * 10
+wpm = int(wpm)
+wpm = wpm / 10
+
+
+print(f"\nYou typed at {wpm} words per minute!")
