@@ -4,13 +4,16 @@ import os #To clear screen and maybe to get terminal size so things can be prope
 import math #May be used to get scores or to round
 from colorama import Style, Fore #Will be used to format and make the outputs look better
 import random #Will be used to randomize order of questions and to name the Study Buddy
-import sys
+import sys #will be used for its 'sys.exit()' function to quit the program easily at any time
 
 #-----------------------------------------------------------
 #Global Variable Section
 #-----------------------------------------------------------
 screenSize = os.get_terminal_size() #This gets the width and height of the terminal, respectively
 z = screenSize[0] #Puts the width of the screen into a variable; ("blah blah blah".center(z))
+subject = "csp" #sets default subject to Comp Sci
+fontColor = "default"
+
 #-----------------------------------------------------------
 #Study Buddy face options storage
 #-----------------------------------------------------------
@@ -25,27 +28,87 @@ z = screenSize[0] #Puts the width of the screen into a variable; ("blah blah bla
 #print("|                                   |".center(z))
 #print("+-----------------+-----------------+".center(z))
 
-#print("+-----------------+-----------------+".center(z)) #Normal standard face
-#print("|           __         __           |".center(z))
-#print("|           ||         ||           |".center(z))
-#print("|           ||         ||           |".center(z))
-#print("|                                   |".center(z))
-#print("|       _____________________       |".center(z))
-#print("|        -__             __-        |".center(z))
-#print("|           ----_____----           |".center(z))
-#print("|                                   |".center(z))
-#print("+-----------------+-----------------+".center(z))
+def buddy_face_standard_smile():
 
-#print("+-----------------+-----------------+".center(z)) #Dead face
-#print("|                                   |".center(z))
-#print("|           \/         \/           |".center(z))
-#print("|           /\         /\           |".center(z))
-#print("|                                   |".center(z))
-#print("|                                   |".center(z))
-#print("|         ~~~~~~~~~~~~~~~~~         |".center(z))
-#print("|                                   |".center(z))
-#print("|                                   |".center(z))
-#print("+-----------------+-----------------+".center(z))
+    print("+-----------------+-----------------+".center(z)) #Normal standard face
+    print("|           __         __           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|                                   |".center(z))
+    print("|       _____________________       |".center(z))
+    print("|        -__             __-        |".center(z))
+    print("|           ----_____----           |".center(z))
+    print("|                                   |".center(z))
+    print("+-----------------+-----------------+".center(z))
+
+def buddy_face_dead():
+    print("+-----------------+-----------------+".center(z)) #Dead face
+    print("|                                   |".center(z))
+    print("|           \/         \/           |".center(z))
+    print("|           /\         /\           |".center(z))
+    print("|                                   |".center(z))
+    print("|                                   |".center(z))
+    print("|         _________________         |".center(z))
+    print("|                  | | |            |".center(z))
+    print("|                   \ /             |".center(z))
+    print("+-----------------+-----------------+".center(z))
+
+def buddy_face_unamused():
+    print("+-----------------+-----------------+".center(z)) #unamused face
+    print("|                                   |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|                                   |".center(z))
+    print("|                                   |".center(z))
+    print("|         ~~~~~~~~~~~~~~~~~         |".center(z))
+    print("|                                   |".center(z))
+    print("|                                   |".center(z))
+    print("+-----------------+-----------------+".center(z))
+def buddy_face_talkOption1():
+    print("+-----------------+-----------------+".center(z)) #talking, slight smile
+    print("|           __         __           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|                                   |".center(z))
+    print("|           _____________           |".center(z))
+    print("|          -_           _-          |".center(z))
+    print("|             --_____--             |".center(z))
+    print("|                                   |".center(z))
+    print("+-----------------+-----------------+".center(z))
+def buddy_face_talkOption2():
+    print("+-----------------+-----------------+".center(z)) #natural talking
+    print("|           __         __           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|                                   |".center(z))
+    print("|            ___________            |".center(z))
+    print("|           |           |           |".center(z))
+    print("|            ---_______-            |".center(z))
+    print("|                                   |".center(z))
+    print("+-----------------+-----------------+".center(z))
+def buddy_face_talkOption3():
+    print("+-----------------+-----------------+".center(z)) #talking, closed-ish mouth
+    print("|           __         __           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|                                   |".center(z))
+    print("|               _____               |".center(z))
+    print("|              |     |              |".center(z))
+    print("|               -___-               |".center(z))
+    print("|                                   |".center(z))
+    print("+-----------------+-----------------+".center(z))
+def buddy_face_question():
+    print("+-----------------+-----------------+".center(z)) #raised eyebrow, questioning
+    print("|           ==                      |".center(z))
+    print("|           ||         __           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|                                   |".center(z))
+    print("|       _____________________       |".center(z))
+    print("|        -__             __-        |".center(z))
+    print("|           ----_____----           |".center(z))
+    print("|                                   |".center(z))
+    print("+-----------------+-----------------+".center(z))
+
 #-----------------------------------------------------------
 
 
@@ -1640,18 +1703,7 @@ def study_buddy_wake_animation():
 
     time.sleep(0.05)
     os.system('clear')
-
-    print("+-----------------+-----------------+".center(z))
-    print("|           __         __           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|                                   |".center(z))
-    print("|       _____________________       |".center(z))
-    print("|        -__             __-        |".center(z))
-    print("|           ----_____----           |".center(z))
-    print("|                                   |".center(z))
-    print("+-----------------+-----------------+".center(z))
-
+    buddy_face_standard_smile()
     time.sleep(2)
 
 
@@ -1662,16 +1714,7 @@ def user_intro():
     randStudyBuddy = [["Merry","Comical","Whimsical","Absurd","Feral","Crazy","Happy","Lazy","Energetic","Smart","Gleeful","Grumpy","Nervous","Peaceful","Playful","Proud","Silly","Sleepy","Creative"],["Dog","Cat","Cow","Hen","Sheep","Rabbit","Duck","Horse","Pig","Turkey","Chicken","Donkey","Goat","Deer","Fish","Bee","Goat","Goose","Rat"]]
     while True:
         os.system('clear')
-        print("+-----------------+-----------------+".center(z))
-        print("|           __         __           |".center(z))
-        print("|           ||         ||           |".center(z))
-        print("|           ||         ||           |".center(z))
-        print("|                                   |".center(z))
-        print("|       _____________________       |".center(z))
-        print("|        -__             __-        |".center(z))
-        print("|           ----_____----           |".center(z))
-        print("|                                   |".center(z))
-        print("+-----------------+-----------------+".center(z))
+        buddy_face_standard_smile()
         print("")
         print("Which option would you like to use to name your Study Buddy?".center(z))
         print("\n")
@@ -1690,31 +1733,13 @@ def user_intro():
             studyBuddyNameList.append(random.choice(randStudyBuddy[1]))
             studyBuddyName = " ".join(studyBuddyNameList)
         else:
-            print("+-----------------+-----------------+".center(z))
-            print("|           __         __           |".center(z))
-            print("|           ||         ||           |".center(z))
-            print("|           ||         ||           |".center(z))
-            print("|                                   |".center(z))
-            print("|       _____________________       |".center(z))
-            print("|        -__             __-        |".center(z))
-            print("|           ----_____----           |".center(z))
-            print("|                                   |".center(z))
-            print("+-----------------+-----------------+".center(z))
+            buddy_face_standard_smile()
             print("")
             print("What would you like to call your Study Buddy?".center(z))
             studyBuddyName = input("\n")
             studyBuddyName = studyBuddyName.capitalize()
         os.system('clear')
-        print("+-----------------+-----------------+".center(z))
-        print("|           ==                      |".center(z))
-        print("|           ||         __           |".center(z))
-        print("|           ||         ||           |".center(z))
-        print("|                                   |".center(z))
-        print("|       _____________________       |".center(z))
-        print("|        -__             __-        |".center(z))
-        print("|           ----_____----           |".center(z))
-        print("|                                   |".center(z))
-        print("+-----------------+-----------------+".center(z))
+        buddy_face_question()
         print("")
         print(f"{studyBuddyName}? Does that sound right?".center(z))
         checkStudyName = input("\n")
@@ -1724,30 +1749,12 @@ def user_intro():
             pass
     while True:
         os.system('clear')
-        print("+-----------------+-----------------+".center(z))
-        print("|           __         __           |".center(z))
-        print("|           ||         ||           |".center(z))
-        print("|           ||         ||           |".center(z))
-        print("|                                   |".center(z))
-        print("|       _____________________       |".center(z))
-        print("|        -__             __-        |".center(z))
-        print("|           ----_____----           |".center(z))
-        print("|                                   |".center(z))
-        print("+-----------------+-----------------+".center(z))
+        buddy_face_standard_smile()
         print("")
         print("What would you like to be called?".center(z))
         userName = input("\n")
         os.system('clear')
-        print("+-----------------+-----------------+".center(z))
-        print("|           ==                      |".center(z))
-        print("|           ||         __           |".center(z))
-        print("|           ||         ||           |".center(z))
-        print("|                                   |".center(z))
-        print("|       _____________________       |".center(z))
-        print("|        -__             __-        |".center(z))
-        print("|           ----_____----           |".center(z))
-        print("|                                   |".center(z))
-        print("+-----------------+-----------------+".center(z))
+        buddy_face_question()
         print("")
         print(f"{userName.capitalize()}? Am I saying that right?".center(z))
         checkName = input("\n")
@@ -1757,16 +1764,7 @@ def user_intro():
             break
         else:
             pass
-    print("+-----------------+-----------------+".center(z))
-    print("|           __         __           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|                                   |".center(z))
-    print("|           _____________           |".center(z))
-    print("|          -_           _-          |".center(z))
-    print("|             --_____--             |".center(z))
-    print("|                                   |".center(z))
-    print("+-----------------+-----------------+".center(z))
+    buddy_face_talkOption1()
     print("")
     print(f"Hey there {userName}! I am your Study Buddy, but you can call me {studyBuddyName}".center(z))
     time.sleep(2.5)
@@ -1774,16 +1772,7 @@ def user_intro():
     print("Press ENTER to continue".center(z))
     input()
     os.system('clear')
-    print("+-----------------+-----------------+".center(z))
-    print("|           __         __           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|                                   |".center(z))
-    print("|               _____               |".center(z))
-    print("|              |     |              |".center(z))
-    print("|               -___-               |".center(z))
-    print("|                                   |".center(z))
-    print("+-----------------+-----------------+".center(z))
+    buddy_face_talkOption3()
     print("")
     print("If you want to change your preferences, type SETTINGS".center(z))
     time.sleep(2.5)
@@ -1791,16 +1780,7 @@ def user_intro():
     print("Press ENTER to continue".center(z))
     input()
     os.system('clear')
-    print("+-----------------+-----------------+".center(z))
-    print("|           __         __           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|                                   |".center(z))
-    print("|            ___________            |".center(z))
-    print("|           |           |           |".center(z))
-    print("|            ---_______-            |".center(z))
-    print("|                                   |".center(z))
-    print("+-----------------+-----------------+".center(z))
+    buddy_face_talkOption2()
     print("")
     print("At any point in time, type HELP for a hint or QUIT to shut me down".center(z))
     time.sleep(2.5)
@@ -1813,16 +1793,7 @@ def user_intro():
 
 def home_menu():
     global userInput
-    print("+-----------------+-----------------+".center(z))
-    print("|           __         __           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|                                   |".center(z))
-    print("|       _____________________       |".center(z))
-    print("|        -__             __-        |".center(z))
-    print("|           ----_____----           |".center(z))
-    print("|                                   |".center(z))
-    print("+-----------------+-----------------+".center(z))
+    buddy_face_standard_smile()
     print("")
     print("+---------------------+                +---------------------+".center(z))
     print("|                     |                |                     |".center(z))
@@ -1838,18 +1809,131 @@ def home_menu():
     userInput = input()
 
 def settings():
-    print("+-----------------+-----------------+".center(z))
-    print("|           __         __           |".center(z))
-    print("|           ||         ||           |".center(z))
-    print("|           ||         ||           |".center(z))
+    buddy_face_standard_smile()
     print("|                                   |".center(z))
-    print("|       _____________________       |".center(z))
-    print("|        -__             __-        |".center(z))
-    print("|           ----_____----           |".center(z))
+    print("|              SETTINGS             |".center(z))
     print("|                                   |".center(z))
     print("+-----------------+-----------------+".center(z))
+    print("")
+    #order will be csp, stats, physics, spanish
+    global subject
+    global fontColor
+    settingSentence = ["What is the name of the base computers use to count and read?" , "What percentage of a distribution is found in one standard deviation away from the mean, in both directions, of a normal distribution?" , "How do you find the coefficient of friction using normal and frictional force?","Qué quiere decir la palabra \"perro\" en español?"]
+    if subject.lower() == "csp":
+        if fontColor.lower() == "default":
+            print(Style.BRIGHT + settingSentence[0].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "red":
+            print(Style.BRIGHT + Fore.RED + settingSentence[0].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "green":
+            print(Style.BRIGHT + Fore.GREEN + settingSentence[0].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "yellow":
+            print(Style.BRIGHT + Fore.YELLOW + settingSentence[0].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "blue":
+            print(Style.BRIGHT + Fore.BLUE + settingSentence[0].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "magenta":
+            print(Style.BRIGHT + Fore.MAGENTA + settingSentence[0].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "cyan":
+            print(Style.BRIGHT + Fore.CYAN + settingSentence[0].center(z) + Style.RESET_ALL)
+    elif subject.lower() == "stats":
+        if fontColor.lower() == "default":
+            print(Style.BRIGHT + settingSentence[1].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "red":
+            print(Style.BRIGHT + Fore.RED + settingSentence[1].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "green":
+            print(Style.BRIGHT + Fore.GREEN + settingSentence[1].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "yellow":
+            print(Style.BRIGHT + Fore.YELLOW + settingSentence[1].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "blue":
+            print(Style.BRIGHT + Fore.BLUE + settingSentence[1].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "magenta":
+            print(Style.BRIGHT + Fore.MAGENTA + settingSentence[1].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "cyan":
+            print(Style.BRIGHT + Fore.CYAN + settingSentence[1].center(z) + Style.RESET_ALL)
+    elif subject.lower() == "phys":
+        if fontColor.lower() == "default":
+            print(Style.BRIGHT + settingSentence[2].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "red":
+            print(Style.BRIGHT + Fore.RED + settingSentence[2].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "green":
+            print(Style.BRIGHT + Fore.GREEN + settingSentence[2].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "yellow":
+            print(Style.BRIGHT + Fore.YELLOW + settingSentence[2].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "blue":
+            print(Style.BRIGHT + Fore.BLUE + settingSentence[2].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "magenta":
+            print(Style.BRIGHT + Fore.MAGENTA + settingSentence[2].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "cyan":
+            print(Style.BRIGHT + Fore.CYAN + settingSentence[2].center(z) + Style.RESET_ALL)
+    elif subject.lower() == "span":
+        if fontColor.lower() == "default":
+            print(Style.BRIGHT + settingSentence[3].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "red":
+            print(Style.BRIGHT + Fore.RED + settingSentence[3].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "green":
+            print(Style.BRIGHT + Fore.GREEN + settingSentence[3].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "yellow":
+            print(Style.BRIGHT + Fore.YELLOW + settingSentence[3].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "blue":
+            print(Style.BRIGHT + Fore.BLUE + settingSentence[3].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "magenta":
+            print(Style.BRIGHT + Fore.MAGENTA + settingSentence[3].center(z) + Style.RESET_ALL)
+        elif fontColor.lower() == "cyan":
+            print(Style.BRIGHT + Fore.CYAN + settingSentence[3].center(z) + Style.RESET_ALL)
+    print("")
+    global settingInput
+    if subject == "csp":
+        subjectName = "Computer Science"
+    elif subject == "stats":
+        subjectName = "Statistics"
+    elif subject == "phys":
+        subjectName = "Physics"
+    elif subject == "span":
+        subjectName = "Spanish"
+    print(Fore.WHITE + f"Subject:   {subjectName}".center(z))
+    print("")
+    print(Fore.WHITE + f"Font color:   {fontColor}".center(z))
+    print("")
+
+    settingInput = input(Fore.WHITE + Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n" + Style.RESET_ALL)
+    os.system('clear')
+    if settingInput.lower() == "subject":
+        print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)")
+        subjectPreference = input()
+        if subjectPreference.lower() != "csp" or subjectPreference.lower() != "phys" or subjectPreference.lower() != "span":
+            pass
+        else:
+          subject = subjectPreference.lower()
+            
+    elif settingInput.lower() == "font color":
+        print(("Default   " + Fore.RED + "Red   " + Style.RESET_ALL + "|" + Fore.YELLOW + "Yellow   " + Style.RESET_ALL + "|" + Fore.GREEN + "Green   " + Style.RESET_ALL + "|" + Fore.BLUE + "Blue   " + Style.RESET_ALL + "|" + Fore.MAGENTA + "Magenta   " + Style.RESET_ALL + "|" + Fore.CYAN + "Cyan" + Style.RESET_ALL + "|").center(z))
+        colorPreference = input()
+        if colorPreference.lower() == "red":
+            fontColor = "Red"
+            os.system('clear')
+        elif colorPreference.lower() == "yellow":
+            fontColor = "Yellow"
+            os.system('clear')
+        elif colorPreference.lower() == "green":
+            fontColor = "Green"
+            os.system('clear')
+        elif colorPreference.lower() == "blue":
+            fontColor = "Blue"
+            os.system('clear')
+        elif colorPreference.lower() == "magenta":
+            fontColor = "Magenta"
+            os.system('clear')
+        elif colorPreference.lower() == "cyan":
+            fontColor = "Cyan"
+            os.system('clear')
+        elif colorPreference.lower() == "default":
+            fontColor = "Default"
+            os.system('clear')
+    else:
+        pass
+
 
 def study_buddy(subject):
+    print("studyBuddy DO LATER")
     
 #def check_answer():
     
@@ -1861,34 +1945,14 @@ user_intro() #asks for the user's name and to name their Study Buddy
 while True:
     home_menu()
     if userInput.lower() == "start":
-        while True:
-            os.system('clear')
-            print("+-----------------+-----------------+".center(z))
-            print("|           __         __           |".center(z))
-            print("|           ||         ||           |".center(z))
-            print("|           ||         ||           |".center(z))
-            print("|                                   |".center(z))
-            print("|               _____               |".center(z))
-            print("|              |     |              |".center(z))
-            print("|               -___-               |".center(z))
-            print("|                                   |".center(z))
-            print("+-----------------+-----------------+".center(z))
-            print("")
-            print("Choose a subject: STATS - CSP - PHYSICS - SPANISH".center(z))
-            print("")
-            userInput = input()
-            if userInput.lower() == "quit":
-                sys.exit()
-            elif userInput.lower() == "stats" or userInput.lower() == "csp" or userInput.lower() == "physics" or userInput.lower() == "spanish":
-                subject = userInput.lower()
-                break
-            else:
-                pass
         study_buddy(subject) #MAKE SURE TO DO LATER
     elif userInput.lower() == "settings":
-        settings()
+        while True:
+            settings()
+            if settingInput == "back":
+                break
     elif userInput.lower() == "help":
-
+        print("help")
     elif userInput.lower() == "quit":
         sys.exit()
 
