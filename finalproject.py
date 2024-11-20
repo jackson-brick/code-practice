@@ -4,6 +4,7 @@ import os #To clear screen and maybe to get terminal size so things can be prope
 import math #May be used to get scores or to round
 from colorama import Style, Fore #Will be used to format and make the outputs look better
 import random #Will be used to randomize order of questions and to name the Study Buddy
+import sys
 
 #-----------------------------------------------------------
 #Global Variable Section
@@ -1768,7 +1769,10 @@ def user_intro():
     print("+-----------------+-----------------+".center(z))
     print("")
     print(f"Hey there {userName}! I am your Study Buddy, but you can call me {studyBuddyName}".center(z))
-    time.sleep(5)
+    time.sleep(2.5)
+    print("")
+    print("Press ENTER to continue".center(z))
+    input()
     os.system('clear')
     print("+-----------------+-----------------+".center(z))
     print("|           __         __           |".center(z))
@@ -1782,7 +1786,10 @@ def user_intro():
     print("+-----------------+-----------------+".center(z))
     print("")
     print("If you want to change your preferences, type SETTINGS".center(z))
-    time.sleep(5)
+    time.sleep(2.5)
+    print("")
+    print("Press ENTER to continue".center(z))
+    input()
     os.system('clear')
     print("+-----------------+-----------------+".center(z))
     print("|           __         __           |".center(z))
@@ -1795,8 +1802,11 @@ def user_intro():
     print("|                                   |".center(z))
     print("+-----------------+-----------------+".center(z))
     print("")
-    print("If you want to change your preferences, type SETTINGS".center(z))
-    time.sleep(5)
+    print("At any point in time, type HELP for a hint or QUIT to shut me down".center(z))
+    time.sleep(2.5)
+    print("")
+    print("Press ENTER to continue".center(z))
+    input()
     os.system('clear')
 
 
@@ -1827,19 +1837,60 @@ def home_menu():
     print("+---------------------+                +---------------------+".center(z))
     userInput = input()
 
+def settings():
+    print("+-----------------+-----------------+".center(z))
+    print("|           __         __           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|           ||         ||           |".center(z))
+    print("|                                   |".center(z))
+    print("|       _____________________       |".center(z))
+    print("|        -__             __-        |".center(z))
+    print("|           ----_____----           |".center(z))
+    print("|                                   |".center(z))
+    print("+-----------------+-----------------+".center(z))
 
-#def study_buddy(subject):
+def study_buddy(subject):
     
 #def check_answer():
     
 print("Press ENTER to wake up your Study Buddy!".center(z))
 input()
-study_buddy_wake_animation()
+#study_buddy_wake_animation()
 print("Please welcome the one, the only, Study Buddy!".center(z))
 user_intro() #asks for the user's name and to name their Study Buddy
 while True:
     home_menu()
-    
+    if userInput.lower() == "start":
+        while True:
+            os.system('clear')
+            print("+-----------------+-----------------+".center(z))
+            print("|           __         __           |".center(z))
+            print("|           ||         ||           |".center(z))
+            print("|           ||         ||           |".center(z))
+            print("|                                   |".center(z))
+            print("|               _____               |".center(z))
+            print("|              |     |              |".center(z))
+            print("|               -___-               |".center(z))
+            print("|                                   |".center(z))
+            print("+-----------------+-----------------+".center(z))
+            print("")
+            print("Choose a subject: STATS - CSP - PHYSICS - SPANISH".center(z))
+            print("")
+            userInput = input()
+            if userInput.lower() == "quit":
+                sys.exit()
+            elif userInput.lower() == "stats" or userInput.lower() == "csp" or userInput.lower() == "physics" or userInput.lower() == "spanish":
+                subject = userInput.lower()
+                break
+            else:
+                pass
+        study_buddy(subject) #MAKE SURE TO DO LATER
+    elif userInput.lower() == "settings":
+        settings()
+    elif userInput.lower() == "help":
+
+    elif userInput.lower() == "quit":
+        sys.exit()
 
 
 
