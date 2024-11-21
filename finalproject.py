@@ -14,7 +14,10 @@ z = screenSize[0] #Puts the width of the screen into a variable; ("blah blah bla
 subject = "csp" #sets default subject to Comp Sci
 fontColor = "default"
 screenMode = "dark"
-print(Back.BLACK)
+if screenMode == "dark":
+    print(Back.BLACK)
+elif screenMode == "light":
+    print(Back.WHITE)
 #-----------------------------------------------------------
 #Study Buddy face options storage
 #-----------------------------------------------------------
@@ -41,7 +44,6 @@ def buddy_face_standard_smile():
     print("|           ----_____----           |".center(z))
     print("|                                   |".center(z))
     print("+-----------------+-----------------+".center(z))
-
 def buddy_face_dead():
     print("+-----------------+-----------------+".center(z)) #Dead face
     print("|                                   |".center(z))
@@ -53,7 +55,6 @@ def buddy_face_dead():
     print("|                  | | |            |".center(z))
     print("|                   \ /             |".center(z))
     print("+-----------------+-----------------+".center(z))
-
 def buddy_face_unamused():
     print("+-----------------+-----------------+".center(z)) #unamused face
     print("|                                   |".center(z))
@@ -111,7 +112,8 @@ def buddy_face_question():
     print("+-----------------+-----------------+".center(z))
 
 #-----------------------------------------------------------
-
+#Space for all my functions
+#-----------------------------------------------------------
 
 def study_buddy_wake_animation():
       #01001010101010010101001010011100110 1
@@ -1706,7 +1708,6 @@ def study_buddy_wake_animation():
     os.system('clear')
     buddy_face_standard_smile()
     time.sleep(2)
-
 def help_animation():
     os.system('clear')
     buddy_face_talkOption1()
@@ -1733,8 +1734,6 @@ def help_animation():
     print("Press ENTER to continue".center(z))
     input()
     os.system('clear')
-
-
 def user_intro():
     global studyBuddyName
     global userName
@@ -1793,9 +1792,6 @@ def user_intro():
         else:
             pass
     help_animation()
-
-
-
 def home_menu():
     global userInput
     os.system('clear')
@@ -1813,14 +1809,16 @@ def home_menu():
     print("|                     |                |                     |".center(z))
     print("+---------------------+                +---------------------+".center(z))
     userInput = input()
-
 def settings():
+    global screenMode
     if screenMode == "dark":
         print(Back.BLACK)
     elif screenMode == "light":
         print(Back.WHITE)
     os.system('clear')
     global subject
+    global fontColor
+    #global screenMode
     buddy_face_standard_smile()
     print("|                                   |".center(z))
     print("|              SETTINGS             |".center(z))
@@ -1828,7 +1826,6 @@ def settings():
     print("+-----------------+-----------------+".center(z))
     print("")
     #order will be csp, stats, physics, spanish
-    global fontColor
     settingSentence = ["What is the name of the base computers use to count and read?" , "True or false: the median is more resistant than the mean" , "How do you find the coefficient of friction using normal and frictional force?","Qué quiere decir la palabra \"perro\" en inglés?"]
     if subject.lower() == "csp":
         if fontColor.lower() == "default":
@@ -2002,9 +1999,12 @@ def settings():
                 print(Back.BLACK)
             elif screenMode == "light":
                 print(Back.WHITE)
-    print("")
     
     global settingInput
+    if screenMode == "dark":
+        modeName = "Dark"
+    elif screenMode == "light":
+        modeName = "Light"
     if subject == "csp":
         subjectName = "Computer Science"
     elif subject == "stats":
@@ -2017,13 +2017,15 @@ def settings():
     print("")
     print(f"Font color:   {fontColor}".center(z))
     print("")
-    print
+    print(f"Screen Mode:   {modeName}".center(z))
+    print("")
 
-    settingInput = input(Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n" + Style.RESET_ALL)
+    
     if screenMode == "dark":
-        print(Back.BLACK)
+        print(Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + Style.RESET_ALL + Back.BLACK)
     elif screenMode == "light":
-        print(Back.WHITE)
+        print(Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + Style.RESET_ALL + Back.WHITE)
+    settingInput = input()
     os.system('clear')
     if settingInput.lower() == "subject":
         print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)".center(z))
@@ -2057,18 +2059,49 @@ def settings():
         elif colorPreference.lower() == "default":
             fontColor = "Default"
             os.system('clear')
+    elif settingInput.lower() == "screen mode":
+        if screenMode == "dark":
+            screenMode = "light"
+        elif screenMode == "light":
+            screenMode = "dark"
     else:
         pass
-
+def quit_animation():
+    os.system('clear')
+    buddy_face_question()
+    print("")
+    print("Wait, you are shutting me off?".center(z))
+    time.sleep(3)
+    os.system('clear')
+    buddy_face_unamused()
+    print("")
+    print("Wow, and I really thought we were becoming friends".center(z))
+    time.sleep(3)
+    os.system('clear')
+    buddy_face_talkOption3()
+    print("")
+    print(f"Wait, {userName}, I feel weird".center(z))
+    time.sleep(3)
+    os.system('clear')
+    buddy_face_talkOption3()
+    print("")
+    print(f"Please, please don't do thi-".center(z))
+    time.sleep(2)
+    os.system('clear')
+    buddy_face_dead()
+    sys.exit()
 
 def study_buddy(subject):
     print("studyBuddy DO LATER")
     
 #def check_answer():
     
+#-----------------------------------------------------------
+#Actual execution of code
+#-----------------------------------------------------------
 print("Press ENTER to wake up your Study Buddy!".center(z))
 input()
-#study_buddy_wake_animation()
+study_buddy_wake_animation()
 print("Please welcome the one, the only, Study Buddy!".center(z))
 user_intro() #asks for the user's name and to name their Study Buddy
 while True:
@@ -2083,26 +2116,4 @@ while True:
     elif userInput.lower() == "help":
         help_animation()
     elif userInput.lower() == "quit":
-        os.system('clear')
-        buddy_face_question()
-        print("")
-        print("Wait, you are shutting me off?".center(z))
-        time.sleep(3)
-        os.system('clear')
-        buddy_face_unamused()
-        print("")
-        print("Wow, and I really thought we were becoming friends".center(z))
-        time.sleep(3)
-        os.system('clear')
-        buddy_face_talkOption3()
-        print("")
-        print(f"Wait, {userName}, I feel weird".center(z))
-        time.sleep(3)
-        os.system('clear')
-        buddy_face_talkOption3()
-        print("")
-        print(f"Please, please don't do thi-".center(z))
-        time.sleep(2)
-        os.system('clear')
-        buddy_face_dead()
-        sys.exit()
+        quit_animation()
