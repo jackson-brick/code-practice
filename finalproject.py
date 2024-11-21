@@ -1904,6 +1904,7 @@ def settings():
     os.system('clear')
     if settingInput.lower() == "subject":
         print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)".center(z))
+        print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)".center(z))
         subjectPreference = input()
         if subjectPreference.lower() == "csp" or subjectPreference.lower() == "phys" or subjectPreference.lower() == "span" or subjectPreference.lower() == "stats":
             subject = subjectPreference.lower()
@@ -1983,14 +1984,3 @@ while True:
         os.system('clear')
         buddy_face_dead()
         sys.exit()
-
-
-
-
-
-
-
-
-
-
-
