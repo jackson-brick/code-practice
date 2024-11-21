@@ -1897,12 +1897,12 @@ def settings():
     settingInput = input(Fore.WHITE + Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n" + Style.RESET_ALL)
     os.system('clear')
     if settingInput.lower() == "subject":
-        print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)")
+        print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)".center(z))
         subjectPreference = input()
-        if subjectPreference.lower() != "csp" or subjectPreference.lower() != "phys" or subjectPreference.lower() != "span":
-            pass
+        if subjectPreference.lower() == "csp" or subjectPreference.lower() == "phys" or subjectPreference.lower() == "span" or subjectPreference.lower() == "stats":
+            subject = subjectPreference.lower()
         else:
-          subject = subjectPreference.lower()
+          pass
             
     elif settingInput.lower() == "font color":
         print(("Default   " + Fore.RED + "Red   " + Style.RESET_ALL + "|" + Fore.YELLOW + "Yellow   " + Style.RESET_ALL + "|" + Fore.GREEN + "Green   " + Style.RESET_ALL + "|" + Fore.BLUE + "Blue   " + Style.RESET_ALL + "|" + Fore.MAGENTA + "Magenta   " + Style.RESET_ALL + "|" + Fore.CYAN + "Cyan" + Style.RESET_ALL + "|").center(z))
@@ -1955,14 +1955,3 @@ while True:
         print("help")
     elif userInput.lower() == "quit":
         sys.exit()
-
-
-
-
-
-
-
-
-
-
-
