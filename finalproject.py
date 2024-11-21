@@ -2,7 +2,7 @@
 import time #To add delays between screen outputs
 import os #To clear screen and maybe to get terminal size so things can be properly centered no matter what size the screen is
 import math #May be used to get scores or to round
-from colorama import Style, Fore #Will be used to format and make the outputs look better
+from colorama import Style, Fore, Back #Will be used to format and make the outputs look better
 import random #Will be used to randomize order of questions and to name the Study Buddy
 import sys #will be used for its 'sys.exit()' function to quit the program easily at any time
 
@@ -13,7 +13,8 @@ screenSize = os.get_terminal_size() #This gets the width and height of the termi
 z = screenSize[0] #Puts the width of the screen into a variable; ("blah blah blah".center(z))
 subject = "csp" #sets default subject to Comp Sci
 fontColor = "default"
-
+screenMode = "dark"
+print(Back.BLACK)
 #-----------------------------------------------------------
 #Study Buddy face options storage
 #-----------------------------------------------------------
@@ -1814,6 +1815,10 @@ def home_menu():
     userInput = input()
 
 def settings():
+    if screenMode == "dark":
+        print(Back.BLACK)
+    elif screenMode == "light":
+        print(Back.WHITE)
     os.system('clear')
     global subject
     buddy_face_standard_smile()
@@ -1828,64 +1833,177 @@ def settings():
     if subject.lower() == "csp":
         if fontColor.lower() == "default":
             print(Style.BRIGHT + settingSentence[0].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "red":
             print(Style.BRIGHT + Fore.RED + settingSentence[0].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "green":
             print(Style.BRIGHT + Fore.GREEN + settingSentence[0].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "yellow":
             print(Style.BRIGHT + Fore.YELLOW + settingSentence[0].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "blue":
             print(Style.BRIGHT + Fore.BLUE + settingSentence[0].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "magenta":
             print(Style.BRIGHT + Fore.MAGENTA + settingSentence[0].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "cyan":
             print(Style.BRIGHT + Fore.CYAN + settingSentence[0].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
     elif subject.lower() == "stats":
         if fontColor.lower() == "default":
             print(Style.BRIGHT + settingSentence[1].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "red":
             print(Style.BRIGHT + Fore.RED + settingSentence[1].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "green":
             print(Style.BRIGHT + Fore.GREEN + settingSentence[1].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "yellow":
             print(Style.BRIGHT + Fore.YELLOW + settingSentence[1].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "blue":
             print(Style.BRIGHT + Fore.BLUE + settingSentence[1].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "magenta":
             print(Style.BRIGHT + Fore.MAGENTA + settingSentence[1].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "cyan":
             print(Style.BRIGHT + Fore.CYAN + settingSentence[1].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
     elif subject.lower() == "phys":
         if fontColor.lower() == "default":
             print(Style.BRIGHT + settingSentence[2].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "red":
             print(Style.BRIGHT + Fore.RED + settingSentence[2].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "green":
             print(Style.BRIGHT + Fore.GREEN + settingSentence[2].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "yellow":
             print(Style.BRIGHT + Fore.YELLOW + settingSentence[2].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "blue":
             print(Style.BRIGHT + Fore.BLUE + settingSentence[2].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "magenta":
             print(Style.BRIGHT + Fore.MAGENTA + settingSentence[2].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "cyan":
             print(Style.BRIGHT + Fore.CYAN + settingSentence[2].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
     elif subject.lower() == "span":
         if fontColor.lower() == "default":
             print(Style.BRIGHT + settingSentence[3].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "red":
             print(Style.BRIGHT + Fore.RED + settingSentence[3].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "green":
             print(Style.BRIGHT + Fore.GREEN + settingSentence[3].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "yellow":
             print(Style.BRIGHT + Fore.YELLOW + settingSentence[3].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "blue":
             print(Style.BRIGHT + Fore.BLUE + settingSentence[3].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "magenta":
             print(Style.BRIGHT + Fore.MAGENTA + settingSentence[3].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
         elif fontColor.lower() == "cyan":
             print(Style.BRIGHT + Fore.CYAN + settingSentence[3].center(z) + Style.RESET_ALL)
+            if screenMode == "dark":
+                print(Back.BLACK)
+            elif screenMode == "light":
+                print(Back.WHITE)
     print("")
+    
     global settingInput
     if subject == "csp":
         subjectName = "Computer Science"
@@ -1895,15 +2013,19 @@ def settings():
         subjectName = "Physics"
     elif subject == "span":
         subjectName = "Spanish"
-    print(Fore.WHITE + f"Subject:   {subjectName}".center(z))
+    print(f"Subject:   {subjectName}".center(z))
     print("")
-    print(Fore.WHITE + f"Font color:   {fontColor}".center(z))
+    print(f"Font color:   {fontColor}".center(z))
     print("")
+    print
 
-    settingInput = input(Fore.WHITE + Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n" + Style.RESET_ALL)
+    settingInput = input(Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n" + Style.RESET_ALL)
+    if screenMode == "dark":
+        print(Back.BLACK)
+    elif screenMode == "light":
+        print(Back.WHITE)
     os.system('clear')
     if settingInput.lower() == "subject":
-        print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)".center(z))
         print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)".center(z))
         subjectPreference = input()
         if subjectPreference.lower() == "csp" or subjectPreference.lower() == "phys" or subjectPreference.lower() == "span" or subjectPreference.lower() == "stats":
@@ -1912,7 +2034,7 @@ def settings():
             pass
             
     elif settingInput.lower() == "font color":
-        print(("Default   " + Fore.RED + "Red   " + Style.RESET_ALL + "|" + Fore.YELLOW + "Yellow   " + Style.RESET_ALL + "|" + Fore.GREEN + "Green   " + Style.RESET_ALL + "|" + Fore.BLUE + "Blue   " + Style.RESET_ALL + "|" + Fore.MAGENTA + "Magenta   " + Style.RESET_ALL + "|" + Fore.CYAN + "Cyan" + Style.RESET_ALL + "|").center(z))
+        print(("Default   " + Fore.RED + "Red   " + Fore.YELLOW + "Yellow   " + Fore.GREEN + "Green   " + Fore.BLUE + "Blue   " + Fore.MAGENTA + "Magenta   " + Fore.CYAN + "Cyan").center(z))
         colorPreference = input()
         if colorPreference.lower() == "red":
             fontColor = "Red"
