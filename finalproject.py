@@ -1706,6 +1706,33 @@ def study_buddy_wake_animation():
     buddy_face_standard_smile()
     time.sleep(2)
 
+def help_animation():
+    os.system('clear')
+    buddy_face_talkOption1()
+    print("")
+    print(f"Hey there {userName}! I am your Study Buddy, but you can call me {studyBuddyName}".center(z))
+    time.sleep(2.5)
+    print("")
+    print("Press ENTER to continue".center(z))
+    input()
+    os.system('clear')
+    buddy_face_talkOption3()
+    print("")
+    print("If you want to change your preferences, type SETTINGS".center(z))
+    time.sleep(2.5)
+    print("")
+    print("Press ENTER to continue".center(z))
+    input()
+    os.system('clear')
+    buddy_face_talkOption2()
+    print("")
+    print("At any point in time, type HELP for a hint or QUIT to shut me down".center(z))
+    time.sleep(2.5)
+    print("")
+    print("Press ENTER to continue".center(z))
+    input()
+    os.system('clear')
+
 
 def user_intro():
     global studyBuddyName
@@ -1764,35 +1791,13 @@ def user_intro():
             break
         else:
             pass
-    buddy_face_talkOption1()
-    print("")
-    print(f"Hey there {userName}! I am your Study Buddy, but you can call me {studyBuddyName}".center(z))
-    time.sleep(2.5)
-    print("")
-    print("Press ENTER to continue".center(z))
-    input()
-    os.system('clear')
-    buddy_face_talkOption3()
-    print("")
-    print("If you want to change your preferences, type SETTINGS".center(z))
-    time.sleep(2.5)
-    print("")
-    print("Press ENTER to continue".center(z))
-    input()
-    os.system('clear')
-    buddy_face_talkOption2()
-    print("")
-    print("At any point in time, type HELP for a hint or QUIT to shut me down".center(z))
-    time.sleep(2.5)
-    print("")
-    print("Press ENTER to continue".center(z))
-    input()
-    os.system('clear')
+    help_animation()
 
 
 
 def home_menu():
     global userInput
+    os.system('clear')
     buddy_face_standard_smile()
     print("")
     print("+---------------------+                +---------------------+".center(z))
@@ -1809,6 +1814,8 @@ def home_menu():
     userInput = input()
 
 def settings():
+    os.system('clear')
+    global subject
     buddy_face_standard_smile()
     print("|                                   |".center(z))
     print("|              SETTINGS             |".center(z))
@@ -1816,9 +1823,8 @@ def settings():
     print("+-----------------+-----------------+".center(z))
     print("")
     #order will be csp, stats, physics, spanish
-    global subject
     global fontColor
-    settingSentence = ["What is the name of the base computers use to count and read?" , "What percentage of a distribution is found in one standard deviation away from the mean, in both directions, of a normal distribution?" , "How do you find the coefficient of friction using normal and frictional force?","Qué quiere decir la palabra \"perro\" en español?"]
+    settingSentence = ["What is the name of the base computers use to count and read?" , "True or false: the median is more resistant than the mean" , "How do you find the coefficient of friction using normal and frictional force?","Qué quiere decir la palabra \"perro\" en inglés?"]
     if subject.lower() == "csp":
         if fontColor.lower() == "default":
             print(Style.BRIGHT + settingSentence[0].center(z) + Style.RESET_ALL)
@@ -1897,12 +1903,12 @@ def settings():
     settingInput = input(Fore.WHITE + Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + "\n" + Style.RESET_ALL)
     os.system('clear')
     if settingInput.lower() == "subject":
-        print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)")
+        print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)".center(z))
         subjectPreference = input()
-        if subjectPreference.lower() != "csp" or subjectPreference.lower() != "phys" or subjectPreference.lower() != "span":
-            pass
+        if subjectPreference.lower() == "csp" or subjectPreference.lower() == "phys" or subjectPreference.lower() == "span" or subjectPreference.lower() == "stats":
+            subject = subjectPreference.lower()
         else:
-          subject = subjectPreference.lower()
+            pass
             
     elif settingInput.lower() == "font color":
         print(("Default   " + Fore.RED + "Red   " + Style.RESET_ALL + "|" + Fore.YELLOW + "Yellow   " + Style.RESET_ALL + "|" + Fore.GREEN + "Green   " + Style.RESET_ALL + "|" + Fore.BLUE + "Blue   " + Style.RESET_ALL + "|" + Fore.MAGENTA + "Magenta   " + Style.RESET_ALL + "|" + Fore.CYAN + "Cyan" + Style.RESET_ALL + "|").center(z))
@@ -1952,8 +1958,30 @@ while True:
             if settingInput == "back":
                 break
     elif userInput.lower() == "help":
-        print("help")
+        help_animation()
     elif userInput.lower() == "quit":
+        os.system('clear')
+        buddy_face_question()
+        print("")
+        print("Wait, you are shutting me off?".center(z))
+        time.sleep(3)
+        os.system('clear')
+        buddy_face_unamused()
+        print("")
+        print("Wow, and I really thought we were becoming friends".center(z))
+        time.sleep(3)
+        os.system('clear')
+        buddy_face_talkOption3()
+        print("")
+        print(f"Wait, {userName}, I feel weird".center(z))
+        time.sleep(3)
+        os.system('clear')
+        buddy_face_talkOption3()
+        print("")
+        print(f"Please, please don't do thi-".center(z))
+        time.sleep(2)
+        os.system('clear')
+        buddy_face_dead()
         sys.exit()
 
 
