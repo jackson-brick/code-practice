@@ -5,6 +5,10 @@ import math #May be used to get scores or to round
 from colorama import Style, Fore, Back #Will be used to format and make the outputs look better
 import random #Will be used to randomize order of questions and to name the Study Buddy
 import sys #will be used for its 'sys.exit()' function to quit the program easily at any time
+import json
+
+with open('questions.json', 'r') as file:
+    questions = json.load(file)
 
 #-----------------------------------------------------------
 #Global Variable Section
