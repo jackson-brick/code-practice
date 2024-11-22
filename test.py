@@ -3,7 +3,7 @@ import os
 
 os.system('clear')
 print("Who is the best person ever?")
-print("\n\ta. Jackson\tb. Zoe\tc. Evany\td. Envy")
+print(Style.BRIGHT + "\n\ta. Jackson\tb. Benji\tc. Evany\td. Envy" + Style.DIM)
 input()
 os.system('clear')
 print("Who is the best person ever?")
