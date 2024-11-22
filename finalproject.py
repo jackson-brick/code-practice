@@ -1791,7 +1791,7 @@ def user_intro():
             break
         else:
             pass
-    help_animation()
+    #help_animation()
 def home_menu():
     global userInput
     os.system('clear')
@@ -2037,6 +2037,11 @@ def settings():
             
     elif settingInput.lower() == "font color":
         print(("Default   " + Fore.RED + "Red   " + Fore.YELLOW + "Yellow   " + Fore.GREEN + "Green   " + Fore.BLUE + "Blue   " + Fore.MAGENTA + "Magenta   " + Fore.CYAN + "Cyan").center(z))
+        print(Style.RESET_ALL)
+        if screenMode == "dark":
+            print(Back.BLACK)
+        elif screenMode == "light":
+            print(Back.WHITE)
         colorPreference = input()
         if colorPreference.lower() == "red":
             fontColor = "Red"
