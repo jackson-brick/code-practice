@@ -23,6 +23,7 @@ endSpace = 17
 progBarSects = int((z-endSpace)/qAmount) - 1 #-1 to determine how many '#' to print for progress bar excluding '|'
 print(Back.BLACK)
 userName = "buddy"
+gameMode = "quiz"
 #-----------------------------------------------------------
 #Study Buddy face options storage
 #-----------------------------------------------------------
@@ -1908,13 +1909,15 @@ def settings():
         subjectName = "Physics"
     elif subject == "span":
         subjectName = "Spanish"
-    print(f"Subject:   {subjectName}".center(z))
+    print(f"Subject:   {subjectName.capitalize()}".center(z))
     print("")
-    print(f"Font color:   {fontColor}".center(z))
+    print(f"Font color:   {fontColor.capitalize()}".center(z))
     print("")
-    print(f"Screen Mode:   {modeName}".center(z))
+    print(f"Screen Mode:   {modeName.capitalize()}".center(z))
     print("")
     print(f"Question Amount:   {qAmount}".center(z))
+    print("")
+    print(f"Game Mode:   {gameMode.capitalize()}".center(z))
     print("")
 
     
