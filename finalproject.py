@@ -1961,11 +1961,12 @@ def settings():
         print("How many questions would you like to have? (Note: You may choose a number from 8 to 25)".center(z))
         qInput = input("\n\n\n")
         if qInput.isdigit():
-            if int(qInput) < 26 or int(qInput) > 7:
+            if int(qInput) <= 25 and int(qInput) >= 8:
                 qAmount = int(qInput)
                 progBarSects = int((z-17)/qAmount) - 1
             else:
-                pass
+                print(Fore.RED + Style.BRIGHT + "You can only have 8 to 25 questions!".center(z) + Fore.RESET + Style.NORMAL)
+                time.sleep(2)
         else: 
             pass
     elif settingInput.lower() == "quit":
@@ -2011,10 +2012,12 @@ def study_buddy(subject):
         if ques == 0:
             percentRight = 0
         else:
-            percentRight = checkCounter/ques * 100
-        print("+" + ("-" * ((progBarSects * qAmount) + 15)) + "+")
+            percentRight = checkCounter/ques * 1000
+            percentRight = int(percentRight)
+            percentRight /= 10
+        print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
         print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
-        print("+" + ("-" * ((progBarSects * qAmount) + 15)) + "+")
+        print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
         print("\n")
         if fontColor.lower() == "default":
             print(questions[subject][usedQList[ques]]["question"])
@@ -2044,9 +2047,9 @@ def study_buddy(subject):
                 mcqList.remove(correctAnswer)
                 mcqList.remove(random.choice(mcqList))
                 os.system('clear')
-                print("+" + ("-" * ((progBarSects * qAmount) + 15)) + "+")
+                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
                 print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (10-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
-                print("+" + ("-" * ((progBarSects * qAmount) + 15)) + "+")
+                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
                 print("\n")
                 if fontColor.lower() == "default":
                     print(questions[subject][usedQList[ques]]["question"])
@@ -2121,9 +2124,9 @@ def study_buddy(subject):
                 quit_animation()
             elif userAnswer.lower() == "help":
                 os.system('clear')
-                print("+" + ("-" * ((progBarSects * qAmount) + 15)) + "+")
+                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
                 print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (10-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
-                print("+" + ("-" * ((progBarSects * qAmount) + 15)) + "+")
+                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
                 print("\n")
                 if fontColor.lower() == "default":
                     print(questions[subject][usedQList[ques]]["question"])
@@ -2184,9 +2187,9 @@ def study_buddy(subject):
                 quit_animation()
             elif userAnswer.lower() == "help":
                 os.system('clear')
-                print("+" + ("-" * ((progBarSects * qAmount) + 15)) + "+")
+                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
                 print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (10-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
-                print("+" + ("-" * ((progBarSects * qAmount) + 15)) + "+")
+                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
                 print("\n")
                 if fontColor.lower() == "default":
                     print(questions[subject][usedQList[ques]]["question"])
@@ -2238,8 +2241,20 @@ def study_buddy(subject):
                         time.sleep(3)
                         pass
                 os.system('clear')
+
+    buddy_face_standard_smile()
+    print("")
+    print("\n" + f"You got {checkCounter} questions correct!".center(z))
+    time.sleep(3)
+    print("\n" + f"That is an accuracy of {percentRight}%".center(z))
+    time.sleep(3)
+    if percentRight >= 80:
+        print("Great work! Keep it up!".center(z))
+    elif percentRight >= 60:
+        print("You're on the right track, keep on learning!".center(z))
+    else:
+        print("Hey, maybe next time! Keep progressing and you'll get there!".center(z))
     
-#def check_answer():
     
 #-----------------------------------------------------------
 #Actual execution of code
