@@ -8,3 +8,5 @@ mcqList.remove(random.choice(mcqList))
 print(mcqList)
 
 print(int(7.9))
+
+print("'to discover'")
