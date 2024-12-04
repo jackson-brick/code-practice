@@ -19,8 +19,10 @@ subject = "csp" #sets default subject to Comp Sci
 fontColor = "default"
 screenMode = "dark"
 qAmount = 10
-progBarSects = int((z-17)/qAmount) - 1
+endSpace = 17
+progBarSects = int((z-endSpace)/qAmount) - 1 #-1 to determine how many '#' to print for progress bar excluding '|'
 print(Back.BLACK)
+userName = "buddy"
 #-----------------------------------------------------------
 #Study Buddy face options storage
 #-----------------------------------------------------------
@@ -1963,7 +1965,7 @@ def settings():
         if qInput.isdigit():
             if int(qInput) <= 25 and int(qInput) >= 8:
                 qAmount = int(qInput)
-                progBarSects = int((z-17)/qAmount) - 1
+                progBarSects = int((z-endSpace)/qAmount) - 1
             else:
                 print(Fore.RED + Style.BRIGHT + "You can only have 8 to 25 questions!".center(z) + Fore.RESET + Style.NORMAL)
                 time.sleep(2)
@@ -1997,7 +1999,6 @@ def quit_animation():
     os.system('clear')
     buddy_face_dead()
     sys.exit()
-
 def study_buddy(subject):
     global checkCounter
     checkCounter = 0
@@ -2048,7 +2049,7 @@ def study_buddy(subject):
                 mcqList.remove(random.choice(mcqList))
                 os.system('clear')
                 print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-                print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (10-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
+                print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
                 print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
                 print("\n")
                 if fontColor.lower() == "default":
@@ -2125,7 +2126,7 @@ def study_buddy(subject):
             elif userAnswer.lower() == "help":
                 os.system('clear')
                 print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-                print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (10-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
+                print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
                 print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
                 print("\n")
                 if fontColor.lower() == "default":
@@ -2188,7 +2189,7 @@ def study_buddy(subject):
             elif userAnswer.lower() == "help":
                 os.system('clear')
                 print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-                print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (10-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
+                print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
                 print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
                 print("\n")
                 if fontColor.lower() == "default":
@@ -2242,18 +2243,25 @@ def study_buddy(subject):
                         pass
                 os.system('clear')
 
+    finalScore = int((checkCounter/qAmount) * 1000)
+    finalScore /= 10
     buddy_face_standard_smile()
     print("")
     print("\n" + f"You got {checkCounter} questions correct!".center(z))
     time.sleep(3)
-    print("\n" + f"That is an accuracy of {percentRight}%".center(z))
+    print("\n" + f"That is an accuracy of {finalScore}%".center(z))
     time.sleep(3)
+    print("")
     if percentRight >= 80:
         print("Great work! Keep it up!".center(z))
     elif percentRight >= 60:
         print("You're on the right track, keep on learning!".center(z))
     else:
         print("Hey, maybe next time! Keep progressing and you'll get there!".center(z))
+    time.sleep(3)
+    print("\n")
+    print("Press ENTER to continue".center(z))
+    input()
     
     
 #-----------------------------------------------------------
@@ -2267,7 +2275,7 @@ print("Please welcome the one, the only, Study Buddy!".center(z))
 while True:
     home_menu()
     if userInput.lower() == "start":
-        study_buddy(subject) #MAKE SURE TO DO LATER
+        study_buddy(subject) 
     elif userInput.lower() == "settings":
         while True:
             settings()
