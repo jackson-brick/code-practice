@@ -1822,6 +1822,7 @@ def settings():
     global fontColor
     global qAmount
     global progBarSects
+    global gameMode
     if screenMode == "dark":
         print(Back.BLACK)
     elif screenMode == "light":
@@ -1909,16 +1910,21 @@ def settings():
         subjectName = "Physics"
     elif subject == "span":
         subjectName = "Spanish"
+    print("")
     print(f"Subject:   {subjectName.capitalize()}".center(z))
     print("")
     print(f"Font color:   {fontColor.capitalize()}".center(z))
     print("")
     print(f"Screen Mode:   {modeName.capitalize()}".center(z))
     print("")
-    print(f"Question Amount:   {qAmount}".center(z))
-    print("")
     print(f"Game Mode:   {gameMode.capitalize()}".center(z))
-    print("")
+    print("")    
+    if gameMode.lower() == "quiz":
+        print(f"Question Amount:   {qAmount}".center(z))
+        print("")
+    elif gameMode.lower() == "flashcards":
+        pass
+
 
     
     print(Style.BRIGHT + "To change a setting, type the name of the setting".center(z) + "Type BACK to return to the start screen:".center(z) + Style.NORMAL)
@@ -1927,8 +1933,17 @@ def settings():
     if settingInput.lower() == "subject":
         print("Computer Science (CSP) | Statistics (STATS) | Physics (PHYS) | Spanish (SPAN)".center(z))
         subjectPreference = input()
-        if subjectPreference.lower() == "csp" or subjectPreference.lower() == "phys" or subjectPreference.lower() == "span" or subjectPreference.lower() == "stats":
-            subject = subjectPreference.lower()
+        if subjectPreference.lower() == "csp" or subjectPreference.lower() == "phys" or subjectPreference.lower() == "span" or subjectPreference.lower() == "stats" or subjectPreference.lower() == "computer science" or subjectPreference.lower() == "statistics" or subjectPreference.lower() == "physics" or subjectPreference.lower() == "spanish":
+            if subjectPreference.lower() == "computer science":
+                subject = "csp"
+            elif subjectPreference.lower() == "statistics":
+                subject = "stats"
+            elif subjectPreference.lower() == "physics":
+                subject = "phys"
+            elif subjectPreference.lower() == "spanish":
+                subject = "span"
+            else:
+                subject = subjectPreference.lower()
         else:
             pass
             
@@ -1974,6 +1989,11 @@ def settings():
                 time.sleep(2)
         else: 
             pass
+    elif settingInput.lower() == "game mode":
+        if gameMode == "quiz":
+            gameMode = "flashcards"
+        elif gameMode == "flashcards":
+            gameMode = "quiz"
     elif settingInput.lower() == "quit":
         quit_animation()
     else:
@@ -2004,91 +2024,108 @@ def quit_animation():
     sys.exit()
 def study_buddy(subject):
     global checkCounter
-    checkCounter = 0
-    randomQChoice = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
-    usedQList = []
-    for lcv in range(qAmount):
-        ele = random.choice(randomQChoice)
-        usedQList.append(ele)
-        randomQChoice.remove(ele)
-    os.system('clear')
-    for ques in range(qAmount):
-        if ques == 0:
-            percentRight = 0
-        else:
-            percentRight = checkCounter/ques * 1000
-            percentRight = int(percentRight)
-            percentRight /= 10
-        print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-        print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
-        print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-        print("\n")
-        if fontColor.lower() == "default":
-            print(questions[subject][usedQList[ques]]["question"])
-        elif fontColor.lower() == "red":
-            print(Fore.RED + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-        elif fontColor.lower() == "yellow":
-            print(Fore.YELLOW + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-        elif fontColor.lower() == "green":
-            print(Fore.GREEN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-        elif fontColor.lower() == "blue":
-            print(Fore.BLUE + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-        elif fontColor.lower() == "magenta":
-            print(Fore.MAGENTA + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-        elif fontColor.lower() == "cyan":
-            print(Fore.CYAN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-        if questions[subject][usedQList[ques]]["qtype"] == "mcq":
-            print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionA"])
-            print(questions[subject][usedQList[ques]]["optionB"])
-            print(questions[subject][usedQList[ques]]["optionC"])
-            print(questions[subject][usedQList[ques]]["optionD"] + Style.NORMAL)
-            userAnswer = input()
-            if userAnswer.lower() == "quit":
-                quit_animation()
-            elif userAnswer.lower() == "help":
-                mcqList = ["a","b","c","d"]
-                correctAnswer = questions[subject][usedQList[ques]]["answer"]
-                mcqList.remove(correctAnswer)
-                mcqList.remove(random.choice(mcqList))
-                os.system('clear')
-                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-                print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
-                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-                print("\n")
-                if fontColor.lower() == "default":
-                    print(questions[subject][usedQList[ques]]["question"])
-                elif fontColor.lower() == "red":
-                    print(Fore.RED + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "yellow":
-                    print(Fore.YELLOW + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "green":
-                    print(Fore.GREEN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "blue":
-                    print(Fore.BLUE + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "magenta":
-                    print(Fore.MAGENTA + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "cyan":
-                    print(Fore.CYAN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-
-                if mcqList[0] == "a": 
-                    print(Style.DIM + questions[subject][usedQList[ques]]["optionA"] + Style.NORMAL)
-                else:
-                    print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionA"] + Style.NORMAL)
-                if mcqList[0] == "b" or mcqList[1] == "b":
-                    print(Style.DIM + questions[subject][usedQList[ques]]["optionB"] + Style.NORMAL)
-                else:
-                    print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionB"] + Style.NORMAL)
-                if mcqList[0] == "c" or mcqList[1] == "c":
-                    print(Style.DIM + questions[subject][usedQList[ques]]["optionC"] + Style.NORMAL)
-                else:
-                    print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionC"] + Style.NORMAL)
-                if mcqList[1] == "d":
-                    print(Style.DIM + questions[subject][usedQList[ques]]["optionD"] + Style.NORMAL)
-                else:
-                    print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionD"] + Style.NORMAL)
+    if gameMode == "quiz":
+        checkCounter = 0
+        randomQChoice = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+        usedQList = []
+        for lcv in range(qAmount):
+            ele = random.choice(randomQChoice)
+            usedQList.append(ele)
+            randomQChoice.remove(ele)
+        os.system('clear')
+        for ques in range(qAmount):
+            if ques == 0:
+                percentRight = 0
+            else:
+                percentRight = checkCounter/ques * 1000
+                percentRight = int(percentRight)
+                percentRight /= 10
+            print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
+            print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
+            print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
+            print("\n")
+            if fontColor.lower() == "default":
+                print(questions[subject][usedQList[ques]]["question"])
+            elif fontColor.lower() == "red":
+                print(Fore.RED + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+            elif fontColor.lower() == "yellow":
+                print(Fore.YELLOW + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+            elif fontColor.lower() == "green":
+                print(Fore.GREEN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+            elif fontColor.lower() == "blue":
+                print(Fore.BLUE + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+            elif fontColor.lower() == "magenta":
+                print(Fore.MAGENTA + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+            elif fontColor.lower() == "cyan":
+                print(Fore.CYAN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+            if questions[subject][usedQList[ques]]["qtype"] == "mcq":
+                print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionA"])
+                print(questions[subject][usedQList[ques]]["optionB"])
+                print(questions[subject][usedQList[ques]]["optionC"])
+                print(questions[subject][usedQList[ques]]["optionD"] + Style.NORMAL)
                 userAnswer = input()
                 if userAnswer.lower() == "quit":
                     quit_animation()
+                elif userAnswer.lower() == "help":
+                    mcqList = ["a","b","c","d"]
+                    correctAnswer = questions[subject][usedQList[ques]]["answer"]
+                    mcqList.remove(correctAnswer)
+                    mcqList.remove(random.choice(mcqList))
+                    os.system('clear')
+                    print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
+                    print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
+                    print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
+                    print("\n")
+                    if fontColor.lower() == "default":
+                        print(questions[subject][usedQList[ques]]["question"])
+                    elif fontColor.lower() == "red":
+                        print(Fore.RED + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "yellow":
+                        print(Fore.YELLOW + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "green":
+                        print(Fore.GREEN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "blue":
+                        print(Fore.BLUE + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "magenta":
+                        print(Fore.MAGENTA + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "cyan":
+                        print(Fore.CYAN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+
+                    if mcqList[0] == "a": 
+                        print(Style.DIM + questions[subject][usedQList[ques]]["optionA"] + Style.NORMAL)
+                    else:
+                        print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionA"] + Style.NORMAL)
+                    if mcqList[0] == "b" or mcqList[1] == "b":
+                        print(Style.DIM + questions[subject][usedQList[ques]]["optionB"] + Style.NORMAL)
+                    else:
+                        print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionB"] + Style.NORMAL)
+                    if mcqList[0] == "c" or mcqList[1] == "c":
+                        print(Style.DIM + questions[subject][usedQList[ques]]["optionC"] + Style.NORMAL)
+                    else:
+                        print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionC"] + Style.NORMAL)
+                    if mcqList[1] == "d":
+                        print(Style.DIM + questions[subject][usedQList[ques]]["optionD"] + Style.NORMAL)
+                    else:
+                        print(Style.BRIGHT + questions[subject][usedQList[ques]]["optionD"] + Style.NORMAL)
+                    userAnswer = input()
+                    if userAnswer.lower() == "quit":
+                        quit_animation()
+                    else:
+                        if userAnswer.isdigit():
+                            if userAnswer == questions[subject][usedQList[ques]]["altanswer"]:
+                                checkCounter += 1
+                                print(Style.BRIGHT + Fore.GREEN + "Correct!" + Fore.RESET + Style.NORMAL)
+                                time.sleep(1.5)
+                        else:
+                            if userAnswer.lower() == questions[subject][usedQList[ques]]["answer"] or userAnswer.lower() == questions[subject][usedQList[ques]]["altanswer"]:
+                                checkCounter += 1
+                                print(Style.BRIGHT + Fore.GREEN + "Correct!" +Fore.RESET + Style.NORMAL)
+                                time.sleep(1.5)
+                            else:
+                                print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
+                                time.sleep(3)
+                                pass
+                        os.system('clear')
                 else:
                     if userAnswer.isdigit():
                         if userAnswer == questions[subject][usedQList[ques]]["altanswer"]:
@@ -2098,61 +2135,60 @@ def study_buddy(subject):
                     else:
                         if userAnswer.lower() == questions[subject][usedQList[ques]]["answer"] or userAnswer.lower() == questions[subject][usedQList[ques]]["altanswer"]:
                             checkCounter += 1
-                            print(Style.BRIGHT + Fore.GREEN + "Correct!" +Fore.RESET + Style.NORMAL)
+                            print(Style.BRIGHT + Fore.GREEN + "Correct!" + Fore.RESET + Style.NORMAL)
                             time.sleep(1.5)
                         else:
                             print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
                             time.sleep(3)
                             pass
                     os.system('clear')
-            else:
-                if userAnswer.isdigit():
-                    if userAnswer == questions[subject][usedQList[ques]]["altanswer"]:
-                        checkCounter += 1
-                        print(Style.BRIGHT + Fore.GREEN + "Correct!" + Fore.RESET + Style.NORMAL)
-                        time.sleep(1.5)
-                else:
-                    if userAnswer.lower() == questions[subject][usedQList[ques]]["answer"] or userAnswer.lower() == questions[subject][usedQList[ques]]["altanswer"]:
-                        checkCounter += 1
-                        print(Style.BRIGHT + Fore.GREEN + "Correct!" + Fore.RESET + Style.NORMAL)
-                        time.sleep(1.5)
-                    else:
-                        print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
-                        time.sleep(3)
-                        pass
-                os.system('clear')
-        elif questions[subject][usedQList[ques]]["qtype"] == "tfq":
-            print("\n\n\n")
-            userAnswer = input()
-            if userAnswer.lower() == "quit":
-                quit_animation()
-            elif userAnswer.lower() == "help":
-                os.system('clear')
-                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-                print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
-                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-                print("\n")
-                if fontColor.lower() == "default":
-                    print(questions[subject][usedQList[ques]]["question"])
-                elif fontColor.lower() == "red":
-                    print(Fore.RED + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "yellow":
-                    print(Fore.YELLOW + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "green":
-                    print(Fore.GREEN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "blue":
-                    print(Fore.BLUE + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "magenta":
-                    print(Fore.MAGENTA + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "cyan":
-                    print(Fore.CYAN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                
-                print("")
-                print(Style.BRIGHT + questions[subject][usedQList[ques]]["hint"] + Style.NORMAL)
-                print("\n")
+            elif questions[subject][usedQList[ques]]["qtype"] == "tfq":
+                print("\n\n\n")
                 userAnswer = input()
                 if userAnswer.lower() == "quit":
                     quit_animation()
+                elif userAnswer.lower() == "help":
+                    os.system('clear')
+                    print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
+                    print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
+                    print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
+                    print("\n")
+                    if fontColor.lower() == "default":
+                        print(questions[subject][usedQList[ques]]["question"])
+                    elif fontColor.lower() == "red":
+                        print(Fore.RED + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "yellow":
+                        print(Fore.YELLOW + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "green":
+                        print(Fore.GREEN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "blue":
+                        print(Fore.BLUE + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "magenta":
+                        print(Fore.MAGENTA + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "cyan":
+                        print(Fore.CYAN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    
+                    print("")
+                    print(Style.BRIGHT + questions[subject][usedQList[ques]]["hint"] + Style.NORMAL)
+                    print("\n")
+                    userAnswer = input()
+                    if userAnswer.lower() == "quit":
+                        quit_animation()
+                    else:
+                        if userAnswer.isdigit():
+                            print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
+                            time.sleep(3)
+                            pass
+                        else:
+                            if userAnswer.lower() == questions[subject][usedQList[ques]]["answer"] or userAnswer.lower() == questions[subject][usedQList[ques]]["altanswer"]:
+                                checkCounter += 1
+                                print(Style.BRIGHT + Fore.GREEN + "Correct!" + Fore.RESET + Style.NORMAL)
+                                time.sleep(1.5)
+                            else:
+                                print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
+                                time.sleep(3)
+                                pass
+                        os.system('clear')
                 else:
                     if userAnswer.isdigit():
                         print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
@@ -2168,53 +2204,53 @@ def study_buddy(subject):
                             time.sleep(3)
                             pass
                     os.system('clear')
-            else:
-                if userAnswer.isdigit():
-                    print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
-                    time.sleep(3)
-                    pass
-                else:
-                    if userAnswer.lower() == questions[subject][usedQList[ques]]["answer"] or userAnswer.lower() == questions[subject][usedQList[ques]]["altanswer"]:
-                        checkCounter += 1
-                        print(Style.BRIGHT + Fore.GREEN + "Correct!" + Fore.RESET + Style.NORMAL)
-                        time.sleep(1.5)
-                    else:
-                        print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
-                        time.sleep(3)
-                        pass
-                os.system('clear')
-        elif questions[subject][usedQList[ques]]["qtype"] == "frq":
-            print(questions[subject][usedQList[ques]]["optionA"])
-            print("\n\n")
-            userAnswer = input()
-            if userAnswer.lower() == "quit":
-                quit_animation()
-            elif userAnswer.lower() == "help":
-                os.system('clear')
-                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-                print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
-                print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
-                print("\n")
-                if fontColor.lower() == "default":
-                    print(questions[subject][usedQList[ques]]["question"])
-                elif fontColor.lower() == "red":
-                    print(Fore.RED + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "yellow":
-                    print(Fore.YELLOW + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "green":
-                    print(Fore.GREEN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "blue":
-                    print(Fore.BLUE + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "magenta":
-                    print(Fore.MAGENTA + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                elif fontColor.lower() == "cyan":
-                    print(Fore.CYAN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
-                
-                print(Style.BRIGHT + questions[subject][usedQList[ques]]["hint"] + Style.NORMAL)
+            elif questions[subject][usedQList[ques]]["qtype"] == "frq":
+                print(questions[subject][usedQList[ques]]["optionA"])
                 print("\n\n")
                 userAnswer = input()
                 if userAnswer.lower() == "quit":
                     quit_animation()
+                elif userAnswer.lower() == "help":
+                    os.system('clear')
+                    print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
+                    print("|" + Fore.BLUE + Style.BRIGHT + ((("#" * progBarSects) + "|") * ques) + ((" " * (progBarSects + 1)) * (qAmount-ques)) + Style.NORMAL + Fore.RESET + "|   " + Style.BRIGHT + f"{checkCounter}/{ques}   {percentRight}%" + Style.NORMAL)
+                    print("+" + ("-" * (progBarSects + 1) * qAmount) + "+")
+                    print("\n")
+                    if fontColor.lower() == "default":
+                        print(questions[subject][usedQList[ques]]["question"])
+                    elif fontColor.lower() == "red":
+                        print(Fore.RED + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "yellow":
+                        print(Fore.YELLOW + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "green":
+                        print(Fore.GREEN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "blue":
+                        print(Fore.BLUE + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "magenta":
+                        print(Fore.MAGENTA + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    elif fontColor.lower() == "cyan":
+                        print(Fore.CYAN + questions[subject][usedQList[ques]]["question"] + Fore.RESET)
+                    
+                    print(questions[subject][usedQList[ques]]["hint"])
+                    print("\n\n")
+                    userAnswer = input()
+                    if userAnswer.lower() == "quit":
+                        quit_animation()
+                    else:
+                        if userAnswer.isdigit():
+                            print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
+                            time.sleep(3)
+                            pass
+                        else:
+                            if userAnswer.lower() == questions[subject][usedQList[ques]]["answer"]:
+                                checkCounter += 1
+                                print(Style.BRIGHT + Fore.GREEN + "Correct!" + Fore.RESET + Style.NORMAL)
+                                time.sleep(1.5)
+                            else:
+                                print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
+                                time.sleep(3)
+                                pass
+                        os.system('clear')
                 else:
                     if userAnswer.isdigit():
                         print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
@@ -2230,42 +2266,120 @@ def study_buddy(subject):
                             time.sleep(3)
                             pass
                     os.system('clear')
-            else:
-                if userAnswer.isdigit():
-                    print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
-                    time.sleep(3)
+
+        finalScore = int((checkCounter/qAmount) * 1000)
+        finalScore /= 10
+        buddy_face_standard_smile()
+        print("")
+        print("\n" + f"You got {checkCounter} questions correct!".center(z))
+        time.sleep(3)
+        print("\n" + f"That is an accuracy of {finalScore}%".center(z))
+        time.sleep(3)
+        print("")
+        if percentRight >= 80:
+            print("Great work! Keep it up!".center(z))
+        elif percentRight >= 60:
+            print("You're on the right track, keep on learning!".center(z))
+        else:
+            print("Hey, maybe next time! Keep progressing and you'll get there!".center(z))
+        time.sleep(3)
+        print("\n")
+        print("Press ENTER to continue".center(z))
+        input()
+    elif gameMode == "flashcards":
+        os.system('clear')
+        print("INSTRUCTIONS (Press ENTER to go to next one)".center(z))
+        input()
+        print("These are the flashcards to help you study!".center(z))
+        input()
+        print("Press ENTER to flip the card and type NEXT to move on or BACK to go to the previous card!".center(z))
+        input()
+        print("At any time, type HOME to return to the home screen or SHUFFLE to shuffle the deck!".center(z))
+        input()
+        randomFlashChoice = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+        random.shuffle(randomFlashChoice)
+        if subject == "csp":
+            flashSubject = "cspflash"
+        elif subject == "stats":
+            flashSubject = "statsflash"
+        elif subject == "phys":
+            flashSubject = "physflash"
+        elif subject == "span":
+            flashSubject = "spanflash"
+        card = 0
+        while True:
+            os.system('clear')
+            print("\n")
+            print(Style.BRIGHT + f"{card + 1}/25".center(z) + "\n" + Style.NORMAL)
+            if fontColor.lower() == "default":
+                print(questions[flashSubject][randomFlashChoice[card]]["word"].center(z))
+            elif fontColor.lower() == "red":
+                print(Fore.RED + questions[flashSubject][randomFlashChoice[card]]["word"].center(z) + Fore.RESET)
+            elif fontColor.lower() == "yellow":
+                print(Fore.YELLOW + questions[flashSubject][randomFlashChoice[card]]["word"].center(z) + Fore.RESET)
+            elif fontColor.lower() == "green":
+                print(Fore.GREEN + questions[flashSubject][randomFlashChoice[card]]["word"].center(z) + Fore.RESET)
+            elif fontColor.lower() == "blue":
+                print(Fore.BLUE + questions[flashSubject][randomFlashChoice[card]]["word"].center(z) + Fore.RESET)
+            elif fontColor.lower() == "magenta":
+                print(Fore.MAGENTA + questions[flashSubject][randomFlashChoice[card]]["word"].center(z) + Fore.RESET)
+            elif fontColor.lower() == "cyan":
+                print(Fore.CYAN + questions[flashSubject][randomFlashChoice[card]]["word"].center(z) + Fore.RESET)
+            print("\n\n\n")
+            flashInput = input()
+            if flashInput.lower() == "next":
+                if card == 24:
+                    os.system('clear')
+                    print("\n\n" + Style.BRIGHT + "You've reached the end! Would you like to start again?".center(z) + Style.NORMAL)
+                    contInput = input()
+                    if contInput.lower() == "yes":
+                        card = 0
+                    else:
+                        break
+                else:
+                    card += 1
+            elif flashInput.lower() == "back":
+                if card == 0:
                     pass
                 else:
-                    if userAnswer.lower() == questions[subject][usedQList[ques]]["answer"]:
-                        checkCounter += 1
-                        print(Style.BRIGHT + Fore.GREEN + "Correct!" + Fore.RESET + Style.NORMAL)
-                        time.sleep(1.5)
-                    else:
-                        print(Style.BRIGHT + Fore.RED + "Incorrect." + Fore.RESET + Style.NORMAL)
-                        time.sleep(3)
-                        pass
+                    card -= 1
+            elif flashInput.lower() == "home":
+                break
+            elif flashInput.lower() == "shuffle":
+                random.shuffle(randomFlashChoice)
+                card = 0
+            else:
                 os.system('clear')
+                print("\n")
+                print(Style.BRIGHT + f"{card + 1}/25".center(z) + "\n" + Style.NORMAL)
+                if fontColor.lower() == "default":
+                    print(questions[flashSubject][randomFlashChoice[card]]["definition"].center(z))
+                elif fontColor.lower() == "red":
+                    print(Fore.RED + questions[flashSubject][randomFlashChoice[card]]["definition"].center(z) + Fore.RESET)
+                elif fontColor.lower() == "yellow":
+                    print(Fore.YELLOW + questions[flashSubject][randomFlashChoice[card]]["definition"].center(z) + Fore.RESET)
+                elif fontColor.lower() == "green":
+                    print(Fore.GREEN + questions[flashSubject][randomFlashChoice[card]]["definition"].center(z) + Fore.RESET)
+                elif fontColor.lower() == "blue":
+                    print(Fore.BLUE + questions[flashSubject][randomFlashChoice[card]]["definition"].center(z) + Fore.RESET)
+                elif fontColor.lower() == "magenta":
+                    print(Fore.MAGENTA + questions[flashSubject][randomFlashChoice[card]]["definition"].center(z) + Fore.RESET)
+                elif fontColor.lower() == "cyan":
+                    print(Fore.CYAN + questions[flashSubject][randomFlashChoice[card]]["definition"].center(z) + Fore.RESET)
+                print("\n\n\n")
+                flashInput = input()
+                if flashInput.lower() == "next":
+                    card += 1
+                elif flashInput.lower() == "back":
+                    card -= 1
+                elif flashInput.lower() == "home":
+                    break
+                elif flashInput.lower() == "shuffle":
+                    random.shuffle(randomFlashChoice)
+                    card = 0
+                else:
+                    pass
 
-    finalScore = int((checkCounter/qAmount) * 1000)
-    finalScore /= 10
-    buddy_face_standard_smile()
-    print("")
-    print("\n" + f"You got {checkCounter} questions correct!".center(z))
-    time.sleep(3)
-    print("\n" + f"That is an accuracy of {finalScore}%".center(z))
-    time.sleep(3)
-    print("")
-    if percentRight >= 80:
-        print("Great work! Keep it up!".center(z))
-    elif percentRight >= 60:
-        print("You're on the right track, keep on learning!".center(z))
-    else:
-        print("Hey, maybe next time! Keep progressing and you'll get there!".center(z))
-    time.sleep(3)
-    print("\n")
-    print("Press ENTER to continue".center(z))
-    input()
-    
     
 #-----------------------------------------------------------
 #Actual execution of code
