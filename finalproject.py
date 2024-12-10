@@ -1,3 +1,4 @@
+
 #All the imports for the code
 import time #To add delays between screen outputs
 import os #To clear screen and maybe to get terminal size so things can be properly centered no matter what size the screen is
@@ -1749,13 +1750,49 @@ def user_intro():
         os.system('clear')
         buddy_face_standard_smile()
         print("")
-        print("Which option would you like to use to name your Study Buddy?".center(z))
-        print("\n")
-        print("a. Random Name\tb. Custom Name".center(z))
-        studyBuddyNameChoice = input("\n") #Asks user if they want to choose their Study Buddy's name or get a random one
-        if studyBuddyNameChoice.lower() == "a" or studyBuddyNameChoice.lower() == "b":
-            break
-
+        print("Have an account already? Type log in!".center(z))
+        print("\n" + "Need an account? Type sign up!".center(z))
+        logOrSign = input()
+        if logOrSign.lower() == "log in": 
+            os.system('clear')
+            buddy_face_standard_smile()
+            print("")
+            usernameCheck = input("Username: ".center(z))
+            passwordCheck = input("Password: ".center(z))
+            returnVar = "false"
+            for user in range(len(questions["user"])):
+                if usernameCheck == questions["user"][user]["name"]:
+                    returnVar = "true"
+                else:
+                    pass
+            if returnVar == "true":
+                if passwordCheck == questions["user"][questions["user"].index(usernameCheck)]["password"]:
+                    userName = usernameCheck
+                    userNum = questions["user"].index(userName)
+                    break
+        elif logOrSign.lower() == "sign up":
+            while True:
+                os.system('clear')
+                buddy_face_standard_smile()
+                print("")
+                userName = input("Create a username: ".center(z))
+                password = input("Create a password: ".center(z))
+                os.system('clear')
+                while True:
+                    print(f"Username: {userName}".center(z) + "\n" + (f"Password: {password[0]}{password[1]}" + ("*" * (len(password) - 3)) + f"{password[-1]}").center(z) + "\n" + "Does this information look correct?".center(z))
+                    checkInfo = input()
+                    if checkInfo.lower() == "yes":
+                        loadJSON = open("questions.json", "a")
+                        loadJSON.update()
+                        break
+                    elif checkInfo.lower() == "no":
+                        break
+                    else:
+                        pass
+                if checkInfo.lower() == "yes":
+                    break
+                else:
+                    pass
         else:
             pass
     while True:
@@ -2269,12 +2306,21 @@ def study_buddy(subject):
 
         finalScore = int((checkCounter/qAmount) * 1000)
         finalScore /= 10
-        buddy_face_standard_smile()
+        buddy_face_talkOption3()
         print("")
         print("\n" + f"You got {checkCounter} questions correct!".center(z))
         time.sleep(3)
+        os.system('clear')
+        buddy_face_talkOption1()
+        print("")
+        print("\n" + f"You got {checkCounter} questions correct!".center(z))
         print("\n" + f"That is an accuracy of {finalScore}%".center(z))
         time.sleep(3)
+        os.system('clear')
+        buddy_face_talkOption2()
+        print("")
+        print("\n" + f"You got {checkCounter} questions correct!".center(z))
+        print("\n" + f"That is an accuracy of {finalScore}%".center(z))
         print("")
         if percentRight >= 80:
             print("Great work! Keep it up!".center(z))
@@ -2283,6 +2329,18 @@ def study_buddy(subject):
         else:
             print("Hey, maybe next time! Keep progressing and you'll get there!".center(z))
         time.sleep(3)
+        os.system('clear')
+        buddy_face_standard_smile()
+        print("")
+        print("\n" + f"You got {checkCounter} questions correct!".center(z))
+        print("\n" + f"That is an accuracy of {finalScore}%".center(z))
+        print("")
+        if percentRight >= 80:
+            print("Great work! Keep it up!".center(z))
+        elif percentRight >= 60:
+            print("You're on the right track, keep on learning!".center(z))
+        else:
+            print("Hey, maybe next time! Keep progressing and you'll get there!".center(z))
         print("\n")
         print("Press ENTER to continue".center(z))
         input()
