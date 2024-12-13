@@ -2444,9 +2444,9 @@ def study_buddy(subject):
 #-----------------------------------------------------------
 print("Press ENTER to wake up your Study Buddy!".center(z))
 input()
-#study_buddy_wake_animation()
+study_buddy_wake_animation()
 print("Please welcome the one, the only, Study Buddy!".center(z))
-#user_intro() #asks for the user's name and to name their Study Buddy
+user_intro() #asks for the user's name and to name their Study Buddy
 while True:
     home_menu()
     if userInput.lower() == "start":
