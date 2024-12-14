@@ -2629,7 +2629,6 @@ def study_buddy(subject):
                                 print(questions[subject][usedQList[ques]]['optionB'])
                                 print(questions[subject][usedQList[ques]]['optionC'] + Style.NORMAL)
                                 print(Style.BRIGHT + Fore.GREEN + questions[subject][usedQList[ques]]['optionD'] + Fore.RESET + Style.NORMAL)                       
-                            checkCounter += 1
                             print("\n" + Fore.RED + Style.BRIGHT + "INCORRECT" + Fore.RESET + Style.NORMAL + "\n")
                             print("Press ENTER to continue")
                             input()
@@ -2725,7 +2724,6 @@ def study_buddy(subject):
                             print(questions[subject][usedQList[ques]]['optionB'])
                             print(questions[subject][usedQList[ques]]['optionC'] + Style.NORMAL)
                             print(Style.BRIGHT + Fore.GREEN + questions[subject][usedQList[ques]]['optionD'] + Fore.RESET + Style.NORMAL)                    
-                        checkCounter += 1
                         print("\n" + Fore.RED + Style.BRIGHT + "INCORRECT" + Fore.RESET + Style.NORMAL + "\n")
                         print("Press ENTER to continue")
                         input()
