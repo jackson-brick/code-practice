@@ -116,6 +116,19 @@
         "correct": 79,
         "total": 88,
         "status": "cleared"
+    },
+    {
+        "name": "booger",
+        "password": "BigusDickus",
+        "studybuddyname": "Phineas",
+        "subject": "span",
+        "fontColor": "green",
+        "screenMode": "dark",
+        "gameMode": "quiz",
+        "qamount": 8,
+        "correct": 13,
+        "total": 24,
+        "status": "cleared"
     }
 ]
 }
