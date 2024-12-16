@@ -27,6 +27,7 @@ def encrypt(pswrd):
     encryptedPass = ''.join(encryptedPass)
 
 def new_user(username,pswrd):
+    global entryNum
     newUser = []
     charList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","1","2","3","4","5","6","7","8","9","0","!","@","#","$","%","^","&","*","(",")","-","_","=","+","`","~","{","}","[","]","|","\\","\'","\"",":",";","<",">",",",".","?","/"," "]
     tempCharList = []
@@ -46,11 +47,14 @@ def new_user(username,pswrd):
     for ele in unencryptedPass:
         encryptedPass.append(keyDict[ele])
     encryptedPass = ''.join(encryptedPass)
-    newUser.append({"key":keyDict,"name":username,"password":encryptedPass,"fontColor":"default","fontBold":"no"})
+    newUser.append({"key":keyDict,"name":username,"password":encryptedPass})
     diaryAtUser.append(newUser[0])
     with open('diaryusers.json','w') as outfile:
         jsonVar = json.dumps(diaryAtUser,indent=4)
         outfile.write('{\n"users": ' + jsonVar + '\n}')
+    for ele in range(len(diaryAtEntry)):
+        if diaryentry["entry"][ele]["name"] == userName:
+            entryNum = ele
     
 
 def user_intro():
@@ -76,8 +80,7 @@ def user_intro():
                 encrypt(password)
                 if encryptedPass == diaryusers["users"][userNum]['password']:
                     key = diaryusers["users"][userNum]['key']
-                    fontColor = diaryusers["users"][userNum]['fontColor']
-                    fontBold = diaryusers["users"][userNum]['fontBold']
+                    
                     break
                 else:
                     print(Fore.RED + Style.BRIGHT + "Your username or password is incorrect".center(z) + Fore.RESET + Style.NORMAL)
@@ -131,18 +134,34 @@ def user_intro():
                         time.sleep(3)
                         break
 
+
+def start():
+    os.system('clear')
+    print(Style.BRIGHT + "REMEMBER: Always end your sentences with punctuation and type HOME to exit".center(z) + Style.NORMAL)
+    print("")
+    if diaryentry["entry"][entryNum]["0"] == "":
+        print(Style.DIM + "Your story starts here..." + Style.NORMAL)
+    else:
+        print("asdasda")
+
 os.system('clear')
 user_intro()
-os.system('clear')
-print(Style.BRIGHT + "COMMAND OPTIONS: SETTINGS, START, HELP, QUIT".center(z) + Style.NORMAL)
-userInput = input("\n\n\n\n\n\n\n\n\n")
+
 while True:
-    if userInput.lower().strip() == "settings":
-
-    elif userInput.lower().strip() == "start":
-
+    os.system('clear')
+    print(Style.BRIGHT + "COMMAND OPTIONS:  START, EDIT, VIEW, HELP, QUIT".center(z) + Style.NORMAL)
+    userInput = input("\n\n\n\n\n\n\n")
+    if userInput.lower().strip() == "start":
+        start()
     elif userInput.lower().strip() == "help":
+        os.system('clear')
         print("Commands for diary use:".center(z))
-        print("View: view the whole document")
-        print("Edit: open text editor to edit sentences")
+        print("View: view the whole document".center(z))
+        print("Edit: open text editor to edit sentences".center(z))
+        print("Start: add sentences".center(z))
+        print("*Note: hitting ENTER after each sentence added allows you to edit one sentence at a time".center(z))
+        print("Press ENTER to go back".center(z))
+        input()
     elif userInput.lower().strip() == "quit":
+        os.system('clear')
+        quit()
