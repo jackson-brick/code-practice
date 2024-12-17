@@ -1,11 +1,8 @@
-import random
 import os
-from colorama import Fore, Style
+z = os.get_terminal_size()
+z = z[0]
+halfZ = int(z/2)
 
-while True:
-    print(Style.BRIGHT + "Test text" + Style.NORMAL + Fore.RESET)
-    print("This text should have no style or fore")
-    INPUT = input()
-    if INPUT == "true":
-        print(Fore.RED)
-    
+
+
+input("".center(halfZ))
