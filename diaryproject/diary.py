@@ -25,6 +25,7 @@ def encrypt(pswrd):
     for ele in unencryptedPass:
         encryptedPass.append(diaryusers["users"][userNum]["key"][ele])
     encryptedPass = ''.join(encryptedPass)
+    return encryptedPass
 
 def new_user(username,pswrd):
     global entryNum
@@ -61,24 +62,25 @@ def new_user(username,pswrd):
     
 def write_to_diary_entry(entry,function):
     global encryptedEntry
-    unencryptedEntry = []
-    for ele in range(len(entry)):
-         unencryptedEntry.append(entry[ele])
-    encryptedEntry = []
-    for ele in unencryptedEntry:
-        encryptedEntry.append(diaryusers["users"][userNum]["key"][ele])
-    encryptedEntry = ''.join(encryptedEntry)
+    if entry != 0:
+        unencryptedEntry = []
+        for ele in range(len(entry)):
+            unencryptedEntry.append(entry[ele])
+        encryptedEntry = []
+        for ele in unencryptedEntry:
+            encryptedEntry.append(diaryusers["users"][userNum]["key"][ele])
+        encryptedEntry = ''.join(encryptedEntry)
     if function == "start":
         diaryAtEntry[entryNum][f"{len(diaryentry["entry"][entryNum]) - 2}"] = encryptedEntry
         diaryAtEntry[entryNum][f"{len(diaryentry["entry"][entryNum]) - 1}"] = ""
     elif function == "edit":
         diaryAtEntry[entryNum][f"{editInput}"] = encryptedEntry
     elif function == "delete":
-        counter = str(editInput)
-        while counter < len(diaryentry["entry"][entryNum]):
-            
-
-        diaryAtEntry[entryNum][f"{editInput}"]
+        counter = editInput
+        while counter < (len(diaryentry["entry"][entryNum]) - 2):
+            diaryAtEntry[entryNum][f"{counter}"] = diaryAtEntry[entryNum][f"{counter + 1}"]
+            counter += 1
+        del diaryAtEntry[entryNum][f"{len(diaryentry["entry"][entryNum]) - 2}"]
     with open('diaryentry.json','w') as outfile:
         jsonVar = json.dumps(diaryAtEntry,indent=4)
         outfile.write('{\n"entry": ' + jsonVar + '\n}')
@@ -187,19 +189,14 @@ def start():
             print(Style.DIM + "Your story starts here..." + Style.NORMAL)
             print("\n\n")
         else:
-            if diaryentry["entry"][entryNum]["1"] == "":
-                print(decrypt(diaryentry["entry"][entryNum]["0"]))
-                print("\n\n")
-            else:
-                if diaryentry["entry"][entryNum]["2"] == "":
-                    print(decrypt(diaryentry["entry"][entryNum]["0"]))
-                    print(decrypt(diaryentry["entry"][entryNum]["1"]))
-                    print("\n")
+            for entry in range(len(diaryentry["entry"][entryNum])):
+                if entry == (len(diaryentry["entry"][entryNum]) - 1) or entry == (len(diaryentry["entry"][entryNum]) - 2):
+                    pass
                 else:
-                    print(decrypt(diaryentry["entry"][entryNum][f"{len(diaryentry["entry"][entryNum]) - 5}"]))
-                    print(decrypt(diaryentry["entry"][entryNum][f"{len(diaryentry["entry"][entryNum]) - 4}"]))
-                    print(decrypt(diaryentry["entry"][entryNum][f"{len(diaryentry["entry"][entryNum]) - 3}"]))
-                    print("")
+                    print(decrypt(diaryentry["entry"][entryNum][f"{entry}"]), end = " ")
+            print("")
+            print(Style.DIM + "Scroll up to see the whole thing" + Style.NORMAL)
+            print("")
         startInput = input()
         if startInput.lower().strip() == "home":
             break
@@ -216,7 +213,7 @@ def edit():
     while True:
         os.system('clear')
         if diaryentry["entry"][entryNum]["0"] == "":
-            print(Style.BRIGHT + Fore.RED + "You have to being writing to edit!".center(z) + Style.NORMAL + Fore.RESET)
+            print(Style.BRIGHT + Fore.RED + "You have to begin writing to edit!".center(z) + Style.NORMAL + Fore.RESET)
             time.sleep(3)
             break
         print(f"Type the number of the sentence you would like to edit (1-{len(diaryentry["entry"][entryNum]) - 2})!".center(z) + Fore.RESET + Style.NORMAL)
@@ -226,6 +223,8 @@ def edit():
                 pass
             else:
                 print(f"({entry + 1}) {decrypt(diaryentry["entry"][entryNum][f"{entry}"])}")
+        print(Style.DIM + "Scroll up to see the whole thing" + Style.NORMAL)
+        print("")
         editInput = input()
         if editInput.lower().strip() == "home":
             break
@@ -245,40 +244,21 @@ def edit():
                 editChange = input()
                 if editChange.lower().strip() != "cancel":
                     if editChange.lower().strip() == "delete":
-                        write_to_diary_entry(editChange,"delete")
-                    write_to_diary_entry(editChange,"edit")
-                
+                        write_to_diary_entry(0,"delete")
+                    else:
+                        write_to_diary_entry(editChange,"edit")
+            else:
+                print(Fore.RED + Style.BRIGHT)
         else:
             print(Fore.RED + Style.BRIGHT)
             
-                
-
-def view():
-    while True:
-        os.system('clear')
-        if diaryentry["entry"][entryNum]["0"] == "":
-            print(Style.BRIGHT + Fore.RED + "You have to being writing to edit!".center(z) + Style.NORMAL + Fore.RESET)
-            time.sleep(3)
-            break
-        print(Style.BRIGHT + "Type HOME to exit!".center(z) + Style.NORMAL)
-        print("")
-        for entry in range(len(diaryentry["entry"][entryNum])):
-            if entry == (len(diaryentry["entry"][entryNum]) - 1) or entry == (len(diaryentry["entry"][entryNum]) - 2):
-                pass
-            else:
-                print(decrypt(diaryentry["entry"][entryNum][f"{entry}"]))
-        print(Style.DIM + "Scroll up to see the whole thing" + Style.NORMAL)
-        print("")
-        viewInput = input()
-        if viewInput.lower().strip() == "home":
-            break
     
 os.system('clear')
 user_intro()
 
 while True:
     os.system('clear')
-    print(Style.BRIGHT + "COMMAND OPTIONS:  START, EDIT, VIEW, HELP, QUIT".center(z) + Style.NORMAL)
+    print(Style.BRIGHT + "COMMAND OPTIONS:  START, EDIT, HELP, QUIT".center(z) + Style.NORMAL)
     userInput = input("\n\n\n\n\n\n\n")
     if userInput.lower().strip() == "start":
         start()
@@ -296,5 +276,17 @@ while True:
         quit()
     elif userInput.lower().strip() == "edit":
         edit()
-    elif userInput.lower().strip() == "view":
-        view()
+    elif userInput == "decode":
+        if diaryusers["users"][userNum]["name"] == "jacksonbrick":
+            os.system('clear')
+            print("Hey there Jackson, copy and paste whatever you wanna decode".center(z))
+            decodeInput = input()
+            print(decrypt(decodeInput).center(z))
+            input()
+    elif userInput == "encode":
+        if diaryusers["users"][userNum]["name"] == "jacksonbrick":
+            os.system('clear')
+            print("Hey there Jackson, copy and paste whatever you wanna encode".center(z))
+            encodeInput = input()
+            print(encrypt(encodeInput).center(z))
+            input()
