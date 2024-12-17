@@ -1,8 +1,12 @@
-import os
-z = os.get_terminal_size()
-z = z[0]
-halfZ = int(z/2)
+entry = input()
 
+unencryptedEntry = []
 
-
-input("".center(halfZ))
+for ele in range(len(entry)):
+    if ele == "’" or ele == "‘":
+        unencryptedEntry.append("'")
+    elif ele == "“" or ele == "”":
+        unencryptedEntry.append("\"")
+    else:
+        unencryptedEntry.append(entry[ele])
+print(unencryptedEntry)
