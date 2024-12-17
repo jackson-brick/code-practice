@@ -29,6 +29,7 @@ def encrypt(pswrd):
 def new_user(username,pswrd):
     global entryNum
     newUser = []
+    newUserEntry = []
     charList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","1","2","3","4","5","6","7","8","9","0","!","@","#","$","%","^","&","*","(",")","-","_","=","+","`","~","{","}","[","]","|","\\","\'","\"",":",";","<",">",",",".","?","/"," "]
     tempCharList = []
     for ele in charList:
@@ -49,12 +50,15 @@ def new_user(username,pswrd):
     encryptedPass = ''.join(encryptedPass)
     newUser.append({"key":keyDict,"name":username,"password":encryptedPass})
     diaryAtUser.append(newUser[0])
+    newUserEntry.append({"name":username,"0":""})
+    diaryAtEntry.append(newUserEntry[0])
     with open('diaryusers.json','w') as outfile:
         jsonVar = json.dumps(diaryAtUser,indent=4)
         outfile.write('{\n"users": ' + jsonVar + '\n}')
-    for ele in range(len(diaryAtEntry)):
-        if diaryentry["entry"][ele]["name"] == userName:
-            entryNum = ele
+    with open('diaryentry.json','w') as outfile:
+        jsonVar = json.dumps(diaryAtEntry,indent=4)
+        outfile.write('{\n"entry": ' + jsonVar + '\n}')
+    
     
 
 def user_intro():
@@ -62,6 +66,7 @@ def user_intro():
     global userName
     global key
     global password
+    global entryNum
     while True:
         userNum = -2
         os.system('clear')
@@ -80,7 +85,9 @@ def user_intro():
                 encrypt(password)
                 if encryptedPass == diaryusers["users"][userNum]['password']:
                     key = diaryusers["users"][userNum]['key']
-                    
+                    for ele in range(len(diaryAtEntry)):
+                        if diaryentry["entry"][ele]["name"] == userName:
+                            entryNum = ele
                     break
                 else:
                     print(Fore.RED + Style.BRIGHT + "Your username or password is incorrect".center(z) + Fore.RESET + Style.NORMAL)
@@ -136,14 +143,54 @@ def user_intro():
 
 
 def start():
-    os.system('clear')
-    print(Style.BRIGHT + "REMEMBER: Always end your sentences with punctuation and type HOME to exit".center(z) + Style.NORMAL)
-    print("")
-    if diaryentry["entry"][entryNum]["0"] == "":
-        print(Style.DIM + "Your story starts here..." + Style.NORMAL)
-    else:
-        print("asdasda")
+    while True:
+        os.system('clear')
+        print(Style.BRIGHT + "REMEMBER: Type HOME to exit ".center(z) + Style.NORMAL + Fore.RESET)
+        print("")
+        if diaryentry["entry"][entryNum]["0"] == "":
+            print(Style.DIM + "Your story starts here..." + Style.NORMAL)
+            print("\n\n")
+        else:
+            if diaryentry["entry"][entryNum]["1"] == "":
+                print(diaryentry["entry"][entryNum]["0"])
+                print("\n\n")
+            else:
+                if diaryentry["entry"][entryNum]["2"] == "":
+                    print(diaryentry["entry"][entryNum]["0"])
+                    print(diaryentry["entry"][entryNum]["1"])
+                    print("\n")
+                else:
+                    print(diaryentry["entry"][entryNum][f"{len(diaryentry["entry"][entryNum]) - 5}"])
+                    print(diaryentry["entry"][entryNum][f"{len(diaryentry["entry"][entryNum]) - 4}"])
+                    print(diaryentry["entry"][entryNum][f"{len(diaryentry["entry"][entryNum]) - 3}"])
+                    print("")
+        startInput = input()
+        if startInput.lower().strip() == "home":
+            break
+        elif startInput.lower().strip() == "quit":
+            os.system('clear')
+            quit()
+        else:
+            diaryAtEntry[entryNum][f"{len(diaryentry["entry"][entryNum]) - 2}"] = startInput
+            diaryAtEntry[entryNum][f"{len(diaryentry["entry"][entryNum]) - 1}"] = ""
+            
+def edit():
+    while True:
+        if diaryentry["entry"][entryNum]["0"] == "":
+            print(Style.BRIGHT + Fore.RED + "You have to being writing to edit!".center(z) + Style.NORMAL + Fore.RESET)
+            break
+        print(Style.BRIGHT + "Type the number of the sentence you would like to edit!".center(z))
+        print("Type home to return home!".center(z) + Style.NORMAL + Fore.RESET)
+        for entry in range(len(diaryentry["entry"][entryNum])):
+            if entry == 0:
+                pass
+            else:
+                print(f"({entry}) {diaryentry["entry"][entryNum][entry]}")
+        editInput = input()
+        if editInput.lower().strip() == "home":
+            break
 
+    
 os.system('clear')
 user_intro()
 
