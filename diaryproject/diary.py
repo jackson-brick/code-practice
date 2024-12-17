@@ -7,6 +7,8 @@ import random
 z = os.get_terminal_size()
 z = z[0]
 
+opCommand = False
+breakVar = False
 
 with open('diaryusers.json','r') as file:
     diaryusers = json.load(file)
@@ -99,6 +101,20 @@ def decrypt(encEntry):
     decryptedEntry = ''.join(decryptedEntry)
     return decryptedEntry
 
+def op_decrypt(encEntry,key):
+    global decryptedEntry
+    encryptedEntry = []
+    for ele in range(len(encEntry)):
+        encryptedEntry.append(encEntry[ele])
+    decryptedEntry = []
+    userKey = key.items()
+    for ele in encryptedEntry:
+        for pair in userKey:
+            if ele == pair[1]:
+                decryptedEntry.append(pair[0])
+    decryptedEntry = ''.join(decryptedEntry)
+    return decryptedEntry
+
 def user_intro():
     global userNum
     global userName
@@ -107,17 +123,24 @@ def user_intro():
     global entryNum
     while True:
         userNum = -2
+        logOrSign = ""
         os.system('clear')
-        print("Have an account already? Type LOG IN".center(z) + "\n" + "Need to create an account? Type SIGN UP".center(z) + "\n")
-        logOrSign = input()
+        if opCommand == False:
+            print("Have an account already? Type LOG IN".center(z) + "\n" + "Need to create an account? Type SIGN UP".center(z) + "\n")
+            logOrSign = input()
         if logOrSign.lower() == "log in":
-            os.system('clear')
-            print("Username:     ".center(z))
-            userName = input()
-            print("Password:     ".center(z))
-            password = input()
+            if opCommand == False:
+                os.system('clear')
+                print("Username:     ".center(z))
+                userName = input()
+                print("Password:     ".center(z))
+                password = input()
             for lcv in range(len(diaryAtUser)):
+                print("iteration")
+                input()
                 if userName == diaryusers["users"][lcv]['name']:
+                    print("match")
+                    input()
                     userNum = lcv
             if userNum >= 0:
                 encrypt(password)
@@ -180,10 +203,11 @@ def user_intro():
                         break
 
 
-def start():
+def write():
     while True:
         os.system('clear')
         print(Style.BRIGHT + "Type HOME to exit!".center(z) + Style.NORMAL + Fore.RESET)
+        print(Style.DIM + "WRITING MODE".center(z) + Style.NORMAL)
         print("")
         if diaryentry["entry"][entryNum]["0"] == "":
             print(Style.DIM + "Your story starts here..." + Style.NORMAL)
@@ -203,6 +227,36 @@ def start():
         elif startInput.lower().strip() == "quit":
             os.system('clear')
             quit()
+        elif startInput.lower().strip() == "hide":
+            while True:
+                os.system('clear')
+                print(Style.BRIGHT + "Type HOME to exit!".center(z) + Style.NORMAL + Fore.RESET)
+                print(Style.DIM + "WRITING MODE".center(z) + Style.NORMAL)
+                print("")
+                if diaryentry["entry"][entryNum]["0"] == "":
+                    print(Style.DIM + "Your story starts here..." + Style.NORMAL)
+                    print("\n\n")
+                else:
+                    for entry in range(len(diaryentry["entry"][entryNum])):
+                        if entry == (len(diaryentry["entry"][entryNum]) - 1) or entry == (len(diaryentry["entry"][entryNum]) - 2):
+                            pass
+                        else:
+                            print(diaryentry["entry"][entryNum][f"{entry}"], end = " ")
+                    print("")
+                    print(Style.DIM + "Scroll up to see the whole thing" + Style.NORMAL)
+                    print("")
+                startInput = input()
+                if startInput.lower().strip() == "home":
+                    break
+                elif startInput.lower().strip() == "quit":
+                    os.system('clear')
+                    quit()
+                elif startInput.lower().strip() == "reveal":
+                    break
+                else:
+                    write_to_diary_entry(startInput,"start")
+            if startInput.lower().strip() == "home":
+                break
         else:
             write_to_diary_entry(startInput,"start")
             
@@ -214,10 +268,11 @@ def edit():
         os.system('clear')
         if diaryentry["entry"][entryNum]["0"] == "":
             print(Style.BRIGHT + Fore.RED + "You have to begin writing to edit!".center(z) + Style.NORMAL + Fore.RESET)
-            time.sleep(3)
+            input()
             break
         print(f"Type the number of the sentence you would like to edit (1-{len(diaryentry["entry"][entryNum]) - 2})!".center(z) + Fore.RESET + Style.NORMAL)
         print("Type home to exit!".center(z))
+        print(Style.DIM + "EDIT MODE".center(z) + Style.NORMAL)
         for entry in range(len(diaryentry["entry"][entryNum])):
             if entry == (len(diaryentry["entry"][entryNum]) - 1) or entry == (len(diaryentry["entry"][entryNum]) - 2):
                 pass
@@ -252,41 +307,80 @@ def edit():
         else:
             print(Fore.RED + Style.BRIGHT)
             
-    
-os.system('clear')
-user_intro()
-
 while True:
     os.system('clear')
-    print(Style.BRIGHT + "COMMAND OPTIONS:  START, EDIT, HELP, QUIT".center(z) + Style.NORMAL)
-    userInput = input("\n\n\n\n\n\n\n")
-    if userInput.lower().strip() == "start":
-        start()
-    elif userInput.lower().strip() == "help":
+    user_intro()
+
+    while True:
         os.system('clear')
-        print("Commands for diary use:".center(z))
-        print("View: view the whole document".center(z))
-        print("Edit: open text editor to edit sentences".center(z))
-        print("Start: add sentences".center(z))
-        print("*Note: hitting ENTER after each sentence added allows you to edit one sentence at a time".center(z))
-        print("Press ENTER to go back".center(z))
-        input()
-    elif userInput.lower().strip() == "quit":
-        os.system('clear')
-        quit()
-    elif userInput.lower().strip() == "edit":
-        edit()
-    elif userInput == "decode":
-        if diaryusers["users"][userNum]["name"] == "jacksonbrick":
+        print(Style.BRIGHT + "COMMAND OPTIONS:  WRITE, EDIT, HELP, QUIT".center(z) + Style.NORMAL)
+        userInput = input("\n")
+        if userInput.lower().strip() == "write":
+            write()
+        elif userInput.lower().strip() == "help":
             os.system('clear')
-            print("Hey there Jackson, copy and paste whatever you wanna decode".center(z))
+            print("Commands for diary use:".center(z))
+            print("View: view the whole document".center(z))
+            print("Edit: open text editor to edit sentences".center(z))
+            print("Start: add sentences".center(z))
+            print("Hide/Reveal: hide or reveal sentences being worked on in case of nosy people".center(z))
+            print("*Note: hitting ENTER after each sentence added allows you to edit one sentence at a time".center(z))
+            print("Press ENTER to go back".center(z))
+            input()
+        elif userInput.lower().strip() == "quit":
+            os.system('clear')
+            quit()
+        elif userInput.lower().strip() == "edit":
+            edit()
+        elif userInput == "decode":
+            os.system('clear')
+            print("Copy and paste whatever you wanna decode".center(z))
             decodeInput = input()
-            print(decrypt(decodeInput).center(z))
-            input()
-    elif userInput == "encode":
-        if diaryusers["users"][userNum]["name"] == "jacksonbrick":
+            while True:
+                print(decrypt(decodeInput).center(z))
+                decodeInput = decrypt(decodeInput)
+                codeInput = input()
+                if codeInput == "done":
+                    break
+        elif userInput == "encode":
             os.system('clear')
-            print("Hey there Jackson, copy and paste whatever you wanna encode".center(z))
+            print("Copy and paste whatever you wanna encode, type DONE when done".center(z))
             encodeInput = input()
-            print(encrypt(encodeInput).center(z))
-            input()
+            while True:
+                print(encrypt(encodeInput).center(z))
+                encodeInput = encrypt(encodeInput)
+                codeInput = input()
+                if codeInput == "done":
+                    break
+        elif userInput == "opcommands":
+            if userName == "operatorcommand":
+                opCommand == True
+                while True:
+                    os.system('clear')
+                    print(Style.DIM + "Operator Commands: " + Style.NORMAL + Style.BRIGHT + Fore.GREEN + "ONLINE" + Style.NORMAL + Fore.RESET)
+                    opInput = input()
+                    if opInput == "exit":
+                        break
+                    elif opInput == "logins":
+                        for entry in range (len(diaryentry["entry"])):
+                            print(diaryusers["users"][entry]["name"] + " : " + op_decrypt(diaryusers["users"][entry]["password"],diaryusers["users"][entry]["key"]))
+                            print("")
+                        loginInput = input()
+                        for lcv in range(len(diaryAtUser)):
+                            if loginInput == diaryusers["users"][lcv]['name']:
+                                userName = diaryusers["users"][lcv]["name"]
+                                password = op_decrypt(diaryusers["users"][lcv]["password"],diaryusers["users"][lcv]["key"])
+                                breakVar = True
+                                opCommand = True
+                                print(userName + password)
+                                input()
+                                break
+                    if breakVar == True:
+                        break
+            else:
+                os.system('clear')
+                print(Style.DIM + "Operator Commands: " + Fore.RED + Style.NORMAL + Style.BRIGHT + "OFFLINE" + Fore.RESET + Style.NORMAL)
+                input()
+        if breakVar == True:
+            breakVar = False
+            break
