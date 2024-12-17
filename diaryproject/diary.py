@@ -20,7 +20,7 @@ def encrypt(pswrd):
     global encryptedPass
     unencryptedPass = []
     for ele in range(len(pswrd)):
-         unencryptedPass.append(pswrd[ele])
+        unencryptedPass.append(pswrd[ele])
     encryptedPass = []
     for ele in unencryptedPass:
         encryptedPass.append(diaryusers["users"][userNum]["key"][ele])
