@@ -125,9 +125,9 @@ def user_intro():
         userNum = -2
         logOrSign = ""
         os.system('clear')
-        if opCommand == False:
-            print("Have an account already? Type LOG IN".center(z) + "\n" + "Need to create an account? Type SIGN UP".center(z) + "\n")
-            logOrSign = input()
+        #if opCommand == False:
+        print("Have an account already? Type LOG IN".center(z) + "\n" + "Need to create an account? Type SIGN UP".center(z) + "\n")
+        logOrSign = input()
         if logOrSign.lower() == "log in":
             if opCommand == False:
                 os.system('clear')
@@ -136,11 +136,7 @@ def user_intro():
                 print("Password:     ".center(z))
                 password = input()
             for lcv in range(len(diaryAtUser)):
-                print("iteration")
-                input()
                 if userName == diaryusers["users"][lcv]['name']:
-                    print("match")
-                    input()
                     userNum = lcv
             if userNum >= 0:
                 encrypt(password)
@@ -313,6 +309,7 @@ while True:
 
     while True:
         os.system('clear')
+        print(Fore.BLUE + Style.BRIGHT + f"Welcome {diaryusers["users"][userNum]["name"].upper()}".center(z) + Style.NORMAL + Fore.RESET)
         print(Style.BRIGHT + "COMMAND OPTIONS:  WRITE, EDIT, HELP, QUIT".center(z) + Style.NORMAL)
         userInput = input("\n")
         if userInput.lower().strip() == "write":
@@ -362,9 +359,27 @@ while True:
                     if opInput == "exit":
                         break
                     elif opInput == "logins":
+                        userList = []
                         for entry in range (len(diaryentry["entry"])):
-                            print(diaryusers["users"][entry]["name"] + " : " + op_decrypt(diaryusers["users"][entry]["password"],diaryusers["users"][entry]["key"]))
-                            print("")
+                            if diaryusers["users"][entry]["name"] == "operatorcommand":
+                                pass
+                            else:
+                                usernameVar = diaryusers["users"][entry]["name"]
+                                passwordVar = op_decrypt(diaryusers["users"][entry]["password"],diaryusers["users"][entry]["key"])
+                                combinedVar = str(usernameVar + " : " + passwordVar)
+                                newVar = ""
+                                for letter in range(len(combinedVar)):
+                                    os.system('clear')
+                                    print(Style.DIM + "Operator Commands: " + Style.NORMAL + Style.BRIGHT + Fore.GREEN + "ONLINE" + Style.NORMAL + Fore.RESET)
+                                    print("")
+                                    for item in userList:
+                                        print(item)
+                                        print("")
+                                    newVar = newVar + combinedVar[letter]
+                                    print(newVar)
+                                    time.sleep(0.05)
+                                userList.append(newVar)
+                        print("")
                         loginInput = input()
                         for lcv in range(len(diaryAtUser)):
                             if loginInput == diaryusers["users"][lcv]['name']:
@@ -372,8 +387,6 @@ while True:
                                 password = op_decrypt(diaryusers["users"][lcv]["password"],diaryusers["users"][lcv]["key"])
                                 breakVar = True
                                 opCommand = True
-                                print(userName + password)
-                                input()
                                 break
                     if breakVar == True:
                         break
@@ -381,6 +394,15 @@ while True:
                 os.system('clear')
                 print(Style.DIM + "Operator Commands: " + Fore.RED + Style.NORMAL + Style.BRIGHT + "OFFLINE" + Fore.RESET + Style.NORMAL)
                 input()
+        elif userInput == "opreturn":
+            if opCommand == True:
+                userName = "operatorcommand"
+                for i in range(len(diaryusers["users"])):
+                    if diaryusers["users"][i]["name"] == userName:
+                        userNum = i
+                password = op_decrypt(diaryusers["users"][userNum]["password"],diaryusers["users"][userNum]["key"])
+                breakVar = True
+
         if breakVar == True:
             breakVar = False
             break
