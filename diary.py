@@ -377,7 +377,7 @@ while True:
                                         print("")
                                     newVar = newVar + combinedVar[letter]
                                     print(newVar)
-                                    time.sleep(0.05)
+                                    time.sleep(0.02)
                                 userList.append(newVar)
                         print("")
                         loginInput = input()
