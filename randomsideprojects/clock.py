@@ -1,5 +1,6 @@
 import time
 import os
+from colorama import Fore, Style, Back
 z = os.get_terminal_size()
 z = z[0]
 start = False
@@ -11,6 +12,17 @@ irl = time.ctime(x)
 strmin = irl[14] + irl[15]
 intmin = int(strmin)
 lockedminute = intmin
+
+while True:
+    os.system('clear')
+    print("Northern Hemisphere                      Southern Hemisphere".center(z))
+    hemisphere = input()
+    if hemisphere.lower().strip() == "northern":
+        hemisphere = "north"
+        break
+    elif hemisphere.lower().strip() == "southern":
+        hemisphere = "south"
+        break
 
 while True:
     os.system('clear')
@@ -41,31 +53,71 @@ while True:
     intsec = int(strsec)
     year = irl[-4] + irl[-3] + irl[-2] + irl[-1]
     if start == True:
-        print("+------------------------------------------+".center(z))
-        print("+                                          +".center(z))
-        print(f"+             Date : {dayname} {month} {daynum}            +".center(z))
-        print("+                                          +".center(z))
-        print("+------------------------------------------+".center(z))
-        
-        print("+------------------------------------------+".center(z))
-        print("+                                          +".center(z))
-        print(f"+                  {strhour}:{strmin} {period}                 +".center(z))
-        print("+                                          +".center(z))
-        print("+------------------------------------------+".center(z))
+        print("----------------------------------------------------------------------------------------------------------")
+        print("")
+        print("           +=====================================================+")
+        print("           |                                                     |            +----------------------+")
+        print("           |                                                     |            |                      |")
+        print(f"           |                                                     |            |      {dayname} {month} {daynum}      |")
+        print("           |                                                     |            |                      |")
+        print("           |                                                     |            +----------------------+")
+        print("           |                                                     |")
+        print("           |                                                     |            +----------------------+")
+        print(f"           |                                                     |            |       {strhour}:{strmin} {period}       |")
+        print("           |                                                     |            +----------------------+")
+        print("           +=====================================================+")
         time.sleep(60)
     else:
-        print("+------------------------------------------+".center(z))
-        print("+                                          +".center(z))
-        print(f"+             Date : {dayname} {month} {daynum}            +".center(z))
-        print("+                                          +".center(z))
-        print("+------------------------------------------+".center(z))
-        
-        print("+------------------------------------------+".center(z))
-        print("+                                          +".center(z))
-        print(f"+                  {strhour}:{strmin} {period}                 +".center(z))
-        print("+                                          +".center(z))
-        print("+------------------------------------------+".center(z))
+        print("----------------------------------------------------------------------------------------------------------")
+        print("")
+        print("           +=====================================================+")
+        print("           |                                                     |            +----------------------+")
+        print("           |                                                     |            |                      |")
+        print(f"           |                                                     |            |      {dayname} {month} {daynum}      |")
+        print("           |                                                     |            |                      |")
+        print("           |                                                     |            +----------------------+")
+        print("           |                                                     |")
+        print("           |                                                     |            +----------------------+")
+        print(f"           |                                                     |            |       {strhour}:{strmin} {period}       |")
+        print("           |                                                     |            +----------------------+")
+        print("           +=====================================================+")
         time.sleep(60-intsec)
         if intmin != lockedminute:
             start = True
+
+
+
+
+
+
+
+
+
+print("----------------------------------------------------------------------------------------------------------")
+print("           +=====================================================+")
+print("           |      |                                              |")
+print("           |     |      ________                                 |            +----------------------+")
+print("           |     | ____/ __|_____|____>                          |            |                      |")
+print("           |      /  ___/  |     |                               |            |      {dayname} {month} {daynum}      |")
+print("           |        /      |     |                               |            |                      |")
+print("           |       /       |     |                               |            +----------------------+")
+print("           |_ __ __|__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ |")
+print("           | |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ||            +----------------------+")
+print("           |#####################################################|            |       {strhour}:{strmin} {period}       |")
+print("           |#####################################################|            +----------------------+")
+print("           +=====================================================+")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
