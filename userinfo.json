@@ -129,6 +129,19 @@
         "correct": 954362,
         "total": 978045,
         "status": "cleared"
+    },
+    {
+        "name": "thosewhoknow",
+        "password": "thosewhodontknow!",
+        "studybuddyname": "jackson",
+        "subject": "span",
+        "fontColor": "default",
+        "screenMode": "dark",
+        "gameMode": "quiz",
+        "qamount": 10,
+        "correct": 13,
+        "total": 20,
+        "status": "cleared"
     }
 ]
 }
