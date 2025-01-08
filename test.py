@@ -281,15 +281,41 @@ print("")
 print("Press ENTER to move to the next prompt".center(z))
 input()
 os.system('clear')
+globalItems = []
+class ShoppingCart:
+    owner = None
+    items = []
+    def __init__(self,items):
+        self.items = items
+    def printItem(self):
+        if len(self.items) > 0:
+            for item in range(len(self.items)):
+                print((item + ". " + self.items[item]).center(z))
+        else:
+            print("There are no items to display".center(z))
+    def addItem(self,items):
+        globalItems.append(addInput)
+    def removeItem(self,items):
+        self.items.remove(removeInput)
+while True:
+    print("Prompt 10: ShoppingCart Class with Methods".center(z))
+    print("You can ADD or REMOVE. Type DONE to move to the next prompt")
+    print("")
+    ShoppingCart.printItem
+    print("")
+    listInput = input()
+    if listInput.lower().strip() == "add":
+        print("What would you like to add?".center(z))
+        addInput = input()
+        ShoppingCart.addItem(addInput)
+    elif listInput.lower().strip() == "remove":
+        print("What would you like to remove?".center(z))
+        removeInput = input()
+        ShoppingCart.removeItem(removeInput)
+    elif listInput.lower().strip() == "done":
+        break
+    os.system('clear')
 
-print("Prompt 10:".center(z))
-print("")
-print(song1.center(z))
-print(song2.center(z))
-print(song3.center(z))
-print("")
-print("Press ENTER to move to the next prompt".center(z))
-input()
 os.system('clear')
 
 print("Prompt 11:".center(z))
@@ -312,12 +338,3 @@ print("Press ENTER to move to the next prompt".center(z))
 input()
 os.system('clear')
 
-print("Prompt 13:".center(z))
-print("")
-print(song1.center(z))
-print(song2.center(z))
-print(song3.center(z))
-print("")
-print("Press ENTER to move to the next prompt".center(z))
-input()
-os.system('clear')
