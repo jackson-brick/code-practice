@@ -293,10 +293,10 @@ class ShoppingCart:
                 print((item + ". " + self.items[item]).center(z))
         else:
             print("There are no items to display".center(z))
-    def addItem(self,items):
-        globalItems.append(addInput)
-    def removeItem(self,items):
-        self.items.remove(removeInput)
+    def addItem(items):
+        globalItems.append(items)
+    def removeItem(items):
+        globalItems.remove(items)
 while True:
     print("Prompt 10: ShoppingCart Class with Methods".center(z))
     print("You can ADD or REMOVE. Type DONE to move to the next prompt")
