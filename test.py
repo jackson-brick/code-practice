@@ -310,34 +310,89 @@ while True:
         addInput = input()
         cart1.addItem(addInput)
     elif listInput.lower().strip() == "remove":
-        print("What would you like to remove?".center(z))
-        removeInput = input()
-        cart1.removeItem(removeInput)
+        if len(cart1.items) == 0:
+            print(Back.BLACK)
+            os.system('clear')
+            print((Fore.RED + Style.BRIGHT + "There is nothing to remove." + Fore.RESET + Style.NORMAL).center(z+24))
+            time.sleep(2.5)
+            print(Back.RESET)
+        else:
+            print("What would you like to remove?".center(z))
+            removeInput = input()
+            cart1.removeItem(removeInput)
     elif listInput.lower().strip() == "done":
         break
     os.system('clear')
 
 os.system('clear')
 
-print("Prompt 11:".center(z))
+class Item:
+    name = None
+    quantity = None
+    price = None
+    def __init__(self,name,quantity,price):
+        self.name = name
+        self.quantity = quantity
+        self.price = price
+    def __str__(self):
+        return (f"{self.name}: {self.quantity}x${self.price}").center(z)
+    def calculateTotalPrice(self):
+        totalPrice = self.quantity * self.price
+        totalPrice *= 100
+        int(totalPrice)
+        totalPrice /= 100
+        print(("$" + str(totalPrice)).center(z))
+item1 = Item("Hershey's Chocolate Bar",10,2.99)
+item2 = Item("Can of Chili",35,5.67)
+
+print("Prompt 11: Inventory System".center(z))
 print("")
-print(song1.center(z))
-print(song2.center(z))
-print(song3.center(z))
+print(item1)
+print(item2)
+print("Total prices:".center(z))
+item1.calculateTotalPrice()
+item2.calculateTotalPrice()
 print("")
 print("Press ENTER to move to the next prompt".center(z))
 input()
 os.system('clear')
 
-print("Prompt 12:".center(z))
-print("")
-print(song1.center(z))
-print(song2.center(z))
-print(song3.center(z))
-print("")
-print("Press ENTER to move to the next prompt".center(z))
-input()
-os.system('clear')
+class Gradebook:
+    studentName = None
+    grades = []
+    def __init__(self,studentName,grades = []):
+        self.studentName = studentName
+        self.grades = grades
+    def __str__(self):
+        return f"{self.studentName} has the grades {(self.grades)}".center(z)
+    def addGrade(self,grade):
+        self.grades.append(grade)
+    def gradeAverage(self,grade):
+        gradeTotal = 0
+        for score in grade:
+            gradeTotal += score
+        gradeAvg = int(gradeTotal/len(grade))
+        return f"The average grade is {gradeAvg}".center(z)
+
+student1 = Gradebook("Benji")
+student1.addGrade(90)
+student1.addGrade(87)
+student1.addGrade(68)
+student1.addGrade(99)
+student1.addGrade(89)
+while True:
+    print("Prompt 12:".center(z))
+    print("")
+    print(student1)
+    print(student1.gradeAverage(student1.grades))
+    print("")
+    print("Type a number to add a grade. This is the final prompt, but type DONE to quit!".center(z))
+    ptwelve = input()
+    if ptwelve.isdigit():
+        student1.addGrade(ptwelve)
+    elif ptwelve.lower().strip() == "done":
+        quit()
+    os.system('clear')
 
 
 
