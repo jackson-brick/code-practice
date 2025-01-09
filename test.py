@@ -281,37 +281,38 @@ print("")
 print("Press ENTER to move to the next prompt".center(z))
 input()
 os.system('clear')
-globalItems = []
 class ShoppingCart:
     owner = None
     items = []
-    def __init__(self,items):
+    def __init__(self,owner,items = []):
+        self.owner = owner
         self.items = items
-    def printItem(self):
-        if len(self.items) > 0:
-            for item in range(len(self.items)):
-                print((item + ". " + self.items[item]).center(z))
+    def displayItems(self):
+        if len(self.items) == 0:
+            print("There are no items in your list".center(z))
         else:
-            print("There are no items to display".center(z))
-    def addItem(items):
-        globalItems.append(items)
-    def removeItem(items):
-        globalItems.remove(items)
+            for i in range(len(self.items)):
+                print(str(i + 1) + ". " + self.items[i])
+    def addItem(self,item):
+        self.items.append(item)
+    def removeItem(self,item):
+        self.items.remove(f"{item}")
+cart1 = ShoppingCart("Jackson")
 while True:
     print("Prompt 10: ShoppingCart Class with Methods".center(z))
-    print("You can ADD or REMOVE. Type DONE to move to the next prompt")
+    print("You can ADD or REMOVE. Type DONE to move to the next prompt".center(z))
     print("")
-    ShoppingCart.printItem
+    cart1.displayItems()
     print("")
     listInput = input()
     if listInput.lower().strip() == "add":
         print("What would you like to add?".center(z))
         addInput = input()
-        ShoppingCart.addItem(addInput)
+        cart1.addItem(addInput)
     elif listInput.lower().strip() == "remove":
         print("What would you like to remove?".center(z))
         removeInput = input()
-        ShoppingCart.removeItem(removeInput)
+        cart1.removeItem(removeInput)
     elif listInput.lower().strip() == "done":
         break
     os.system('clear')
@@ -337,4 +338,6 @@ print("")
 print("Press ENTER to move to the next prompt".center(z))
 input()
 os.system('clear')
+
+
 
