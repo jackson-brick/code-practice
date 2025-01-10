@@ -389,7 +389,7 @@ while True:
     print("Type a number to add a grade. This is the final prompt, but type DONE to quit!".center(z))
     ptwelve = input()
     if ptwelve.isdigit():
-        student1.addGrade(ptwelve)
+        student1.addGrade(int(ptwelve))
     elif ptwelve.lower().strip() == "done":
         quit()
     os.system('clear')
