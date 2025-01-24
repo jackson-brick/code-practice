@@ -118,19 +118,6 @@
         "status": "cleared"
     },
     {
-        "name": "jacksonbrick",
-        "password": "evanystately",
-        "studybuddyname": "EVANY",
-        "subject": "csp",
-        "fontColor": "red",
-        "screenMode": "dark",
-        "gameMode": "quiz",
-        "qamount": 15,
-        "correct": 954362,
-        "total": 978045,
-        "status": "cleared"
-    },
-    {
         "name": "thosewhoknow",
         "password": "thosewhodontknow!",
         "studybuddyname": "jackson",
@@ -167,6 +154,19 @@
         "qamount": 8,
         "correct": 6,
         "total": 8,
+        "status": "cleared"
+    },
+    {
+        "name": "jacksonbrick",
+        "password": "evanystately",
+        "studybuddyname": "EVANY",
+        "subject": "span",
+        "fontColor": "red",
+        "screenMode": "dark",
+        "gameMode": "quiz",
+        "qamount": 15,
+        "correct": 954362,
+        "total": 978045,
         "status": "cleared"
     }
 ]
