@@ -1,5 +1,6 @@
 import csv
 
+
 fullUnempCSV = []
 with open('education2023.csv','r') as file:
     unemp = csv.DictReader(file)
@@ -16,12 +17,17 @@ removeList = []
 #for value in removeList:
     #fullUnempCSV.remove(value)
 for value in fullUnempCSV:
-    value["Year"] = value["Attribute"][-1] + value["Attribute"][-2] + value["Attribute"][-3] + value["Attribute"][-4]
-    value["Attribute"].replace(f", {value["Year"]}","")
-
+    value["Year"] = value["Attribute"][-4] + value["Attribute"][-3] + value["Attribute"][-2] + value["Attribute"][-1]
+    tempAttribute = ""
+    for char in value["Attribute"]:
+        if char == ",":
+            break
+        else:
+            tempAttribute += char
+    value["Attribute"] = tempAttribute
 
 with open('education2023.csv','w',newline='') as file:
-    field_names = ["Year","Age","Gender","Educational Attainment","Personal Income","Population Count"]
+    field_names = ["FIPS Code","State","Area name","Attribute","Value","Year"]
     writer = csv.DictWriter(file,fieldnames=field_names)
 
     writer.writeheader()
