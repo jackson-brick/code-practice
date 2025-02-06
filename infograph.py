@@ -29,6 +29,5 @@ educ2023DATA = ""
 edToIncCADATA = pd.read_csv('calieducationtoincome2008-2014.csv')
 incSince1958DATA = ""
 
-pd.options.display.max_rows()
-edToIncCADATA.plot(x="Educational Attainment",y="Population Count",title="Educational attainment")
+edToIncCADATA.scatter(x="Educational Attainment",y="Population Count",title="Educational attainment")
 plot.savefig('figure.png')

@@ -31,22 +31,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 0,US,United States,Percent of adults who are high school graduates (or equivalent),28.6,2000
 0,US,United States,Percent of adults completing some college or associate degree,27.4,2000
 0,US,United States,Percent of adults with a bachelor's degree or higher,24.4,2000
-0,US,United States,Less than high school graduate,29179819,8-12
-0,US,United States,High school graduate (or equivalency),57706852,8-12
-0,US,United States,Some college or associate degree,59244324,8-12
-0,US,United States,Bachelor's degree or higher,58205022,8-12
-0,US,United States,Percent of adults who are not high school graduates,14.28031114,8-12
-0,US,United States,Percent of adults who are high school graduates (or equivalent),28.24115535,8-12
-0,US,United States,Percent of adults completing some college or associate degree,28.99357875,8-12
-0,US,United States,Percent of adults with a bachelor's degree or higher,28.48495476,8-12
-0,US,United States,Less than high school graduate,24230217,9-23
-0,US,United States,High school graduate (or equivalency),59836489,9-23
-0,US,United States,Some college or associate degree,64413653,9-23
-0,US,United States,Bachelor's degree or higher,79954302,9-23
-0,US,United States,Percent of adults who are not high school graduates,10.60706676,9-23
-0,US,United States,Percent of adults who are high school graduates (or equivalent),26.19413741,9-23
-0,US,United States,Percent of adults completing some college or associate degree,28.1978456,9-23
-0,US,United States,Percent of adults with a bachelor's degree or higher,35.00095023,9-23
+0,US,United States,Less than high school graduate,29179819,2010
+0,US,United States,High school graduate (or equivalency),57706852,2010
+0,US,United States,Some college or associate degree,59244324,2010
+0,US,United States,Bachelor's degree or higher,58205022,2010
+0,US,United States,Percent of adults who are not high school graduates,14.28031114,2010
+0,US,United States,Percent of adults who are high school graduates (or equivalent),28.24115535,2010
+0,US,United States,Percent of adults completing some college or associate degree,28.99357875,2010
+0,US,United States,Percent of adults with a bachelor's degree or higher,28.48495476,2010
+0,US,United States,Less than high school graduate,24230217,2023
+0,US,United States,High school graduate (or equivalency),59836489,2023
+0,US,United States,Some college or associate degree,64413653,2023
+0,US,United States,Bachelor's degree or higher,79954302,2023
+0,US,United States,Percent of adults who are not high school graduates,10.60706676,2023
+0,US,United States,Percent of adults who are high school graduates (or equivalent),26.19413741,2023
+0,US,United States,Percent of adults completing some college or associate degree,28.1978456,2023
+0,US,United States,Percent of adults with a bachelor's degree or higher,35.00095023,2023
 1000,AL,Alabama,Less than a high school diploma,1062306,1970
 1000,AL,Alabama,High school diploma only,468269,1970
 1000,AL,Alabama,Some college (1-3 years),136287,1970
@@ -79,22 +79,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 1000,AL,Alabama,Percent of adults who are high school graduates (or equivalent),30.4,2000
 1000,AL,Alabama,Percent of adults completing some college or associate degree,25.9,2000
 1000,AL,Alabama,Percent of adults with a bachelor's degree or higher,19,2000
-1000,AL,Alabama,Less than high school graduate,551030,8-12
-1000,AL,Alabama,High school graduate (or equivalency),991406,8-12
-1000,AL,Alabama,Some college or associate degree,918987,8-12
-1000,AL,Alabama,Bachelor's degree or higher,705001,8-12
-1000,AL,Alabama,Percent of adults who are not high school graduates,17.40228093,8-12
-1000,AL,Alabama,Percent of adults who are high school graduates (or equivalent),31.30995723,8-12
-1000,AL,Alabama,Percent of adults completing some college or associate degree,29.02286617,8-12
-1000,AL,Alabama,Percent of adults with a bachelor's degree or higher,22.26489567,8-12
-1000,AL,Alabama,Less than high school graduate,409381,9-23
-1000,AL,Alabama,High school graduate (or equivalency),1046374,9-23
-1000,AL,Alabama,Some college or associate degree,1035466,9-23
-1000,AL,Alabama,Bachelor's degree or higher,957081,9-23
-1000,AL,Alabama,Percent of adults who are not high school graduates,11.87195901,9-23
-1000,AL,Alabama,Percent of adults who are high school graduates (or equivalent),30.34461599,9-23
-1000,AL,Alabama,Percent of adults completing some college or associate degree,30.02828639,9-23
-1000,AL,Alabama,Percent of adults with a bachelor's degree or higher,27.75513862,9-23
+1000,AL,Alabama,Less than high school graduate,551030,2010
+1000,AL,Alabama,High school graduate (or equivalency),991406,2010
+1000,AL,Alabama,Some college or associate degree,918987,2010
+1000,AL,Alabama,Bachelor's degree or higher,705001,2010
+1000,AL,Alabama,Percent of adults who are not high school graduates,17.40228093,2010
+1000,AL,Alabama,Percent of adults who are high school graduates (or equivalent),31.30995723,2010
+1000,AL,Alabama,Percent of adults completing some college or associate degree,29.02286617,2010
+1000,AL,Alabama,Percent of adults with a bachelor's degree or higher,22.26489567,2010
+1000,AL,Alabama,Less than high school graduate,409381,2023
+1000,AL,Alabama,High school graduate (or equivalency),1046374,2023
+1000,AL,Alabama,Some college or associate degree,1035466,2023
+1000,AL,Alabama,Bachelor's degree or higher,957081,2023
+1000,AL,Alabama,Percent of adults who are not high school graduates,11.87195901,2023
+1000,AL,Alabama,Percent of adults who are high school graduates (or equivalent),30.34461599,2023
+1000,AL,Alabama,Percent of adults completing some college or associate degree,30.02828639,2023
+1000,AL,Alabama,Percent of adults with a bachelor's degree or higher,27.75513862,2023
 2000,AK,Alaska,Less than a high school diploma,44994,1970
 2000,AK,Alaska,High school diploma only,50820,1970
 2000,AK,Alaska,Some college (1-3 years),20052,1970
@@ -127,22 +127,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 2000,AK,Alaska,Percent of adults who are high school graduates (or equivalent),27.9,2000
 2000,AK,Alaska,Percent of adults completing some college or associate degree,35.7,2000
 2000,AK,Alaska,Percent of adults with a bachelor's degree or higher,24.7,2000
-2000,AK,Alaska,Less than high school graduate,37652,8-12
-2000,AK,Alaska,High school graduate (or equivalency),121272,8-12
-2000,AK,Alaska,Some college or associate degree,165651,8-12
-2000,AK,Alaska,Bachelor's degree or higher,122968,8-12
-2000,AK,Alaska,Percent of adults who are not high school graduates,8.413046344,8-12
-2000,AK,Alaska,Percent of adults who are high school graduates (or equivalent),27.09728451,8-12
-2000,AK,Alaska,Percent of adults completing some college or associate degree,37.01342664,8-12
-2000,AK,Alaska,Percent of adults with a bachelor's degree or higher,27.47624251,8-12
-2000,AK,Alaska,Less than high school graduate,31854,9-23
-2000,AK,Alaska,High school graduate (or equivalency),141206,9-23
-2000,AK,Alaska,Some college or associate degree,162411,9-23
-2000,AK,Alaska,Bachelor's degree or higher,152432,9-23
-2000,AK,Alaska,Percent of adults who are not high school graduates,6.528756741,9-23
-2000,AK,Alaska,Percent of adults who are high school graduates (or equivalent),28.94140844,9-23
-2000,AK,Alaska,Percent of adults completing some college or associate degree,33.28755921,9-23
-2000,AK,Alaska,Percent of adults with a bachelor's degree or higher,31.24227562,9-23
+2000,AK,Alaska,Less than high school graduate,37652,2010
+2000,AK,Alaska,High school graduate (or equivalency),121272,2010
+2000,AK,Alaska,Some college or associate degree,165651,2010
+2000,AK,Alaska,Bachelor's degree or higher,122968,2010
+2000,AK,Alaska,Percent of adults who are not high school graduates,8.413046344,2010
+2000,AK,Alaska,Percent of adults who are high school graduates (or equivalent),27.09728451,2010
+2000,AK,Alaska,Percent of adults completing some college or associate degree,37.01342664,2010
+2000,AK,Alaska,Percent of adults with a bachelor's degree or higher,27.47624251,2010
+2000,AK,Alaska,Less than high school graduate,31854,2023
+2000,AK,Alaska,High school graduate (or equivalency),141206,2023
+2000,AK,Alaska,Some college or associate degree,162411,2023
+2000,AK,Alaska,Bachelor's degree or higher,152432,2023
+2000,AK,Alaska,Percent of adults who are not high school graduates,6.528756741,2023
+2000,AK,Alaska,Percent of adults who are high school graduates (or equivalent),28.94140844,2023
+2000,AK,Alaska,Percent of adults completing some college or associate degree,33.28755921,2023
+2000,AK,Alaska,Percent of adults with a bachelor's degree or higher,31.24227562,2023
 4000,AZ,Arizona,Less than a high school diploma,383873,1970
 4000,AZ,Arizona,High school diploma only,289781,1970
 4000,AZ,Arizona,Some college (1-3 years),127063,1970
@@ -175,22 +175,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 4000,AZ,Arizona,Percent of adults who are high school graduates (or equivalent),24.3,2000
 4000,AZ,Arizona,Percent of adults completing some college or associate degree,33.1,2000
 4000,AZ,Arizona,Percent of adults with a bachelor's degree or higher,23.5,2000
-4000,AZ,Arizona,Less than high school graduate,604136,8-12
-4000,AZ,Arizona,High school graduate (or equivalency),1012503,8-12
-4000,AZ,Arizona,Some college or associate degree,1428213,8-12
-4000,AZ,Arizona,Bachelor's degree or higher,1105103,8-12
-4000,AZ,Arizona,Percent of adults who are not high school graduates,14.55765183,8-12
-4000,AZ,Arizona,Percent of adults who are high school graduates (or equivalent),24.39792721,8-12
-4000,AZ,Arizona,Percent of adults completing some college or associate degree,34.41514426,8-12
-4000,AZ,Arizona,Percent of adults with a bachelor's degree or higher,26.6292767,8-12
-4000,AZ,Arizona,Less than high school graduate,544528,9-23
-4000,AZ,Arizona,High school graduate (or equivalency),1171693,9-23
-4000,AZ,Arizona,Some college or associate degree,1646950,9-23
-4000,AZ,Arizona,Bachelor's degree or higher,1627462,9-23
-4000,AZ,Arizona,Percent of adults who are not high school graduates,10.91100067,9-23
-4000,AZ,Arizona,Percent of adults who are high school graduates (or equivalent),23.47784339,9-23
-4000,AZ,Arizona,Percent of adults completing some college or associate degree,33.00082374,9-23
-4000,AZ,Arizona,Percent of adults with a bachelor's degree or higher,32.6103322,9-23
+4000,AZ,Arizona,Less than high school graduate,604136,2010
+4000,AZ,Arizona,High school graduate (or equivalency),1012503,2010
+4000,AZ,Arizona,Some college or associate degree,1428213,2010
+4000,AZ,Arizona,Bachelor's degree or higher,1105103,2010
+4000,AZ,Arizona,Percent of adults who are not high school graduates,14.55765183,2010
+4000,AZ,Arizona,Percent of adults who are high school graduates (or equivalent),24.39792721,2010
+4000,AZ,Arizona,Percent of adults completing some college or associate degree,34.41514426,2010
+4000,AZ,Arizona,Percent of adults with a bachelor's degree or higher,26.6292767,2010
+4000,AZ,Arizona,Less than high school graduate,544528,2023
+4000,AZ,Arizona,High school graduate (or equivalency),1171693,2023
+4000,AZ,Arizona,Some college or associate degree,1646950,2023
+4000,AZ,Arizona,Bachelor's degree or higher,1627462,2023
+4000,AZ,Arizona,Percent of adults who are not high school graduates,10.91100067,2023
+4000,AZ,Arizona,Percent of adults who are high school graduates (or equivalent),23.47784339,2023
+4000,AZ,Arizona,Percent of adults completing some college or associate degree,33.00082374,2023
+4000,AZ,Arizona,Percent of adults with a bachelor's degree or higher,32.6103322,2023
 5000,AR,Arkansas,Less than a high school diploma,635149,1970
 5000,AR,Arkansas,High school diploma only,271150,1970
 5000,AR,Arkansas,Some college (1-3 years),80835,1970
@@ -223,22 +223,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 5000,AR,Arkansas,Percent of adults who are high school graduates (or equivalent),34.1,2000
 5000,AR,Arkansas,Percent of adults completing some college or associate degree,24.5,2000
 5000,AR,Arkansas,Percent of adults with a bachelor's degree or higher,16.7,2000
-5000,AR,Arkansas,Less than high school graduate,320693,8-12
-5000,AR,Arkansas,High school graduate (or equivalency),674742,8-12
-5000,AR,Arkansas,Some college or associate degree,545270,8-12
-5000,AR,Arkansas,Bachelor's degree or higher,380334,8-12
-5000,AR,Arkansas,Percent of adults who are not high school graduates,16.69372668,8-12
-5000,AR,Arkansas,Percent of adults who are high school graduates (or equivalent),35.1238054,8-12
-5000,AR,Arkansas,Percent of adults completing some college or associate degree,28.38411922,8-12
-5000,AR,Arkansas,Percent of adults with a bachelor's degree or higher,19.79834871,8-12
-5000,AR,Arkansas,Less than high school graduate,233857,9-23
-5000,AR,Arkansas,High school graduate (or equivalency),702778,9-23
-5000,AR,Arkansas,Some college or associate degree,593923,9-23
-5000,AR,Arkansas,Bachelor's degree or higher,513221,9-23
-5000,AR,Arkansas,Percent of adults who are not high school graduates,11.44238198,9-23
-5000,AR,Arkansas,Percent of adults who are high school graduates (or equivalent),34.3862032,9-23
-5000,AR,Arkansas,Percent of adults completing some college or associate degree,29.06004025,9-23
-5000,AR,Arkansas,Percent of adults with a bachelor's degree or higher,25.11137457,9-23
+5000,AR,Arkansas,Less than high school graduate,320693,2010
+5000,AR,Arkansas,High school graduate (or equivalency),674742,2010
+5000,AR,Arkansas,Some college or associate degree,545270,2010
+5000,AR,Arkansas,Bachelor's degree or higher,380334,2010
+5000,AR,Arkansas,Percent of adults who are not high school graduates,16.69372668,2010
+5000,AR,Arkansas,Percent of adults who are high school graduates (or equivalent),35.1238054,2010
+5000,AR,Arkansas,Percent of adults completing some college or associate degree,28.38411922,2010
+5000,AR,Arkansas,Percent of adults with a bachelor's degree or higher,19.79834871,2010
+5000,AR,Arkansas,Less than high school graduate,233857,2023
+5000,AR,Arkansas,High school graduate (or equivalency),702778,2023
+5000,AR,Arkansas,Some college or associate degree,593923,2023
+5000,AR,Arkansas,Bachelor's degree or higher,513221,2023
+5000,AR,Arkansas,Percent of adults who are not high school graduates,11.44238198,2023
+5000,AR,Arkansas,Percent of adults who are high school graduates (or equivalent),34.3862032,2023
+5000,AR,Arkansas,Percent of adults completing some college or associate degree,29.06004025,2023
+5000,AR,Arkansas,Percent of adults with a bachelor's degree or higher,25.11137457,2023
 6000,CA,California,Less than a high school diploma,4062367,1970
 6000,CA,California,High school diploma only,3566578,1970
 6000,CA,California,Some college (1-3 years),1784772,1970
@@ -271,22 +271,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 6000,CA,California,Percent of adults who are high school graduates (or equivalent),20.1,2000
 6000,CA,California,Percent of adults completing some college or associate degree,30,2000
 6000,CA,California,Percent of adults with a bachelor's degree or higher,26.6,2000
-6000,CA,California,Less than high school graduate,4577493,8-12
-6000,CA,California,High school graduate (or equivalency),4988559,8-12
-6000,CA,California,Some college or associate degree,7206710,8-12
-6000,CA,California,Bachelor's degree or higher,7344555,8-12
-6000,CA,California,Percent of adults who are not high school graduates,18.98010877,8-12
-6000,CA,California,Percent of adults who are high school graduates (or equivalent),20.6845521,8-12
-6000,CA,California,Percent of adults completing some college or associate degree,29.88188943,8-12
-6000,CA,California,Percent of adults with a bachelor's degree or higher,30.45344969,8-12
-6000,CA,California,Less than high school graduate,4149146,9-23
-6000,CA,California,High school graduate (or equivalency),5496195,9-23
-6000,CA,California,Some college or associate degree,7461496,9-23
-6000,CA,California,Bachelor's degree or higher,9834361,9-23
-6000,CA,California,Percent of adults who are not high school graduates,15.40074795,9-23
-6000,CA,California,Percent of adults who are high school graduates (or equivalent),20.4007075,9-23
-6000,CA,California,Percent of adults completing some college or associate degree,27.69548704,9-23
-6000,CA,California,Percent of adults with a bachelor's degree or higher,36.50305751,9-23
+6000,CA,California,Less than high school graduate,4577493,2010
+6000,CA,California,High school graduate (or equivalency),4988559,2010
+6000,CA,California,Some college or associate degree,7206710,2010
+6000,CA,California,Bachelor's degree or higher,7344555,2010
+6000,CA,California,Percent of adults who are not high school graduates,18.98010877,2010
+6000,CA,California,Percent of adults who are high school graduates (or equivalent),20.6845521,2010
+6000,CA,California,Percent of adults completing some college or associate degree,29.88188943,2010
+6000,CA,California,Percent of adults with a bachelor's degree or higher,30.45344969,2010
+6000,CA,California,Less than high school graduate,4149146,2023
+6000,CA,California,High school graduate (or equivalency),5496195,2023
+6000,CA,California,Some college or associate degree,7461496,2023
+6000,CA,California,Bachelor's degree or higher,9834361,2023
+6000,CA,California,Percent of adults who are not high school graduates,15.40074795,2023
+6000,CA,California,Percent of adults who are high school graduates (or equivalent),20.4007075,2023
+6000,CA,California,Percent of adults completing some college or associate degree,27.69548704,2023
+6000,CA,California,Percent of adults with a bachelor's degree or higher,36.50305751,2023
 8000,CO,Colorado,Less than a high school diploma,411837,1970
 8000,CO,Colorado,High school diploma only,392787,1970
 8000,CO,Colorado,Some college (1-3 years),166188,1970
@@ -319,22 +319,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 8000,CO,Colorado,Percent of adults who are high school graduates (or equivalent),23.2,2000
 8000,CO,Colorado,Percent of adults completing some college or associate degree,31,2000
 8000,CO,Colorado,Percent of adults with a bachelor's degree or higher,32.7,2000
-8000,CO,Colorado,Less than high school graduate,335459,8-12
-8000,CO,Colorado,High school graduate (or equivalency),744320,8-12
-8000,CO,Colorado,Some college or associate degree,1028184,8-12
-8000,CO,Colorado,Bachelor's degree or higher,1220906,8-12
-8000,CO,Colorado,Percent of adults who are not high school graduates,10.07726648,8-12
-8000,CO,Colorado,Percent of adults who are high school graduates (or equivalent),22.35954614,8-12
-8000,CO,Colorado,Percent of adults completing some college or associate degree,30.88688681,8-12
-8000,CO,Colorado,Percent of adults with a bachelor's degree or higher,36.67630057,8-12
-8000,CO,Colorado,Less than high school graduate,292446,9-23
-8000,CO,Colorado,High school graduate (or equivalency),811023,9-23
-8000,CO,Colorado,Some college or associate degree,1128710,9-23
-8000,CO,Colorado,Bachelor's degree or higher,1806355,9-23
-8000,CO,Colorado,Percent of adults who are not high school graduates,7.241390069,9-23
-8000,CO,Colorado,Percent of adults who are high school graduates (or equivalent),20.08211396,9-23
-8000,CO,Colorado,Percent of adults completing some college or associate degree,27.94850805,9-23
-8000,CO,Colorado,Percent of adults with a bachelor's degree or higher,44.72798793,9-23
+8000,CO,Colorado,Less than high school graduate,335459,2010
+8000,CO,Colorado,High school graduate (or equivalency),744320,2010
+8000,CO,Colorado,Some college or associate degree,1028184,2010
+8000,CO,Colorado,Bachelor's degree or higher,1220906,2010
+8000,CO,Colorado,Percent of adults who are not high school graduates,10.07726648,2010
+8000,CO,Colorado,Percent of adults who are high school graduates (or equivalent),22.35954614,2010
+8000,CO,Colorado,Percent of adults completing some college or associate degree,30.88688681,2010
+8000,CO,Colorado,Percent of adults with a bachelor's degree or higher,36.67630057,2010
+8000,CO,Colorado,Less than high school graduate,292446,2023
+8000,CO,Colorado,High school graduate (or equivalency),811023,2023
+8000,CO,Colorado,Some college or associate degree,1128710,2023
+8000,CO,Colorado,Bachelor's degree or higher,1806355,2023
+8000,CO,Colorado,Percent of adults who are not high school graduates,7.241390069,2023
+8000,CO,Colorado,Percent of adults who are high school graduates (or equivalent),20.08211396,2023
+8000,CO,Colorado,Percent of adults completing some college or associate degree,27.94850805,2023
+8000,CO,Colorado,Percent of adults with a bachelor's degree or higher,44.72798793,2023
 9000,CT,Connecticut,Less than a high school diploma,740830,1970
 9000,CT,Connecticut,High school diploma only,534830,1970
 9000,CT,Connecticut,Some college (1-3 years),179635,1970
@@ -367,22 +367,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 9000,CT,Connecticut,Percent of adults who are high school graduates (or equivalent),28.5,2000
 9000,CT,Connecticut,Percent of adults completing some college or associate degree,24.1,2000
 9000,CT,Connecticut,Percent of adults with a bachelor's degree or higher,31.4,2000
-9000,CT,Connecticut,Less than high school graduate,268454,8-12
-9000,CT,Connecticut,High school graduate (or equivalency),677253,8-12
-9000,CT,Connecticut,Some college or associate degree,606544,8-12
-9000,CT,Connecticut,Bachelor's degree or higher,879089,8-12
-9000,CT,Connecticut,Percent of adults who are not high school graduates,11.04140104,8-12
-9000,CT,Connecticut,Percent of adults who are high school graduates (or equivalent),27.85513338,8-12
-9000,CT,Connecticut,Percent of adults completing some college or associate degree,24.94690171,8-12
-9000,CT,Connecticut,Percent of adults with a bachelor's degree or higher,36.15656387,8-12
-9000,CT,Connecticut,Less than high school graduate,219549,9-23
-9000,CT,Connecticut,High school graduate (or equivalency),647094,9-23
-9000,CT,Connecticut,Some college or associate degree,603807,9-23
-9000,CT,Connecticut,Bachelor's degree or higher,1062403,9-23
-9000,CT,Connecticut,Percent of adults who are not high school graduates,8.668051403,9-23
-9000,CT,Connecticut,Percent of adults who are high school graduates (or equivalent),25.54802825,9-23
-9000,CT,Connecticut,Percent of adults completing some college or associate degree,23.83900684,9-23
-9000,CT,Connecticut,Percent of adults with a bachelor's degree or higher,41.9449135,9-23
+9000,CT,Connecticut,Less than high school graduate,268454,2010
+9000,CT,Connecticut,High school graduate (or equivalency),677253,2010
+9000,CT,Connecticut,Some college or associate degree,606544,2010
+9000,CT,Connecticut,Bachelor's degree or higher,879089,2010
+9000,CT,Connecticut,Percent of adults who are not high school graduates,11.04140104,2010
+9000,CT,Connecticut,Percent of adults who are high school graduates (or equivalent),27.85513338,2010
+9000,CT,Connecticut,Percent of adults completing some college or associate degree,24.94690171,2010
+9000,CT,Connecticut,Percent of adults with a bachelor's degree or higher,36.15656387,2010
+9000,CT,Connecticut,Less than high school graduate,219549,2023
+9000,CT,Connecticut,High school graduate (or equivalency),647094,2023
+9000,CT,Connecticut,Some college or associate degree,603807,2023
+9000,CT,Connecticut,Bachelor's degree or higher,1062403,2023
+9000,CT,Connecticut,Percent of adults who are not high school graduates,8.668051403,2023
+9000,CT,Connecticut,Percent of adults who are high school graduates (or equivalent),25.54802825,2023
+9000,CT,Connecticut,Percent of adults completing some college or associate degree,23.83900684,2023
+9000,CT,Connecticut,Percent of adults with a bachelor's degree or higher,41.9449135,2023
 10000,DE,Delaware,Less than a high school diploma,130463,1970
 10000,DE,Delaware,High school diploma only,91211,1970
 10000,DE,Delaware,Some college (1-3 years),28091,1970
@@ -415,22 +415,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 10000,DE,Delaware,Percent of adults who are high school graduates (or equivalent),31.4,2000
 10000,DE,Delaware,Percent of adults completing some college or associate degree,26.1,2000
 10000,DE,Delaware,Percent of adults with a bachelor's degree or higher,25,2000
-10000,DE,Delaware,Less than high school graduate,74349,8-12
-10000,DE,Delaware,High school graduate (or equivalency),190866,8-12
-10000,DE,Delaware,Some college or associate degree,166032,8-12
-10000,DE,Delaware,Bachelor's degree or higher,172084,8-12
-10000,DE,Delaware,Percent of adults who are not high school graduates,12.32308633,8-12
-10000,DE,Delaware,Percent of adults who are high school graduates (or equivalent),31.63537097,8-12
-10000,DE,Delaware,Percent of adults completing some college or associate degree,27.51922245,8-12
-10000,DE,Delaware,Percent of adults with a bachelor's degree or higher,28.52232025,8-12
-10000,DE,Delaware,Less than high school graduate,61144,9-23
-10000,DE,Delaware,High school graduate (or equivalency),206192,9-23
-10000,DE,Delaware,Some college or associate degree,192480,9-23
-10000,DE,Delaware,Bachelor's degree or higher,250626,9-23
-10000,DE,Delaware,Percent of adults who are not high school graduates,8.606473153,9-23
-10000,DE,Delaware,Percent of adults who are high school graduates (or equivalent),29.02305888,9-23
-10000,DE,Delaware,Percent of adults completing some college or associate degree,27.09299281,9-23
-10000,DE,Delaware,Percent of adults with a bachelor's degree or higher,35.27747515,9-23
+10000,DE,Delaware,Less than high school graduate,74349,2010
+10000,DE,Delaware,High school graduate (or equivalency),190866,2010
+10000,DE,Delaware,Some college or associate degree,166032,2010
+10000,DE,Delaware,Bachelor's degree or higher,172084,2010
+10000,DE,Delaware,Percent of adults who are not high school graduates,12.32308633,2010
+10000,DE,Delaware,Percent of adults who are high school graduates (or equivalent),31.63537097,2010
+10000,DE,Delaware,Percent of adults completing some college or associate degree,27.51922245,2010
+10000,DE,Delaware,Percent of adults with a bachelor's degree or higher,28.52232025,2010
+10000,DE,Delaware,Less than high school graduate,61144,2023
+10000,DE,Delaware,High school graduate (or equivalency),206192,2023
+10000,DE,Delaware,Some college or associate degree,192480,2023
+10000,DE,Delaware,Bachelor's degree or higher,250626,2023
+10000,DE,Delaware,Percent of adults who are not high school graduates,8.606473153,2023
+10000,DE,Delaware,Percent of adults who are high school graduates (or equivalent),29.02305888,2023
+10000,DE,Delaware,Percent of adults completing some college or associate degree,27.09299281,2023
+10000,DE,Delaware,Percent of adults with a bachelor's degree or higher,35.27747515,2023
 12000,FL,Florida,Less than a high school diploma,1882537,1970
 12000,FL,Florida,High school diploma only,1219216,1970
 12000,FL,Florida,Some college (1-3 years),458864,1970
@@ -463,22 +463,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 12000,FL,Florida,Percent of adults who are high school graduates (or equivalent),28.7,2000
 12000,FL,Florida,Percent of adults completing some college or associate degree,28.8,2000
 12000,FL,Florida,Percent of adults with a bachelor's degree or higher,22.3,2000
-12000,FL,Florida,Less than high school graduate,1860966,8-12
-12000,FL,Florida,High school graduate (or equivalency),3915878,8-12
-12000,FL,Florida,Some college or associate degree,3915609,8-12
-12000,FL,Florida,Bachelor's degree or higher,3435171,8-12
-12000,FL,Florida,Percent of adults who are not high school graduates,14.17595446,8-12
-12000,FL,Florida,Percent of adults who are high school graduates (or equivalent),29.82929737,8-12
-12000,FL,Florida,Percent of adults completing some college or associate degree,29.82724825,8-12
-12000,FL,Florida,Percent of adults with a bachelor's degree or higher,26.16749992,8-12
-12000,FL,Florida,Less than high school graduate,1643437,9-23
-12000,FL,Florida,High school graduate (or equivalency),4346402,9-23
-12000,FL,Florida,Some college or associate degree,4596529,9-23
-12000,FL,Florida,Bachelor's degree or higher,5263931,9-23
-12000,FL,Florida,Percent of adults who are not high school graduates,10.3684921,9-23
-12000,FL,Florida,Percent of adults who are high school graduates (or equivalent),27.42157735,9-23
-12000,FL,Florida,Percent of adults completing some college or associate degree,28.99963591,9-23
-12000,FL,Florida,Percent of adults with a bachelor's degree or higher,33.21029464,9-23
+12000,FL,Florida,Less than high school graduate,1860966,2010
+12000,FL,Florida,High school graduate (or equivalency),3915878,2010
+12000,FL,Florida,Some college or associate degree,3915609,2010
+12000,FL,Florida,Bachelor's degree or higher,3435171,2010
+12000,FL,Florida,Percent of adults who are not high school graduates,14.17595446,2010
+12000,FL,Florida,Percent of adults who are high school graduates (or equivalent),29.82929737,2010
+12000,FL,Florida,Percent of adults completing some college or associate degree,29.82724825,2010
+12000,FL,Florida,Percent of adults with a bachelor's degree or higher,26.16749992,2010
+12000,FL,Florida,Less than high school graduate,1643437,2023
+12000,FL,Florida,High school graduate (or equivalency),4346402,2023
+12000,FL,Florida,Some college or associate degree,4596529,2023
+12000,FL,Florida,Bachelor's degree or higher,5263931,2023
+12000,FL,Florida,Percent of adults who are not high school graduates,10.3684921,2023
+12000,FL,Florida,Percent of adults who are high school graduates (or equivalent),27.42157735,2023
+12000,FL,Florida,Percent of adults completing some college or associate degree,28.99963591,2023
+12000,FL,Florida,Percent of adults with a bachelor's degree or higher,33.21029464,2023
 13000,GA,Georgia,Less than a high school diploma,1399175,1970
 13000,GA,Georgia,High school diploma only,528537,1970
 13000,GA,Georgia,Some college (1-3 years),211101,1970
@@ -511,22 +511,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 13000,GA,Georgia,Percent of adults who are high school graduates (or equivalent),28.7,2000
 13000,GA,Georgia,Percent of adults completing some college or associate degree,25.6,2000
 13000,GA,Georgia,Percent of adults with a bachelor's degree or higher,24.3,2000
-13000,GA,Georgia,Less than high school graduate,972291,8-12
-13000,GA,Georgia,High school graduate (or equivalency),1805733,8-12
-13000,GA,Georgia,Some college or associate degree,1731313,8-12
-13000,GA,Georgia,Bachelor's degree or higher,1733171,8-12
-13000,GA,Georgia,Percent of adults who are not high school graduates,15.57532646,8-12
-13000,GA,Georgia,Percent of adults who are high school graduates (or equivalent),28.92640266,8-12
-13000,GA,Georgia,Percent of adults completing some college or associate degree,27.7342536,8-12
-13000,GA,Georgia,Percent of adults with a bachelor's degree or higher,27.76401728,8-12
-13000,GA,Georgia,Less than high school graduate,801324,9-23
-13000,GA,Georgia,High school graduate (or equivalency),1950698,9-23
-13000,GA,Georgia,Some college or associate degree,2020131,9-23
-13000,GA,Georgia,Bachelor's degree or higher,2480907,9-23
-13000,GA,Georgia,Percent of adults who are not high school graduates,11.04808178,9-23
-13000,GA,Georgia,Percent of adults who are high school graduates (or equivalent),26.89482784,9-23
-13000,GA,Georgia,Percent of adults completing some college or associate degree,27.85212035,9-23
-13000,GA,Georgia,Percent of adults with a bachelor's degree or higher,34.20497004,9-23
+13000,GA,Georgia,Less than high school graduate,972291,2010
+13000,GA,Georgia,High school graduate (or equivalency),1805733,2010
+13000,GA,Georgia,Some college or associate degree,1731313,2010
+13000,GA,Georgia,Bachelor's degree or higher,1733171,2010
+13000,GA,Georgia,Percent of adults who are not high school graduates,15.57532646,2010
+13000,GA,Georgia,Percent of adults who are high school graduates (or equivalent),28.92640266,2010
+13000,GA,Georgia,Percent of adults completing some college or associate degree,27.7342536,2010
+13000,GA,Georgia,Percent of adults with a bachelor's degree or higher,27.76401728,2010
+13000,GA,Georgia,Less than high school graduate,801324,2023
+13000,GA,Georgia,High school graduate (or equivalency),1950698,2023
+13000,GA,Georgia,Some college or associate degree,2020131,2023
+13000,GA,Georgia,Bachelor's degree or higher,2480907,2023
+13000,GA,Georgia,Percent of adults who are not high school graduates,11.04808178,2023
+13000,GA,Georgia,Percent of adults who are high school graduates (or equivalent),26.89482784,2023
+13000,GA,Georgia,Percent of adults completing some college or associate degree,27.85212035,2023
+13000,GA,Georgia,Percent of adults with a bachelor's degree or higher,34.20497004,2023
 15000,HI,Hawaii,Less than a high school diploma,146701,1970
 15000,HI,Hawaii,High school diploma only,138307,1970
 15000,HI,Hawaii,Some college (1-3 years),46088,1970
@@ -559,22 +559,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 15000,HI,Hawaii,Percent of adults who are high school graduates (or equivalent),28.5,2000
 15000,HI,Hawaii,Percent of adults completing some college or associate degree,29.9,2000
 15000,HI,Hawaii,Percent of adults with a bachelor's degree or higher,26.2,2000
-15000,HI,Hawaii,Less than high school graduate,90416,8-12
-15000,HI,Hawaii,High school graduate (or equivalency),263569,8-12
-15000,HI,Hawaii,Some college or associate degree,299356,8-12
-15000,HI,Hawaii,Bachelor's degree or higher,274791,8-12
-15000,HI,Hawaii,Percent of adults who are not high school graduates,9.741717773,8-12
-15000,HI,Hawaii,Percent of adults who are high school graduates (or equivalent),28.39779256,8-12
-15000,HI,Hawaii,Percent of adults completing some college or associate degree,32.25360186,8-12
-15000,HI,Hawaii,Percent of adults with a bachelor's degree or higher,29.60688781,8-12
-15000,HI,Hawaii,Less than high school graduate,72950,9-23
-15000,HI,Hawaii,High school graduate (or equivalency),273812,9-23
-15000,HI,Hawaii,Some college or associate degree,316191,9-23
-15000,HI,Hawaii,Bachelor's degree or higher,364398,9-23
-15000,HI,Hawaii,Percent of adults who are not high school graduates,7.100786391,9-23
-15000,HI,Hawaii,Percent of adults who are high school graduates (or equivalent),26.65223473,9-23
-15000,HI,Hawaii,Percent of adults completing some college or associate degree,30.7773098,9-23
-15000,HI,Hawaii,Percent of adults with a bachelor's degree or higher,35.46966908,9-23
+15000,HI,Hawaii,Less than high school graduate,90416,2010
+15000,HI,Hawaii,High school graduate (or equivalency),263569,2010
+15000,HI,Hawaii,Some college or associate degree,299356,2010
+15000,HI,Hawaii,Bachelor's degree or higher,274791,2010
+15000,HI,Hawaii,Percent of adults who are not high school graduates,9.741717773,2010
+15000,HI,Hawaii,Percent of adults who are high school graduates (or equivalent),28.39779256,2010
+15000,HI,Hawaii,Percent of adults completing some college or associate degree,32.25360186,2010
+15000,HI,Hawaii,Percent of adults with a bachelor's degree or higher,29.60688781,2010
+15000,HI,Hawaii,Less than high school graduate,72950,2023
+15000,HI,Hawaii,High school graduate (or equivalency),273812,2023
+15000,HI,Hawaii,Some college or associate degree,316191,2023
+15000,HI,Hawaii,Bachelor's degree or higher,364398,2023
+15000,HI,Hawaii,Percent of adults who are not high school graduates,7.100786391,2023
+15000,HI,Hawaii,Percent of adults who are high school graduates (or equivalent),26.65223473,2023
+15000,HI,Hawaii,Percent of adults completing some college or associate degree,30.7773098,2023
+15000,HI,Hawaii,Percent of adults with a bachelor's degree or higher,35.46966908,2023
 16000,ID,Idaho,Less than a high school diploma,149531,1970
 16000,ID,Idaho,High school diploma only,127462,1970
 16000,ID,Idaho,Some college (1-3 years),55171,1970
@@ -607,22 +607,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 16000,ID,Idaho,Percent of adults who are high school graduates (or equivalent),28.5,2000
 16000,ID,Idaho,Percent of adults completing some college or associate degree,34.6,2000
 16000,ID,Idaho,Percent of adults with a bachelor's degree or higher,21.7,2000
-16000,ID,Idaho,Less than high school graduate,112350,8-12
-16000,ID,Idaho,High school graduate (or equivalency),275678,8-12
-16000,ID,Idaho,Some college or associate degree,354433,8-12
-16000,ID,Idaho,Bachelor's degree or higher,243711,8-12
-16000,ID,Idaho,Percent of adults who are not high school graduates,11.39253599,8-12
-16000,ID,Idaho,Percent of adults who are high school graduates (or equivalent),27.95435279,8-12
-16000,ID,Idaho,Percent of adults completing some college or associate degree,35.94028222,8-12
-16000,ID,Idaho,Percent of adults with a bachelor's degree or higher,24.712829,8-12
-16000,ID,Idaho,Less than high school graduate,103570,9-23
-16000,ID,Idaho,High school graduate (or equivalency),322573,9-23
-16000,ID,Idaho,Some college or associate degree,430144,9-23
-16000,ID,Idaho,Bachelor's degree or higher,388032,9-23
-16000,ID,Idaho,Percent of adults who are not high school graduates,8.323428317,9-23
-16000,ID,Idaho,Percent of adults who are high school graduates (or equivalent),25.92365784,9-23
-16000,ID,Idaho,Percent of adults completing some college or associate degree,34.5686275,9-23
-16000,ID,Idaho,Percent of adults with a bachelor's degree or higher,31.18428634,9-23
+16000,ID,Idaho,Less than high school graduate,112350,2010
+16000,ID,Idaho,High school graduate (or equivalency),275678,2010
+16000,ID,Idaho,Some college or associate degree,354433,2010
+16000,ID,Idaho,Bachelor's degree or higher,243711,2010
+16000,ID,Idaho,Percent of adults who are not high school graduates,11.39253599,2010
+16000,ID,Idaho,Percent of adults who are high school graduates (or equivalent),27.95435279,2010
+16000,ID,Idaho,Percent of adults completing some college or associate degree,35.94028222,2010
+16000,ID,Idaho,Percent of adults with a bachelor's degree or higher,24.712829,2010
+16000,ID,Idaho,Less than high school graduate,103570,2023
+16000,ID,Idaho,High school graduate (or equivalency),322573,2023
+16000,ID,Idaho,Some college or associate degree,430144,2023
+16000,ID,Idaho,Bachelor's degree or higher,388032,2023
+16000,ID,Idaho,Percent of adults who are not high school graduates,8.323428317,2023
+16000,ID,Idaho,Percent of adults who are high school graduates (or equivalent),25.92365784,2023
+16000,ID,Idaho,Percent of adults completing some college or associate degree,34.5686275,2023
+16000,ID,Idaho,Percent of adults with a bachelor's degree or higher,31.18428634,2023
 17000,IL,Illinois,Less than a high school diploma,2885938,1970
 17000,IL,Illinois,High school diploma only,1944720,1970
 17000,IL,Illinois,Some college (1-3 years),630845,1970
@@ -655,22 +655,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 17000,IL,Illinois,Percent of adults who are high school graduates (or equivalent),27.7,2000
 17000,IL,Illinois,Percent of adults completing some college or associate degree,27.6,2000
 17000,IL,Illinois,Percent of adults with a bachelor's degree or higher,26.1,2000
-17000,IL,Illinois,Less than high school graduate,1102449,8-12
-17000,IL,Illinois,High school graduate (or equivalency),2301245,8-12
-17000,IL,Illinois,Some college or associate degree,2426909,8-12
-17000,IL,Illinois,Bachelor's degree or higher,2629344,8-12
-17000,IL,Illinois,Percent of adults who are not high school graduates,13.0313937,8-12
-17000,IL,Illinois,Percent of adults who are high school graduates (or equivalent),27.20164795,8-12
-17000,IL,Illinois,Percent of adults completing some college or associate degree,28.68704733,8-12
-17000,IL,Illinois,Percent of adults with a bachelor's degree or higher,31.07991102,8-12
-17000,IL,Illinois,Less than high school graduate,851323,9-23
-17000,IL,Illinois,High school graduate (or equivalency),2207546,9-23
-17000,IL,Illinois,Some college or associate degree,2430244,9-23
-17000,IL,Illinois,Bachelor's degree or higher,3249494,9-23
-17000,IL,Illinois,Percent of adults who are not high school graduates,9.742090473,9-23
-17000,IL,Illinois,Percent of adults who are high school graduates (or equivalent),25.2619897,9-23
-17000,IL,Illinois,Percent of adults completing some college or associate degree,27.81042791,9-23
-17000,IL,Illinois,Percent of adults with a bachelor's degree or higher,37.18549192,9-23
+17000,IL,Illinois,Less than high school graduate,1102449,2010
+17000,IL,Illinois,High school graduate (or equivalency),2301245,2010
+17000,IL,Illinois,Some college or associate degree,2426909,2010
+17000,IL,Illinois,Bachelor's degree or higher,2629344,2010
+17000,IL,Illinois,Percent of adults who are not high school graduates,13.0313937,2010
+17000,IL,Illinois,Percent of adults who are high school graduates (or equivalent),27.20164795,2010
+17000,IL,Illinois,Percent of adults completing some college or associate degree,28.68704733,2010
+17000,IL,Illinois,Percent of adults with a bachelor's degree or higher,31.07991102,2010
+17000,IL,Illinois,Less than high school graduate,851323,2023
+17000,IL,Illinois,High school graduate (or equivalency),2207546,2023
+17000,IL,Illinois,Some college or associate degree,2430244,2023
+17000,IL,Illinois,Bachelor's degree or higher,3249494,2023
+17000,IL,Illinois,Percent of adults who are not high school graduates,9.742090473,2023
+17000,IL,Illinois,Percent of adults who are high school graduates (or equivalent),25.2619897,2023
+17000,IL,Illinois,Percent of adults completing some college or associate degree,27.81042791,2023
+17000,IL,Illinois,Percent of adults with a bachelor's degree or higher,37.18549192,2023
 18000,IN,Indiana,Less than a high school diploma,1292237,1970
 18000,IN,Indiana,High school diploma only,991710,1970
 18000,IN,Indiana,Some college (1-3 years),233791,1970
@@ -703,22 +703,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 18000,IN,Indiana,Percent of adults who are high school graduates (or equivalent),37.2,2000
 18000,IN,Indiana,Percent of adults completing some college or associate degree,25.5,2000
 18000,IN,Indiana,Percent of adults with a bachelor's degree or higher,19.4,2000
-18000,IN,Indiana,Less than high school graduate,549930,8-12
-18000,IN,Indiana,High school graduate (or equivalency),1498095,8-12
-18000,IN,Indiana,Some college or associate degree,1209106,8-12
-18000,IN,Indiana,Bachelor's degree or higher,972007,8-12
-18000,IN,Indiana,Percent of adults who are not high school graduates,13.00335908,8-12
-18000,IN,Indiana,Percent of adults who are high school graduates (or equivalent),35.42317607,8-12
-18000,IN,Indiana,Percent of adults completing some college or associate degree,28.58989231,8-12
-18000,IN,Indiana,Percent of adults with a bachelor's degree or higher,22.98357254,8-12
-18000,IN,Indiana,Less than high school graduate,445651,9-23
-18000,IN,Indiana,High school graduate (or equivalency),1496214,9-23
-18000,IN,Indiana,Some college or associate degree,1304353,9-23
-18000,IN,Indiana,Bachelor's degree or higher,1313086,9-23
-18000,IN,Indiana,Percent of adults who are not high school graduates,9.774540149,9-23
-18000,IN,Indiana,Percent of adults who are high school graduates (or equivalent),32.81671939,9-23
-18000,IN,Indiana,Percent of adults completing some college or associate degree,28.60859903,9-23
-18000,IN,Indiana,Percent of adults with a bachelor's degree or higher,28.80014143,9-23
+18000,IN,Indiana,Less than high school graduate,549930,2010
+18000,IN,Indiana,High school graduate (or equivalency),1498095,2010
+18000,IN,Indiana,Some college or associate degree,1209106,2010
+18000,IN,Indiana,Bachelor's degree or higher,972007,2010
+18000,IN,Indiana,Percent of adults who are not high school graduates,13.00335908,2010
+18000,IN,Indiana,Percent of adults who are high school graduates (or equivalent),35.42317607,2010
+18000,IN,Indiana,Percent of adults completing some college or associate degree,28.58989231,2010
+18000,IN,Indiana,Percent of adults with a bachelor's degree or higher,22.98357254,2010
+18000,IN,Indiana,Less than high school graduate,445651,2023
+18000,IN,Indiana,High school graduate (or equivalency),1496214,2023
+18000,IN,Indiana,Some college or associate degree,1304353,2023
+18000,IN,Indiana,Bachelor's degree or higher,1313086,2023
+18000,IN,Indiana,Percent of adults who are not high school graduates,9.774540149,2023
+18000,IN,Indiana,Percent of adults who are high school graduates (or equivalent),32.81671939,2023
+18000,IN,Indiana,Percent of adults completing some college or associate degree,28.60859903,2023
+18000,IN,Indiana,Percent of adults with a bachelor's degree or higher,28.80014143,2023
 19000,IA,Iowa,Less than a high school diploma,632366,1970
 19000,IA,Iowa,High school diploma only,596649,1970
 19000,IA,Iowa,Some college (1-3 years),171454,1970
@@ -751,22 +751,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 19000,IA,Iowa,Percent of adults who are high school graduates (or equivalent),36.1,2000
 19000,IA,Iowa,Percent of adults completing some college or associate degree,28.8,2000
 19000,IA,Iowa,Percent of adults with a bachelor's degree or higher,21.2,2000
-19000,IA,Iowa,Less than high school graduate,187633,8-12
-19000,IA,Iowa,High school graduate (or equivalency),666739,8-12
-19000,IA,Iowa,Some college or associate degree,649313,8-12
-19000,IA,Iowa,Bachelor's degree or higher,509944,8-12
-19000,IA,Iowa,Percent of adults who are not high school graduates,9.318151457,8-12
-19000,IA,Iowa,Percent of adults who are high school graduates (or equivalent),33.11131296,8-12
-19000,IA,Iowa,Percent of adults completing some college or associate degree,32.24591024,8-12
-19000,IA,Iowa,Percent of adults with a bachelor's degree or higher,25.32462534,8-12
-19000,IA,Iowa,Less than high school graduate,145119,9-23
-19000,IA,Iowa,High school graduate (or equivalency),649969,9-23
-19000,IA,Iowa,Some college or associate degree,684769,9-23
-19000,IA,Iowa,Bachelor's degree or higher,660619,9-23
-19000,IA,Iowa,Percent of adults who are not high school graduates,6.779753662,9-23
-19000,IA,Iowa,Percent of adults who are high school graduates (or equivalent),30.36562895,9-23
-19000,IA,Iowa,Percent of adults completing some college or associate degree,31.99143555,9-23
-19000,IA,Iowa,Percent of adults with a bachelor's degree or higher,30.86318183,9-23
+19000,IA,Iowa,Less than high school graduate,187633,2010
+19000,IA,Iowa,High school graduate (or equivalency),666739,2010
+19000,IA,Iowa,Some college or associate degree,649313,2010
+19000,IA,Iowa,Bachelor's degree or higher,509944,2010
+19000,IA,Iowa,Percent of adults who are not high school graduates,9.318151457,2010
+19000,IA,Iowa,Percent of adults who are high school graduates (or equivalent),33.11131296,2010
+19000,IA,Iowa,Percent of adults completing some college or associate degree,32.24591024,2010
+19000,IA,Iowa,Percent of adults with a bachelor's degree or higher,25.32462534,2010
+19000,IA,Iowa,Less than high school graduate,145119,2023
+19000,IA,Iowa,High school graduate (or equivalency),649969,2023
+19000,IA,Iowa,Some college or associate degree,684769,2023
+19000,IA,Iowa,Bachelor's degree or higher,660619,2023
+19000,IA,Iowa,Percent of adults who are not high school graduates,6.779753662,2023
+19000,IA,Iowa,Percent of adults who are high school graduates (or equivalent),30.36562895,2023
+19000,IA,Iowa,Percent of adults completing some college or associate degree,31.99143555,2023
+19000,IA,Iowa,Percent of adults with a bachelor's degree or higher,30.86318183,2023
 20000,KS,Kansas,Less than a high school diploma,492098,1970
 20000,KS,Kansas,High school diploma only,438583,1970
 20000,KS,Kansas,Some college (1-3 years),155828,1970
@@ -799,22 +799,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 20000,KS,Kansas,Percent of adults who are high school graduates (or equivalent),29.8,2000
 20000,KS,Kansas,Percent of adults completing some college or associate degree,30.4,2000
 20000,KS,Kansas,Percent of adults with a bachelor's degree or higher,25.8,2000
-20000,KS,Kansas,Less than high school graduate,188859,8-12
-20000,KS,Kansas,High school graduate (or equivalency),511212,8-12
-20000,KS,Kansas,Some college or associate degree,586634,8-12
-20000,KS,Kansas,Bachelor's degree or higher,551374,8-12
-20000,KS,Kansas,Percent of adults who are not high school graduates,10.2748032,8-12
-20000,KS,Kansas,Percent of adults who are high school graduates (or equivalent),27.81229751,8-12
-20000,KS,Kansas,Percent of adults completing some college or associate degree,31.91560319,8-12
-20000,KS,Kansas,Percent of adults with a bachelor's degree or higher,29.99729609,8-12
-20000,KS,Kansas,Less than high school graduate,156595,9-23
-20000,KS,Kansas,High school graduate (or equivalency),495115,9-23
-20000,KS,Kansas,Some college or associate degree,601919,9-23
-20000,KS,Kansas,Bachelor's degree or higher,679664,9-23
-20000,KS,Kansas,Percent of adults who are not high school graduates,8.09991036,9-23
-20000,KS,Kansas,Percent of adults who are high school graduates (or equivalent),25.60993083,9-23
-20000,KS,Kansas,Percent of adults completing some college or associate degree,31.13439091,9-23
-20000,KS,Kansas,Percent of adults with a bachelor's degree or higher,35.1557679,9-23
+20000,KS,Kansas,Less than high school graduate,188859,2010
+20000,KS,Kansas,High school graduate (or equivalency),511212,2010
+20000,KS,Kansas,Some college or associate degree,586634,2010
+20000,KS,Kansas,Bachelor's degree or higher,551374,2010
+20000,KS,Kansas,Percent of adults who are not high school graduates,10.2748032,2010
+20000,KS,Kansas,Percent of adults who are high school graduates (or equivalent),27.81229751,2010
+20000,KS,Kansas,Percent of adults completing some college or associate degree,31.91560319,2010
+20000,KS,Kansas,Percent of adults with a bachelor's degree or higher,29.99729609,2010
+20000,KS,Kansas,Less than high school graduate,156595,2023
+20000,KS,Kansas,High school graduate (or equivalency),495115,2023
+20000,KS,Kansas,Some college or associate degree,601919,2023
+20000,KS,Kansas,Bachelor's degree or higher,679664,2023
+20000,KS,Kansas,Percent of adults who are not high school graduates,8.09991036,2023
+20000,KS,Kansas,Percent of adults who are high school graduates (or equivalent),25.60993083,2023
+20000,KS,Kansas,Percent of adults completing some college or associate degree,31.13439091,2023
+20000,KS,Kansas,Percent of adults with a bachelor's degree or higher,35.1557679,2023
 21000,KY,Kentucky,Less than a high school diploma,1053196,1970
 21000,KY,Kentucky,High school diploma only,412640,1970
 21000,KY,Kentucky,Some college (1-3 years),123919,1970
@@ -847,22 +847,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 21000,KY,Kentucky,Percent of adults who are high school graduates (or equivalent),33.6,2000
 21000,KY,Kentucky,Percent of adults completing some college or associate degree,23.4,2000
 21000,KY,Kentucky,Percent of adults with a bachelor's degree or higher,17.1,2000
-21000,KY,Kentucky,Less than high school graduate,510196,8-12
-21000,KY,Kentucky,High school graduate (or equivalency),988008,8-12
-21000,KY,Kentucky,Some college or associate degree,795165,8-12
-21000,KY,Kentucky,Bachelor's degree or higher,608927,8-12
-21000,KY,Kentucky,Percent of adults who are not high school graduates,17.57904776,8-12
-21000,KY,Kentucky,Percent of adults who are high school graduates (or equivalent),34.04228928,8-12
-21000,KY,Kentucky,Percent of adults completing some college or associate degree,27.39779127,8-12
-21000,KY,Kentucky,Percent of adults with a bachelor's degree or higher,20.9808717,8-12
-21000,KY,Kentucky,Less than high school graduate,352966,9-23
-21000,KY,Kentucky,High school graduate (or equivalency),1006715,9-23
-21000,KY,Kentucky,Some college or associate degree,887620,9-23
-21000,KY,Kentucky,Bachelor's degree or higher,830856,9-23
-21000,KY,Kentucky,Percent of adults who are not high school graduates,11.46679653,9-23
-21000,KY,Kentucky,Percent of adults who are high school graduates (or equivalent),32.70512193,9-23
-21000,KY,Kentucky,Percent of adults completing some college or associate degree,28.83608601,9-23
-21000,KY,Kentucky,Percent of adults with a bachelor's degree or higher,26.99199553,9-23
+21000,KY,Kentucky,Less than high school graduate,510196,2010
+21000,KY,Kentucky,High school graduate (or equivalency),988008,2010
+21000,KY,Kentucky,Some college or associate degree,795165,2010
+21000,KY,Kentucky,Bachelor's degree or higher,608927,2010
+21000,KY,Kentucky,Percent of adults who are not high school graduates,17.57904776,2010
+21000,KY,Kentucky,Percent of adults who are high school graduates (or equivalent),34.04228928,2010
+21000,KY,Kentucky,Percent of adults completing some college or associate degree,27.39779127,2010
+21000,KY,Kentucky,Percent of adults with a bachelor's degree or higher,20.9808717,2010
+21000,KY,Kentucky,Less than high school graduate,352966,2023
+21000,KY,Kentucky,High school graduate (or equivalency),1006715,2023
+21000,KY,Kentucky,Some college or associate degree,887620,2023
+21000,KY,Kentucky,Bachelor's degree or higher,830856,2023
+21000,KY,Kentucky,Percent of adults who are not high school graduates,11.46679653,2023
+21000,KY,Kentucky,Percent of adults who are high school graduates (or equivalent),32.70512193,2023
+21000,KY,Kentucky,Percent of adults completing some college or associate degree,28.83608601,2023
+21000,KY,Kentucky,Percent of adults with a bachelor's degree or higher,26.99199553,2023
 22000,LA,Louisiana,Less than a high school diploma,1046551,1970
 22000,LA,Louisiana,High school diploma only,446400,1970
 22000,LA,Louisiana,Some college (1-3 years),153171,1970
@@ -895,22 +895,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 22000,LA,Louisiana,Percent of adults who are high school graduates (or equivalent),32.4,2000
 22000,LA,Louisiana,Percent of adults completing some college or associate degree,23.7,2000
 22000,LA,Louisiana,Percent of adults with a bachelor's degree or higher,18.7,2000
-22000,LA,Louisiana,Less than high school graduate,523958,8-12
-22000,LA,Louisiana,High school graduate (or equivalency),1008396,8-12
-22000,LA,Louisiana,Some college or associate degree,778029,8-12
-22000,LA,Louisiana,Bachelor's degree or higher,629915,8-12
-22000,LA,Louisiana,Percent of adults who are not high school graduates,17.81989445,8-12
-22000,LA,Louisiana,Percent of adults who are high school graduates (or equivalent),34.29570744,8-12
-22000,LA,Louisiana,Percent of adults completing some college or associate degree,26.46088934,8-12
-22000,LA,Louisiana,Percent of adults with a bachelor's degree or higher,21.42350877,8-12
-22000,LA,Louisiana,Less than high school graduate,407400,9-23
-22000,LA,Louisiana,High school graduate (or equivalency),1012121,9-23
-22000,LA,Louisiana,Some college or associate degree,864939,9-23
-22000,LA,Louisiana,Bachelor's degree or higher,825794,9-23
-22000,LA,Louisiana,Percent of adults who are not high school graduates,13.09860867,9-23
-22000,LA,Louisiana,Percent of adults who are high school graduates (or equivalent),32.54142588,9-23
-22000,LA,Louisiana,Percent of adults completing some college or associate degree,27.80927217,9-23
-22000,LA,Louisiana,Percent of adults with a bachelor's degree or higher,26.55069329,9-23
+22000,LA,Louisiana,Less than high school graduate,523958,2010
+22000,LA,Louisiana,High school graduate (or equivalency),1008396,2010
+22000,LA,Louisiana,Some college or associate degree,778029,2010
+22000,LA,Louisiana,Bachelor's degree or higher,629915,2010
+22000,LA,Louisiana,Percent of adults who are not high school graduates,17.81989445,2010
+22000,LA,Louisiana,Percent of adults who are high school graduates (or equivalent),34.29570744,2010
+22000,LA,Louisiana,Percent of adults completing some college or associate degree,26.46088934,2010
+22000,LA,Louisiana,Percent of adults with a bachelor's degree or higher,21.42350877,2010
+22000,LA,Louisiana,Less than high school graduate,407400,2023
+22000,LA,Louisiana,High school graduate (or equivalency),1012121,2023
+22000,LA,Louisiana,Some college or associate degree,864939,2023
+22000,LA,Louisiana,Bachelor's degree or higher,825794,2023
+22000,LA,Louisiana,Percent of adults who are not high school graduates,13.09860867,2023
+22000,LA,Louisiana,Percent of adults who are high school graduates (or equivalent),32.54142588,2023
+22000,LA,Louisiana,Percent of adults completing some college or associate degree,27.80927217,2023
+22000,LA,Louisiana,Percent of adults with a bachelor's degree or higher,26.55069329,2023
 23000,ME,Maine,Less than a high school diploma,243532,1970
 23000,ME,Maine,High school diploma only,188886,1970
 23000,ME,Maine,Some college (1-3 years),60424,1970
@@ -943,22 +943,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 23000,ME,Maine,Percent of adults who are high school graduates (or equivalent),36.2,2000
 23000,ME,Maine,Percent of adults completing some college or associate degree,26.3,2000
 23000,ME,Maine,Percent of adults with a bachelor's degree or higher,22.9,2000
-23000,ME,Maine,Less than high school graduate,88276,8-12
-23000,ME,Maine,High school graduate (or equivalency),321100,8-12
-23000,ME,Maine,Some college or associate degree,272783,8-12
-23000,ME,Maine,Bachelor's degree or higher,256465,8-12
-23000,ME,Maine,Percent of adults who are not high school graduates,9.404830901,8-12
-23000,ME,Maine,Percent of adults who are high school graduates (or equivalent),34.20965158,8-12
-23000,ME,Maine,Percent of adults completing some college or associate degree,29.06200992,8-12
-23000,ME,Maine,Percent of adults with a bachelor's degree or higher,27.3235076,8-12
-23000,ME,Maine,Less than high school graduate,56031,9-23
-23000,ME,Maine,High school graduate (or equivalency),310243,9-23
-23000,ME,Maine,Some college or associate degree,291033,9-23
-23000,ME,Maine,Bachelor's degree or higher,359323,9-23
-23000,ME,Maine,Percent of adults who are not high school graduates,5.511444675,9-23
-23000,ME,Maine,Percent of adults who are high school graduates (or equivalent),30.51680552,9-23
-23000,ME,Maine,Percent of adults completing some college or associate degree,28.62722918,9-23
-23000,ME,Maine,Percent of adults with a bachelor's degree or higher,35.34452062,9-23
+23000,ME,Maine,Less than high school graduate,88276,2010
+23000,ME,Maine,High school graduate (or equivalency),321100,2010
+23000,ME,Maine,Some college or associate degree,272783,2010
+23000,ME,Maine,Bachelor's degree or higher,256465,2010
+23000,ME,Maine,Percent of adults who are not high school graduates,9.404830901,2010
+23000,ME,Maine,Percent of adults who are high school graduates (or equivalent),34.20965158,2010
+23000,ME,Maine,Percent of adults completing some college or associate degree,29.06200992,2010
+23000,ME,Maine,Percent of adults with a bachelor's degree or higher,27.3235076,2010
+23000,ME,Maine,Less than high school graduate,56031,2023
+23000,ME,Maine,High school graduate (or equivalency),310243,2023
+23000,ME,Maine,Some college or associate degree,291033,2023
+23000,ME,Maine,Bachelor's degree or higher,359323,2023
+23000,ME,Maine,Percent of adults who are not high school graduates,5.511444675,2023
+23000,ME,Maine,Percent of adults who are high school graduates (or equivalent),30.51680552,2023
+23000,ME,Maine,Percent of adults completing some college or associate degree,28.62722918,2023
+23000,ME,Maine,Percent of adults with a bachelor's degree or higher,35.34452062,2023
 24000,MD,Maryland,Less than a high school diploma,992786,1970
 24000,MD,Maryland,High school diploma only,593295,1970
 24000,MD,Maryland,Some college (1-3 years),206230,1970
@@ -991,22 +991,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 24000,MD,Maryland,Percent of adults who are high school graduates (or equivalent),26.7,2000
 24000,MD,Maryland,Percent of adults completing some college or associate degree,25.7,2000
 24000,MD,Maryland,Percent of adults with a bachelor's degree or higher,31.4,2000
-24000,MD,Maryland,Less than high school graduate,445826,8-12
-24000,MD,Maryland,High school graduate (or equivalency),1008437,8-12
-24000,MD,Maryland,Some college or associate degree,1012698,8-12
-24000,MD,Maryland,Bachelor's degree or higher,1408321,8-12
-24000,MD,Maryland,Percent of adults who are not high school graduates,11.50434988,8-12
-24000,MD,Maryland,Percent of adults who are high school graduates (or equivalent),26.02228689,8-12
-24000,MD,Maryland,Percent of adults completing some college or associate degree,26.13224018,8-12
-24000,MD,Maryland,Percent of adults with a bachelor's degree or higher,36.34112305,8-12
-24000,MD,Maryland,Less than high school graduate,382701,9-23
-24000,MD,Maryland,High school graduate (or equivalency),1014175,9-23
-24000,MD,Maryland,Some college or associate degree,1049892,9-23
-24000,MD,Maryland,Bachelor's degree or higher,1826045,9-23
-24000,MD,Maryland,Percent of adults who are not high school graduates,8.95665221,9-23
-24000,MD,Maryland,Percent of adults who are high school graduates (or equivalent),23.73553441,9-23
-24000,MD,Maryland,Percent of adults completing some college or associate degree,24.57144743,9-23
-24000,MD,Maryland,Percent of adults with a bachelor's degree or higher,42.73636595,9-23
+24000,MD,Maryland,Less than high school graduate,445826,2010
+24000,MD,Maryland,High school graduate (or equivalency),1008437,2010
+24000,MD,Maryland,Some college or associate degree,1012698,2010
+24000,MD,Maryland,Bachelor's degree or higher,1408321,2010
+24000,MD,Maryland,Percent of adults who are not high school graduates,11.50434988,2010
+24000,MD,Maryland,Percent of adults who are high school graduates (or equivalent),26.02228689,2010
+24000,MD,Maryland,Percent of adults completing some college or associate degree,26.13224018,2010
+24000,MD,Maryland,Percent of adults with a bachelor's degree or higher,36.34112305,2010
+24000,MD,Maryland,Less than high school graduate,382701,2023
+24000,MD,Maryland,High school graduate (or equivalency),1014175,2023
+24000,MD,Maryland,Some college or associate degree,1049892,2023
+24000,MD,Maryland,Bachelor's degree or higher,1826045,2023
+24000,MD,Maryland,Percent of adults who are not high school graduates,8.95665221,2023
+24000,MD,Maryland,Percent of adults who are high school graduates (or equivalent),23.73553441,2023
+24000,MD,Maryland,Percent of adults completing some college or associate degree,24.57144743,2023
+24000,MD,Maryland,Percent of adults with a bachelor's degree or higher,42.73636595,2023
 25000,MA,Massachusetts,Less than a high school diploma,1305345,1970
 25000,MA,Massachusetts,High school diploma only,1096249,1970
 25000,MA,Massachusetts,Some college (1-3 years),346399,1970
@@ -1039,22 +1039,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 25000,MA,Massachusetts,Percent of adults who are high school graduates (or equivalent),27.3,2000
 25000,MA,Massachusetts,Percent of adults completing some college or associate degree,24.3,2000
 25000,MA,Massachusetts,Percent of adults with a bachelor's degree or higher,33.2,2000
-25000,MA,Massachusetts,Less than high school graduate,484887,8-12
-25000,MA,Massachusetts,High school graduate (or equivalency),1156650,8-12
-25000,MA,Massachusetts,Some college or associate degree,1083895,8-12
-25000,MA,Massachusetts,Bachelor's degree or higher,1740466,8-12
-25000,MA,Massachusetts,Percent of adults who are not high school graduates,10.85754757,8-12
-25000,MA,Massachusetts,Percent of adults who are high school graduates (or equivalent),25.89960631,8-12
-25000,MA,Massachusetts,Percent of adults completing some college or associate degree,24.27048267,8-12
-25000,MA,Massachusetts,Percent of adults with a bachelor's degree or higher,38.97236345,8-12
-25000,MA,Massachusetts,Less than high school graduate,425209,9-23
-25000,MA,Massachusetts,High school graduate (or equivalency),1129802,9-23
-25000,MA,Massachusetts,Some college or associate degree,1084720,9-23
-25000,MA,Massachusetts,Bachelor's degree or higher,2305899,9-23
-25000,MA,Massachusetts,Percent of adults who are not high school graduates,8.597671075,9-23
-25000,MA,Massachusetts,Percent of adults who are high school graduates (or equivalent),22.84445056,9-23
-25000,MA,Massachusetts,Percent of adults completing some college or associate degree,21.93289834,9-23
-25000,MA,Massachusetts,Percent of adults with a bachelor's degree or higher,46.62498003,9-23
+25000,MA,Massachusetts,Less than high school graduate,484887,2010
+25000,MA,Massachusetts,High school graduate (or equivalency),1156650,2010
+25000,MA,Massachusetts,Some college or associate degree,1083895,2010
+25000,MA,Massachusetts,Bachelor's degree or higher,1740466,2010
+25000,MA,Massachusetts,Percent of adults who are not high school graduates,10.85754757,2010
+25000,MA,Massachusetts,Percent of adults who are high school graduates (or equivalent),25.89960631,2010
+25000,MA,Massachusetts,Percent of adults completing some college or associate degree,24.27048267,2010
+25000,MA,Massachusetts,Percent of adults with a bachelor's degree or higher,38.97236345,2010
+25000,MA,Massachusetts,Less than high school graduate,425209,2023
+25000,MA,Massachusetts,High school graduate (or equivalency),1129802,2023
+25000,MA,Massachusetts,Some college or associate degree,1084720,2023
+25000,MA,Massachusetts,Bachelor's degree or higher,2305899,2023
+25000,MA,Massachusetts,Percent of adults who are not high school graduates,8.597671075,2023
+25000,MA,Massachusetts,Percent of adults who are high school graduates (or equivalent),22.84445056,2023
+25000,MA,Massachusetts,Percent of adults completing some college or associate degree,21.93289834,2023
+25000,MA,Massachusetts,Percent of adults with a bachelor's degree or higher,46.62498003,2023
 26000,MI,Michigan,Less than a high school diploma,2170415,1970
 26000,MI,Michigan,High school diploma only,1546679,1970
 26000,MI,Michigan,Some college (1-3 years),444452,1970
@@ -1087,22 +1087,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 26000,MI,Michigan,Percent of adults who are high school graduates (or equivalent),31.3,2000
 26000,MI,Michigan,Percent of adults completing some college or associate degree,30.3,2000
 26000,MI,Michigan,Percent of adults with a bachelor's degree or higher,21.8,2000
-26000,MI,Michigan,Less than high school graduate,744419,8-12
-26000,MI,Michigan,High school graduate (or equivalency),2021310,8-12
-26000,MI,Michigan,Some college or associate degree,2133610,8-12
-26000,MI,Michigan,Bachelor's degree or higher,1679180,8-12
-26000,MI,Michigan,Percent of adults who are not high school graduates,11.3159056,8-12
-26000,MI,Michigan,Percent of adults who are high school graduates (or equivalent),30.72591263,8-12
-26000,MI,Michigan,Percent of adults completing some college or associate degree,32.43298378,8-12
-26000,MI,Michigan,Percent of adults with a bachelor's degree or higher,25.525198,8-12
-26000,MI,Michigan,Less than high school graduate,564902,9-23
-26000,MI,Michigan,High school graduate (or equivalency),1964538,9-23
-26000,MI,Michigan,Some college or associate degree,2224908,9-23
-26000,MI,Michigan,Bachelor's degree or higher,2213104,9-23
-26000,MI,Michigan,Percent of adults who are not high school graduates,8.107727186,9-23
-26000,MI,Michigan,Percent of adults who are high school graduates (or equivalent),28.1959316,9-23
-26000,MI,Michigan,Percent of adults completing some college or associate degree,31.93287876,9-23
-26000,MI,Michigan,Percent of adults with a bachelor's degree or higher,31.76346245,9-23
+26000,MI,Michigan,Less than high school graduate,744419,2010
+26000,MI,Michigan,High school graduate (or equivalency),2023310,2010
+26000,MI,Michigan,Some college or associate degree,2133610,2010
+26000,MI,Michigan,Bachelor's degree or higher,1679180,2010
+26000,MI,Michigan,Percent of adults who are not high school graduates,11.3159056,2010
+26000,MI,Michigan,Percent of adults who are high school graduates (or equivalent),30.72591263,2010
+26000,MI,Michigan,Percent of adults completing some college or associate degree,32.43298378,2010
+26000,MI,Michigan,Percent of adults with a bachelor's degree or higher,25.525198,2010
+26000,MI,Michigan,Less than high school graduate,564902,2023
+26000,MI,Michigan,High school graduate (or equivalency),1964538,2023
+26000,MI,Michigan,Some college or associate degree,2224908,2023
+26000,MI,Michigan,Bachelor's degree or higher,2213104,2023
+26000,MI,Michigan,Percent of adults who are not high school graduates,8.107727186,2023
+26000,MI,Michigan,Percent of adults who are high school graduates (or equivalent),28.1959316,2023
+26000,MI,Michigan,Percent of adults completing some college or associate degree,31.93287876,2023
+26000,MI,Michigan,Percent of adults with a bachelor's degree or higher,31.76346245,2023
 27000,MN,Minnesota,Less than a high school diploma,844065,1970
 27000,MN,Minnesota,High school diploma only,687242,1970
 27000,MN,Minnesota,Some college (1-3 years),238128,1970
@@ -1135,22 +1135,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 27000,MN,Minnesota,Percent of adults who are high school graduates (or equivalent),28.8,2000
 27000,MN,Minnesota,Percent of adults completing some college or associate degree,31.7,2000
 27000,MN,Minnesota,Percent of adults with a bachelor's degree or higher,27.4,2000
-27000,MN,Minnesota,Less than high school graduate,285839,8-12
-27000,MN,Minnesota,High school graduate (or equivalency),955846,8-12
-27000,MN,Minnesota,Some college or associate degree,1147626,8-12
-27000,MN,Minnesota,Bachelor's degree or higher,1136539,8-12
-27000,MN,Minnesota,Percent of adults who are not high school graduates,8.106952933,8-12
-27000,MN,Minnesota,Percent of adults who are high school graduates (or equivalent),27.1096615,8-12
-27000,MN,Minnesota,Percent of adults completing some college or associate degree,32.54891728,8-12
-27000,MN,Minnesota,Percent of adults with a bachelor's degree or higher,32.23446828,8-12
-27000,MN,Minnesota,Less than high school graduate,239636,9-23
-27000,MN,Minnesota,High school graduate (or equivalency),916744,9-23
-27000,MN,Minnesota,Some college or associate degree,1227836,9-23
-27000,MN,Minnesota,Bachelor's degree or higher,1513374,9-23
-27000,MN,Minnesota,Percent of adults who are not high school graduates,6.148312162,9-23
-27000,MN,Minnesota,Percent of adults who are high school graduates (or equivalent),23.52079105,9-23
-27000,MN,Minnesota,Percent of adults completing some college or associate degree,31.50244125,9-23
-27000,MN,Minnesota,Percent of adults with a bachelor's degree or higher,38.82845553,9-23
+27000,MN,Minnesota,Less than high school graduate,285839,2010
+27000,MN,Minnesota,High school graduate (or equivalency),955846,2010
+27000,MN,Minnesota,Some college or associate degree,1147626,2010
+27000,MN,Minnesota,Bachelor's degree or higher,1136539,2010
+27000,MN,Minnesota,Percent of adults who are not high school graduates,8.106952933,2010
+27000,MN,Minnesota,Percent of adults who are high school graduates (or equivalent),27.1096615,2010
+27000,MN,Minnesota,Percent of adults completing some college or associate degree,32.54891728,2010
+27000,MN,Minnesota,Percent of adults with a bachelor's degree or higher,32.23446828,2010
+27000,MN,Minnesota,Less than high school graduate,239636,2023
+27000,MN,Minnesota,High school graduate (or equivalency),916744,2023
+27000,MN,Minnesota,Some college or associate degree,1227836,2023
+27000,MN,Minnesota,Bachelor's degree or higher,1513374,2023
+27000,MN,Minnesota,Percent of adults who are not high school graduates,6.148312162,2023
+27000,MN,Minnesota,Percent of adults who are high school graduates (or equivalent),23.52079105,2023
+27000,MN,Minnesota,Percent of adults completing some college or associate degree,31.50244125,2023
+27000,MN,Minnesota,Percent of adults with a bachelor's degree or higher,38.82845553,2023
 28000,MS,Mississippi,Less than a high school diploma,656198,1970
 28000,MS,Mississippi,High school diploma only,266121,1970
 28000,MS,Mississippi,Some college (1-3 years),99907,1970
@@ -1183,22 +1183,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 28000,MS,Mississippi,Percent of adults who are high school graduates (or equivalent),29.4,2000
 28000,MS,Mississippi,Percent of adults completing some college or associate degree,26.6,2000
 28000,MS,Mississippi,Percent of adults with a bachelor's degree or higher,16.9,2000
-28000,MS,Mississippi,Less than high school graduate,361500,8-12
-28000,MS,Mississippi,High school graduate (or equivalency),579270,8-12
-28000,MS,Mississippi,Some college or associate degree,583598,8-12
-28000,MS,Mississippi,Bachelor's degree or higher,380481,8-12
-28000,MS,Mississippi,Percent of adults who are not high school graduates,18.97788224,8-12
-28000,MS,Mississippi,Percent of adults who are high school graduates (or equivalent),30.41028449,8-12
-28000,MS,Mississippi,Percent of adults completing some college or associate degree,30.6374941,8-12
-28000,MS,Mississippi,Percent of adults with a bachelor's degree or higher,19.97433917,8-12
-28000,MS,Mississippi,Less than high school graduate,263266,9-23
-28000,MS,Mississippi,High school graduate (or equivalency),589225,9-23
-28000,MS,Mississippi,Some college or associate degree,641810,9-23
-28000,MS,Mississippi,Bachelor's degree or higher,475997,9-23
-28000,MS,Mississippi,Percent of adults who are not high school graduates,13.36173513,9-23
-28000,MS,Mississippi,Percent of adults who are high school graduates (or equivalent),29.90537472,9-23
-28000,MS,Mississippi,Percent of adults completing some college or associate degree,32.57426034,9-23
-28000,MS,Mississippi,Percent of adults with a bachelor's degree or higher,24.15862981,9-23
+28000,MS,Mississippi,Less than high school graduate,361500,2010
+28000,MS,Mississippi,High school graduate (or equivalency),579270,2010
+28000,MS,Mississippi,Some college or associate degree,583598,2010
+28000,MS,Mississippi,Bachelor's degree or higher,380481,2010
+28000,MS,Mississippi,Percent of adults who are not high school graduates,18.97788224,2010
+28000,MS,Mississippi,Percent of adults who are high school graduates (or equivalent),30.41028449,2010
+28000,MS,Mississippi,Percent of adults completing some college or associate degree,30.6374941,2010
+28000,MS,Mississippi,Percent of adults with a bachelor's degree or higher,19.97433917,2010
+28000,MS,Mississippi,Less than high school graduate,263266,2023
+28000,MS,Mississippi,High school graduate (or equivalency),589225,2023
+28000,MS,Mississippi,Some college or associate degree,641810,2023
+28000,MS,Mississippi,Bachelor's degree or higher,475997,2023
+28000,MS,Mississippi,Percent of adults who are not high school graduates,13.36173513,2023
+28000,MS,Mississippi,Percent of adults who are high school graduates (or equivalent),29.90537472,2023
+28000,MS,Mississippi,Percent of adults completing some college or associate degree,32.57426034,2023
+28000,MS,Mississippi,Percent of adults with a bachelor's degree or higher,24.15862981,2023
 29000,MO,Missouri,Less than a high school diploma,1332385,1970
 29000,MO,Missouri,High school diploma only,795144,1970
 29000,MO,Missouri,Some college (1-3 years),241285,1970
@@ -1231,22 +1231,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 29000,MO,Missouri,Percent of adults who are high school graduates (or equivalent),32.7,2000
 29000,MO,Missouri,Percent of adults completing some college or associate degree,27,2000
 29000,MO,Missouri,Percent of adults with a bachelor's degree or higher,21.6,2000
-29000,MO,Missouri,Less than high school graduate,508960,8-12
-29000,MO,Missouri,High school graduate (or equivalency),1260509,8-12
-29000,MO,Missouri,Some college or associate degree,1180069,8-12
-29000,MO,Missouri,Bachelor's degree or higher,1024076,8-12
-29000,MO,Missouri,Percent of adults who are not high school graduates,12.80849121,8-12
-29000,MO,Missouri,Percent of adults who are high school graduates (or equivalent),31.72197903,8-12
-29000,MO,Missouri,Percent of adults completing some college or associate degree,29.69762539,8-12
-29000,MO,Missouri,Percent of adults with a bachelor's degree or higher,25.77190437,8-12
-29000,MO,Missouri,Less than high school graduate,354732,9-23
-29000,MO,Missouri,High school graduate (or equivalency),1279442,9-23
-29000,MO,Missouri,Some college or associate degree,1238028,9-23
-29000,MO,Missouri,Bachelor's degree or higher,1345230,9-23
-29000,MO,Missouri,Percent of adults who are not high school graduates,8.411089971,9-23
-29000,MO,Missouri,Percent of adults who are high school graduates (or equivalent),30.3369918,9-23
-29000,MO,Missouri,Percent of adults completing some college or associate degree,29.35501983,9-23
-29000,MO,Missouri,Percent of adults with a bachelor's degree or higher,31.8968984,9-23
+29000,MO,Missouri,Less than high school graduate,508960,2010
+29000,MO,Missouri,High school graduate (or equivalency),1260509,2010
+29000,MO,Missouri,Some college or associate degree,1180069,2010
+29000,MO,Missouri,Bachelor's degree or higher,1024076,2010
+29000,MO,Missouri,Percent of adults who are not high school graduates,12.80849121,2010
+29000,MO,Missouri,Percent of adults who are high school graduates (or equivalent),31.72197903,2010
+29000,MO,Missouri,Percent of adults completing some college or associate degree,29.69762539,2010
+29000,MO,Missouri,Percent of adults with a bachelor's degree or higher,25.77190437,2010
+29000,MO,Missouri,Less than high school graduate,354732,2023
+29000,MO,Missouri,High school graduate (or equivalency),1279442,2023
+29000,MO,Missouri,Some college or associate degree,1238028,2023
+29000,MO,Missouri,Bachelor's degree or higher,1345230,2023
+29000,MO,Missouri,Percent of adults who are not high school graduates,8.411089971,2023
+29000,MO,Missouri,Percent of adults who are high school graduates (or equivalent),30.3369918,2023
+29000,MO,Missouri,Percent of adults completing some college or associate degree,29.35501983,2023
+29000,MO,Missouri,Percent of adults with a bachelor's degree or higher,31.8968984,2023
 30000,MT,Montana,Less than a high school diploma,148759,1970
 30000,MT,Montana,High school diploma only,124113,1970
 30000,MT,Montana,Some college (1-3 years),51500,1970
@@ -1279,22 +1279,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 30000,MT,Montana,Percent of adults who are high school graduates (or equivalent),31.3,2000
 30000,MT,Montana,Percent of adults completing some college or associate degree,31.5,2000
 30000,MT,Montana,Percent of adults with a bachelor's degree or higher,24.4,2000
-30000,MT,Montana,Less than high school graduate,54629,8-12
-30000,MT,Montana,High school graduate (or equivalency),202958,8-12
-30000,MT,Montana,Some college or associate degree,222534,8-12
-30000,MT,Montana,Bachelor's degree or higher,191216,8-12
-30000,MT,Montana,Percent of adults who are not high school graduates,8.137343838,8-12
-30000,MT,Montana,Percent of adults who are high school graduates (or equivalent),30.23191035,8-12
-30000,MT,Montana,Percent of adults completing some college or associate degree,33.14788251,8-12
-30000,MT,Montana,Percent of adults with a bachelor's degree or higher,28.4828633,8-12
-30000,MT,Montana,Less than high school graduate,41822,9-23
-30000,MT,Montana,High school graduate (or equivalency),214759,9-23
-30000,MT,Montana,Some college or associate degree,247688,9-23
-30000,MT,Montana,Bachelor's degree or higher,266066,9-23
-30000,MT,Montana,Percent of adults who are not high school graduates,5.429066575,9-23
-30000,MT,Montana,Percent of adults who are high school graduates (or equivalent),27.8786502,9-23
-30000,MT,Montana,Percent of adults completing some college or associate degree,32.15328396,9-23
-30000,MT,Montana,Percent of adults with a bachelor's degree or higher,34.53899927,9-23
+30000,MT,Montana,Less than high school graduate,54629,2010
+30000,MT,Montana,High school graduate (or equivalency),202958,2010
+30000,MT,Montana,Some college or associate degree,222534,2010
+30000,MT,Montana,Bachelor's degree or higher,191216,2010
+30000,MT,Montana,Percent of adults who are not high school graduates,8.137343838,2010
+30000,MT,Montana,Percent of adults who are high school graduates (or equivalent),30.23191035,2010
+30000,MT,Montana,Percent of adults completing some college or associate degree,33.14788251,2010
+30000,MT,Montana,Percent of adults with a bachelor's degree or higher,28.4828633,2010
+30000,MT,Montana,Less than high school graduate,41822,2023
+30000,MT,Montana,High school graduate (or equivalency),214759,2023
+30000,MT,Montana,Some college or associate degree,247688,2023
+30000,MT,Montana,Bachelor's degree or higher,266066,2023
+30000,MT,Montana,Percent of adults who are not high school graduates,5.429066575,2023
+30000,MT,Montana,Percent of adults who are high school graduates (or equivalent),27.8786502,2023
+30000,MT,Montana,Percent of adults completing some college or associate degree,32.15328396,2023
+30000,MT,Montana,Percent of adults with a bachelor's degree or higher,34.53899927,2023
 31000,NE,Nebraska,Less than a high school diploma,327773,1970
 31000,NE,Nebraska,High school diploma only,299440,1970
 31000,NE,Nebraska,Some college (1-3 years),99767,1970
@@ -1327,22 +1327,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 31000,NE,Nebraska,Percent of adults who are high school graduates (or equivalent),31.3,2000
 31000,NE,Nebraska,Percent of adults completing some college or associate degree,31.6,2000
 31000,NE,Nebraska,Percent of adults with a bachelor's degree or higher,23.7,2000
-31000,NE,Nebraska,Less than high school graduate,113355,8-12
-31000,NE,Nebraska,High school graduate (or equivalency),339607,8-12
-31000,NE,Nebraska,Some college or associate degree,398679,8-12
-31000,NE,Nebraska,Bachelor's degree or higher,333027,8-12
-31000,NE,Nebraska,Percent of adults who are not high school graduates,9.568503581,8-12
-31000,NE,Nebraska,Percent of adults who are high school graduates (or equivalent),28.66685012,8-12
-31000,NE,Nebraska,Percent of adults completing some college or associate degree,33.65322605,8-12
-31000,NE,Nebraska,Percent of adults with a bachelor's degree or higher,28.11142025,8-12
-31000,NE,Nebraska,Less than high school graduate,102256,9-23
-31000,NE,Nebraska,High school graduate (or equivalency),324253,9-23
-31000,NE,Nebraska,Some college or associate degree,423513,9-23
-31000,NE,Nebraska,Bachelor's degree or higher,440234,9-23
-31000,NE,Nebraska,Percent of adults who are not high school graduates,7.925248943,9-23
-31000,NE,Nebraska,Percent of adults who are high school graduates (or equivalent),25.13090425,9-23
-31000,NE,Nebraska,Percent of adults completing some college or associate degree,32.82395122,9-23
-31000,NE,Nebraska,Percent of adults with a bachelor's degree or higher,34.11989559,9-23
+31000,NE,Nebraska,Less than high school graduate,113355,2010
+31000,NE,Nebraska,High school graduate (or equivalency),339607,2010
+31000,NE,Nebraska,Some college or associate degree,398679,2010
+31000,NE,Nebraska,Bachelor's degree or higher,333027,2010
+31000,NE,Nebraska,Percent of adults who are not high school graduates,9.568503581,2010
+31000,NE,Nebraska,Percent of adults who are high school graduates (or equivalent),28.66685012,2010
+31000,NE,Nebraska,Percent of adults completing some college or associate degree,33.65322605,2010
+31000,NE,Nebraska,Percent of adults with a bachelor's degree or higher,28.11142025,2010
+31000,NE,Nebraska,Less than high school graduate,102256,2023
+31000,NE,Nebraska,High school graduate (or equivalency),324253,2023
+31000,NE,Nebraska,Some college or associate degree,423513,2023
+31000,NE,Nebraska,Bachelor's degree or higher,440234,2023
+31000,NE,Nebraska,Percent of adults who are not high school graduates,7.925248943,2023
+31000,NE,Nebraska,Percent of adults who are high school graduates (or equivalent),25.13090425,2023
+31000,NE,Nebraska,Percent of adults completing some college or associate degree,32.82395122,2023
+31000,NE,Nebraska,Percent of adults with a bachelor's degree or higher,34.11989559,2023
 32000,NV,Nevada,Less than a high school diploma,92220,1970
 32000,NV,Nevada,High school diploma only,103235,1970
 32000,NV,Nevada,Some college (1-3 years),41042,1970
@@ -1375,22 +1375,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 32000,NV,Nevada,Percent of adults who are high school graduates (or equivalent),29.3,2000
 32000,NV,Nevada,Percent of adults completing some college or associate degree,33.2,2000
 32000,NV,Nevada,Percent of adults with a bachelor's degree or higher,18.2,2000
-32000,NV,Nevada,Less than high school graduate,279754,8-12
-32000,NV,Nevada,High school graduate (or equivalency),514459,8-12
-32000,NV,Nevada,Some college or associate degree,598907,8-12
-32000,NV,Nevada,Bachelor's degree or higher,397909,8-12
-32000,NV,Nevada,Percent of adults who are not high school graduates,15.61973592,8-12
-32000,NV,Nevada,Percent of adults who are high school graduates (or equivalent),28.72421385,8-12
-32000,NV,Nevada,Percent of adults completing some college or associate degree,33.43926871,8-12
-32000,NV,Nevada,Percent of adults with a bachelor's degree or higher,22.21678153,8-12
-32000,NV,Nevada,Less than high school graduate,277389,9-23
-32000,NV,Nevada,High school graduate (or equivalency),602478,9-23
-32000,NV,Nevada,Some college or associate degree,714821,9-23
-32000,NV,Nevada,Bachelor's degree or higher,601393,9-23
-32000,NV,Nevada,Percent of adults who are not high school graduates,12.63109148,9-23
-32000,NV,Nevada,Percent of adults who are high school graduates (or equivalent),27.43423398,9-23
-32000,NV,Nevada,Percent of adults completing some college or associate degree,32.54984675,9-23
-32000,NV,Nevada,Percent of adults with a bachelor's degree or higher,27.38482779,9-23
+32000,NV,Nevada,Less than high school graduate,279754,2010
+32000,NV,Nevada,High school graduate (or equivalency),514459,2010
+32000,NV,Nevada,Some college or associate degree,598907,2010
+32000,NV,Nevada,Bachelor's degree or higher,397909,2010
+32000,NV,Nevada,Percent of adults who are not high school graduates,15.61973592,2010
+32000,NV,Nevada,Percent of adults who are high school graduates (or equivalent),28.72421385,2010
+32000,NV,Nevada,Percent of adults completing some college or associate degree,33.43926871,2010
+32000,NV,Nevada,Percent of adults with a bachelor's degree or higher,22.21678153,2010
+32000,NV,Nevada,Less than high school graduate,277389,2023
+32000,NV,Nevada,High school graduate (or equivalency),602478,2023
+32000,NV,Nevada,Some college or associate degree,714821,2023
+32000,NV,Nevada,Bachelor's degree or higher,601393,2023
+32000,NV,Nevada,Percent of adults who are not high school graduates,12.63109148,2023
+32000,NV,Nevada,Percent of adults who are high school graduates (or equivalent),27.43423398,2023
+32000,NV,Nevada,Percent of adults completing some college or associate degree,32.54984675,2023
+32000,NV,Nevada,Percent of adults with a bachelor's degree or higher,27.38482779,2023
 33000,NH,New Hampshire,Less than a high school diploma,168709,1970
 33000,NH,New Hampshire,High school diploma only,136982,1970
 33000,NH,New Hampshire,Some college (1-3 years),48837,1970
@@ -1423,22 +1423,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 33000,NH,New Hampshire,Percent of adults who are high school graduates (or equivalent),30.1,2000
 33000,NH,New Hampshire,Percent of adults completing some college or associate degree,28.7,2000
 33000,NH,New Hampshire,Percent of adults with a bachelor's degree or higher,28.7,2000
-33000,NH,New Hampshire,Less than high school graduate,77643,8-12
-33000,NH,New Hampshire,High school graduate (or equivalency),265671,8-12
-33000,NH,New Hampshire,Some college or associate degree,260654,8-12
-33000,NH,New Hampshire,Bachelor's degree or higher,303370,8-12
-33000,NH,New Hampshire,Percent of adults who are not high school graduates,8.557230051,8-12
-33000,NH,New Hampshire,Percent of adults who are high school graduates (or equivalent),29.28026821,8-12
-33000,NH,New Hampshire,Percent of adults completing some college or associate degree,28.72733204,8-12
-33000,NH,New Hampshire,Percent of adults with a bachelor's degree or higher,33.43516969,8-12
-33000,NH,New Hampshire,Less than high school graduate,59997,9-23
-33000,NH,New Hampshire,High school graduate (or equivalency),272558,9-23
-33000,NH,New Hampshire,Some college or associate degree,274829,9-23
-33000,NH,New Hampshire,Bachelor's degree or higher,401838,9-23
-33000,NH,New Hampshire,Percent of adults who are not high school graduates,5.94487635,9-23
-33000,NH,New Hampshire,Percent of adults who are high school graduates (or equivalent),27.00674381,9-23
-33000,NH,New Hampshire,Percent of adults completing some college or associate degree,27.23176863,9-23
-33000,NH,New Hampshire,Percent of adults with a bachelor's degree or higher,39.81661121,9-23
+33000,NH,New Hampshire,Less than high school graduate,77643,2010
+33000,NH,New Hampshire,High school graduate (or equivalency),265671,2010
+33000,NH,New Hampshire,Some college or associate degree,260654,2010
+33000,NH,New Hampshire,Bachelor's degree or higher,303370,2010
+33000,NH,New Hampshire,Percent of adults who are not high school graduates,8.557230051,2010
+33000,NH,New Hampshire,Percent of adults who are high school graduates (or equivalent),29.28026821,2010
+33000,NH,New Hampshire,Percent of adults completing some college or associate degree,28.72733204,2010
+33000,NH,New Hampshire,Percent of adults with a bachelor's degree or higher,33.43516969,2010
+33000,NH,New Hampshire,Less than high school graduate,59997,2023
+33000,NH,New Hampshire,High school graduate (or equivalency),272558,2023
+33000,NH,New Hampshire,Some college or associate degree,274829,2023
+33000,NH,New Hampshire,Bachelor's degree or higher,401838,2023
+33000,NH,New Hampshire,Percent of adults who are not high school graduates,5.94487635,2023
+33000,NH,New Hampshire,Percent of adults who are high school graduates (or equivalent),27.00674381,2023
+33000,NH,New Hampshire,Percent of adults completing some college or associate degree,27.23176863,2023
+33000,NH,New Hampshire,Percent of adults with a bachelor's degree or higher,39.81661121,2023
 34000,NJ,New Jersey,Less than a high school diploma,1925498,1970
 34000,NJ,New Jersey,High school diploma only,1292000,1970
 34000,NJ,New Jersey,Some college (1-3 years),358982,1970
@@ -1471,22 +1471,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 34000,NJ,New Jersey,Percent of adults who are high school graduates (or equivalent),29.4,2000
 34000,NJ,New Jersey,Percent of adults completing some college or associate degree,22.9,2000
 34000,NJ,New Jersey,Percent of adults with a bachelor's degree or higher,29.8,2000
-34000,NJ,New Jersey,Less than high school graduate,723029,8-12
-34000,NJ,New Jersey,High school graduate (or equivalency),1741272,8-12
-34000,NJ,New Jersey,Some college or associate degree,1393117,8-12
-34000,NJ,New Jersey,Bachelor's degree or higher,2112098,8-12
-34000,NJ,New Jersey,Percent of adults who are not high school graduates,12.11202047,8-12
-34000,NJ,New Jersey,Percent of adults who are high school graduates (or equivalent),29.1694,8-12
-34000,NJ,New Jersey,Percent of adults completing some college or associate degree,23.33718513,8-12
-34000,NJ,New Jersey,Percent of adults with a bachelor's degree or higher,35.3813944,8-12
-34000,NJ,New Jersey,Less than high school graduate,600736,9-23
-34000,NJ,New Jersey,High school graduate (or equivalency),1662983,9-23
-34000,NJ,New Jersey,Some college or associate degree,1423815,9-23
-34000,NJ,New Jersey,Bachelor's degree or higher,2771686,9-23
-34000,NJ,New Jersey,Percent of adults who are not high school graduates,9.300441849,9-23
-34000,NJ,New Jersey,Percent of adults who are high school graduates (or equivalent),25.74587953,9-23
-34000,NJ,New Jersey,Percent of adults completing some college or associate degree,22.04314143,9-23
-34000,NJ,New Jersey,Percent of adults with a bachelor's degree or higher,42.91053719,9-23
+34000,NJ,New Jersey,Less than high school graduate,723029,2010
+34000,NJ,New Jersey,High school graduate (or equivalency),1741272,2010
+34000,NJ,New Jersey,Some college or associate degree,1393117,2010
+34000,NJ,New Jersey,Bachelor's degree or higher,2112098,2010
+34000,NJ,New Jersey,Percent of adults who are not high school graduates,12.11202047,2010
+34000,NJ,New Jersey,Percent of adults who are high school graduates (or equivalent),29.1694,2010
+34000,NJ,New Jersey,Percent of adults completing some college or associate degree,23.33718513,2010
+34000,NJ,New Jersey,Percent of adults with a bachelor's degree or higher,35.3813944,2010
+34000,NJ,New Jersey,Less than high school graduate,600736,2023
+34000,NJ,New Jersey,High school graduate (or equivalency),1662983,2023
+34000,NJ,New Jersey,Some college or associate degree,1423815,2023
+34000,NJ,New Jersey,Bachelor's degree or higher,2771686,2023
+34000,NJ,New Jersey,Percent of adults who are not high school graduates,9.300441849,2023
+34000,NJ,New Jersey,Percent of adults who are high school graduates (or equivalent),25.74587953,2023
+34000,NJ,New Jersey,Percent of adults completing some college or associate degree,22.04314143,2023
+34000,NJ,New Jersey,Percent of adults with a bachelor's degree or higher,42.91053719,2023
 35000,NM,New Mexico,Less than a high school diploma,219208,1970
 35000,NM,New Mexico,High school diploma only,146711,1970
 35000,NM,New Mexico,Some college (1-3 years),61354,1970
@@ -1519,22 +1519,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 35000,NM,New Mexico,Percent of adults who are high school graduates (or equivalent),26.6,2000
 35000,NM,New Mexico,Percent of adults completing some college or associate degree,28.8,2000
 35000,NM,New Mexico,Percent of adults with a bachelor's degree or higher,23.5,2000
-35000,NM,New Mexico,Less than high school graduate,221143,8-12
-35000,NM,New Mexico,High school graduate (or equivalency),351718,8-12
-35000,NM,New Mexico,Some college or associate degree,419187,8-12
-35000,NM,New Mexico,Bachelor's degree or higher,341878,8-12
-35000,NM,New Mexico,Percent of adults who are not high school graduates,16.57835592,8-12
-35000,NM,New Mexico,Percent of adults who are high school graduates (or equivalent),26.36712981,8-12
-35000,NM,New Mexico,Percent of adults completing some college or associate degree,31.42505656,8-12
-35000,NM,New Mexico,Percent of adults with a bachelor's degree or higher,25.62945771,8-12
-35000,NM,New Mexico,Less than high school graduate,178146,9-23
-35000,NM,New Mexico,High school graduate (or equivalency),373330,9-23
-35000,NM,New Mexico,Some college or associate degree,461295,9-23
-35000,NM,New Mexico,Bachelor's degree or higher,438228,9-23
-35000,NM,New Mexico,Percent of adults who are not high school graduates,12.27747228,9-23
-35000,NM,New Mexico,Percent of adults who are high school graduates (or equivalent),25.72917004,9-23
-35000,NM,New Mexico,Percent of adults completing some college or associate degree,31.791545,9-23
-35000,NM,New Mexico,Percent of adults with a bachelor's degree or higher,30.20181268,9-23
+35000,NM,New Mexico,Less than high school graduate,221143,2010
+35000,NM,New Mexico,High school graduate (or equivalency),351718,2010
+35000,NM,New Mexico,Some college or associate degree,419187,2010
+35000,NM,New Mexico,Bachelor's degree or higher,341878,2010
+35000,NM,New Mexico,Percent of adults who are not high school graduates,16.57835592,2010
+35000,NM,New Mexico,Percent of adults who are high school graduates (or equivalent),26.36712981,2010
+35000,NM,New Mexico,Percent of adults completing some college or associate degree,31.42505656,2010
+35000,NM,New Mexico,Percent of adults with a bachelor's degree or higher,25.62945771,2010
+35000,NM,New Mexico,Less than high school graduate,178146,2023
+35000,NM,New Mexico,High school graduate (or equivalency),373330,2023
+35000,NM,New Mexico,Some college or associate degree,461295,2023
+35000,NM,New Mexico,Bachelor's degree or higher,438228,2023
+35000,NM,New Mexico,Percent of adults who are not high school graduates,12.27747228,2023
+35000,NM,New Mexico,Percent of adults who are high school graduates (or equivalent),25.72917004,2023
+35000,NM,New Mexico,Percent of adults completing some college or associate degree,31.791545,2023
+35000,NM,New Mexico,Percent of adults with a bachelor's degree or higher,30.20181268,2023
 36000,NY,New York,Less than a high school diploma,4932459,1970
 36000,NY,New York,High school diploma only,3249934,1970
 36000,NY,New York,Some college (1-3 years),997627,1970
@@ -1567,22 +1567,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 36000,NY,New York,Percent of adults who are high school graduates (or equivalent),27.8,2000
 36000,NY,New York,Percent of adults completing some college or associate degree,23.9,2000
 36000,NY,New York,Percent of adults with a bachelor's degree or higher,27.4,2000
-36000,NY,New York,Less than high school graduate,1981850,8-12
-36000,NY,New York,High school graduate (or equivalency),3578443,8-12
-36000,NY,New York,Some college or associate degree,3245783,8-12
-36000,NY,New York,Bachelor's degree or higher,4295906,8-12
-36000,NY,New York,Percent of adults who are not high school graduates,15.12633737,8-12
-36000,NY,New York,Percent of adults who are high school graduates (or equivalent),27.3122265,8-12
-36000,NY,New York,Percent of adults completing some college or associate degree,24.77322133,8-12
-36000,NY,New York,Percent of adults with a bachelor's degree or higher,32.78821479,8-12
-36000,NY,New York,Less than high school graduate,1698537,9-23
-36000,NY,New York,High school graduate (or equivalency),3437438,9-23
-36000,NY,New York,Some college or associate degree,3324660,9-23
-36000,NY,New York,Bachelor's degree or higher,5535503,9-23
-36000,NY,New York,Percent of adults who are not high school graduates,12.13575488,9-23
-36000,NY,New York,Percent of adults who are high school graduates (or equivalent),24.5599036,9-23
-36000,NY,New York,Percent of adults completing some college or associate degree,23.75412417,9-23
-36000,NY,New York,Percent of adults with a bachelor's degree or higher,39.55021735,9-23
+36000,NY,New York,Less than high school graduate,1981850,2010
+36000,NY,New York,High school graduate (or equivalency),3578443,2010
+36000,NY,New York,Some college or associate degree,3245783,2010
+36000,NY,New York,Bachelor's degree or higher,4295906,2010
+36000,NY,New York,Percent of adults who are not high school graduates,15.12633737,2010
+36000,NY,New York,Percent of adults who are high school graduates (or equivalent),27.3122265,2010
+36000,NY,New York,Percent of adults completing some college or associate degree,24.77322133,2010
+36000,NY,New York,Percent of adults with a bachelor's degree or higher,32.78821479,2010
+36000,NY,New York,Less than high school graduate,1698537,2023
+36000,NY,New York,High school graduate (or equivalency),3437438,2023
+36000,NY,New York,Some college or associate degree,3324660,2023
+36000,NY,New York,Bachelor's degree or higher,5535503,2023
+36000,NY,New York,Percent of adults who are not high school graduates,12.13575488,2023
+36000,NY,New York,Percent of adults who are high school graduates (or equivalent),24.5599036,2023
+36000,NY,New York,Percent of adults completing some college or associate degree,23.75412417,2023
+36000,NY,New York,Percent of adults with a bachelor's degree or higher,39.55021735,2023
 37000,NC,North Carolina,Less than a high school diploma,1628322,1970
 37000,NC,North Carolina,High school diploma only,572928,1970
 37000,NC,North Carolina,Some college (1-3 years),221396,1970
@@ -1615,22 +1615,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 37000,NC,North Carolina,Percent of adults who are high school graduates (or equivalent),28.4,2000
 37000,NC,North Carolina,Percent of adults completing some college or associate degree,27.2,2000
 37000,NC,North Carolina,Percent of adults with a bachelor's degree or higher,22.5,2000
-37000,NC,North Carolina,Less than high school graduate,979717,8-12
-37000,NC,North Carolina,High school graduate (or equivalency),1722998,8-12
-37000,NC,North Carolina,Some college or associate degree,1924759,8-12
-37000,NC,North Carolina,Bachelor's degree or higher,1696645,8-12
-37000,NC,North Carolina,Percent of adults who are not high school graduates,15.49175466,8-12
-37000,NC,North Carolina,Percent of adults who are high school graduates (or equivalent),27.24487,8-12
-37000,NC,North Carolina,Percent of adults completing some college or associate degree,30.43521161,8-12
-37000,NC,North Carolina,Percent of adults with a bachelor's degree or higher,26.82816373,8-12
-37000,NC,North Carolina,Less than high school graduate,744581,9-23
-37000,NC,North Carolina,High school graduate (or equivalency),1812528,9-23
-37000,NC,North Carolina,Some college or associate degree,2183348,9-23
-37000,NC,North Carolina,Bachelor's degree or higher,2521353,9-23
-37000,NC,North Carolina,Percent of adults who are not high school graduates,10.25338036,9-23
-37000,NC,North Carolina,Percent of adults who are high school graduates (or equivalent),24.95972767,9-23
-37000,NC,North Carolina,Percent of adults completing some college or associate degree,30.06616808,9-23
-37000,NC,North Carolina,Percent of adults with a bachelor's degree or higher,34.7207239,9-23
+37000,NC,North Carolina,Less than high school graduate,979717,2010
+37000,NC,North Carolina,High school graduate (or equivalency),1722998,2010
+37000,NC,North Carolina,Some college or associate degree,1924759,2010
+37000,NC,North Carolina,Bachelor's degree or higher,1696645,2010
+37000,NC,North Carolina,Percent of adults who are not high school graduates,15.49175466,2010
+37000,NC,North Carolina,Percent of adults who are high school graduates (or equivalent),27.24487,2010
+37000,NC,North Carolina,Percent of adults completing some college or associate degree,30.43521161,2010
+37000,NC,North Carolina,Percent of adults with a bachelor's degree or higher,26.82816373,2010
+37000,NC,North Carolina,Less than high school graduate,744581,2023
+37000,NC,North Carolina,High school graduate (or equivalency),1812528,2023
+37000,NC,North Carolina,Some college or associate degree,2183348,2023
+37000,NC,North Carolina,Bachelor's degree or higher,2521353,2023
+37000,NC,North Carolina,Percent of adults who are not high school graduates,10.25338036,2023
+37000,NC,North Carolina,Percent of adults who are high school graduates (or equivalent),24.95972767,2023
+37000,NC,North Carolina,Percent of adults completing some college or associate degree,30.06616808,2023
+37000,NC,North Carolina,Percent of adults with a bachelor's degree or higher,34.7207239,2023
 38000,ND,North Dakota,Less than a high school diploma,158151,1970
 38000,ND,North Dakota,High school diploma only,87806,1970
 38000,ND,North Dakota,Some college (1-3 years),45680,1970
@@ -1663,22 +1663,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 38000,ND,North Dakota,Percent of adults who are high school graduates (or equivalent),27.9,2000
 38000,ND,North Dakota,Percent of adults completing some college or associate degree,34,2000
 38000,ND,North Dakota,Percent of adults with a bachelor's degree or higher,22,2000
-38000,ND,North Dakota,Less than high school graduate,42106,8-12
-38000,ND,North Dakota,High school graduate (or equivalency),120581,8-12
-38000,ND,North Dakota,Some college or associate degree,160302,8-12
-38000,ND,North Dakota,Bachelor's degree or higher,119800,8-12
-38000,ND,North Dakota,Percent of adults who are not high school graduates,9.509269652,8-12
-38000,ND,North Dakota,Percent of adults who are high school graduates (or equivalent),27.23215798,8-12
-38000,ND,North Dakota,Percent of adults completing some college or associate degree,36.20279637,8-12
-38000,ND,North Dakota,Percent of adults with a bachelor's degree or higher,27.055776,8-12
-38000,ND,North Dakota,Less than high school graduate,31418,9-23
-38000,ND,North Dakota,High school graduate (or equivalency),130763,9-23
-38000,ND,North Dakota,Some college or associate degree,182590,9-23
-38000,ND,North Dakota,Bachelor's degree or higher,164378,9-23
-38000,ND,North Dakota,Percent of adults who are not high school graduates,6.170688737,9-23
-38000,ND,North Dakota,Percent of adults who are high school graduates (or equivalent),25.68265871,9-23
-38000,ND,North Dakota,Percent of adults completing some college or associate degree,35.86180077,9-23
-38000,ND,North Dakota,Percent of adults with a bachelor's degree or higher,32.28485178,9-23
+38000,ND,North Dakota,Less than high school graduate,42106,2010
+38000,ND,North Dakota,High school graduate (or equivalency),120581,2010
+38000,ND,North Dakota,Some college or associate degree,160302,2010
+38000,ND,North Dakota,Bachelor's degree or higher,119800,2010
+38000,ND,North Dakota,Percent of adults who are not high school graduates,9.509269652,2010
+38000,ND,North Dakota,Percent of adults who are high school graduates (or equivalent),27.23215798,2010
+38000,ND,North Dakota,Percent of adults completing some college or associate degree,36.20279637,2010
+38000,ND,North Dakota,Percent of adults with a bachelor's degree or higher,27.055776,2010
+38000,ND,North Dakota,Less than high school graduate,31418,2023
+38000,ND,North Dakota,High school graduate (or equivalency),130763,2023
+38000,ND,North Dakota,Some college or associate degree,182590,2023
+38000,ND,North Dakota,Bachelor's degree or higher,164378,2023
+38000,ND,North Dakota,Percent of adults who are not high school graduates,6.170688737,2023
+38000,ND,North Dakota,Percent of adults who are high school graduates (or equivalent),25.68265871,2023
+38000,ND,North Dakota,Percent of adults completing some college or associate degree,35.86180077,2023
+38000,ND,North Dakota,Percent of adults with a bachelor's degree or higher,32.28485178,2023
 39000,OH,Ohio,Less than a high school diploma,2665837,1970
 39000,OH,Ohio,High school diploma only,2010237,1970
 39000,OH,Ohio,Some college (1-3 years),496057,1970
@@ -1711,22 +1711,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 39000,OH,Ohio,Percent of adults who are high school graduates (or equivalent),36.1,2000
 39000,OH,Ohio,Percent of adults completing some college or associate degree,25.8,2000
 39000,OH,Ohio,Percent of adults with a bachelor's degree or higher,21.1,2000
-39000,OH,Ohio,Less than high school graduate,910330,8-12
-39000,OH,Ohio,High school graduate (or equivalency),2694883,8-12
-39000,OH,Ohio,Some college or associate degree,2202241,8-12
-39000,OH,Ohio,Bachelor's degree or higher,1908439,8-12
-39000,OH,Ohio,Percent of adults who are not high school graduates,11.79811591,8-12
-39000,OH,Ohio,Percent of adults who are high school graduates (or equivalent),34.92639154,8-12
-39000,OH,Ohio,Percent of adults completing some college or associate degree,28.54162182,8-12
-39000,OH,Ohio,Percent of adults with a bachelor's degree or higher,24.73387073,8-12
-39000,OH,Ohio,Less than high school graduate,680554,9-23
-39000,OH,Ohio,High school graduate (or equivalency),2624935,9-23
-39000,OH,Ohio,Some college or associate degree,2303726,9-23
-39000,OH,Ohio,Bachelor's degree or higher,2514129,9-23
-39000,OH,Ohio,Percent of adults who are not high school graduates,8.377756746,9-23
-39000,OH,Ohio,Percent of adults who are high school graduates (or equivalent),32.31347829,9-23
-39000,OH,Ohio,Percent of adults completing some college or associate degree,28.35933084,9-23
-39000,OH,Ohio,Percent of adults with a bachelor's degree or higher,30.94943412,9-23
+39000,OH,Ohio,Less than high school graduate,910330,2010
+39000,OH,Ohio,High school graduate (or equivalency),2694883,2010
+39000,OH,Ohio,Some college or associate degree,2202241,2010
+39000,OH,Ohio,Bachelor's degree or higher,1908439,2010
+39000,OH,Ohio,Percent of adults who are not high school graduates,11.79811591,2010
+39000,OH,Ohio,Percent of adults who are high school graduates (or equivalent),34.92639154,2010
+39000,OH,Ohio,Percent of adults completing some college or associate degree,28.54162182,2010
+39000,OH,Ohio,Percent of adults with a bachelor's degree or higher,24.73387073,2010
+39000,OH,Ohio,Less than high school graduate,680554,2023
+39000,OH,Ohio,High school graduate (or equivalency),2624935,2023
+39000,OH,Ohio,Some college or associate degree,2303726,2023
+39000,OH,Ohio,Bachelor's degree or higher,2514129,2023
+39000,OH,Ohio,Percent of adults who are not high school graduates,8.377756746,2023
+39000,OH,Ohio,Percent of adults who are high school graduates (or equivalent),32.31347829,2023
+39000,OH,Ohio,Percent of adults completing some college or associate degree,28.35933084,2023
+39000,OH,Ohio,Percent of adults with a bachelor's degree or higher,30.94943412,2023
 40000,OK,Oklahoma,Less than a high school diploma,688737,1970
 40000,OK,Oklahoma,High school diploma only,426577,1970
 40000,OK,Oklahoma,Some college (1-3 years),164711,1970
@@ -1759,22 +1759,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 40000,OK,Oklahoma,Percent of adults who are high school graduates (or equivalent),31.5,2000
 40000,OK,Oklahoma,Percent of adults completing some college or associate degree,28.8,2000
 40000,OK,Oklahoma,Percent of adults with a bachelor's degree or higher,20.3,2000
-40000,OK,Oklahoma,Less than high school graduate,336888,8-12
-40000,OK,Oklahoma,High school graduate (or equivalency),773447,8-12
-40000,OK,Oklahoma,Some college or associate degree,761486,8-12
-40000,OK,Oklahoma,Bachelor's degree or higher,566500,8-12
-40000,OK,Oklahoma,Percent of adults who are not high school graduates,13.81639251,8-12
-40000,OK,Oklahoma,Percent of adults who are high school graduates (or equivalent),31.72047487,8-12
-40000,OK,Oklahoma,Percent of adults completing some college or associate degree,31.2299324,8-12
-40000,OK,Oklahoma,Percent of adults with a bachelor's degree or higher,23.23320022,8-12
-40000,OK,Oklahoma,Less than high school graduate,287078,9-23
-40000,OK,Oklahoma,High school graduate (or equivalency),811387,9-23
-40000,OK,Oklahoma,Some college or associate degree,809067,9-23
-40000,OK,Oklahoma,Bachelor's degree or higher,733793,9-23
-40000,OK,Oklahoma,Percent of adults who are not high school graduates,10.86871173,9-23
-40000,OK,Oklahoma,Percent of adults who are high school graduates (or equivalent),30.71893841,9-23
-40000,OK,Oklahoma,Percent of adults completing some college or associate degree,30.63110371,9-23
-40000,OK,Oklahoma,Percent of adults with a bachelor's degree or higher,27.78124615,9-23
+40000,OK,Oklahoma,Less than high school graduate,336888,2010
+40000,OK,Oklahoma,High school graduate (or equivalency),773447,2010
+40000,OK,Oklahoma,Some college or associate degree,761486,2010
+40000,OK,Oklahoma,Bachelor's degree or higher,566500,2010
+40000,OK,Oklahoma,Percent of adults who are not high school graduates,13.81639251,2010
+40000,OK,Oklahoma,Percent of adults who are high school graduates (or equivalent),31.72047487,2010
+40000,OK,Oklahoma,Percent of adults completing some college or associate degree,31.2299324,2010
+40000,OK,Oklahoma,Percent of adults with a bachelor's degree or higher,23.23320022,2010
+40000,OK,Oklahoma,Less than high school graduate,287078,2023
+40000,OK,Oklahoma,High school graduate (or equivalency),811387,2023
+40000,OK,Oklahoma,Some college or associate degree,809067,2023
+40000,OK,Oklahoma,Bachelor's degree or higher,733793,2023
+40000,OK,Oklahoma,Percent of adults who are not high school graduates,10.86871173,2023
+40000,OK,Oklahoma,Percent of adults who are high school graduates (or equivalent),30.71893841,2023
+40000,OK,Oklahoma,Percent of adults completing some college or associate degree,30.63110371,2023
+40000,OK,Oklahoma,Percent of adults with a bachelor's degree or higher,27.78124615,2023
 41000,OR,Oregon,Less than a high school diploma,461957,1970
 41000,OR,Oregon,High school diploma only,404406,1970
 41000,OR,Oregon,Some college (1-3 years),153489,1970
@@ -1807,22 +1807,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 41000,OR,Oregon,Percent of adults who are high school graduates (or equivalent),26.3,2000
 41000,OR,Oregon,Percent of adults completing some college or associate degree,33.8,2000
 41000,OR,Oregon,Percent of adults with a bachelor's degree or higher,25.1,2000
-41000,OR,Oregon,Less than high school graduate,283302,8-12
-41000,OR,Oregon,High school graduate (or equivalency),647185,8-12
-41000,OR,Oregon,Some college or associate degree,917646,8-12
-41000,OR,Oregon,Bachelor's degree or higher,763911,8-12
-41000,OR,Oregon,Percent of adults who are not high school graduates,10.84598881,8-12
-41000,OR,Oregon,Percent of adults who are high school graduates (or equivalent),24.77695628,8-12
-41000,OR,Oregon,Percent of adults completing some college or associate degree,35.13133776,8-12
-41000,OR,Oregon,Percent of adults with a bachelor's degree or higher,29.24571715,8-12
-41000,OR,Oregon,Less than high school graduate,250221,9-23
-41000,OR,Oregon,High school graduate (or equivalency),676182,9-23
-41000,OR,Oregon,Some college or associate degree,1000295,9-23
-41000,OR,Oregon,Bachelor's degree or higher,1094312,9-23
-41000,OR,Oregon,Percent of adults who are not high school graduates,8.282693536,9-23
-41000,OR,Oregon,Percent of adults who are high school graduates (or equivalent),22.38264686,9-23
-41000,OR,Oregon,Percent of adults completing some college or associate degree,33.11127735,9-23
-41000,OR,Oregon,Percent of adults with a bachelor's degree or higher,36.22338225,9-23
+41000,OR,Oregon,Less than high school graduate,283302,2010
+41000,OR,Oregon,High school graduate (or equivalency),647185,2010
+41000,OR,Oregon,Some college or associate degree,917646,2010
+41000,OR,Oregon,Bachelor's degree or higher,763911,2010
+41000,OR,Oregon,Percent of adults who are not high school graduates,10.84598881,2010
+41000,OR,Oregon,Percent of adults who are high school graduates (or equivalent),24.77695628,2010
+41000,OR,Oregon,Percent of adults completing some college or associate degree,35.13133776,2010
+41000,OR,Oregon,Percent of adults with a bachelor's degree or higher,29.24571715,2010
+41000,OR,Oregon,Less than high school graduate,250221,2023
+41000,OR,Oregon,High school graduate (or equivalency),676182,2023
+41000,OR,Oregon,Some college or associate degree,1000295,2023
+41000,OR,Oregon,Bachelor's degree or higher,1094312,2023
+41000,OR,Oregon,Percent of adults who are not high school graduates,8.282693536,2023
+41000,OR,Oregon,Percent of adults who are high school graduates (or equivalent),22.38264686,2023
+41000,OR,Oregon,Percent of adults completing some college or associate degree,33.11127735,2023
+41000,OR,Oregon,Percent of adults with a bachelor's degree or higher,36.22338225,2023
 42000,PA,Pennsylvania,Less than a high school diploma,3329284,1970
 42000,PA,Pennsylvania,High school diploma only,2306108,1970
 42000,PA,Pennsylvania,Some college (1-3 years),469256,1970
@@ -1855,22 +1855,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 42000,PA,Pennsylvania,Percent of adults who are high school graduates (or equivalent),38.1,2000
 42000,PA,Pennsylvania,Percent of adults completing some college or associate degree,21.4,2000
 42000,PA,Pennsylvania,Percent of adults with a bachelor's degree or higher,22.4,2000
-42000,PA,Pennsylvania,Less than high school graduate,1013820,8-12
-42000,PA,Pennsylvania,High school graduate (or equivalency),3222376,8-12
-42000,PA,Pennsylvania,Some college or associate degree,2080799,8-12
-42000,PA,Pennsylvania,Bachelor's degree or higher,2341877,8-12
-42000,PA,Pennsylvania,Percent of adults who are not high school graduates,11.70845348,8-12
-42000,PA,Pennsylvania,Percent of adults who are high school graduates (or equivalent),37.2147319,8-12
-42000,PA,Pennsylvania,Percent of adults completing some college or associate degree,24.03083219,8-12
-42000,PA,Pennsylvania,Percent of adults with a bachelor's degree or higher,27.04598243,8-12
-42000,PA,Pennsylvania,Less than high school graduate,740736,9-23
-42000,PA,Pennsylvania,High school graduate (or equivalency),3039316,9-23
-42000,PA,Pennsylvania,Some college or associate degree,2215776,9-23
-42000,PA,Pennsylvania,Bachelor's degree or higher,3157318,9-23
-42000,PA,Pennsylvania,Percent of adults who are not high school graduates,8.092692939,9-23
-42000,PA,Pennsylvania,Percent of adults who are high school graduates (or equivalent),33.20515154,9-23
-42000,PA,Pennsylvania,Percent of adults completing some college or associate degree,24.20780789,9-23
-42000,PA,Pennsylvania,Percent of adults with a bachelor's degree or higher,34.49434763,9-23
+42000,PA,Pennsylvania,Less than high school graduate,1013820,2010
+42000,PA,Pennsylvania,High school graduate (or equivalency),3222376,2010
+42000,PA,Pennsylvania,Some college or associate degree,2080799,2010
+42000,PA,Pennsylvania,Bachelor's degree or higher,2341877,2010
+42000,PA,Pennsylvania,Percent of adults who are not high school graduates,11.70845348,2010
+42000,PA,Pennsylvania,Percent of adults who are high school graduates (or equivalent),37.2147319,2010
+42000,PA,Pennsylvania,Percent of adults completing some college or associate degree,24.03083219,2010
+42000,PA,Pennsylvania,Percent of adults with a bachelor's degree or higher,27.04598243,2010
+42000,PA,Pennsylvania,Less than high school graduate,740736,2023
+42000,PA,Pennsylvania,High school graduate (or equivalency),3039316,2023
+42000,PA,Pennsylvania,Some college or associate degree,2215776,2023
+42000,PA,Pennsylvania,Bachelor's degree or higher,3157318,2023
+42000,PA,Pennsylvania,Percent of adults who are not high school graduates,8.092692939,2023
+42000,PA,Pennsylvania,Percent of adults who are high school graduates (or equivalent),33.20515154,2023
+42000,PA,Pennsylvania,Percent of adults completing some college or associate degree,24.20780789,2023
+42000,PA,Pennsylvania,Percent of adults with a bachelor's degree or higher,34.49434763,2023
 44000,RI,Rhode Island,Less than a high school diploma,281089,1970
 44000,RI,Rhode Island,High school diploma only,151919,1970
 44000,RI,Rhode Island,Some college (1-3 years),41875,1970
@@ -1903,22 +1903,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 44000,RI,Rhode Island,Percent of adults who are high school graduates (or equivalent),27.8,2000
 44000,RI,Rhode Island,Percent of adults completing some college or associate degree,24.6,2000
 44000,RI,Rhode Island,Percent of adults with a bachelor's degree or higher,25.6,2000
-44000,RI,Rhode Island,Less than high school graduate,108156,8-12
-44000,RI,Rhode Island,High school graduate (or equivalency),195007,8-12
-44000,RI,Rhode Island,Some college or associate degree,188195,8-12
-44000,RI,Rhode Island,Bachelor's degree or higher,218325,8-12
-44000,RI,Rhode Island,Percent of adults who are not high school graduates,15.24004379,8-12
-44000,RI,Rhode Island,Percent of adults who are high school graduates (or equivalent),27.47804301,8-12
-44000,RI,Rhode Island,Percent of adults completing some college or associate degree,26.51817783,8-12
-44000,RI,Rhode Island,Percent of adults with a bachelor's degree or higher,30.76373536,8-12
-44000,RI,Rhode Island,Less than high school graduate,81676,9-23
-44000,RI,Rhode Island,High school graduate (or equivalency),205862,9-23
-44000,RI,Rhode Island,Some college or associate degree,199300,9-23
-44000,RI,Rhode Island,Bachelor's degree or higher,289667,9-23
-44000,RI,Rhode Island,Percent of adults who are not high school graduates,10.51841263,9-23
-44000,RI,Rhode Island,Percent of adults who are high school graduates (or equivalent),26.51135537,9-23
-44000,RI,Rhode Island,Percent of adults completing some college or associate degree,25.66628676,9-23
-44000,RI,Rhode Island,Percent of adults with a bachelor's degree or higher,37.30394524,9-23
+44000,RI,Rhode Island,Less than high school graduate,108156,2010
+44000,RI,Rhode Island,High school graduate (or equivalency),195007,2010
+44000,RI,Rhode Island,Some college or associate degree,188195,2010
+44000,RI,Rhode Island,Bachelor's degree or higher,218325,2010
+44000,RI,Rhode Island,Percent of adults who are not high school graduates,15.24004379,2010
+44000,RI,Rhode Island,Percent of adults who are high school graduates (or equivalent),27.47804301,2010
+44000,RI,Rhode Island,Percent of adults completing some college or associate degree,26.51817783,2010
+44000,RI,Rhode Island,Percent of adults with a bachelor's degree or higher,30.76373536,2010
+44000,RI,Rhode Island,Less than high school graduate,81676,2023
+44000,RI,Rhode Island,High school graduate (or equivalency),205862,2023
+44000,RI,Rhode Island,Some college or associate degree,199300,2023
+44000,RI,Rhode Island,Bachelor's degree or higher,289667,2023
+44000,RI,Rhode Island,Percent of adults who are not high school graduates,10.51841263,2023
+44000,RI,Rhode Island,Percent of adults who are high school graduates (or equivalent),26.51135537,2023
+44000,RI,Rhode Island,Percent of adults completing some college or associate degree,25.66628676,2023
+44000,RI,Rhode Island,Percent of adults with a bachelor's degree or higher,37.30394524,2023
 45000,SC,South Carolina,Less than a high school diploma,798556,1970
 45000,SC,South Carolina,High school diploma only,264070,1970
 45000,SC,South Carolina,Some college (1-3 years),106092,1970
@@ -1951,22 +1951,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 45000,SC,South Carolina,Percent of adults who are high school graduates (or equivalent),30,2000
 45000,SC,South Carolina,Percent of adults completing some college or associate degree,25.9,2000
 45000,SC,South Carolina,Percent of adults with a bachelor's degree or higher,20.4,2000
-45000,SC,South Carolina,Less than high school graduate,490863,8-12
-45000,SC,South Carolina,High school graduate (or equivalency),932051,8-12
-45000,SC,South Carolina,Some college or associate degree,897454,8-12
-45000,SC,South Carolina,Bachelor's degree or higher,755287,8-12
-45000,SC,South Carolina,Percent of adults who are not high school graduates,15.95962486,8-12
-45000,SC,South Carolina,Percent of adults who are high school graduates (or equivalent),30.3041466,8-12
-45000,SC,South Carolina,Percent of adults completing some college or associate degree,29.17928051,8-12
-45000,SC,South Carolina,Percent of adults with a bachelor's degree or higher,24.55694803,8-12
-45000,SC,South Carolina,Less than high school graduate,375697,9-23
-45000,SC,South Carolina,High school graduate (or equivalency),1019313,9-23
-45000,SC,South Carolina,Some college or associate degree,1079156,9-23
-45000,SC,South Carolina,Bachelor's degree or higher,1136208,9-23
-45000,SC,South Carolina,Percent of adults who are not high school graduates,10.40604104,9-23
-45000,SC,South Carolina,Percent of adults who are high school graduates (or equivalent),28.23289222,9-23
-45000,SC,South Carolina,Percent of adults completing some college or associate degree,29.89042132,9-23
-45000,SC,South Carolina,Percent of adults with a bachelor's degree or higher,31.47064542,9-23
+45000,SC,South Carolina,Less than high school graduate,490863,2010
+45000,SC,South Carolina,High school graduate (or equivalency),932051,2010
+45000,SC,South Carolina,Some college or associate degree,897454,2010
+45000,SC,South Carolina,Bachelor's degree or higher,755287,2010
+45000,SC,South Carolina,Percent of adults who are not high school graduates,15.95962486,2010
+45000,SC,South Carolina,Percent of adults who are high school graduates (or equivalent),30.3041466,2010
+45000,SC,South Carolina,Percent of adults completing some college or associate degree,29.17928051,2010
+45000,SC,South Carolina,Percent of adults with a bachelor's degree or higher,24.55694803,2010
+45000,SC,South Carolina,Less than high school graduate,375697,2023
+45000,SC,South Carolina,High school graduate (or equivalency),1019313,2023
+45000,SC,South Carolina,Some college or associate degree,1079156,2023
+45000,SC,South Carolina,Bachelor's degree or higher,1136208,2023
+45000,SC,South Carolina,Percent of adults who are not high school graduates,10.40604104,2023
+45000,SC,South Carolina,Percent of adults who are high school graduates (or equivalent),28.23289222,2023
+45000,SC,South Carolina,Percent of adults completing some college or associate degree,29.89042132,2023
+45000,SC,South Carolina,Percent of adults with a bachelor's degree or higher,31.47064542,2023
 46000,SD,South Dakota,Less than a high school diploma,163089,1970
 46000,SD,South Dakota,High school diploma only,108908,1970
 46000,SD,South Dakota,Some college (1-3 years),47457,1970
@@ -1999,22 +1999,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 46000,SD,South Dakota,Percent of adults who are high school graduates (or equivalent),32.9,2000
 46000,SD,South Dakota,Percent of adults completing some college or associate degree,30.2,2000
 46000,SD,South Dakota,Percent of adults with a bachelor's degree or higher,21.5,2000
-46000,SD,South Dakota,Less than high school graduate,52522,8-12
-46000,SD,South Dakota,High school graduate (or equivalency),169564,8-12
-46000,SD,South Dakota,Some college or associate degree,171164,8-12
-46000,SD,South Dakota,Bachelor's degree or higher,138523,8-12
-46000,SD,South Dakota,Percent of adults who are not high school graduates,9.876770727,8-12
-46000,SD,South Dakota,Percent of adults who are high school graduates (or equivalent),31.88653805,8-12
-46000,SD,South Dakota,Percent of adults completing some college or associate degree,32.18741832,8-12
-46000,SD,South Dakota,Percent of adults with a bachelor's degree or higher,26.0492729,8-12
-46000,SD,South Dakota,Less than high school graduate,41643,9-23
-46000,SD,South Dakota,High school graduate (or equivalency),175713,9-23
-46000,SD,South Dakota,Some college or associate degree,193370,9-23
-46000,SD,South Dakota,Bachelor's degree or higher,185411,9-23
-46000,SD,South Dakota,Percent of adults who are not high school graduates,6.985474815,9-23
-46000,SD,South Dakota,Percent of adults who are high school graduates (or equivalent),29.47527162,9-23
-46000,SD,South Dakota,Percent of adults completing some college or associate degree,32.43717468,9-23
-46000,SD,South Dakota,Percent of adults with a bachelor's degree or higher,31.10207888,9-23
+46000,SD,South Dakota,Less than high school graduate,52522,2010
+46000,SD,South Dakota,High school graduate (or equivalency),169564,2010
+46000,SD,South Dakota,Some college or associate degree,171164,2010
+46000,SD,South Dakota,Bachelor's degree or higher,138523,2010
+46000,SD,South Dakota,Percent of adults who are not high school graduates,9.876770727,2010
+46000,SD,South Dakota,Percent of adults who are high school graduates (or equivalent),31.88653805,2010
+46000,SD,South Dakota,Percent of adults completing some college or associate degree,32.18741832,2010
+46000,SD,South Dakota,Percent of adults with a bachelor's degree or higher,26.0492729,2010
+46000,SD,South Dakota,Less than high school graduate,41643,2023
+46000,SD,South Dakota,High school graduate (or equivalency),175713,2023
+46000,SD,South Dakota,Some college or associate degree,193370,2023
+46000,SD,South Dakota,Bachelor's degree or higher,185411,2023
+46000,SD,South Dakota,Percent of adults who are not high school graduates,6.985474815,2023
+46000,SD,South Dakota,Percent of adults who are high school graduates (or equivalent),29.47527162,2023
+46000,SD,South Dakota,Percent of adults completing some college or associate degree,32.43717468,2023
+46000,SD,South Dakota,Percent of adults with a bachelor's degree or higher,31.10207888,2023
 47000,TN,Tennessee,Less than a high school diploma,1239514,1970
 47000,TN,Tennessee,High school diploma only,546481,1970
 47000,TN,Tennessee,Some college (1-3 years),173969,1970
@@ -2047,22 +2047,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 47000,TN,Tennessee,Percent of adults who are high school graduates (or equivalent),31.6,2000
 47000,TN,Tennessee,Percent of adults completing some college or associate degree,24.8,2000
 47000,TN,Tennessee,Percent of adults with a bachelor's degree or higher,19.6,2000
-47000,TN,Tennessee,Less than high school graduate,685390,8-12
-47000,TN,Tennessee,High school graduate (or equivalency),1401231,8-12
-47000,TN,Tennessee,Some college or associate degree,1165595,8-12
-47000,TN,Tennessee,Bachelor's degree or higher,998674,8-12
-47000,TN,Tennessee,Percent of adults who are not high school graduates,16.12344709,8-12
-47000,TN,Tennessee,Percent of adults who are high school graduates (or equivalent),32.96323829,8-12
-47000,TN,Tennessee,Percent of adults completing some college or associate degree,27.42002263,8-12
-47000,TN,Tennessee,Percent of adults with a bachelor's degree or higher,23.49329199,8-12
-47000,TN,Tennessee,Less than high school graduate,499497,9-23
-47000,TN,Tennessee,High school graduate (or equivalency),1508292,9-23
-47000,TN,Tennessee,Some college or associate degree,1337243,9-23
-47000,TN,Tennessee,Bachelor's degree or higher,1460501,9-23
-47000,TN,Tennessee,Percent of adults who are not high school graduates,10.39420601,9-23
-47000,TN,Tennessee,Percent of adults who are high school graduates (or equivalent),31.38657044,9-23
-47000,TN,Tennessee,Percent of adults completing some college or associate degree,27.82715258,9-23
-47000,TN,Tennessee,Percent of adults with a bachelor's degree or higher,30.39207097,9-23
+47000,TN,Tennessee,Less than high school graduate,685390,2010
+47000,TN,Tennessee,High school graduate (or equivalency),1401231,2010
+47000,TN,Tennessee,Some college or associate degree,1165595,2010
+47000,TN,Tennessee,Bachelor's degree or higher,998674,2010
+47000,TN,Tennessee,Percent of adults who are not high school graduates,16.12344709,2010
+47000,TN,Tennessee,Percent of adults who are high school graduates (or equivalent),32.96323829,2010
+47000,TN,Tennessee,Percent of adults completing some college or associate degree,27.42002263,2010
+47000,TN,Tennessee,Percent of adults with a bachelor's degree or higher,23.49329199,2010
+47000,TN,Tennessee,Less than high school graduate,499497,2023
+47000,TN,Tennessee,High school graduate (or equivalency),1508292,2023
+47000,TN,Tennessee,Some college or associate degree,1337243,2023
+47000,TN,Tennessee,Bachelor's degree or higher,1460501,2023
+47000,TN,Tennessee,Percent of adults who are not high school graduates,10.39420601,2023
+47000,TN,Tennessee,Percent of adults who are high school graduates (or equivalent),31.38657044,2023
+47000,TN,Tennessee,Percent of adults completing some college or associate degree,27.82715258,2023
+47000,TN,Tennessee,Percent of adults with a bachelor's degree or higher,30.39207097,2023
 48000,TX,Texas,Less than a high school diploma,3060636,1970
 48000,TX,Texas,High school diploma only,1458297,1970
 48000,TX,Texas,Some college (1-3 years),665746,1970
@@ -2095,22 +2095,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 48000,TX,Texas,Percent of adults who are high school graduates (or equivalent),24.8,2000
 48000,TX,Texas,Percent of adults completing some college or associate degree,27.6,2000
 48000,TX,Texas,Percent of adults with a bachelor's degree or higher,23.2,2000
-48000,TX,Texas,Less than high school graduate,3031189,8-12
-48000,TX,Texas,High school graduate (or equivalency),3986617,8-12
-48000,TX,Texas,Some college or associate degree,4607434,8-12
-48000,TX,Texas,Bachelor's degree or higher,4139808,8-12
-48000,TX,Texas,Percent of adults who are not high school graduates,19.22727416,8-12
-48000,TX,Texas,Percent of adults who are high school graduates (or equivalent),25.28769338,8-12
-48000,TX,Texas,Percent of adults completing some college or associate degree,29.22562621,8-12
-48000,TX,Texas,Percent of adults with a bachelor's degree or higher,26.25940625,8-12
-48000,TX,Texas,Less than high school graduate,2759723,9-23
-48000,TX,Texas,High school graduate (or equivalency),4691708,9-23
-48000,TX,Texas,Some college or associate degree,5461229,9-23
-48000,TX,Texas,Bachelor's degree or higher,6381971,9-23
-48000,TX,Texas,Percent of adults who are not high school graduates,14.30306182,9-23
-48000,TX,Texas,Percent of adults who are high school graduates (or equivalent),24.3161323,9-23
-48000,TX,Texas,Percent of adults completing some college or associate degree,28.30439722,9-23
-48000,TX,Texas,Percent of adults with a bachelor's degree or higher,33.07640867,9-23
+48000,TX,Texas,Less than high school graduate,3031189,2010
+48000,TX,Texas,High school graduate (or equivalency),3986617,2010
+48000,TX,Texas,Some college or associate degree,4607434,2010
+48000,TX,Texas,Bachelor's degree or higher,4139808,2010
+48000,TX,Texas,Percent of adults who are not high school graduates,19.22727416,2010
+48000,TX,Texas,Percent of adults who are high school graduates (or equivalent),25.28769338,2010
+48000,TX,Texas,Percent of adults completing some college or associate degree,29.22562621,2010
+48000,TX,Texas,Percent of adults with a bachelor's degree or higher,26.25940625,2010
+48000,TX,Texas,Less than high school graduate,2759723,2023
+48000,TX,Texas,High school graduate (or equivalency),4691708,2023
+48000,TX,Texas,Some college or associate degree,5461229,2023
+48000,TX,Texas,Bachelor's degree or higher,6381971,2023
+48000,TX,Texas,Percent of adults who are not high school graduates,14.30306182,2023
+48000,TX,Texas,Percent of adults who are high school graduates (or equivalent),24.3161323,2023
+48000,TX,Texas,Percent of adults completing some college or associate degree,28.30439722,2023
+48000,TX,Texas,Percent of adults with a bachelor's degree or higher,33.07640867,2023
 49000,UT,Utah,Less than a high school diploma,161198,1970
 49000,UT,Utah,High school diploma only,176606,1970
 49000,UT,Utah,Some college (1-3 years),85705,1970
@@ -2143,22 +2143,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 49000,UT,Utah,Percent of adults who are high school graduates (or equivalent),24.6,2000
 49000,UT,Utah,Percent of adults completing some college or associate degree,37,2000
 49000,UT,Utah,Percent of adults with a bachelor's degree or higher,26.1,2000
-49000,UT,Utah,Less than high school graduate,147760,8-12
-49000,UT,Utah,High school graduate (or equivalency),376840,8-12
-49000,UT,Utah,Some college or associate degree,582358,8-12
-49000,UT,Utah,Bachelor's degree or higher,471185,8-12
-49000,UT,Utah,Percent of adults who are not high school graduates,9.362903108,8-12
-49000,UT,Utah,Percent of adults who are high school graduates (or equivalent),23.87869794,8-12
-49000,UT,Utah,Percent of adults completing some college or associate degree,36.90147217,8-12
-49000,UT,Utah,Percent of adults with a bachelor's degree or higher,29.85692678,8-12
-49000,UT,Utah,Less than high school graduate,134602,9-23
-49000,UT,Utah,High school graduate (or equivalency),449786,9-23
-49000,UT,Utah,Some college or associate degree,679141,9-23
-49000,UT,Utah,Bachelor's degree or higher,739555,9-23
-49000,UT,Utah,Percent of adults who are not high school graduates,6.719738164,9-23
-49000,UT,Utah,Percent of adults who are high school graduates (or equivalent),22.45467489,9-23
-49000,UT,Utah,Percent of adults completing some college or associate degree,33.90476885,9-23
-49000,UT,Utah,Percent of adults with a bachelor's degree or higher,36.9208181,9-23
+49000,UT,Utah,Less than high school graduate,147760,2010
+49000,UT,Utah,High school graduate (or equivalency),376840,2010
+49000,UT,Utah,Some college or associate degree,582358,2010
+49000,UT,Utah,Bachelor's degree or higher,471185,2010
+49000,UT,Utah,Percent of adults who are not high school graduates,9.362903108,2010
+49000,UT,Utah,Percent of adults who are high school graduates (or equivalent),23.87869794,2010
+49000,UT,Utah,Percent of adults completing some college or associate degree,36.90147217,2010
+49000,UT,Utah,Percent of adults with a bachelor's degree or higher,29.85692678,2010
+49000,UT,Utah,Less than high school graduate,134602,2023
+49000,UT,Utah,High school graduate (or equivalency),449786,2023
+49000,UT,Utah,Some college or associate degree,679141,2023
+49000,UT,Utah,Bachelor's degree or higher,739555,2023
+49000,UT,Utah,Percent of adults who are not high school graduates,6.719738164,2023
+49000,UT,Utah,Percent of adults who are high school graduates (or equivalent),22.45467489,2023
+49000,UT,Utah,Percent of adults completing some college or associate degree,33.90476885,2023
+49000,UT,Utah,Percent of adults with a bachelor's degree or higher,36.9208181,2023
 50000,VT,Vermont,Less than a high school diploma,99897,1970
 50000,VT,Vermont,High school diploma only,76675,1970
 50000,VT,Vermont,Some college (1-3 years),29346,1970
@@ -2191,22 +2191,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 50000,VT,Vermont,Percent of adults who are high school graduates (or equivalent),32.4,2000
 50000,VT,Vermont,Percent of adults completing some college or associate degree,24.6,2000
 50000,VT,Vermont,Percent of adults with a bachelor's degree or higher,29.4,2000
-50000,VT,Vermont,Less than high school graduate,37748,8-12
-50000,VT,Vermont,High school graduate (or equivalency),134734,8-12
-50000,VT,Vermont,Some college or associate degree,111475,8-12
-50000,VT,Vermont,Bachelor's degree or higher,147624,8-12
-50000,VT,Vermont,Percent of adults who are not high school graduates,8.746446206,8-12
-50000,VT,Vermont,Percent of adults who are high school graduates (or equivalent),31.21870518,8-12
-50000,VT,Vermont,Percent of adults completing some college or associate degree,25.82945032,8-12
-50000,VT,Vermont,Percent of adults with a bachelor's degree or higher,34.20539829,8-12
-50000,VT,Vermont,Less than high school graduate,25326,9-23
-50000,VT,Vermont,High school graduate (or equivalency),126179,9-23
-50000,VT,Vermont,Some college or associate degree,114122,9-23
-50000,VT,Vermont,Bachelor's degree or higher,197369,9-23
-50000,VT,Vermont,Percent of adults who are not high school graduates,5.470025659,9-23
-50000,VT,Vermont,Percent of adults who are high school graduates (or equivalent),27.25271925,9-23
-50000,VT,Vermont,Percent of adults completing some college or associate degree,24.64859308,9-23
-50000,VT,Vermont,Percent of adults with a bachelor's degree or higher,42.62866202,9-23
+50000,VT,Vermont,Less than high school graduate,37748,2010
+50000,VT,Vermont,High school graduate (or equivalency),134734,2010
+50000,VT,Vermont,Some college or associate degree,111475,2010
+50000,VT,Vermont,Bachelor's degree or higher,147624,2010
+50000,VT,Vermont,Percent of adults who are not high school graduates,8.746446206,2010
+50000,VT,Vermont,Percent of adults who are high school graduates (or equivalent),31.21870518,2010
+50000,VT,Vermont,Percent of adults completing some college or associate degree,25.82945032,2010
+50000,VT,Vermont,Percent of adults with a bachelor's degree or higher,34.20539829,2010
+50000,VT,Vermont,Less than high school graduate,25326,2023
+50000,VT,Vermont,High school graduate (or equivalency),126179,2023
+50000,VT,Vermont,Some college or associate degree,114122,2023
+50000,VT,Vermont,Bachelor's degree or higher,197369,2023
+50000,VT,Vermont,Percent of adults who are not high school graduates,5.470025659,2023
+50000,VT,Vermont,Percent of adults who are high school graduates (or equivalent),27.25271925,2023
+50000,VT,Vermont,Percent of adults completing some college or associate degree,24.64859308,2023
+50000,VT,Vermont,Percent of adults with a bachelor's degree or higher,42.62866202,2023
 51000,VA,Virginia,Less than a high school diploma,1277359,1970
 51000,VA,Virginia,High school diploma only,616942,1970
 51000,VA,Virginia,Some college (1-3 years),250838,1970
@@ -2239,22 +2239,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 51000,VA,Virginia,Percent of adults who are high school graduates (or equivalent),26,2000
 51000,VA,Virginia,Percent of adults completing some college or associate degree,26,2000
 51000,VA,Virginia,Percent of adults with a bachelor's degree or higher,29.5,2000
-51000,VA,Virginia,Less than high school graduate,699056,8-12
-51000,VA,Virginia,High school graduate (or equivalency),1352347,8-12
-51000,VA,Virginia,Some college or associate degree,1447591,8-12
-51000,VA,Virginia,Bachelor's degree or higher,1857577,8-12
-51000,VA,Virginia,Percent of adults who are not high school graduates,13.05043842,8-12
-51000,VA,Virginia,Percent of adults who are high school graduates (or equivalent),25.24650565,8-12
-51000,VA,Virginia,Percent of adults completing some college or associate degree,27.02458345,8-12
-51000,VA,Virginia,Percent of adults with a bachelor's degree or higher,34.67847248,8-12
-51000,VA,Virginia,Less than high school graduate,516186,9-23
-51000,VA,Virginia,High school graduate (or equivalency),1423702,9-23
-51000,VA,Virginia,Some college or associate degree,1547397,9-23
-51000,VA,Virginia,Bachelor's degree or higher,2471630,9-23
-51000,VA,Virginia,Percent of adults who are not high school graduates,8.662415893,9-23
-51000,VA,Virginia,Percent of adults who are high school graduates (or equivalent),23.89196691,9-23
-51000,VA,Virginia,Percent of adults completing some college or associate degree,25.96776427,9-23
-51000,VA,Virginia,Percent of adults with a bachelor's degree or higher,41.47785293,9-23
+51000,VA,Virginia,Less than high school graduate,699056,2010
+51000,VA,Virginia,High school graduate (or equivalency),1352347,2010
+51000,VA,Virginia,Some college or associate degree,1447591,2010
+51000,VA,Virginia,Bachelor's degree or higher,1857577,2010
+51000,VA,Virginia,Percent of adults who are not high school graduates,13.05043842,2010
+51000,VA,Virginia,Percent of adults who are high school graduates (or equivalent),25.24650565,2010
+51000,VA,Virginia,Percent of adults completing some college or associate degree,27.02458345,2010
+51000,VA,Virginia,Percent of adults with a bachelor's degree or higher,34.67847248,2010
+51000,VA,Virginia,Less than high school graduate,516186,2023
+51000,VA,Virginia,High school graduate (or equivalency),1423702,2023
+51000,VA,Virginia,Some college or associate degree,1547397,2023
+51000,VA,Virginia,Bachelor's degree or higher,2471630,2023
+51000,VA,Virginia,Percent of adults who are not high school graduates,8.662415893,2023
+51000,VA,Virginia,Percent of adults who are high school graduates (or equivalent),23.89196691,2023
+51000,VA,Virginia,Percent of adults completing some college or associate degree,25.96776427,2023
+51000,VA,Virginia,Percent of adults with a bachelor's degree or higher,41.47785293,2023
 53000,WA,Washington,Less than a high school diploma,666656,1970
 53000,WA,Washington,High school diploma only,661800,1970
 53000,WA,Washington,Some college (1-3 years),265140,1970
@@ -2287,22 +2287,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 53000,WA,Washington,Percent of adults who are high school graduates (or equivalent),24.9,2000
 53000,WA,Washington,Percent of adults completing some college or associate degree,34.4,2000
 53000,WA,Washington,Percent of adults with a bachelor's degree or higher,27.7,2000
-53000,WA,Washington,Less than high school graduate,451404,8-12
-53000,WA,Washington,High school graduate (or equivalency),1063518,8-12
-53000,WA,Washington,Some college or associate degree,1569438,8-12
-53000,WA,Washington,Bachelor's degree or higher,1423109,8-12
-53000,WA,Washington,Percent of adults who are not high school graduates,10.01457803,8-12
-53000,WA,Washington,Percent of adults who are high school graduates (or equivalent),23.59457159,8-12
-53000,WA,Washington,Percent of adults completing some college or associate degree,34.81860885,8-12
-53000,WA,Washington,Percent of adults with a bachelor's degree or higher,31.57224154,8-12
-53000,WA,Washington,Less than high school graduate,421541,9-23
-53000,WA,Washington,High school graduate (or equivalency),1176403,9-23
-53000,WA,Washington,Some college or associate degree,1714049,9-23
-53000,WA,Washington,Bachelor's degree or higher,2097154,9-23
-53000,WA,Washington,Percent of adults who are not high school graduates,7.793114145,9-23
-53000,WA,Washington,Percent of adults who are high school graduates (or equivalent),21.74840137,9-23
-53000,WA,Washington,Percent of adults completing some college or associate degree,31.68797224,9-23
-53000,WA,Washington,Percent of adults with a bachelor's degree or higher,38.77051225,9-23
+53000,WA,Washington,Less than high school graduate,451404,2010
+53000,WA,Washington,High school graduate (or equivalency),1063518,2010
+53000,WA,Washington,Some college or associate degree,1569438,2010
+53000,WA,Washington,Bachelor's degree or higher,1423109,2010
+53000,WA,Washington,Percent of adults who are not high school graduates,10.01457803,2010
+53000,WA,Washington,Percent of adults who are high school graduates (or equivalent),23.59457159,2010
+53000,WA,Washington,Percent of adults completing some college or associate degree,34.81860885,2010
+53000,WA,Washington,Percent of adults with a bachelor's degree or higher,31.57224154,2010
+53000,WA,Washington,Less than high school graduate,421541,2023
+53000,WA,Washington,High school graduate (or equivalency),1176403,2023
+53000,WA,Washington,Some college or associate degree,1714049,2023
+53000,WA,Washington,Bachelor's degree or higher,2097154,2023
+53000,WA,Washington,Percent of adults who are not high school graduates,7.793114145,2023
+53000,WA,Washington,Percent of adults who are high school graduates (or equivalent),21.74840137,2023
+53000,WA,Washington,Percent of adults completing some college or associate degree,31.68797224,2023
+53000,WA,Washington,Percent of adults with a bachelor's degree or higher,38.77051225,2023
 54000,WV,West Virginia,Less than a high school diploma,566026,1970
 54000,WV,West Virginia,High school diploma only,267165,1970
 54000,WV,West Virginia,Some college (1-3 years),70605,1970
@@ -2335,22 +2335,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 54000,WV,West Virginia,Percent of adults who are high school graduates (or equivalent),39.4,2000
 54000,WV,West Virginia,Percent of adults completing some college or associate degree,21,2000
 54000,WV,West Virginia,Percent of adults with a bachelor's degree or higher,14.8,2000
-54000,WV,West Virginia,Less than high school graduate,214586,8-12
-54000,WV,West Virginia,High school graduate (or equivalency),528874,8-12
-54000,WV,West Virginia,Some college or associate degree,317396,8-12
-54000,WV,West Virginia,Bachelor's degree or higher,231418,8-12
-54000,WV,West Virginia,Percent of adults who are not high school graduates,16.60530197,8-12
-54000,WV,West Virginia,Percent of adults who are high school graduates (or equivalent),40.9258408,8-12
-54000,WV,West Virginia,Percent of adults completing some college or associate degree,24.5610451,8-12
-54000,WV,West Virginia,Percent of adults with a bachelor's degree or higher,17.90781212,8-12
-54000,WV,West Virginia,Less than high school graduate,144554,9-23
-54000,WV,West Virginia,High school graduate (or equivalency),501118,9-23
-54000,WV,West Virginia,Some college or associate degree,327989,9-23
-54000,WV,West Virginia,Bachelor's degree or higher,295541,9-23
-54000,WV,West Virginia,Percent of adults who are not high school graduates,11.38936119,9-23
-54000,WV,West Virginia,Percent of adults who are high school graduates (or equivalent),39.48291919,9-23
-54000,WV,West Virginia,Percent of adults completing some college or associate degree,25.84214333,9-23
-54000,WV,West Virginia,Percent of adults with a bachelor's degree or higher,23.28557629,9-23
+54000,WV,West Virginia,Less than high school graduate,214586,2010
+54000,WV,West Virginia,High school graduate (or equivalency),528874,2010
+54000,WV,West Virginia,Some college or associate degree,317396,2010
+54000,WV,West Virginia,Bachelor's degree or higher,231418,2010
+54000,WV,West Virginia,Percent of adults who are not high school graduates,16.60530197,2010
+54000,WV,West Virginia,Percent of adults who are high school graduates (or equivalent),40.9258408,2010
+54000,WV,West Virginia,Percent of adults completing some college or associate degree,24.5610451,2010
+54000,WV,West Virginia,Percent of adults with a bachelor's degree or higher,17.90781212,2010
+54000,WV,West Virginia,Less than high school graduate,144554,2023
+54000,WV,West Virginia,High school graduate (or equivalency),501118,2023
+54000,WV,West Virginia,Some college or associate degree,327989,2023
+54000,WV,West Virginia,Bachelor's degree or higher,295541,2023
+54000,WV,West Virginia,Percent of adults who are not high school graduates,11.38936119,2023
+54000,WV,West Virginia,Percent of adults who are high school graduates (or equivalent),39.48291919,2023
+54000,WV,West Virginia,Percent of adults completing some college or associate degree,25.84214333,2023
+54000,WV,West Virginia,Percent of adults with a bachelor's degree or higher,23.28557629,2023
 55000,WI,Wisconsin,Less than a high school diploma,1060531,1970
 55000,WI,Wisconsin,High school diploma only,811048,1970
 55000,WI,Wisconsin,Some college (1-3 years),230874,1970
@@ -2383,22 +2383,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 55000,WI,Wisconsin,Percent of adults who are high school graduates (or equivalent),34.6,2000
 55000,WI,Wisconsin,Percent of adults completing some college or associate degree,28.1,2000
 55000,WI,Wisconsin,Percent of adults with a bachelor's degree or higher,22.4,2000
-55000,WI,Wisconsin,Less than high school graduate,374135,8-12
-55000,WI,Wisconsin,High school graduate (or equivalency),1258948,8-12
-55000,WI,Wisconsin,Some college or associate degree,1163995,8-12
-55000,WI,Wisconsin,Bachelor's degree or higher,1003213,8-12
-55000,WI,Wisconsin,Percent of adults who are not high school graduates,9.844903982,8-12
-55000,WI,Wisconsin,Percent of adults who are high school graduates (or equivalent),33.12767364,8-12
-55000,WI,Wisconsin,Percent of adults completing some college or associate degree,30.62910182,8-12
-55000,WI,Wisconsin,Percent of adults with a bachelor's degree or higher,26.39832055,8-12
-55000,WI,Wisconsin,Less than high school graduate,269431,9-23
-55000,WI,Wisconsin,High school graduate (or equivalency),1207407,9-23
-55000,WI,Wisconsin,Some college or associate degree,1259617,9-23
-55000,WI,Wisconsin,Bachelor's degree or higher,1333128,9-23
-55000,WI,Wisconsin,Percent of adults who are not high school graduates,6.620604617,9-23
-55000,WI,Wisconsin,Percent of adults who are high school graduates (or equivalent),29.66905946,9-23
-55000,WI,Wisconsin,Percent of adults completing some college or associate degree,30.95199189,9-23
-55000,WI,Wisconsin,Percent of adults with a bachelor's degree or higher,32.75834404,9-23
+55000,WI,Wisconsin,Less than high school graduate,374135,2010
+55000,WI,Wisconsin,High school graduate (or equivalency),1258948,2010
+55000,WI,Wisconsin,Some college or associate degree,1163995,2010
+55000,WI,Wisconsin,Bachelor's degree or higher,1003213,2010
+55000,WI,Wisconsin,Percent of adults who are not high school graduates,9.844903982,2010
+55000,WI,Wisconsin,Percent of adults who are high school graduates (or equivalent),33.12767364,2010
+55000,WI,Wisconsin,Percent of adults completing some college or associate degree,30.62910182,2010
+55000,WI,Wisconsin,Percent of adults with a bachelor's degree or higher,26.39832055,2010
+55000,WI,Wisconsin,Less than high school graduate,269431,2023
+55000,WI,Wisconsin,High school graduate (or equivalency),1207407,2023
+55000,WI,Wisconsin,Some college or associate degree,1259617,2023
+55000,WI,Wisconsin,Bachelor's degree or higher,1333128,2023
+55000,WI,Wisconsin,Percent of adults who are not high school graduates,6.620604617,2023
+55000,WI,Wisconsin,Percent of adults who are high school graduates (or equivalent),29.66905946,2023
+55000,WI,Wisconsin,Percent of adults completing some college or associate degree,30.95199189,2023
+55000,WI,Wisconsin,Percent of adults with a bachelor's degree or higher,32.75834404,2023
 56000,WY,Wyoming,Less than a high school diploma,65252,1970
 56000,WY,Wyoming,High school diploma only,63630,1970
 56000,WY,Wyoming,Some college (1-3 years),26074,1970
@@ -2431,22 +2431,22 @@ FIPS Code,State,Area name,Attribute,Value,Year
 56000,WY,Wyoming,Percent of adults who are high school graduates (or equivalent),31,2000
 56000,WY,Wyoming,Percent of adults completing some college or associate degree,35,2000
 56000,WY,Wyoming,Percent of adults with a bachelor's degree or higher,21.9,2000
-56000,WY,Wyoming,Less than high school graduate,29387,8-12
-56000,WY,Wyoming,High school graduate (or equivalency),113353,8-12
-56000,WY,Wyoming,Some college or associate degree,138325,8-12
-56000,WY,Wyoming,Bachelor's degree or higher,90031,8-12
-56000,WY,Wyoming,Percent of adults who are not high school graduates,7.918975144,8-12
-56000,WY,Wyoming,Percent of adults who are high school graduates (or equivalent),30.54546532,8-12
-56000,WY,Wyoming,Percent of adults completing some college or associate degree,37.27472137,8-12
-56000,WY,Wyoming,Percent of adults with a bachelor's degree or higher,24.26083817,8-12
-56000,WY,Wyoming,Less than high school graduate,23502,9-23
-56000,WY,Wyoming,High school graduate (or equivalency),109885,9-23
-56000,WY,Wyoming,Some college or associate degree,143781,9-23
-56000,WY,Wyoming,Bachelor's degree or higher,118336,9-23
-56000,WY,Wyoming,Percent of adults who are not high school graduates,5.942291355,9-23
-56000,WY,Wyoming,Percent of adults who are high school graduates (or equivalent),27.78353696,9-23
-56000,WY,Wyoming,Percent of adults completing some college or associate degree,36.35386747,9-23
-56000,WY,Wyoming,Percent of adults with a bachelor's degree or higher,29.92030422,9-23
+56000,WY,Wyoming,Less than high school graduate,29387,2010
+56000,WY,Wyoming,High school graduate (or equivalency),113353,2010
+56000,WY,Wyoming,Some college or associate degree,138325,2010
+56000,WY,Wyoming,Bachelor's degree or higher,90031,2010
+56000,WY,Wyoming,Percent of adults who are not high school graduates,7.918975144,2010
+56000,WY,Wyoming,Percent of adults who are high school graduates (or equivalent),30.54546532,2010
+56000,WY,Wyoming,Percent of adults completing some college or associate degree,37.27472137,2010
+56000,WY,Wyoming,Percent of adults with a bachelor's degree or higher,24.26083817,2010
+56000,WY,Wyoming,Less than high school graduate,23502,2023
+56000,WY,Wyoming,High school graduate (or equivalency),109885,2023
+56000,WY,Wyoming,Some college or associate degree,143781,2023
+56000,WY,Wyoming,Bachelor's degree or higher,118336,2023
+56000,WY,Wyoming,Percent of adults who are not high school graduates,5.942291355,2023
+56000,WY,Wyoming,Percent of adults who are high school graduates (or equivalent),27.78353696,2023
+56000,WY,Wyoming,Percent of adults completing some college or associate degree,36.35386747,2023
+56000,WY,Wyoming,Percent of adults with a bachelor's degree or higher,29.92030422,2023
 72000,PR,Puerto Rico,Less than a high school diploma,954011,1980
 72000,PR,Puerto Rico,High school diploma only,332770,1980
 72000,PR,Puerto Rico,Some college (1-3 years),142981,1980
@@ -2471,19 +2471,19 @@ FIPS Code,State,Area name,Attribute,Value,Year
 72000,PR,Puerto Rico,Percent of adults who are high school graduates (or equivalent),22.3,2000
 72000,PR,Puerto Rico,Percent of adults completing some college or associate degree,19.4,2000
 72000,PR,Puerto Rico,Percent of adults with a bachelor's degree or higher,18.3,2000
-72000,PR,Puerto Rico,Less than high school graduate,739786,8-12
-72000,PR,Puerto Rico,High school graduate (or equivalency),627608,8-12
-72000,PR,Puerto Rico,Some college or associate degree,524750,8-12
-72000,PR,Puerto Rico,Bachelor's degree or higher,548830,8-12
-72000,PR,Puerto Rico,Percent of adults who are not high school graduates,30.3070004,8-12
-72000,PR,Puerto Rico,Percent of adults who are high school graduates (or equivalent),25.71137587,8-12
-72000,PR,Puerto Rico,Percent of adults completing some college or associate degree,21.49756614,8-12
-72000,PR,Puerto Rico,Percent of adults with a bachelor's degree or higher,22.48405759,8-12
-72000,PR,Puerto Rico,Less than high school graduate,472462,9-23
-72000,PR,Puerto Rico,High school graduate (or equivalency),670172,9-23
-72000,PR,Puerto Rico,Some college or associate degree,566777,9-23
-72000,PR,Puerto Rico,Bachelor's degree or higher,702653,9-23
-72000,PR,Puerto Rico,Percent of adults who are not high school graduates,19.58745705,9-23
-72000,PR,Puerto Rico,Percent of adults who are high school graduates (or equivalent),27.78417156,9-23
-72000,PR,Puerto Rico,Percent of adults completing some college or associate degree,23.49759376,9-23
-72000,PR,Puerto Rico,Percent of adults with a bachelor's degree or higher,29.13077762,9-23
+72000,PR,Puerto Rico,Less than high school graduate,739786,2010
+72000,PR,Puerto Rico,High school graduate (or equivalency),627608,2010
+72000,PR,Puerto Rico,Some college or associate degree,524750,2010
+72000,PR,Puerto Rico,Bachelor's degree or higher,548830,2010
+72000,PR,Puerto Rico,Percent of adults who are not high school graduates,30.3070004,2010
+72000,PR,Puerto Rico,Percent of adults who are high school graduates (or equivalent),25.71137587,2010
+72000,PR,Puerto Rico,Percent of adults completing some college or associate degree,21.49756614,2010
+72000,PR,Puerto Rico,Percent of adults with a bachelor's degree or higher,22.48405759,2010
+72000,PR,Puerto Rico,Less than high school graduate,472462,2023
+72000,PR,Puerto Rico,High school graduate (or equivalency),670172,2023
+72000,PR,Puerto Rico,Some college or associate degree,566777,2023
+72000,PR,Puerto Rico,Bachelor's degree or higher,702653,2023
+72000,PR,Puerto Rico,Percent of adults who are not high school graduates,19.58745705,2023
+72000,PR,Puerto Rico,Percent of adults who are high school graduates (or equivalent),27.78417156,2023
+72000,PR,Puerto Rico,Percent of adults completing some college or associate degree,23.49759376,2023
+72000,PR,Puerto Rico,Percent of adults with a bachelor's degree or higher,29.13077762,2023
