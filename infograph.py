@@ -35,11 +35,23 @@ for item in edToIncCADATA2008NHSD["Personal Income"]:
 popCount = []
 for item in edToIncCADATA2008NHSD["Population Count"]:
     popCount.append(item)
-incSince1958DATA = ""
+incSince1958DATA = pd.read_csv('incomesince1958.csv')
+incSince1958DATAPersInc = incSince1958DATA[incSince1958DATA["Description"]==" Personal dividend income "].iloc[:,:]
+states = []
+for state in incSince1958DATAPersInc["GeoName"]:
+    states.append(state)
+personalIncome2018 = []
+for lcv in incSince1958DATAPersInc["2018"]:
+    personalIncome2018.append(lcv)
 
-edToIncCADATA2008NHSD.plot(kind="scatter",subplots=False,x="Population Count",y="Personal Income",title="Educational attainment")
+#edToIncCADATA2008NHSD.plot(kind="scatter",subplots=True,x="Personal Income",y="Population Count",title="Educational attainment")
 #plot.barh(persInc,popCount)
 #plot.title("Income for People With No High School Diploma, 2008")
 #plot.xlabel("# of People")
 #plot.ylabel("Personal Income")
-plot.savefig('figure.png',bbox_inches="tight")
+#incSince1958DATA.plot(kind="bar",subplots=True,x="GeoName",y="1958")
+plot.barh(states,personalIncome2018)
+plot.xlabel("Personal Income")
+plot.ylabel("State")
+plot.savefig('figure.png',bbox_inches = "tight")
+print(states)
