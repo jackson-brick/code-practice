@@ -310,7 +310,7 @@ while True:
     while True:
         os.system('clear')
         print(Fore.BLUE + Style.BRIGHT + f"Welcome {diaryusers["users"][userNum]["name"].upper()}".center(z) + Style.NORMAL + Fore.RESET)
-        print(Style.BRIGHT + "COMMAND OPTIONS:  WRITE, EDIT, HELP, QUIT".center(z) + Style.NORMAL)
+        print(Style.BRIGHT + "COMMAND OPTIONS:  WRITE, EDIT, HELP, QUIT, LOG OUT".center(z) + Style.NORMAL)
         userInput = input("\n")
         if userInput.lower().strip() == "write":
             write()
@@ -402,7 +402,8 @@ while True:
                         userNum = i
                 password = op_decrypt(diaryusers["users"][userNum]["password"],diaryusers["users"][userNum]["key"])
                 breakVar = True
-
+        elif userInput.lower().strip() == "log out":
+            user_intro()
         if breakVar == True:
             breakVar = False
             break
