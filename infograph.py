@@ -37,9 +37,9 @@ for item in edToIncCADATA2008NHSD["Population Count"]:
     popCount.append(item)
 incSince1958DATA = ""
 
-#edToIncCADATA2008NHSD.plot(x="Personal Income",y="Population Count",title="Educational attainment")
-plot.barh(persInc,popCount)
-plot.title("Income for People With No High School Diploma, 2008")
-plot.xlabel("# of People")
-plot.ylabel("Personal Income")
+edToIncCADATA2008NHSD.plot(kind="scatter",subplots=False,x="Population Count",y="Personal Income",title="Educational attainment")
+#plot.barh(persInc,popCount)
+#plot.title("Income for People With No High School Diploma, 2008")
+#plot.xlabel("# of People")
+#plot.ylabel("Personal Income")
 plot.savefig('figure.png',bbox_inches="tight")
