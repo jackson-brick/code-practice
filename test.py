@@ -6,27 +6,40 @@ with open('incomesince1958.csv','r') as file:
     inc = csv.DictReader(file)
     for line in inc:
         fullIncCSV.append(line)
-print(fullIncCSV)
-input()
+incKeys = fullIncCSV[0].keys()
+removeKeys = []
+for key in incKeys:
+    if key.isdigit():
+        removeKeys.append(key)
+
+
+
 removeList = []
-for line in fullIncCSV:
-    if line["Description"] != "Personal dividend income":
+for line in fullIncCSV: 
+    if line["Description"] != " Personal dividend income ":
         removeList.append(line)
 for line in removeList:
     fullIncCSV.remove(line)
-print(fullIncCSV)
-input()
-for lcv in range(1958,2024):
+newIncCSV = []
+x=0
+for lcv in range(1958,2024): 
     for line in fullIncCSV:
-        #line["Year"] = 
-        print("")
+        newIncCSV.append(line)
+        newIncCSV[x]["Year"] = str(lcv)
+        newIncCSV[x]["Value"] = line[str(lcv)]
+        x+=1
+print(newIncCSV[0]["1958"])
+input()
+for key in removeKeys:
+    for entry in newIncCSV:
+        del entry[str(key)]
 
 
-with open('education2023.csv','w',newline='') as file:
-    field_names = ["FIPS Code","State","Area name","Attribute","Value","Year"]
+with open('incomesince1958TEST.csv','w',newline='') as file:
+    field_names = ["GeoFIPS","GeoName","Region","LineCode","Description","Unit","Year","Value"]
     writer = csv.DictWriter(file,fieldnames=field_names)
 
     writer.writeheader()
-    for line in fullUnempCSV:
+    for line in newIncCSV:
         writer.writerow(line)
 
