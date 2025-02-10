@@ -28,8 +28,11 @@ for lcv in range(1958,2024):
         newIncCSV[x]["Year"] = str(lcv)
         newIncCSV[x]["Value"] = line[str(lcv)]
         x+=1
-print(newIncCSV[0]["1958"])
-input()
+print(newIncCSV[0]['1958'])
+print(removeKeys)
+print(newIncCSV[0][removeKeys[0]])
+
+
 for key in removeKeys:
     for entry in newIncCSV:
         del entry[str(key)]
