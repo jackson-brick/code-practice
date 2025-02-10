@@ -1,30 +1,26 @@
 import csv
 
 
-fullUnempCSV = []
-with open('education2023.csv','r') as file:
-    unemp = csv.DictReader(file)
-    for line in unemp:
-        fullUnempCSV.append(line)
-
+fullIncCSV = []
+with open('incomesince1958.csv','r') as file:
+    inc = csv.DictReader(file)
+    for line in inc:
+        fullIncCSV.append(line)
+print(fullIncCSV)
+input()
 removeList = []
-#for line in fullUnempCSV:
-    #if line["IndustryClassification"] != "...":
-        #print(line)
-    #removeList.append(line)
+for line in fullIncCSV:
+    if line["Description"] != "Personal dividend income":
+        removeList.append(line)
+for line in removeList:
+    fullIncCSV.remove(line)
+print(fullIncCSV)
+input()
+for lcv in range(1958,2024):
+    for line in fullIncCSV:
+        #line["Year"] = 
+        print("")
 
-
-#for value in removeList:
-    #fullUnempCSV.remove(value)
-for value in fullUnempCSV:
-    value["Year"] = value["Attribute"][-4] + value["Attribute"][-3] + value["Attribute"][-2] + value["Attribute"][-1]
-    tempAttribute = ""
-    for char in value["Attribute"]:
-        if char == ",":
-            break
-        else:
-            tempAttribute += char
-    value["Attribute"] = tempAttribute
 
 with open('education2023.csv','w',newline='') as file:
     field_names = ["FIPS Code","State","Area name","Attribute","Value","Year"]
