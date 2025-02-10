@@ -50,6 +50,8 @@ for lcv in incSince1958DATAPersInc["2018"]:
 #plot.xlabel("# of People")
 #plot.ylabel("Personal Income")
 #incSince1958DATA.plot(kind="bar",subplots=True,x="GeoName",y="1958")
+states.remove('United States')
+personalIncome2018.pop(0)
 plot.barh(states,personalIncome2018)
 plot.xlabel("Personal Income")
 plot.ylabel("State")
