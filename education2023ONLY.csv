@@ -1,0 +1,417 @@
+FIPS Code,State,Area name,Attribute,Value,Year
+0,US,United States,Less than high school graduate,24230217,2023
+0,US,United States,High school graduate (or equivalency),59836489,2023
+0,US,United States,Some college or associate degree,64413653,2023
+0,US,United States,Bachelor's degree or higher,79954302,2023
+0,US,United States,Percent of adults who are not high school graduates,10.60706676,2023
+0,US,United States,Percent of adults who are high school graduates (or equivalent),26.19413741,2023
+0,US,United States,Percent of adults completing some college or associate degree,28.1978456,2023
+0,US,United States,Percent of adults with a bachelor's degree or higher,35.00095023,2023
+1000,AL,Alabama,Less than high school graduate,409381,2023
+1000,AL,Alabama,High school graduate (or equivalency),1046374,2023
+1000,AL,Alabama,Some college or associate degree,1035466,2023
+1000,AL,Alabama,Bachelor's degree or higher,957081,2023
+1000,AL,Alabama,Percent of adults who are not high school graduates,11.87195901,2023
+1000,AL,Alabama,Percent of adults who are high school graduates (or equivalent),30.34461599,2023
+1000,AL,Alabama,Percent of adults completing some college or associate degree,30.02828639,2023
+1000,AL,Alabama,Percent of adults with a bachelor's degree or higher,27.75513862,2023
+2000,AK,Alaska,Less than high school graduate,31854,2023
+2000,AK,Alaska,High school graduate (or equivalency),141206,2023
+2000,AK,Alaska,Some college or associate degree,162411,2023
+2000,AK,Alaska,Bachelor's degree or higher,152432,2023
+2000,AK,Alaska,Percent of adults who are not high school graduates,6.528756741,2023
+2000,AK,Alaska,Percent of adults who are high school graduates (or equivalent),28.94140844,2023
+2000,AK,Alaska,Percent of adults completing some college or associate degree,33.28755921,2023
+2000,AK,Alaska,Percent of adults with a bachelor's degree or higher,31.24227562,2023
+4000,AZ,Arizona,Less than high school graduate,544528,2023
+4000,AZ,Arizona,High school graduate (or equivalency),1171693,2023
+4000,AZ,Arizona,Some college or associate degree,1646950,2023
+4000,AZ,Arizona,Bachelor's degree or higher,1627462,2023
+4000,AZ,Arizona,Percent of adults who are not high school graduates,10.91100067,2023
+4000,AZ,Arizona,Percent of adults who are high school graduates (or equivalent),23.47784339,2023
+4000,AZ,Arizona,Percent of adults completing some college or associate degree,33.00082374,2023
+4000,AZ,Arizona,Percent of adults with a bachelor's degree or higher,32.6103322,2023
+5000,AR,Arkansas,Less than high school graduate,233857,2023
+5000,AR,Arkansas,High school graduate (or equivalency),702778,2023
+5000,AR,Arkansas,Some college or associate degree,593923,2023
+5000,AR,Arkansas,Bachelor's degree or higher,513221,2023
+5000,AR,Arkansas,Percent of adults who are not high school graduates,11.44238198,2023
+5000,AR,Arkansas,Percent of adults who are high school graduates (or equivalent),34.3862032,2023
+5000,AR,Arkansas,Percent of adults completing some college or associate degree,29.06004025,2023
+5000,AR,Arkansas,Percent of adults with a bachelor's degree or higher,25.11137457,2023
+6000,CA,California,Less than high school graduate,4149146,2023
+6000,CA,California,High school graduate (or equivalency),5496195,2023
+6000,CA,California,Some college or associate degree,7461496,2023
+6000,CA,California,Bachelor's degree or higher,9834361,2023
+6000,CA,California,Percent of adults who are not high school graduates,15.40074795,2023
+6000,CA,California,Percent of adults who are high school graduates (or equivalent),20.4007075,2023
+6000,CA,California,Percent of adults completing some college or associate degree,27.69548704,2023
+6000,CA,California,Percent of adults with a bachelor's degree or higher,36.50305751,2023
+8000,CO,Colorado,Less than high school graduate,292446,2023
+8000,CO,Colorado,High school graduate (or equivalency),811023,2023
+8000,CO,Colorado,Some college or associate degree,1128710,2023
+8000,CO,Colorado,Bachelor's degree or higher,1806355,2023
+8000,CO,Colorado,Percent of adults who are not high school graduates,7.241390069,2023
+8000,CO,Colorado,Percent of adults who are high school graduates (or equivalent),20.08211396,2023
+8000,CO,Colorado,Percent of adults completing some college or associate degree,27.94850805,2023
+8000,CO,Colorado,Percent of adults with a bachelor's degree or higher,44.72798793,2023
+9000,CT,Connecticut,Less than high school graduate,219549,2023
+9000,CT,Connecticut,High school graduate (or equivalency),647094,2023
+9000,CT,Connecticut,Some college or associate degree,603807,2023
+9000,CT,Connecticut,Bachelor's degree or higher,1062403,2023
+9000,CT,Connecticut,Percent of adults who are not high school graduates,8.668051403,2023
+9000,CT,Connecticut,Percent of adults who are high school graduates (or equivalent),25.54802825,2023
+9000,CT,Connecticut,Percent of adults completing some college or associate degree,23.83900684,2023
+9000,CT,Connecticut,Percent of adults with a bachelor's degree or higher,41.9449135,2023
+10000,DE,Delaware,Less than high school graduate,61144,2023
+10000,DE,Delaware,High school graduate (or equivalency),206192,2023
+10000,DE,Delaware,Some college or associate degree,192480,2023
+10000,DE,Delaware,Bachelor's degree or higher,250626,2023
+10000,DE,Delaware,Percent of adults who are not high school graduates,8.606473153,2023
+10000,DE,Delaware,Percent of adults who are high school graduates (or equivalent),29.02305888,2023
+10000,DE,Delaware,Percent of adults completing some college or associate degree,27.09299281,2023
+10000,DE,Delaware,Percent of adults with a bachelor's degree or higher,35.27747515,2023
+12000,FL,Florida,Less than high school graduate,1643437,2023
+12000,FL,Florida,High school graduate (or equivalency),4346402,2023
+12000,FL,Florida,Some college or associate degree,4596529,2023
+12000,FL,Florida,Bachelor's degree or higher,5263931,2023
+12000,FL,Florida,Percent of adults who are not high school graduates,10.3684921,2023
+12000,FL,Florida,Percent of adults who are high school graduates (or equivalent),27.42157735,2023
+12000,FL,Florida,Percent of adults completing some college or associate degree,28.99963591,2023
+12000,FL,Florida,Percent of adults with a bachelor's degree or higher,33.21029464,2023
+13000,GA,Georgia,Less than high school graduate,801324,2023
+13000,GA,Georgia,High school graduate (or equivalency),1950698,2023
+13000,GA,Georgia,Some college or associate degree,2020131,2023
+13000,GA,Georgia,Bachelor's degree or higher,2480907,2023
+13000,GA,Georgia,Percent of adults who are not high school graduates,11.04808178,2023
+13000,GA,Georgia,Percent of adults who are high school graduates (or equivalent),26.89482784,2023
+13000,GA,Georgia,Percent of adults completing some college or associate degree,27.85212035,2023
+13000,GA,Georgia,Percent of adults with a bachelor's degree or higher,34.20497004,2023
+15000,HI,Hawaii,Less than high school graduate,72950,2023
+15000,HI,Hawaii,High school graduate (or equivalency),273812,2023
+15000,HI,Hawaii,Some college or associate degree,316191,2023
+15000,HI,Hawaii,Bachelor's degree or higher,364398,2023
+15000,HI,Hawaii,Percent of adults who are not high school graduates,7.100786391,2023
+15000,HI,Hawaii,Percent of adults who are high school graduates (or equivalent),26.65223473,2023
+15000,HI,Hawaii,Percent of adults completing some college or associate degree,30.7773098,2023
+15000,HI,Hawaii,Percent of adults with a bachelor's degree or higher,35.46966908,2023
+16000,ID,Idaho,Less than high school graduate,103570,2023
+16000,ID,Idaho,High school graduate (or equivalency),322573,2023
+16000,ID,Idaho,Some college or associate degree,430144,2023
+16000,ID,Idaho,Bachelor's degree or higher,388032,2023
+16000,ID,Idaho,Percent of adults who are not high school graduates,8.323428317,2023
+16000,ID,Idaho,Percent of adults who are high school graduates (or equivalent),25.92365784,2023
+16000,ID,Idaho,Percent of adults completing some college or associate degree,34.5686275,2023
+16000,ID,Idaho,Percent of adults with a bachelor's degree or higher,31.18428634,2023
+17000,IL,Illinois,Less than high school graduate,851323,2023
+17000,IL,Illinois,High school graduate (or equivalency),2207546,2023
+17000,IL,Illinois,Some college or associate degree,2430244,2023
+17000,IL,Illinois,Bachelor's degree or higher,3249494,2023
+17000,IL,Illinois,Percent of adults who are not high school graduates,9.742090473,2023
+17000,IL,Illinois,Percent of adults who are high school graduates (or equivalent),25.2619897,2023
+17000,IL,Illinois,Percent of adults completing some college or associate degree,27.81042791,2023
+17000,IL,Illinois,Percent of adults with a bachelor's degree or higher,37.18549192,2023
+18000,IN,Indiana,Less than high school graduate,445651,2023
+18000,IN,Indiana,High school graduate (or equivalency),1496214,2023
+18000,IN,Indiana,Some college or associate degree,1304353,2023
+18000,IN,Indiana,Bachelor's degree or higher,1313086,2023
+18000,IN,Indiana,Percent of adults who are not high school graduates,9.774540149,2023
+18000,IN,Indiana,Percent of adults who are high school graduates (or equivalent),32.81671939,2023
+18000,IN,Indiana,Percent of adults completing some college or associate degree,28.60859903,2023
+18000,IN,Indiana,Percent of adults with a bachelor's degree or higher,28.80014143,2023
+19000,IA,Iowa,Less than high school graduate,145119,2023
+19000,IA,Iowa,High school graduate (or equivalency),649969,2023
+19000,IA,Iowa,Some college or associate degree,684769,2023
+19000,IA,Iowa,Bachelor's degree or higher,660619,2023
+19000,IA,Iowa,Percent of adults who are not high school graduates,6.779753662,2023
+19000,IA,Iowa,Percent of adults who are high school graduates (or equivalent),30.36562895,2023
+19000,IA,Iowa,Percent of adults completing some college or associate degree,31.99143555,2023
+19000,IA,Iowa,Percent of adults with a bachelor's degree or higher,30.86318183,2023
+20000,KS,Kansas,Less than high school graduate,156595,2023
+20000,KS,Kansas,High school graduate (or equivalency),495115,2023
+20000,KS,Kansas,Some college or associate degree,601919,2023
+20000,KS,Kansas,Bachelor's degree or higher,679664,2023
+20000,KS,Kansas,Percent of adults who are not high school graduates,8.09991036,2023
+20000,KS,Kansas,Percent of adults who are high school graduates (or equivalent),25.60993083,2023
+20000,KS,Kansas,Percent of adults completing some college or associate degree,31.13439091,2023
+20000,KS,Kansas,Percent of adults with a bachelor's degree or higher,35.1557679,2023
+21000,KY,Kentucky,Less than high school graduate,352966,2023
+21000,KY,Kentucky,High school graduate (or equivalency),1006715,2023
+21000,KY,Kentucky,Some college or associate degree,887620,2023
+21000,KY,Kentucky,Bachelor's degree or higher,830856,2023
+21000,KY,Kentucky,Percent of adults who are not high school graduates,11.46679653,2023
+21000,KY,Kentucky,Percent of adults who are high school graduates (or equivalent),32.70512193,2023
+21000,KY,Kentucky,Percent of adults completing some college or associate degree,28.83608601,2023
+21000,KY,Kentucky,Percent of adults with a bachelor's degree or higher,26.99199553,2023
+22000,LA,Louisiana,Less than high school graduate,407400,2023
+22000,LA,Louisiana,High school graduate (or equivalency),1012121,2023
+22000,LA,Louisiana,Some college or associate degree,864939,2023
+22000,LA,Louisiana,Bachelor's degree or higher,825794,2023
+22000,LA,Louisiana,Percent of adults who are not high school graduates,13.09860867,2023
+22000,LA,Louisiana,Percent of adults who are high school graduates (or equivalent),32.54142588,2023
+22000,LA,Louisiana,Percent of adults completing some college or associate degree,27.80927217,2023
+22000,LA,Louisiana,Percent of adults with a bachelor's degree or higher,26.55069329,2023
+23000,ME,Maine,Less than high school graduate,56031,2023
+23000,ME,Maine,High school graduate (or equivalency),310243,2023
+23000,ME,Maine,Some college or associate degree,291033,2023
+23000,ME,Maine,Bachelor's degree or higher,359323,2023
+23000,ME,Maine,Percent of adults who are not high school graduates,5.511444675,2023
+23000,ME,Maine,Percent of adults who are high school graduates (or equivalent),30.51680552,2023
+23000,ME,Maine,Percent of adults completing some college or associate degree,28.62722918,2023
+23000,ME,Maine,Percent of adults with a bachelor's degree or higher,35.34452062,2023
+24000,MD,Maryland,Less than high school graduate,382701,2023
+24000,MD,Maryland,High school graduate (or equivalency),1014175,2023
+24000,MD,Maryland,Some college or associate degree,1049892,2023
+24000,MD,Maryland,Bachelor's degree or higher,1826045,2023
+24000,MD,Maryland,Percent of adults who are not high school graduates,8.95665221,2023
+24000,MD,Maryland,Percent of adults who are high school graduates (or equivalent),23.73553441,2023
+24000,MD,Maryland,Percent of adults completing some college or associate degree,24.57144743,2023
+24000,MD,Maryland,Percent of adults with a bachelor's degree or higher,42.73636595,2023
+25000,MA,Massachusetts,Less than high school graduate,425209,2023
+25000,MA,Massachusetts,High school graduate (or equivalency),1129802,2023
+25000,MA,Massachusetts,Some college or associate degree,1084720,2023
+25000,MA,Massachusetts,Bachelor's degree or higher,2305899,2023
+25000,MA,Massachusetts,Percent of adults who are not high school graduates,8.597671075,2023
+25000,MA,Massachusetts,Percent of adults who are high school graduates (or equivalent),22.84445056,2023
+25000,MA,Massachusetts,Percent of adults completing some college or associate degree,21.93289834,2023
+25000,MA,Massachusetts,Percent of adults with a bachelor's degree or higher,46.62498003,2023
+26000,MI,Michigan,Less than high school graduate,564902,2023
+26000,MI,Michigan,High school graduate (or equivalency),1964538,2023
+26000,MI,Michigan,Some college or associate degree,2224908,2023
+26000,MI,Michigan,Bachelor's degree or higher,2213104,2023
+26000,MI,Michigan,Percent of adults who are not high school graduates,8.107727186,2023
+26000,MI,Michigan,Percent of adults who are high school graduates (or equivalent),28.1959316,2023
+26000,MI,Michigan,Percent of adults completing some college or associate degree,31.93287876,2023
+26000,MI,Michigan,Percent of adults with a bachelor's degree or higher,31.76346245,2023
+27000,MN,Minnesota,Less than high school graduate,239636,2023
+27000,MN,Minnesota,High school graduate (or equivalency),916744,2023
+27000,MN,Minnesota,Some college or associate degree,1227836,2023
+27000,MN,Minnesota,Bachelor's degree or higher,1513374,2023
+27000,MN,Minnesota,Percent of adults who are not high school graduates,6.148312162,2023
+27000,MN,Minnesota,Percent of adults who are high school graduates (or equivalent),23.52079105,2023
+27000,MN,Minnesota,Percent of adults completing some college or associate degree,31.50244125,2023
+27000,MN,Minnesota,Percent of adults with a bachelor's degree or higher,38.82845553,2023
+28000,MS,Mississippi,Less than high school graduate,263266,2023
+28000,MS,Mississippi,High school graduate (or equivalency),589225,2023
+28000,MS,Mississippi,Some college or associate degree,641810,2023
+28000,MS,Mississippi,Bachelor's degree or higher,475997,2023
+28000,MS,Mississippi,Percent of adults who are not high school graduates,13.36173513,2023
+28000,MS,Mississippi,Percent of adults who are high school graduates (or equivalent),29.90537472,2023
+28000,MS,Mississippi,Percent of adults completing some college or associate degree,32.57426034,2023
+28000,MS,Mississippi,Percent of adults with a bachelor's degree or higher,24.15862981,2023
+29000,MO,Missouri,Less than high school graduate,354732,2023
+29000,MO,Missouri,High school graduate (or equivalency),1279442,2023
+29000,MO,Missouri,Some college or associate degree,1238028,2023
+29000,MO,Missouri,Bachelor's degree or higher,1345230,2023
+29000,MO,Missouri,Percent of adults who are not high school graduates,8.411089971,2023
+29000,MO,Missouri,Percent of adults who are high school graduates (or equivalent),30.3369918,2023
+29000,MO,Missouri,Percent of adults completing some college or associate degree,29.35501983,2023
+29000,MO,Missouri,Percent of adults with a bachelor's degree or higher,31.8968984,2023
+30000,MT,Montana,Less than high school graduate,41822,2023
+30000,MT,Montana,High school graduate (or equivalency),214759,2023
+30000,MT,Montana,Some college or associate degree,247688,2023
+30000,MT,Montana,Bachelor's degree or higher,266066,2023
+30000,MT,Montana,Percent of adults who are not high school graduates,5.429066575,2023
+30000,MT,Montana,Percent of adults who are high school graduates (or equivalent),27.8786502,2023
+30000,MT,Montana,Percent of adults completing some college or associate degree,32.15328396,2023
+30000,MT,Montana,Percent of adults with a bachelor's degree or higher,34.53899927,2023
+31000,NE,Nebraska,Less than high school graduate,102256,2023
+31000,NE,Nebraska,High school graduate (or equivalency),324253,2023
+31000,NE,Nebraska,Some college or associate degree,423513,2023
+31000,NE,Nebraska,Bachelor's degree or higher,440234,2023
+31000,NE,Nebraska,Percent of adults who are not high school graduates,7.925248943,2023
+31000,NE,Nebraska,Percent of adults who are high school graduates (or equivalent),25.13090425,2023
+31000,NE,Nebraska,Percent of adults completing some college or associate degree,32.82395122,2023
+31000,NE,Nebraska,Percent of adults with a bachelor's degree or higher,34.11989559,2023
+32000,NV,Nevada,Less than high school graduate,277389,2023
+32000,NV,Nevada,High school graduate (or equivalency),602478,2023
+32000,NV,Nevada,Some college or associate degree,714821,2023
+32000,NV,Nevada,Bachelor's degree or higher,601393,2023
+32000,NV,Nevada,Percent of adults who are not high school graduates,12.63109148,2023
+32000,NV,Nevada,Percent of adults who are high school graduates (or equivalent),27.43423398,2023
+32000,NV,Nevada,Percent of adults completing some college or associate degree,32.54984675,2023
+32000,NV,Nevada,Percent of adults with a bachelor's degree or higher,27.38482779,2023
+33000,NH,New Hampshire,Less than high school graduate,59997,2023
+33000,NH,New Hampshire,High school graduate (or equivalency),272558,2023
+33000,NH,New Hampshire,Some college or associate degree,274829,2023
+33000,NH,New Hampshire,Bachelor's degree or higher,401838,2023
+33000,NH,New Hampshire,Percent of adults who are not high school graduates,5.94487635,2023
+33000,NH,New Hampshire,Percent of adults who are high school graduates (or equivalent),27.00674381,2023
+33000,NH,New Hampshire,Percent of adults completing some college or associate degree,27.23176863,2023
+33000,NH,New Hampshire,Percent of adults with a bachelor's degree or higher,39.81661121,2023
+34000,NJ,New Jersey,Less than high school graduate,600736,2023
+34000,NJ,New Jersey,High school graduate (or equivalency),1662983,2023
+34000,NJ,New Jersey,Some college or associate degree,1423815,2023
+34000,NJ,New Jersey,Bachelor's degree or higher,2771686,2023
+34000,NJ,New Jersey,Percent of adults who are not high school graduates,9.300441849,2023
+34000,NJ,New Jersey,Percent of adults who are high school graduates (or equivalent),25.74587953,2023
+34000,NJ,New Jersey,Percent of adults completing some college or associate degree,22.04314143,2023
+34000,NJ,New Jersey,Percent of adults with a bachelor's degree or higher,42.91053719,2023
+35000,NM,New Mexico,Less than high school graduate,178146,2023
+35000,NM,New Mexico,High school graduate (or equivalency),373330,2023
+35000,NM,New Mexico,Some college or associate degree,461295,2023
+35000,NM,New Mexico,Bachelor's degree or higher,438228,2023
+35000,NM,New Mexico,Percent of adults who are not high school graduates,12.27747228,2023
+35000,NM,New Mexico,Percent of adults who are high school graduates (or equivalent),25.72917004,2023
+35000,NM,New Mexico,Percent of adults completing some college or associate degree,31.791545,2023
+35000,NM,New Mexico,Percent of adults with a bachelor's degree or higher,30.20181268,2023
+36000,NY,New York,Less than high school graduate,1698537,2023
+36000,NY,New York,High school graduate (or equivalency),3437438,2023
+36000,NY,New York,Some college or associate degree,3324660,2023
+36000,NY,New York,Bachelor's degree or higher,5535503,2023
+36000,NY,New York,Percent of adults who are not high school graduates,12.13575488,2023
+36000,NY,New York,Percent of adults who are high school graduates (or equivalent),24.5599036,2023
+36000,NY,New York,Percent of adults completing some college or associate degree,23.75412417,2023
+36000,NY,New York,Percent of adults with a bachelor's degree or higher,39.55021735,2023
+37000,NC,North Carolina,Less than high school graduate,744581,2023
+37000,NC,North Carolina,High school graduate (or equivalency),1812528,2023
+37000,NC,North Carolina,Some college or associate degree,2183348,2023
+37000,NC,North Carolina,Bachelor's degree or higher,2521353,2023
+37000,NC,North Carolina,Percent of adults who are not high school graduates,10.25338036,2023
+37000,NC,North Carolina,Percent of adults who are high school graduates (or equivalent),24.95972767,2023
+37000,NC,North Carolina,Percent of adults completing some college or associate degree,30.06616808,2023
+37000,NC,North Carolina,Percent of adults with a bachelor's degree or higher,34.7207239,2023
+38000,ND,North Dakota,Less than high school graduate,31418,2023
+38000,ND,North Dakota,High school graduate (or equivalency),130763,2023
+38000,ND,North Dakota,Some college or associate degree,182590,2023
+38000,ND,North Dakota,Bachelor's degree or higher,164378,2023
+38000,ND,North Dakota,Percent of adults who are not high school graduates,6.170688737,2023
+38000,ND,North Dakota,Percent of adults who are high school graduates (or equivalent),25.68265871,2023
+38000,ND,North Dakota,Percent of adults completing some college or associate degree,35.86180077,2023
+38000,ND,North Dakota,Percent of adults with a bachelor's degree or higher,32.28485178,2023
+39000,OH,Ohio,Less than high school graduate,680554,2023
+39000,OH,Ohio,High school graduate (or equivalency),2624935,2023
+39000,OH,Ohio,Some college or associate degree,2303726,2023
+39000,OH,Ohio,Bachelor's degree or higher,2514129,2023
+39000,OH,Ohio,Percent of adults who are not high school graduates,8.377756746,2023
+39000,OH,Ohio,Percent of adults who are high school graduates (or equivalent),32.31347829,2023
+39000,OH,Ohio,Percent of adults completing some college or associate degree,28.35933084,2023
+39000,OH,Ohio,Percent of adults with a bachelor's degree or higher,30.94943412,2023
+40000,OK,Oklahoma,Less than high school graduate,287078,2023
+40000,OK,Oklahoma,High school graduate (or equivalency),811387,2023
+40000,OK,Oklahoma,Some college or associate degree,809067,2023
+40000,OK,Oklahoma,Bachelor's degree or higher,733793,2023
+40000,OK,Oklahoma,Percent of adults who are not high school graduates,10.86871173,2023
+40000,OK,Oklahoma,Percent of adults who are high school graduates (or equivalent),30.71893841,2023
+40000,OK,Oklahoma,Percent of adults completing some college or associate degree,30.63110371,2023
+40000,OK,Oklahoma,Percent of adults with a bachelor's degree or higher,27.78124615,2023
+41000,OR,Oregon,Less than high school graduate,250221,2023
+41000,OR,Oregon,High school graduate (or equivalency),676182,2023
+41000,OR,Oregon,Some college or associate degree,1000295,2023
+41000,OR,Oregon,Bachelor's degree or higher,1094312,2023
+41000,OR,Oregon,Percent of adults who are not high school graduates,8.282693536,2023
+41000,OR,Oregon,Percent of adults who are high school graduates (or equivalent),22.38264686,2023
+41000,OR,Oregon,Percent of adults completing some college or associate degree,33.11127735,2023
+41000,OR,Oregon,Percent of adults with a bachelor's degree or higher,36.22338225,2023
+42000,PA,Pennsylvania,Less than high school graduate,740736,2023
+42000,PA,Pennsylvania,High school graduate (or equivalency),3039316,2023
+42000,PA,Pennsylvania,Some college or associate degree,2215776,2023
+42000,PA,Pennsylvania,Bachelor's degree or higher,3157318,2023
+42000,PA,Pennsylvania,Percent of adults who are not high school graduates,8.092692939,2023
+42000,PA,Pennsylvania,Percent of adults who are high school graduates (or equivalent),33.20515154,2023
+42000,PA,Pennsylvania,Percent of adults completing some college or associate degree,24.20780789,2023
+42000,PA,Pennsylvania,Percent of adults with a bachelor's degree or higher,34.49434763,2023
+44000,RI,Rhode Island,Less than high school graduate,81676,2023
+44000,RI,Rhode Island,High school graduate (or equivalency),205862,2023
+44000,RI,Rhode Island,Some college or associate degree,199300,2023
+44000,RI,Rhode Island,Bachelor's degree or higher,289667,2023
+44000,RI,Rhode Island,Percent of adults who are not high school graduates,10.51841263,2023
+44000,RI,Rhode Island,Percent of adults who are high school graduates (or equivalent),26.51135537,2023
+44000,RI,Rhode Island,Percent of adults completing some college or associate degree,25.66628676,2023
+44000,RI,Rhode Island,Percent of adults with a bachelor's degree or higher,37.30394524,2023
+45000,SC,South Carolina,Less than high school graduate,375697,2023
+45000,SC,South Carolina,High school graduate (or equivalency),1019313,2023
+45000,SC,South Carolina,Some college or associate degree,1079156,2023
+45000,SC,South Carolina,Bachelor's degree or higher,1136208,2023
+45000,SC,South Carolina,Percent of adults who are not high school graduates,10.40604104,2023
+45000,SC,South Carolina,Percent of adults who are high school graduates (or equivalent),28.23289222,2023
+45000,SC,South Carolina,Percent of adults completing some college or associate degree,29.89042132,2023
+45000,SC,South Carolina,Percent of adults with a bachelor's degree or higher,31.47064542,2023
+46000,SD,South Dakota,Less than high school graduate,41643,2023
+46000,SD,South Dakota,High school graduate (or equivalency),175713,2023
+46000,SD,South Dakota,Some college or associate degree,193370,2023
+46000,SD,South Dakota,Bachelor's degree or higher,185411,2023
+46000,SD,South Dakota,Percent of adults who are not high school graduates,6.985474815,2023
+46000,SD,South Dakota,Percent of adults who are high school graduates (or equivalent),29.47527162,2023
+46000,SD,South Dakota,Percent of adults completing some college or associate degree,32.43717468,2023
+46000,SD,South Dakota,Percent of adults with a bachelor's degree or higher,31.10207888,2023
+47000,TN,Tennessee,Less than high school graduate,499497,2023
+47000,TN,Tennessee,High school graduate (or equivalency),1508292,2023
+47000,TN,Tennessee,Some college or associate degree,1337243,2023
+47000,TN,Tennessee,Bachelor's degree or higher,1460501,2023
+47000,TN,Tennessee,Percent of adults who are not high school graduates,10.39420601,2023
+47000,TN,Tennessee,Percent of adults who are high school graduates (or equivalent),31.38657044,2023
+47000,TN,Tennessee,Percent of adults completing some college or associate degree,27.82715258,2023
+47000,TN,Tennessee,Percent of adults with a bachelor's degree or higher,30.39207097,2023
+48000,TX,Texas,Less than high school graduate,2759723,2023
+48000,TX,Texas,High school graduate (or equivalency),4691708,2023
+48000,TX,Texas,Some college or associate degree,5461229,2023
+48000,TX,Texas,Bachelor's degree or higher,6381971,2023
+48000,TX,Texas,Percent of adults who are not high school graduates,14.30306182,2023
+48000,TX,Texas,Percent of adults who are high school graduates (or equivalent),24.3161323,2023
+48000,TX,Texas,Percent of adults completing some college or associate degree,28.30439722,2023
+48000,TX,Texas,Percent of adults with a bachelor's degree or higher,33.07640867,2023
+49000,UT,Utah,Less than high school graduate,134602,2023
+49000,UT,Utah,High school graduate (or equivalency),449786,2023
+49000,UT,Utah,Some college or associate degree,679141,2023
+49000,UT,Utah,Bachelor's degree or higher,739555,2023
+49000,UT,Utah,Percent of adults who are not high school graduates,6.719738164,2023
+49000,UT,Utah,Percent of adults who are high school graduates (or equivalent),22.45467489,2023
+49000,UT,Utah,Percent of adults completing some college or associate degree,33.90476885,2023
+49000,UT,Utah,Percent of adults with a bachelor's degree or higher,36.9208181,2023
+50000,VT,Vermont,Less than high school graduate,25326,2023
+50000,VT,Vermont,High school graduate (or equivalency),126179,2023
+50000,VT,Vermont,Some college or associate degree,114122,2023
+50000,VT,Vermont,Bachelor's degree or higher,197369,2023
+50000,VT,Vermont,Percent of adults who are not high school graduates,5.470025659,2023
+50000,VT,Vermont,Percent of adults who are high school graduates (or equivalent),27.25271925,2023
+50000,VT,Vermont,Percent of adults completing some college or associate degree,24.64859308,2023
+50000,VT,Vermont,Percent of adults with a bachelor's degree or higher,42.62866202,2023
+51000,VA,Virginia,Less than high school graduate,516186,2023
+51000,VA,Virginia,High school graduate (or equivalency),1423702,2023
+51000,VA,Virginia,Some college or associate degree,1547397,2023
+51000,VA,Virginia,Bachelor's degree or higher,2471630,2023
+51000,VA,Virginia,Percent of adults who are not high school graduates,8.662415893,2023
+51000,VA,Virginia,Percent of adults who are high school graduates (or equivalent),23.89196691,2023
+51000,VA,Virginia,Percent of adults completing some college or associate degree,25.96776427,2023
+51000,VA,Virginia,Percent of adults with a bachelor's degree or higher,41.47785293,2023
+53000,WA,Washington,Less than high school graduate,421541,2023
+53000,WA,Washington,High school graduate (or equivalency),1176403,2023
+53000,WA,Washington,Some college or associate degree,1714049,2023
+53000,WA,Washington,Bachelor's degree or higher,2097154,2023
+53000,WA,Washington,Percent of adults who are not high school graduates,7.793114145,2023
+53000,WA,Washington,Percent of adults who are high school graduates (or equivalent),21.74840137,2023
+53000,WA,Washington,Percent of adults completing some college or associate degree,31.68797224,2023
+53000,WA,Washington,Percent of adults with a bachelor's degree or higher,38.77051225,2023
+54000,WV,West Virginia,Less than high school graduate,144554,2023
+54000,WV,West Virginia,High school graduate (or equivalency),501118,2023
+54000,WV,West Virginia,Some college or associate degree,327989,2023
+54000,WV,West Virginia,Bachelor's degree or higher,295541,2023
+54000,WV,West Virginia,Percent of adults who are not high school graduates,11.38936119,2023
+54000,WV,West Virginia,Percent of adults who are high school graduates (or equivalent),39.48291919,2023
+54000,WV,West Virginia,Percent of adults completing some college or associate degree,25.84214333,2023
+54000,WV,West Virginia,Percent of adults with a bachelor's degree or higher,23.28557629,2023
+55000,WI,Wisconsin,Less than high school graduate,269431,2023
+55000,WI,Wisconsin,High school graduate (or equivalency),1207407,2023
+55000,WI,Wisconsin,Some college or associate degree,1259617,2023
+55000,WI,Wisconsin,Bachelor's degree or higher,1333128,2023
+55000,WI,Wisconsin,Percent of adults who are not high school graduates,6.620604617,2023
+55000,WI,Wisconsin,Percent of adults who are high school graduates (or equivalent),29.66905946,2023
+55000,WI,Wisconsin,Percent of adults completing some college or associate degree,30.95199189,2023
+55000,WI,Wisconsin,Percent of adults with a bachelor's degree or higher,32.75834404,2023
+56000,WY,Wyoming,Less than high school graduate,23502,2023
+56000,WY,Wyoming,High school graduate (or equivalency),109885,2023
+56000,WY,Wyoming,Some college or associate degree,143781,2023
+56000,WY,Wyoming,Bachelor's degree or higher,118336,2023
+56000,WY,Wyoming,Percent of adults who are not high school graduates,5.942291355,2023
+56000,WY,Wyoming,Percent of adults who are high school graduates (or equivalent),27.78353696,2023
+56000,WY,Wyoming,Percent of adults completing some college or associate degree,36.35386747,2023
+56000,WY,Wyoming,Percent of adults with a bachelor's degree or higher,29.92030422,2023
+72000,PR,Puerto Rico,Less than high school graduate,472462,2023
+72000,PR,Puerto Rico,High school graduate (or equivalency),670172,2023
+72000,PR,Puerto Rico,Some college or associate degree,566777,2023
+72000,PR,Puerto Rico,Bachelor's degree or higher,702653,2023
+72000,PR,Puerto Rico,Percent of adults who are not high school graduates,19.58745705,2023
+72000,PR,Puerto Rico,Percent of adults who are high school graduates (or equivalent),27.78417156,2023
+72000,PR,Puerto Rico,Percent of adults completing some college or associate degree,23.49759376,2023
+72000,PR,Puerto Rico,Percent of adults with a bachelor's degree or higher,29.13077762,2023
