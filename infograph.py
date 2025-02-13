@@ -23,6 +23,11 @@ with open('incomesince1958.csv','r') as file:
     incSince = csv.DictReader(file)
     for line in incSince:
         incSince1958.append(line)
+educ2023ONLY = []
+with open('education2023ONLY.csv','r') as file:
+    educ = csv.DictReader(file)
+    for line in educ:
+        educ2023ONLY.append(line)
 
 unemp2023DATA = ""
 educ2023DATA = pd.read_csv('education2023.csv')
@@ -45,17 +50,38 @@ for item in edToIncCADATA2008NHSD["Population Count"]:
 
 
 incSince1958DATA = pd.read_csv('incomesince1958.csv')
-incSince1958DATAPersInc = incSince1958DATA[incSince1958DATA["Description"]==" Personal dividend income "].iloc[:,:]
-incSince1958DATAPersIncCA = incSince1958DATAPersInc[incSince1958DATAPersInc["GeoName"] == "California"].iloc[:,:]
+
 
 states = []
-for state in incSince1958DATAPersInc["GeoName"]:
-    states.append(state)
-personalIncome2018 = []
-for lcv in incSince1958DATAPersInc["2018"]:
-    personalIncome2018.append(lcv)
+for state in incSince1958DATA["GeoName"]:
+    if state not in states:
+        states.append(state)
 
-incSince1958DATAPersIncCA.plot(kind="scatter",subplots=True,x="1958",y="2018")
+stateIncomes2023 = []
+for val in incSince1958DATA:
+    if val["Year"] == "2023":
+        stateIncomes2023.append(val["Value"])
+
+percentCollege = []
+percentPastHS = []
+
+for lcv in educ2023ONLY:
+    x=100
+    if lcv["Attribute"] == "Percent of adults who are not high school graduates":
+        x -= lcv["Value"]
+    percentPastHS.append(x)
+for lcv in educ2023ONLY:
+    x=0
+    if lcv["Attribute"] == "Percent of adults completing some college or associate degree":
+        x += lcv["Value"]
+    elif lcv["Attribute"] == "Percent of adults with a bachelor's degree or higher":
+        x += lcv["Value"]
+    percentCollege.append(x)
+
+#for item in incSince1958:
+    #if item["GeoName"] not in stateIncomes:
+        #stateIncomes[item["GeoName"]] = 
+
 
 #edToIncCADATA2008NHSD.plot(kind="scatter",subplots=True,x="Personal Income",y="Population Count",title="Educational attainment")
 #plot.barh(persInc,popCount)
