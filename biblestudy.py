@@ -20,6 +20,7 @@ def write():
             print(f"{line["Book Name"]} {line["Chapter"]}:{line["Verse"]}".center(z))
             print("")
             print(line["Text"].center(z))
+            print(line["myTranslation"].center(z))
             print("")
             notes = input()
             if notes.lower().strip() == "done":
