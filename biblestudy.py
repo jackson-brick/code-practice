@@ -27,16 +27,36 @@ def write():
             else:
                 line["Notes"] = notes
             
+def translate():
+    for line in bibleList:
+        os.system('clear')
+        if line["myTranslation"] == "":
+            print(f"{line["Book Name"]} {line["Chapter"]}:{line["Verse"]}".center(z))
+            print("")
+            print(line["Text"].center(z))
+            print("")
+            translation = input()
+            if translation.lower().strip() == "done":
+                break
+            else:
+                line["myTranslation"] = translation
 
 
-write()
+while True:
+    os.system('clear')
+    print("What would you like to do?".center(z))
+    do = input()
+    if do.lower().strip() == "write":
+        write()
+    elif do.lower().strip() == "translate":
+        translate()
 
 
 
 
 
 with open('bibleentries.csv','w',newline='') as file:
-    field_names = ["Verse ID","Book Name","Book Number","Chapter","Verse","Text","Notes"]
+    field_names = ["Verse ID","Book Name","Book Number","Chapter","Verse","Text","Notes","myTranslation"]
     writer = csv.DictWriter(file,fieldnames=field_names)
     writer.writeheader()
     for line in bibleList:
