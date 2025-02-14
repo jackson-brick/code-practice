@@ -50,6 +50,8 @@ while True:
         write()
     elif do.lower().strip() == "translate":
         translate()
+    elif do == "DONE":
+        break
 
 
 
