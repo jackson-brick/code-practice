@@ -19,17 +19,17 @@ def write():
         if line["Notes"] == "":
             print(f"{line["Book Name"]} {line["Chapter"]}:{line["Verse"]}".center(z))
             print("")
+            print(line["Text"].center(z))
+            print("")
             notes = input()
-            line["Notes"] = notes
+            if notes.lower().strip() == "done":
+                break
+            else:
+                line["Notes"] = notes
             
-def edit():
-    print("What book do you want to edit?".center(z))
-    for book in bookList:
-        if bookList.index(book) == (len(bookList)-1)
-        print(book, end=" | ")
-    bookName = input()
 
 
+write()
 
 
 
