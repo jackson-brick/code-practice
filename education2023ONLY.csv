@@ -407,11 +407,4 @@ FIPS Code,State,Area name,Attribute,Value,Year
 56000,WY,Wyoming,Percent of adults who are high school graduates (or equivalent),27.78353696,2023
 56000,WY,Wyoming,Percent of adults completing some college or associate degree,36.35386747,2023
 56000,WY,Wyoming,Percent of adults with a bachelor's degree or higher,29.92030422,2023
-72000,PR,Puerto Rico,Less than high school graduate,472462,2023
-72000,PR,Puerto Rico,High school graduate (or equivalency),670172,2023
-72000,PR,Puerto Rico,Some college or associate degree,566777,2023
-72000,PR,Puerto Rico,Bachelor's degree or higher,702653,2023
-72000,PR,Puerto Rico,Percent of adults who are not high school graduates,19.58745705,2023
-72000,PR,Puerto Rico,Percent of adults who are high school graduates (or equivalent),27.78417156,2023
-72000,PR,Puerto Rico,Percent of adults completing some college or associate degree,23.49759376,2023
-72000,PR,Puerto Rico,Percent of adults with a bachelor's degree or higher,29.13077762,2023
+
