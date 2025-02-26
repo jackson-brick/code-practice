@@ -53,7 +53,12 @@ def unencryption():
                 print(Fore.GREEN + Style.DIM + item + Style.RESET_ALL)
                 time.sleep(0.01)
             
-           
+    if code != "This is the way the world ends; Not with a bang but a whimper.":
+        os.system('clear')
+        print(Fore.RED + Style.BRIGHT+lcv+Style.RESET_ALL)
+        print("")
+        for item in tempList:
+            print(Fore.RED + Style.DIM + item + Style.RESET_ALL)
         
     print(Style.RESET_ALL)
         
@@ -63,10 +68,10 @@ while True:
     print(Style.RESET_ALL)
     print(Style.DIM)
     print(("Computer Information: " + Style.NORMAL + Style.BRIGHT + Fore.RED +"LOCKED").center(z))
+    print(Style.RESET_ALL)
     print(Fore.GREEN)
     print("\n\n\n")
     code = input()
-    code = "This is the way the world ends; Not with a bang but a whimper."
     os.system('clear')
     unencryption()
     if code == "This is the way the world ends; Not with a bang but a whimper.":
