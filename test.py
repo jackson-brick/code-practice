@@ -5,7 +5,7 @@ import time
 z=os.get_terminal_size()
 z=z[0]
 
-tempList = [" "," "," "," "," "," "," "]
+tempList = [" "," "," "," "," "," "," "," "," "," "]
 keyboard_characters = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\','a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '{', '}', '|', ':', '"', '<', '>', '?', '~', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '|','A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '"', 'Z', 'X', 'C', 'V', 'B', 'N', 'M']
 security_check_messages = [
     "Initializing security protocols...",
@@ -43,8 +43,8 @@ def unencryption():
             lineLen = random.randint(3,50)
             for i in range(lineLen):
                 x += random.choice(keyboard_characters)
-            tempList.insert(0,x)
-            tempList.pop(-1)
+            tempList.append(x)
+            tempList.pop(0)
 
             print(Fore.GREEN + Style.BRIGHT+lcv+Style.RESET_ALL)
             time.sleep(0.01)
@@ -75,10 +75,6 @@ while True:
     os.system('clear')
     unencryption()
     if code == "Bypassing the security protocols...":
-        print("")
-        print(Style.BRIGHT + Fore.GREEN)
-        print("Code success. Press ENTER to continue.")
-        input()
         os.system('clear')
         break
     else:
