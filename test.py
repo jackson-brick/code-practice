@@ -74,7 +74,7 @@ while True:
     code = input()
     os.system('clear')
     unencryption()
-    if code == "This is the way the world ends; Not with a bang but a whimper.":
+    if code == "Bypassing the security protocols...":
         print("")
         print(Style.BRIGHT + Fore.GREEN)
         print("Code success. Press ENTER to continue.")
