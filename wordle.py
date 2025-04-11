@@ -38,12 +38,14 @@ for lcv in range(7):
                 for char in range(len(player)):
                     if chosenWordList[char] == playerList[char]:
                         newPlayerList[char] = (Fore.GREEN + Style.BRIGHT + playerList[char].upper()+Style.RESET_ALL+" ")
-                        chosenWordList[char] = "!!"
+                        chosenWordList[char] = "!"
                         count[lcv]+=12
+                    print(chosenWordList)
+                    input()
                 for char in range(len(player)):
                     if playerList[char] in chosenWordList:
                         newPlayerList[char] = (Fore.YELLOW + playerList[char].upper()+Fore.RESET +" ")
-                        chosenWordList[char] = "!!"
+                        chosenWordList[char] = "!"
                         count[lcv] += 10
                     else:
                         newPlayerList[char] = (Style.DIM + playerList[char].upper()+Style.RESET_ALL+" ")
