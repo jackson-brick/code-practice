@@ -12,13 +12,12 @@ with open('wordle.csv','r') as file:
     wordle = csv.DictReader(file)
     for line in wordle:
         wordList.append(line)
-#chosenWord = random.choice(wordList)
-#chosenWord = chosenWord['1']+chosenWord['2']+chosenWord['3']+chosenWord['4']+chosenWord['5']
-chosenWord = "bunny"
-count = [0,0,0,0,0,0]
-display = ["_ _ _ _ _","_ _ _ _ _","_ _ _ _ _","_ _ _ _ _","_ _ _ _ _","_ _ _ _ _"]
 
 while True:
+    chosenWord = random.choice(wordList)
+    chosenWord = chosenWord['1']+chosenWord['2']+chosenWord['3']+chosenWord['4']+chosenWord['5']
+    count = [0,0,0,0,0,0]
+    display = ["_ _ _ _ _","_ _ _ _ _","_ _ _ _ _","_ _ _ _ _","_ _ _ _ _","_ _ _ _ _"]
     for lcv in range(7):
         os.system('clear')
         if lcv == 7:
@@ -51,28 +50,20 @@ while True:
                     for char in range(len(player)):
                         if chosenWordList[char] == playerList[char]:
                             newPlayerList[char] = (Fore.GREEN + Style.BRIGHT + playerList[char].upper()+Style.RESET_ALL+" ")
-                            print(chosenWordList)
-                            input()
                             chosenWordList[char] = "!"
                             count[lcv]+=13
-                            print(count)
-                            print(chosenWordList)
-                            print(newPlayerList)
-                            input()
-                    for char in range(len(player)):
-                        if playerList[char] in chosenWordList:
-                            newPlayerList[char] = (Fore.YELLOW + playerList[char].upper()+Fore.RESET +" ")
-                            chosenWordList[chosenWordList.index(playerList[char])] = "!"
-                            count[lcv] += 10
 
-                        else:
-                            newPlayerList[char] = (Style.DIM + playerList[char].upper()+Style.RESET_ALL+" ")
-                            count[lcv] += 8
-                        print(count)
-                        print(chosenWordList)
-                        print(newPlayerList)
-                        print(playerList[char])
-                        input()
+                    for char in range(len(player)):
+                        if chosenWordList[char] != "!":
+                            if playerList[char] in chosenWordList:
+                                newPlayerList[char] = (Fore.YELLOW + playerList[char].upper()+Fore.RESET +" ")
+                                chosenWordList[chosenWordList.index(playerList[char])] = "!"
+                                count[lcv] += 10
+
+                            else:
+                                newPlayerList[char] = (Style.DIM + playerList[char].upper()+Style.RESET_ALL+" ")
+                                chosenWordList[chosenWordList.index(playerList[char])] = "!"
+                                count[lcv] += 8
                     display[lcv] = "".join(newPlayerList)
                     break
                 else:
