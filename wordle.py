@@ -4,7 +4,7 @@ import os
 import csv
 z = os.get_terminal_size()
 z=z[0]
-#os.system('clear')
+os.system('clear')
 
 wordList = []
 wordUsedList = []
@@ -17,31 +17,48 @@ with open('wordleUsed.csv','r') as file:
     wordle = csv.DictReader(file)
     for line in wordle:
         wordUsedList.append(line)
-wordUsedList = [{'word':'pence'}]
+#wordUsedList = [{'word':'peril'}]
 
 while True:
+    colorCount = 0
     chosenWord = random.choice(wordUsedList)
     chosenWord = chosenWord['word'].upper()
     count = [0,0,0,0,0,0]
     display = ["_ _ _ _ _","_ _ _ _ _","_ _ _ _ _","_ _ _ _ _","_ _ _ _ _","_ _ _ _ _"]
     for lcv in range(7):
-        #os.system('clear')
+        os.system('clear')
         if lcv == 6:
             print(Fore.RED )
+            print(chosenWord.center(z))
+            print("")
             print("Maybe next time!".center(z))
             print(Style.RESET_ALL)
+            print("WORDLE".center(z))
+            print("")
+            for i in range(6):
+                if colorCount != 1 and colorCount != 3:
+                    print(display[i].center(z+len(display[i])-8))
+                else:
+                    print(display[i].center(z+len(display[i])-9))
+                    colorCount = 0
+            print("")
             print("PRESS ENTER TO PLAY AGAIN".center(z))
             input()
             break
         while True:
-            print(chosenWord.center(z))
+            print("WORDLE".center(z))
+            print("")
             for i in range(6):
-                print(display[i].center(z+count[i]))
-                print("")
+                if colorCount != 1 and colorCount != 3:
+                    print(display[i].center(z+len(display[i])-8))
+                else:
+                    print(display[i].center(z+len(display[i])-9))
+                    colorCount = 0
+                
             player = input()
             player = player.upper().strip()
             if player == chosenWord:
-                #os.system('clear')
+                os.system('clear')
                 print(Fore.GREEN )
                 print("You Win!".center(z))
                 print(Style.RESET_ALL)
@@ -54,42 +71,45 @@ while True:
                 if playerDict in wordList:
                     playerList = list(playerDict['word'])
                     chosenWordList = list(chosenWord)
+                    checkList = ["","","","",""]
                     newPlayerList = ["","","","",""]
                     for char in range(len(player)):
                         if chosenWordList[char] == playerList[char]:
                             newPlayerList[char] = (Fore.GREEN  + playerList[char].upper()+Style.RESET_ALL)
-                            chosenWordList[char] = "!"
+                            checkList[char] = "!"
                             if char != 4:
                                 newPlayerList[char] += " "
 
 
 
                     for char in range(len(player)):
-                        if chosenWordList[char] != "!":
+                        if checkList[char] != "!":
                             if playerList[char] in chosenWordList:
                                 newPlayerList[char] = (Fore.YELLOW + playerList[char].upper()+Style.RESET_ALL)
-                                chosenWordList[playerList.index(playerList[char])] = "!"
+                                checkList[char] = "!"
                                 if char != 4:
                                     newPlayerList[char] += " "
+                        
+                        
 
 
-                            else:
-                                newPlayerList[char] = (Style.DIM + playerList[char].upper()+Style.RESET_ALL)
-                                chosenWordList[playerList.index(playerList[char])] = "!"
-                                if char != 4:
-                                    newPlayerList[char] += " "
-                            
-                    
-                    count[lcv] += 44
+                    for char in range(len(player)):
+                        if newPlayerList[char] == "":
+                            newPlayerList[char] = (Style.DIM + playerList[char].upper()+Style.RESET_ALL)
+                            if char != 4:
+                                newPlayerList[char] += " "
+
                     display[lcv] = "".join(newPlayerList)
                     break
                 else:
-                    #os.system('clear')
-                    print(Fore.RED  + "Word not in word list")
+                    os.system('clear')
+                    print(Fore.RED)
+                    print("Word not in word list".center(z))
                     print(Style.RESET_ALL)
             else:
-                #os.system('clear')
-                print(Fore.RED  + "Word not in word list")
+                os.system('clear')
+                print(Fore.RED) 
+                print("Word not in word list".center(z))
                 print(Style.RESET_ALL)
         if win == True:
             win = False
