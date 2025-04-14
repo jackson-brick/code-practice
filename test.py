@@ -7,29 +7,25 @@ z = z[0]
 
 wordList = []
 with open('wordle.csv','r') as file:
-    wordle = csv.DictReader(file)
-    for line in wordle:
+    word = csv.DictReader(file)
+    for line in word:
         wordList.append(line)
-word = random.choice(wordList)
-word = word['1']+word['2']+word['3']+word['4']+word['5']
+wordleUsedList = []
+with open('wordleUsed.csv','r') as file:
+    word = csv.DictReader(file)
+    for line in word:
+        wordleUsedList.append(line)
 
-newWord = ["","","","",""]
-newWord[0] = "X"
-print(str(newWord))
-newWord[0] = (Fore.RED + Style.BRIGHT + "p" + Style.RESET_ALL)
-newWord += Fore.GREEN + Style.BRIGHT + "o" + Style.RESET_ALL
-print("control")
-print("".join(newWord))
-print("control")
-a = Fore.GREEN + Style.BRIGHT + "poped" + Style.RESET_ALL
-b = Fore.YELLOW + "poped" + Fore.RESET
-c = Style.DIM + "poped" + Style.RESET_ALL
-print(repr(a).center(z))
-print(a.center(z+12))
-print(len(a))
-print(repr(b).center(z))
-print(b.center(z+10))
-print(len(b))
-print(repr(c).center(z))
-print(c.center(z+8))
-print(len(c))
+for line in wordleUsedList:
+    del line['occurrence']
+    del line['day']
+
+
+    
+
+
+
+
+
+
+
