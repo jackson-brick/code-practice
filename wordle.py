@@ -17,7 +17,7 @@ with open('wordleUsed.csv','r') as file:
     wordle = csv.DictReader(file)
     for line in wordle:
         wordUsedList.append(line)
-wordUsedList = [{'word':'raven'}]
+#wordUsedList = [{'word':'south'}]
 
 while True:
     colorCount = 0
@@ -77,6 +77,7 @@ while True:
                         if chosenWordList[char] == playerList[char]:
                             newPlayerList[char] = (Fore.GREEN  + playerList[char].upper()+Style.RESET_ALL)
                             checkList[char] = "!"
+                            chosenWordList[char] = "!"
                             if char != 4:
                                 newPlayerList[char] += " "
 
@@ -87,10 +88,10 @@ while True:
                             if playerList[char] in chosenWordList:
                                 newPlayerList[char] = (Fore.YELLOW + playerList[char].upper()+Style.RESET_ALL)
                                 checkList[char] = "!"
+                                chosenWordList[chosenWordList.index(player[char])] = "!"
                                 if char != 4:
                                     newPlayerList[char] += " "
-                        
-                        
+
 
 
                     for char in range(len(player)):
