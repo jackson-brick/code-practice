@@ -1,26 +1,18 @@
-import csv
-import random
-from colorama import Fore, Style
+import tkinter as Tkinter
 import os
-z = os.get_terminal_size()
-z = z[0]
 
-word = []
-word.append(Fore.GREEN + "PooP"+Style.RESET_ALL)
-word.append(Fore.YELLOW + "pEE"+Style.RESET_ALL)
-word.append(Style.DIM + "fart" + Style.RESET_ALL)
-word = "".join(word)
-print(word)
-print(len(word))
-print(word.center(z))
-print(word.center(z+len(word)-11))
-print("XXX".center(z))
-
-    
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using :0.0')
+    os.environ.__setitem__('DISPLAY', ':0.0')
+master = Tkinter.Tk()
+master.title("tester")
+master.geometry("300x100")
 
 
+#make a label for the window
+label1 = Tkinter.Label(master, text='Hellooooo')
+# Lay out label
+label1.pack()
 
-
-
-
-
+# Run forever!
+master.mainloop()
