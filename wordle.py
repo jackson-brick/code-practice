@@ -17,7 +17,8 @@ with open('wordleUsed.csv','r') as file:
     wordle = csv.DictReader(file)
     for line in wordle:
         wordUsedList.append(line)
-#wordUsedList = [{'word':'south'}]
+wordUsedList = [{'word':'optic'}]
+#whore, tongs, liver
 
 while True:
     colorCount = 0
