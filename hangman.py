@@ -1,5 +1,13 @@
 import os
 import random
+import csv
+
+wordOptions = []
+with open('hangman.csv','r') as file:
+    csvWord = csv.DictReader(file)
+    for i in csvWord:
+        wordOptions.append(i['word'])
+
 
 z = os.get_terminal_size()[0]
 
@@ -16,9 +24,9 @@ while True:
 
 while True:
     os.system('clear')
+    letterBank = []
     failCount = 0
     if numPlayers == 1:
-        wordOptions = ["bunny"]
         word = random.choice(wordOptions)
     else:
         while True:
@@ -40,37 +48,61 @@ while True:
     fail4 = "|         "
     fail5 = "|         "
     fail6 = "|         "
+    fail7 = "|         "
+    fail8 = "|         "
+    fail9 = "|         "
+    fail10 = "|         "
     while True:
         os.system('clear')
         if failCount == 1:
-            fail1 = "|      ( )"
+            fail1 = " |      ( ) "
         elif failCount == 2:
-            fail2 = "|       |"
+            fail2 = " |      ( )\\"
         elif failCount == 3:
-            fail3 = "|      /|"
+            fail3 = " |     /( )\\"
         elif failCount == 4:
-            fail4 = "|      /|\\"
+            fail4 = "|       |"
         elif failCount == 5:
-            fail5 = "|      / "
+            fail5 = "|      /|"
         elif failCount == 6:
-            fail6 = "|      / \\"
+            fail6 = "|      /|\\"
+        elif failCount == 7:
+            fail7 = " |      /  "
+        elif failCount == 8:
+            fail8 = " |      / \\ "
+        elif failCount == 9:
+            fail9 = " |     _/ \\ "
+        elif failCount == 10:
+            fail10 = " |     _/ \\_"
+        
         print(",-------,".center(z))
         print("|       |".center(z))
-        print(fail1.center(z))
-        if failCount <= 2:
+        if failCount <2:
+            print(fail1.center(z))
+        elif failCount == 2:
             print(fail2.center(z))
-        elif failCount == 3:
-            print(fail3.center(z))
         else:
+            print(fail3.center(z))
+        if failCount == 4:
             print(fail4.center(z))
-        if failCount <= 5:
+        elif failCount == 5:
             print(fail5.center(z))
         else:
             print(fail6.center(z))
+        if failCount == 7:
+            print(fail7.center(z))
+        elif failCount == 8:
+            print(fail8.center(z))
+        elif failCount == 9:
+            print(fail9.center(z))
+        else:
+            print(fail10.center(z))
         print("|         ".center(z))
         print("|_________".center(z))
         print("")
-        if failCount < 6:
+        print(f"Guessed Letters: {', '.join(letterBank)}".center(z))
+        print("")
+        if failCount <= 10:
             if "_" in blankList:
                 print(("Word: " + " ".join(blankList)).center(z))
                 guess = input()
@@ -114,6 +146,8 @@ while True:
                         wordList[i] = "!"
             else:
                 failCount+=1
+                if guess.strip().upper() not in letterBank:
+                    letterBank.append(guess.strip().upper())
             
         else:
             failCount+=1
