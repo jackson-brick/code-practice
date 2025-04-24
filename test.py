@@ -2,11 +2,13 @@ import csv
 
 words = []
 with open('hangman.csv','r') as file:
-    word = csv.DictReader(file)
-    for line in word:
-        print(line)
-        input()
-        words.append(line)
-print(words)
-print(words[0])
-print(words[-1])
+    word = csv.reader(file)
+    header = next(word)
+
+
+with open('hangman.csv','w',newline="") as file:
+    field_names = ["word"]
+    writer = csv.DictWriter(file, fieldnames= field_names)
+    writer.writeheader()
+    for line in header:
+        writer.writerow(line)
