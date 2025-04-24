@@ -2,7 +2,8 @@ import os
 
 z = os.get_terminal_size()[0]
 
-
+print("1 or 2 players?".center(z))
+numPlayers=input()
 
 while True:
     failCount = 0
@@ -46,8 +47,18 @@ while True:
         print("|_________".center(z))
         print("")
         if failCount < 6:
-            print(("Word: " + " ".join(blankList)).center(z))
-            guess = input()
+            if "_" in blankList:
+                print(("Word: " + " ".join(blankList)).center(z))
+                guess = input()
+            else:
+                os.system('clear')
+                print("You win! Press ENTER to play again!".center(z))
+                print("")
+                print("Type QUIT to close the program".center(z))
+                win = input()
+                if win.lower().strip() == "quit":
+                    quit()
+                break
         else:
             print("You lose! Press ENTER to play again!".center(z))
             print("")
@@ -58,9 +69,9 @@ while True:
             break
         if guess.lower().strip() == word:
             os.system('clear')
-            print("You win! Press ENTER to play again!")
+            print("You win! Press ENTER to play again!".center(z))
             print("")
-            print("Type QUIT to close the program")
+            print("Type QUIT to close the program".center(z))
             win = input()
             if win.lower().strip() == "quit":
                 quit()
