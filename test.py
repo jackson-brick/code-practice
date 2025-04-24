@@ -1,17 +1,12 @@
-import tkinter as Tkinter
-import os
+import csv
 
-
-os.environ.__setitem__('DISPLAY', '0.0')
-master = Tkinter.Tk()
-master.title("tester")
-master.geometry("300x100")
-
-
-#make a label for the window
-label1 = Tkinter.Label(master, text='Hellooooo')
-# Lay out label
-label1.pack()
-
-# Run forever!
-master.mainloop()
+words = []
+with open('hangman.csv','r') as file:
+    word = csv.DictReader(file)
+    for line in word:
+        print(line)
+        input()
+        words.append(line)
+print(words)
+print(words[0])
+print(words[-1])

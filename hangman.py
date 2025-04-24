@@ -1,13 +1,36 @@
 import os
+import random
 
 z = os.get_terminal_size()[0]
 
-print("1 or 2 players?".center(z))
-numPlayers=input()
+while True:
+    os.system('clear')
+    print("1 or 2 players?".center(z))
+    numPlayers=input()
+    if numPlayers.strip() == "1":
+        numPlayers = 1
+        break
+    elif numPlayers.strip() == "2":
+        numPlayers = 2
+        break
 
 while True:
+    os.system('clear')
     failCount = 0
-    word = "bunny"
+    if numPlayers == 1:
+        wordOptions = ["bunny"]
+        word = random.choice(wordOptions)
+    else:
+        while True:
+            os.system('clear')
+            print("Without the other player looking, choose a word".center(z))
+            print("(Phrases are not supported yet, only one word please)".center(z))
+            word = input()
+            if " " not in word.strip():
+                if word.strip().isalpha():
+                    if len(word.strip()) >3 and len(word) <41:
+                        word = word.strip().lower()
+                        break
     wordList = list(word)
     blankList = list("_"*len(word))
 
@@ -18,6 +41,7 @@ while True:
     fail5 = "|         "
     fail6 = "|         "
     while True:
+        os.system('clear')
         if failCount == 1:
             fail1 = "|      ( )"
         elif failCount == 2:
@@ -52,6 +76,8 @@ while True:
                 guess = input()
             else:
                 os.system('clear')
+                print(" ".join(list(word.upper())).center(z))
+                print("")
                 print("You win! Press ENTER to play again!".center(z))
                 print("")
                 print("Type QUIT to close the program".center(z))
@@ -60,6 +86,8 @@ while True:
                     quit()
                 break
         else:
+            print(" ".join(list(word.upper())).center(z))
+            print("")
             print("You lose! Press ENTER to play again!".center(z))
             print("")
             print("Type QUIT to close the program!".center(z))
@@ -69,6 +97,8 @@ while True:
             break
         if guess.lower().strip() == word:
             os.system('clear')
+            print(" ".join(list(word.upper())).center(z))
+            print("")
             print("You win! Press ENTER to play again!".center(z))
             print("")
             print("Type QUIT to close the program".center(z))
