@@ -10,11 +10,11 @@ z = z[0]
 opCommand = False
 breakVar = False
 
-with open('diaryusers.json','r') as file:
+with open('diaryproject/diaryusers.json','r') as file:
     diaryusers = json.load(file)
 diaryAtUser = diaryusers["users"]
 
-with open('diaryentry.json','r') as file:
+with open('diaryproject/diaryentry.json','r') as file:
     diaryentry = json.load(file)
 diaryAtEntry = diaryentry["entry"]
 
@@ -55,10 +55,10 @@ def new_user(username,pswrd):
     diaryAtUser.append(newUser[0])
     newUserEntry.append({"name":username,"0":""})
     diaryAtEntry.append(newUserEntry[0])
-    with open('diaryusers.json','w') as outfile:
+    with open('diaryproject/diaryusers.json','w') as outfile:
         jsonVar = json.dumps(diaryAtUser,indent=4)
         outfile.write('{\n"users": ' + jsonVar + '\n}')
-    with open('diaryentry.json','w') as outfile:
+    with open('diaryproject/diaryentry.json','w') as outfile:
         jsonVar = json.dumps(diaryAtEntry,indent=4)
         outfile.write('{\n"entry": ' + jsonVar + '\n}')
     
@@ -83,7 +83,7 @@ def write_to_diary_entry(entry,function):
             diaryAtEntry[entryNum][f"{counter}"] = diaryAtEntry[entryNum][f"{counter + 1}"]
             counter += 1
         del diaryAtEntry[entryNum][f"{len(diaryentry["entry"][entryNum]) - 2}"]
-    with open('diaryentry.json','w') as outfile:
+    with open('diaryproject/diaryentry.json','w') as outfile:
         jsonVar = json.dumps(diaryAtEntry,indent=4)
         outfile.write('{\n"entry": ' + jsonVar + '\n}')
 

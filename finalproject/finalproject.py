@@ -17,9 +17,9 @@ z = screenSize[0] #Puts the width of the screen into a variable; ("blah blah bla
 subject = "csp" #sets default subject to Comp Sci
 
 print(Back.BLACK) #sets background to black as default or until changed in user's settings
-with open('questions.json', 'r') as file: #loads questions.json into variable 'questions'
+with open('finalproject/questions.json', 'r') as file: #loads questions.json into variable 'questions'
     questions = json.load(file)
-with open('userinfo.json','r') as file: #loads userinfo.json into variable 'userinfo'
+with open('finalproject/userinfo.json','r') as file: #loads userinfo.json into variable 'userinfo'
     userinfo = json.load(file)
 userAtUser = userinfo["user"] #makes data inside userinfo into an appendable list
 #-----------------------------------------------------------
@@ -133,7 +133,7 @@ def write_to_json(lst):
     Returns nothing
     """
     userAtUser.append(lst)
-    with open("userinfo.json","w") as outfile:
+    with open("finalproject/userinfo.json","w") as outfile:
         jsonVar = json.dumps(userAtUser,indent=4)
         outfile.write('{\n"user": ' + jsonVar + '\n}')
 
@@ -162,7 +162,7 @@ def write_to_json_updated_settings():
     userAtUser.pop(userNum) #removes the user that is trying to change their settings temporarily, they will be appended with updated settings later
     userAtUser.append(userDataDict) #appends updated user settings
     userNum = -1 #userNum is now set to the -1 because it is the index number, and no matter what the active user is at the end of the list
-    with open("userinfo.json","w") as outfile:
+    with open("finalproject/userinfo.json","w") as outfile:
         jsonVar = json.dumps(userAtUser,indent=4)
         outfile.write('{\n"user": ' + jsonVar + '\n}') #Fully rewrites json file with new list
 
@@ -1817,7 +1817,7 @@ def user_intro():
     returnVar = "false"
     userNum = ""
     while True:
-        with open('userinfo.json','r') as file:
+        with open('finalproject/userinfo.json','r') as file:
             userinfo = json.load(file)
         
         os.system('clear')

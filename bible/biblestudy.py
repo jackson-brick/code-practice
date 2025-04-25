@@ -4,7 +4,7 @@ z=os.get_terminal_size()
 z=z[0]
 
 bibleList = []
-with open('bibleentries.csv','r') as file:
+with open('bible/bibleentries.csv','r') as file:
     bible = csv.DictReader(file)
     for line in bible:
         bibleList.append(line)
@@ -53,7 +53,7 @@ while True:
     elif do.lower().strip() == "translate":
         translate()
     elif do == "DONE":
-        with open('bibleentries.csv','w',newline='') as file:
+        with open('bible/bibleentries.csv','w',newline='') as file:
             field_names = ["Verse ID","Book Name","Book Number","Chapter","Verse","Text","Notes","myTranslation"]
             writer = csv.DictWriter(file,fieldnames=field_names)
             writer.writeheader()

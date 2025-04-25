@@ -3,7 +3,7 @@ import random
 import csv
 
 wordOptions = []
-with open('hangman.csv','r') as file:
+with open('gamesandmisc/hangman.csv','r') as file:
     csvWord = csv.DictReader(file)
     for i in csvWord:
         wordOptions.append(i['word'])

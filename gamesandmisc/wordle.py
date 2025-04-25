@@ -9,11 +9,11 @@ os.system('clear')
 wordList = []
 wordUsedList = []
 win = False
-with open('wordle.csv','r') as file:
+with open('gamesandmisc/wordle.csv','r') as file:
     wordle = csv.DictReader(file)
     for line in wordle:
         wordList.append(line)
-with open('wordleUsed.csv','r') as file:
+with open('gamesandmisc/wordleUsed.csv','r') as file:
     wordle = csv.DictReader(file)
     for line in wordle:
         wordUsedList.append(line)

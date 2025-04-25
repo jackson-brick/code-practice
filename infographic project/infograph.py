@@ -8,24 +8,24 @@ unemp2023 = []
 educ2023 = []
 edToIncCA = []
 incSince1958 = []
-with open('unemployment2023.csv','r') as file:
+with open('infographic project/unemployment2023.csv','r') as file:
     unemp = csv.DictReader(file)
     for line in unemp:
         unemp2023.append(line)
-with open('education2023.csv','r') as file:
+with open('infographic project/education2023.csv','r') as file:
     educ = csv.DictReader(file)
     for line in educ:
         educ2023.append(line)
-with open('calieducationtoincome2008-2014.csv','r') as file:
+with open('infographic project/calieducationtoincome2008-2014.csv','r') as file:
     edToInc = csv.DictReader(file)
     for line in edToInc:
         edToIncCA.append(line)
-with open('incomesince1958TEST.csv','r') as file:
+with open('infographic project/incomesince1958TEST.csv','r') as file:
     incSince = csv.DictReader(file)
     for line in incSince:
         incSince1958.append(line)
 educ2023ONLY = []
-with open('education2023ONLY.csv','r') as file:
+with open('infographic project/education2023ONLY.csv','r') as file:
     educ = csv.DictReader(file)
     for line in educ:
         educ2023ONLY.append(line)
