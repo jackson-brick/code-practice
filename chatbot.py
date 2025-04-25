@@ -1,5 +1,14 @@
 import nltk
 from nltk.chat.util import Chat, reflections
+from nltk import word_tokenize, sent_tokenize
+from nltk.stem import PorterStemmer
+
+sent = "GeeksforGeeks is a great learning platform.\
+It is one of the best for Computer Science students."
+
+print(word_tokenize(sent))
+print(sent_tokenize(sent))
+input()
 
 patterns = [
     (r'hi|hello|hey', ['Hello!', 'Hi there!', 'Hey!']),
