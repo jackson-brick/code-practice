@@ -3,22 +3,33 @@ import os
 os.system('clear')
 z=os.get_terminal_size()[0]
 
-websiteToken = 107.25
-appToken = 109.5
 
-print("Are you using a website or an app?".center(z))
-webApp = input()
-word=webApp.strip().lower()
-finalCount = 0
-weightCount = 0
-for i in range(len(word)):
-    finalCount +=  ((i+1)*ord(word[i]))
-    weightCount += (i+1)
-webApp = finalCount/weightCount
-if (websiteToken-webApp) > (appToken-webApp):
-    webApp = "app"
-else:
-    webApp = "website"
+while True:
+    print("Are you using a website or an app?".center(z))
+    webApp = input()
+    webApp=webApp.strip().lower()
+    websiteScore = 0
+    appScore = 0
+    for i in range(len(webApp)):
+        try:
+            if webApp[i] == "website"[i]:
+                websiteScore += 1
+        except:
+            pass
+        try:
+            if webApp[i] == "app"[i]:
+                appScore += 1
+        except:
+            pass
+    print(websiteScore)
+    if not websiteScore >=3 and appScore >=2:
+        print("true")
+        if websiteScore - appScore > 0:
+            webApp = "website"
+            break
+        elif websiteScore-appScore < 0:
+            webApp = "app"
+            break
 print(webApp)
 print("Enter the full url of the website you need the password for")
 website = input()
