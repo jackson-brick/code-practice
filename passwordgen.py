@@ -3,34 +3,25 @@ import os
 os.system('clear')
 z=os.get_terminal_size()[0]
 
+name = ""
 
 while True:
+    os.system('clear')
     print("Are you using a website or an app?".center(z))
     webApp = input()
-    webApp=webApp.strip().lower()
-    websiteScore = 0
-    appScore = 0
-    for i in range(len(webApp)):
-        try:
-            if webApp[i] == "website"[i]:
-                websiteScore += 1
-        except:
-            pass
-        try:
-            if webApp[i] == "app"[i]:
-                appScore += 1
-        except:
-            pass
-    print(websiteScore)
-    if not websiteScore >=3 and appScore >=2:
-        print("true")
-        if websiteScore - appScore > 0:
-            webApp = "website"
-            break
-        elif websiteScore-appScore < 0:
-            webApp = "app"
-            break
-print(webApp)
-print("Enter the full url of the website you need the password for")
-website = input()
+    if webApp.strip().lower() == "website":
+        webApp = "website"
+        break
+    elif webApp.strip().lower() == "app":
+        webApp = "app"
+        break
+
+while True:
+    os.system('clear')
+    if webApp == "website":
+        print("Enter the full url of the website you need the password for")
+        website = input()
+        if website.count(".") < 2:
+            for i in website:
+        elif website.count(".") == 2:
 
