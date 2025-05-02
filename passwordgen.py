@@ -240,10 +240,11 @@ else:
         for i in passwords:
             if i['siteName'] == get:
                 for char in i['password']:
-                    for key,value in jacksonKey:
-                        if char == value:
-                            display += key
-                print(display)
+                    for lcv in jacksonKey:
+                        if char == jacksonKey[lcv]:
+                            display += lcv
+                os.system('clear')
+                print(display.center(z))
                 quit()
                     
 
