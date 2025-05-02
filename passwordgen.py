@@ -219,13 +219,9 @@ if webApp != "1114100930":
     for ele in finalPassword:
         tempPass.append(ele)
     encryptedPassword = ''
-    print(tempPass)
-    input()
     for i in finalPassword:
         encryptedPassword+= jacksonKey[i]
-    print(encryptedPassword)
-    input()
-    passwords.append({'password':finalPassword,'siteName':name})
+    passwords.append({'password':encryptedPassword,'siteName':name})
     with open('passwords.csv','w',newline='') as file:
         field_names = ['password','siteName']
         writer = csv.DictWriter(file,fieldnames=field_names)
@@ -235,5 +231,22 @@ if webApp != "1114100930":
         
 
 else:
-    os.system('clear')
+    while True:
+        display = ''
+        os.system('clear')
+        print("Enter the name of the whatever it is you need the password for".center(z))
+        print("")
+        get = input()
+        for i in passwords:
+            if i['siteName'] == get:
+                for char in i['password']:
+                    for key,value in jacksonKey:
+                        if char == value:
+                            display += key
+                print(display)
+                quit()
+                    
+
+
+    
 
