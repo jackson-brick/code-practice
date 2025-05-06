@@ -45,9 +45,12 @@ def login(username, password,forgot):
 
 def logout(user):
     users.append(user)
-    with open('rpusers.csv','w') as file:
+    with open('resumeplease project/rpusers.csv','w',newline="") as file:
         field_names = ["username","password","key","phone","checkpoint","iterations"]
         writer = csv.DictWriter(file,fieldnames=field_names)
+        writer.writeheader()
+        for line in users:
+            writer.writerow(line)
 
 def new_user(username,password,key,phone):
     password = list(password)
@@ -58,7 +61,7 @@ def new_user(username,password,key,phone):
         encrypted.append(int(ord(i))*key)
     for i in phone:
         hiddenPhone.append(int(ord(i))*key)
-    users.append({'username':username,'password':encrypted,'key':key,'phone':hiddenPhone,'checkpoint':0,'iteration':0})
+    users.append({'username':username,'password':encrypted,'key':key,'phone':hiddenPhone,'checkpoint':0,'iterations':0})
 
 while True:
     os.system('clear')
@@ -70,15 +73,15 @@ while True:
         forgot = False
         os.system('clear')
         print("Type your username".center(z))
-        username=input()
+        username=input().strip()
         print("")
         print("Type your password (If you forgot your password, type FORGOT)".center(z))
-        password = input()
+        password = input().strip()
         try:
             if password.lower().strip().replace(" ","") == "forgot":
                 print("")
                 print("Enter the phone number associated with your account".center(z))
-                phone = input().strip().replace("-","").replace(" ","")
+                phone = input().strip().replace("-","").replace(" ","").replace("(","").replace(")","")
                 forgot = True
         except:
             pass
@@ -109,26 +112,34 @@ while True:
         while True:
             userInList = False
             os.system('clear')
-            print("Create a username".center(z))
-            username = input()
+            print("Create a username (3 to 16 characters)".center(z))
+            username = input().strip()
             for i in users:
                 if i['username'].lower().strip().replace(" ","") == username.lower().strip().replace(" ",''):
                     userInList == True
-            if not userInList:
+            if not userInList and len(username) >=3 and len(username)<=16:
                 print("Create a password (Minimum 5 characters, maximum 16)".center(z))
-                password = input()
+                password = input().strip()
                 if len(password) >= 5 and len(password) <=16:
                     print("Enter your phone number (used if you forget your password)".center(z))
-                    phone = input().strip().replace(" ","").replace("-","")
-                    if phone.isdigit():
+                    phone = input().strip().replace(" ","").replace("-","").replace("(","").replace(")","")
+                    if phone.isdigit() and len(phone) == 10:
                         infoValidCheck = False
+                        show = False
                         while True:
-                            os.system('clear')
-                            print(f"Username: {username}".center(z))
-                            print(f"Password: {password[0]}...{password[-3]}{password[-2]}{password[-1]}".center(z))
-                            print(f"Phone #: {phone}".center(z))
-                            print("")
-                            print("Does this information look correct?")
+                            if not show:
+                                os.system('clear')
+                                print(f"Username: {username}".center(z))
+                                print(f"Password: {len(password)*"*"} (Type SHOW to show password)".center(z))
+                                print(f"Phone #: ({phone[:3]}) {phone[3:6]}-{phone[6:]}".center(z))
+                                print("")
+                            else:
+                                os.system('clear')
+                                print(f"Username: {username}".center(z))
+                                print(f"Password: {password} (Type HIDE to hide password)".center(z))
+                                print(f"Phone #: ({phone[:3]}) {phone[3:6]}-{phone[6:]}".center(z))
+                                print("")
+                            print("Does this information look correct?".center(z))
                             infoValid = input().lower().strip().replace(" ","")
                             if infoValid == "yes":
                                 infoValidCheck = True
@@ -150,7 +161,7 @@ while True:
                         for i in range(3):
                             os.system('clear')
                             print("")
-                            print("Your phone is only numbers, please sign up again".center(z))
+                            print("Phone number is invalid, please sign up again".center(z))
                             print("")
                             print(f"{3-i}".center(z))
                             time.sleep(1)
@@ -168,7 +179,7 @@ while True:
                 for i in range(3):
                     os.system('clear')
                     print("")
-                    print("That username is taken, please sign up again".center(z))
+                    print("That username is taken or does not follow length rules, please sign up again".center(z))
                     print("")
                     print(f"{3-i}".center(z))
                     time.sleep(1)
