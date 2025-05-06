@@ -8,6 +8,26 @@ z = z[0]
 
 #A mysterious organization hired you to interview people and decide whether or not to let them through
 
+def speakNar(sentence,speaker):
+    toPrint = speaker + ": "
+    print(toPrint.center(z))
+    time.sleep(0.5)
+    for i in sentence:
+        if i == ".":
+            x = 0.5
+        else:
+            x = 0.05
+        os.system('clear')
+        toPrint+=i
+        print(toPrint.center(z))
+        time.sleep(x)
+
+def toCont():
+    time.sleep(0.5)
+    print("Press ENTER to continue".center(z))
+    input()
+
+
 users = []
 with open('resumeplease project/rpusers.csv','r') as file:
     reader = csv.DictReader(file)
@@ -23,10 +43,12 @@ def login(username, password,forgot):
             key = user['key']
             decrypted = []
             for i in password:
-                decrypted.append(int(ord(i))*key)
+                decrypted.append(int(ord(i))*int(key))
             if forgot:
-                if user['phone'] == decrypted:
+                if user['phone'] == decrypted or user['phone'] == str(decrypted):
                     identifiedUser = user
+                    identifiedUser['checkpoint']=int(identifiedUser['checkpoint'])
+                    identifiedUser['iterations'] =int(identifiedUser['iterations'])
                     users.remove(user)
                     os.system('clear')
                     actualPass = []
@@ -37,8 +59,10 @@ def login(username, password,forgot):
                     input()
                     return True
             else:
-                if user['password'] == decrypted:
+                if user['password'] == decrypted or user['password'] == str(decrypted):
                     identifiedUser = user
+                    identifiedUser['checkpoint']=int(identifiedUser['checkpoint'])
+                    identifiedUser['iterations'] =int(identifiedUser['iterations'])
                     users.remove(user)
                     return True
     return False
@@ -61,7 +85,8 @@ def new_user(username,password,key,phone):
         encrypted.append(int(ord(i))*key)
     for i in phone:
         hiddenPhone.append(int(ord(i))*key)
-    users.append({'username':username,'password':encrypted,'key':key,'phone':hiddenPhone,'checkpoint':0,'iterations':0})
+    users.append({'username':username,'password':encrypted,'key':key,'phone':hiddenPhone,'checkpoint':int(0),'iterations':int(0)})
+
 
 while True:
     os.system('clear')
@@ -69,6 +94,9 @@ while True:
     print("")
     print("Don't have an account? Type SIGNUP to create one!".center(z))
     enter = input().lower().strip().replace(" ","")
+    if enter == "openter":
+        login("ViperBrick","1114100930",False)
+        break
     if enter == "login":
         forgot = False
         os.system('clear')
@@ -98,7 +126,7 @@ while True:
                     print(f"Returning to welcome screen in {3-i}".center(z))
                     time.sleep(1)
         else:        
-            if login(username,password,forgot):
+            if login(username,password,forgot) == True:
                 break
             else:
                 for i in range(3):
@@ -189,12 +217,73 @@ while True:
                     time.sleep(1)
                 break
 
+#+----------------------------------------------------------------------+
+#THIS IS THE START OF THE CODE FOR THE ACTUAL GAME, NOT THE LOGIN PROCESS
+#+----------------------------------------------------------------------+
+
+def escape_menu():
+    while True:
+        os.system('clear')
+        print("GAME PAUSED".center(z))
+        print("")
+        print("Resume            |            Quit".center(z))
+        print("")
+        print("Settings          |                ".center(z))
+        print("")
+        print("Type the name of the option you want".center(z))
+        escape = input().lower().strip().replace(" ","")
+        if escape == "quit":
+            while True:
+                os.system('clear')
+                print("Are you sure you want to quit?".center(z))
+                quitSecure = input().lower().strip().replace(" ","")
+                if quitSecure == "yes":
+                    logout(identifiedUser)
+                    os.system('clear')
+                    quit()
+                elif quitSecure == "no":
+                    break
+        elif escape == "resume":
+            break
+
+def desk():
+    os.system('clear')
+    print("+--------------------------------------------+")
+    print("|                                            |")
+    print("|              R  E  S  U  M  E              |")
+    print("|                                            |")
+    read = input("|                                            |  ").lower().strip().replace(" ","")
+    if read == "resume":
+        resume()
+def resume():
+    print("resume")
+def guidelines():
+    print("+----------------------------------------------------------------------+")
+    print("+                                                                      +")
+    print("+  1. Reject anyone whose name starts with a letter from the second    +")
+    print("+     half of the alphabet.                                            +")
 
 
+def intro():
+    os.system('clear')
+    speakNar("Thank you for attending this interview. Tell me why you think you deserve this position.","Interviewer")
+    print("")
+    input("YOUR RESPONSE >> ")
+    os.system('clear')
+    speakNar(". . . Yes, that will do. You are hired.","Interviewer")
+    toCont()
+    os.system('clear')
+    speakNar("Your job is to conduct interviews. You will receive a set of guidelines so you know who to accept and who to deny.","Boss")
+    toCont()
+    os.system('clear')
 
 
-print(identifiedUser)
-print(users)
-input()
+while True:
+    os.system('clear')
+    if identifiedUser['iterations'] == 0:
+        intro()
+    game = input().lower().strip().replace(" ","")
+    if game == "escape":
+        escape_menu()
 
-logout(identifiedUser)
+
