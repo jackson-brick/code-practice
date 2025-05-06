@@ -155,6 +155,10 @@ while True:
                                 break
                             elif infoValid == "no":
                                 break
+                            elif infoValid == "show":
+                                show = True
+                            elif infoValid == "hide":
+                                show = False
                         if infoValidCheck == True:
                             break
                     else:
