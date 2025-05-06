@@ -1,2 +1,2 @@
-username,password,checkpoint
-ViperBrick, 1114100930,0
+username,password,key,checkpoint,iterations
+ViperBrick, 1114100930,13579,0,0
