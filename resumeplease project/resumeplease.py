@@ -9,7 +9,10 @@ z = z[0]
 #A mysterious organization hired you to interview people and decide whether or not to let them through
 
 def speakNar(sentence,speaker):
-    toPrint = speaker + ": "
+    if speaker == "continuation":
+        toPrint = ""
+    else:
+        toPrint = speaker + ": "
     print(toPrint.center(z))
     time.sleep(0.5)
     for i in sentence:
@@ -26,6 +29,7 @@ def toCont():
     time.sleep(0.5)
     print("Press ENTER to continue".center(z))
     input()
+
 
 
 users = []
@@ -67,7 +71,7 @@ def login(username, password,forgot):
                     return True
     return False
 
-def logout(user):
+def save(user):
     users.append(user)
     with open('resumeplease project/rpusers.csv','w',newline="") as file:
         field_names = ["username","password","key","phone","checkpoint","iterations"]
@@ -238,7 +242,7 @@ def escape_menu():
                 print("Are you sure you want to quit?".center(z))
                 quitSecure = input().lower().strip().replace(" ","")
                 if quitSecure == "yes":
-                    logout(identifiedUser)
+                    save(identifiedUser)
                     os.system('clear')
                     quit()
                 elif quitSecure == "no":
@@ -246,22 +250,42 @@ def escape_menu():
         elif escape == "resume":
             break
 
-def desk():
-    os.system('clear')
-    print("+--------------------------------------------+")
-    print("|                                            |")
-    print("|              R  E  S  U  M  E              |")
-    print("|                                            |")
-    read = input("|                                            |  ").lower().strip().replace(" ","")
+def desk(introCheck):
+    print("+--------------------------------------------+        +========================+")
+    print("|                                            |        |                        |")
+    print("|              R  E  S  U  M  E              |        |       GUIDELINES       |")
+    print("|                                            |        |                        |")
+    print("|                                            |        +========================+")
+    if introCheck:
+        read = ""
+    else:
+        read = input("|                                            |    ").lower().strip().replace(" ","")
     if read == "resume":
         resume()
-def resume():
-    print("resume")
-def guidelines():
+    elif read == "guidelines":
+        guidelines()
+def resume(introCheck,name,dob):
+    print("---------------------------------------------------------------------------------------------")
+    print("")
+    print(name)
+    print(dob)
+    if introCheck:
+        readResume = ""
+    else:
+        readResume = input().lower().strip().replace(" ","")
+    if readResume == "back":
+        return readResume
+def guidelines(introCheck):
     print("+----------------------------------------------------------------------+")
     print("+                                                                      +")
     print("+  1. Reject anyone whose name starts with a letter from the second    +")
     print("+     half of the alphabet.                                            +")
+    if introCheck:
+        readGuidelines = ""
+    else:
+        readGuidelines = input().lower().strip().replace(" ","")
+    if readGuidelines == "back":
+        return readGuidelines
 
 
 def intro():
@@ -276,6 +300,95 @@ def intro():
     speakNar("Your job is to conduct interviews. You will receive a set of guidelines so you know who to accept and who to deny.","Boss")
     toCont()
     os.system('clear')
+    speakNar("This is your desk. You will review any materials they bring here.","Boss")
+    desk(True)
+    time.sleep(1)
+    toCont()
+    os.system('clear')
+    speakNar("In general, typing the name of something will allow you to inspect it. Try it here.","Boss")
+    desk(True)
+    sawResume = False
+    sawGuidelines = False
+    while sawResume == False or sawGuidelines == False:
+        introDesk = input().lower().strip().replace(" ","")
+        if introDesk == "resume":
+            os.system('clear')
+            speakNar("You will be able to read people's resumes here.","Boss")
+            speakNar("You must review their resume to decide whether to hire or not.","continuation")
+            resume(True,"Jackson Brick","09/30/2001")
+            if sawResume == False and sawGuidelines == False:
+                speakNar("Type BACK when you want to go back to your desk.","Boss")
+                speakNar("Remember that no commands are case sensitive. You can type UPPERCASE, lowercase, ","continuation")
+                speakNar("or sOmeWHerE iN B eT wEE n. Go on, try it.","continuation")
+                while True:
+                    os.system('clear')
+                    print("Boss: You will be able to read people's resumes here.".center(z))
+                    print("You must review their resume to decide whether to hire or not.".center(z))
+                    resume(True,"Jackson Brick","09/30/2001")
+                    print("Boss: Type BACK when you want to go back to your desk.".center(z))
+                    print("Remember that no commands are case sensitive. You can type UPPERCASE, lowercase, ".center(z))
+                    print("or sOmeWHerE iN B eT wEE n. Go on, try it.".center(z))
+                    learnBack = input().lower().strip().replace(" ","")
+                    if learnBack == "back":
+                        sawResume = True
+                        break
+            else:
+                speakNar("Type BACK when you want to return to your desk.","Boss")
+                while True:
+                    os.system('clear')
+                    print("Boss: You will be able to read people's resumes here.".center(z))
+                    print("You must review their resume to decide whether to hire or not.".center(z))
+                    resume(True,"Jackson Brick","09/30/2001")
+                    print("Boss: Type BACK when you want to return to your desk".center(z))
+                    learnBack = input().lower().strip().replace(" ","")
+                    if learnBack == "back":
+                        sawResume = True
+                        break
+                    
+                    
+        elif introDesk == "guidelines":
+            os.system('clear')
+            speakNar("Here you can find the rules that you must follow. Deviation from these rules will result","Boss")
+            speakNar("in consequences.","continuation")
+            guidelines(True)
+            if sawResume == False and sawGuidelines == False:
+                speakNar("Type BACK when you want to go back to your desk.","Boss")
+                speakNar("Remember that no commands are case sensitive. You can type UPPERCASE, lowercase, ","continuation")
+                speakNar("or sOmeWHerE iN B eT wEE n. Go on, try it.","continuation")
+                while True:
+                    os.system('clear')
+                    print("Here you can find the rules that you must follow. Deviation from these rules will result".center(z))
+                    print("in consequences.".center(z))
+                    guidelines(True)
+                    print("Boss: Type BACK when you want to go back to your desk.".center(z))
+                    print("Remember that no commands are case sensitive. You can type UPPERCASE, lowercase, ".center(z))
+                    print("or sOmeWHerE iN B eT wEE n. Go on, try it.".center(z))
+                    learnBack = input().lower().strip().replace(" ","")
+                    if learnBack == "back":
+                        sawGuidelines = True
+                        break
+            else:
+                speakNar("Type BACK when you want to return to your desk.","Boss")
+                while True:
+                    os.system('clear')
+                    print("Here you can find the rules that you must follow. Deviation from these rules will result".center(z))
+                    print("in consequences.".center(z))
+                    guidelines(True)
+                    learnBack = input().lower().strip().replace(" ","")
+                    if learnBack == "back":
+                        sawGuidelines = True
+                        break
+
+        else:
+            os.system('clear')
+            print("Boss: In general, typing the name of something will allow you to inspect it. Try it here.".center(z))
+            desk(True)
+            introDesk = input().lower().strip().replace(" ","")
+    os.system('clear')
+    speakNar("Follow the rules and you will get paid. Do not make us regret hiring you.","Boss")
+    toCont()
+    identifiedUser['iterations'] += 1
+    save(identifiedUser)
 
 
 while True:
