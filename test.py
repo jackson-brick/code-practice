@@ -6,102 +6,31 @@ import os
 os.system('clear')
 
 countyData = []
-with open('statsfinal.csv','r') as file:
+with open('usdatamelanoma.csv','r') as file:
     reader = csv.DictReader(file)
     for line in reader:
         countyData.append(line)
 
-ca = []
-wa = []
-ore = []
-ct = []
-de = []
-fl = []
-ga = []
-me = []
-ml = []
-ma = []
-nh = []
-nj = []
-ny = []
-nc = []
-ri = []
-sc = []
-va = []
-
-
 for i in countyData:
-    if "California" in i["County"]:
-        ca.append(i)
-    elif "Washington" in i["County"]:
-        wa.append(i)
-    elif "Oregon" in i["County"]:
-        ore.append(i)
-    elif "Connecticut" in i["County"]:
-        ct.append(i)
-    elif "Delaware" in i["County"]:
-        de.append(i)
-    elif "Florida" in i["County"]:
-        fl.append(i)
-    elif "Georgia" in i["County"]:
-        ga.append(i)
-    elif "Maine" in i["County"]:
-        me.append(i)
-    elif "Maryland" in i["County"]:
-        ml.append(i)
-    elif "Massachusetts" in i["County"]:
-        ma.append(i)
-    elif "New Hampshire" in i["County"]:
-        nh.append(i)
-    elif "New Jersey" in i["County"]:
-        nj.append(i)
-    elif "New York" in i["County"]:
-        ny.append(i)
-    elif "North Carolina" in i["County"]:
-        nc.append(i)
-    elif "Rhode Island" in i["County"]:
-        ri.append(i)
-    elif "South Carolina" in i["County"]:
-        sc.append(i)
-    elif "Virginia" in i["County"]:
-        va.append(i)
 
-WCcountyList = [ca,ore,wa]
-ECcountyList = [ct,de,fl,ga,me,ml,ma,nh,nj,ny,nc,ri,sc,va]
-
-sumx = 0
-sumy = 0
-print("West Coast")
-for i in range(10):
-    while True:
-        x = random.choice(random.choice(WCcountyList))
-        if x["County"][-13:-3] == "California" or x["County"][-13:-3] == "Washington" or x["County"][-9:-3] == "Oregon":
-            break
-    print(x["County"] + " : " + x["Average Annual Count"])
-    if x["Average Annual Count"].replace(" ","").isdigit():
-        sumx += float(x["Average Annual Count"].replace(" ",""))
-    elif x["Average Annual Count"] == "3 or fewer":
-        sumx += 2
-print(f"Average: {sumx/10}")
-
-print("")
-print("East Coast")
-for i in range(10):
-    while True:
-        y = random.choice(random.choice(ECcountyList))
-        if y["County"][-13:-3] != "California" and y["County"][-13:-3] != "Washington" and y["County"][-9:-3] != "Oregon":
-            break
-    print(y["County"] + " : " + y["Average Annual Count"])
-    if y["Average Annual Count"].replace(" ","").isdigit():
-        sumy += float(y["Average Annual Count"].replace(" ",""))
-    elif y["Average Annual Count"] == "3 or fewer":
-        sumy += 2
-    
-print(f"Average: {sumy/10}")
+    if i["Average Annual Count"] == "data not available":
+        print(i)
+        countyData.remove(i)
+        
+    elif i['Average Annual Count'] == "3 or fewer":
+        print(i)
+        i['Average Annual Count'] = 2
+        print(i)
+        
 
 
 
-
+with open('usdatamelanoma','w',newline='') as file:
+    field_names = ["County","FIPS","2023 Rural-Urban Continuum Codes([rural urban note])","Age-Adjusted Incidence Rate([rate note]) - cases per 100,000","Lower 95% Confidence Interval","Upper 95% Confidence Interval","CI*Rank([rank note])","Lower CI (CI*Rank)","Upper CI (CI*Rank)","Average Annual Count","Recent Trend","Recent 5-Year Trend ([trend note]) in Incidence Rates","Lower 95% Confidence Interval","Upper 95% Confidence Interval"]
+    writer = csv.DictWriter(file, fieldnames=field_names)
+    writer.writeheader()
+    for line in countyData:
+        writer.writerow(line)
 
 
 
