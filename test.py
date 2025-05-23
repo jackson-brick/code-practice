@@ -6,33 +6,87 @@ import os
 os.system('clear')
 
 countyData = []
-with open('usdatamelanoma.csv','r') as file:
+with open('statsfinal.csv','r') as file:
     reader = csv.DictReader(file)
     for line in reader:
         countyData.append(line)
 
+def poop():
+    for i in countyData:
+
+        if i["Average Annual Count"] == "data not available":
+            print(i)
+            countyData.remove(i)
+            
+        elif i['Average Annual Count'] == "3 or fewer":
+            print(i)
+            i['Average Annual Count'] = 2
+            print(i)
+            
+
+
+
+    with open('usdatamelanoma','w',newline='') as file:
+        field_names = ["County","FIPS","2023 Rural-Urban Continuum Codes([rural urban note])","Age-Adjusted Incidence Rate([rate note]) - cases per 100,000","Lower 95% Confidence Interval","Upper 95% Confidence Interval","CI*Rank([rank note])","Lower CI (CI*Rank)","Upper CI (CI*Rank)","Average Annual Count","Recent Trend","Recent 5-Year Trend ([trend note]) in Incidence Rates","Lower 95% Confidence Interval","Upper 95% Confidence Interval"]
+        writer = csv.DictWriter(file, fieldnames=field_names)
+        writer.writeheader()
+        for line in countyData:
+            writer.writerow(line)
+
+wcStates = ["California", "Washington","Oregon"]
+ecStates = ["Connecticut","Delaware","Florida", "Georgia","Maine","Maryland","Massachusetts","New Hampshire","New Jersey","New York","North Carolina","Rhode Island","South Carolina","Virginia"]
+
+eastCoast = []
+westCoast = []
+
 for i in countyData:
+    if i["County"][i["County"].index(","):-3].replace(", ","") in wcStates:
+        westCoast.append(i)
+    elif i["County"][i["County"].index(","):-3].replace(", ","") in ecStates:
+        eastCoast.append(i)
 
-    if i["Average Annual Count"] == "data not available":
-        print(i)
-        countyData.remove(i)
-        
-    elif i['Average Annual Count'] == "3 or fewer":
-        print(i)
-        i['Average Annual Count'] = 2
-        print(i)
-        
-
+finalWest = []
+finalEast = []
+westPropSum = 0
+eastPropSum = 0
 
 
-with open('usdatamelanoma','w',newline='') as file:
-    field_names = ["County","FIPS","2023 Rural-Urban Continuum Codes([rural urban note])","Age-Adjusted Incidence Rate([rate note]) - cases per 100,000","Lower 95% Confidence Interval","Upper 95% Confidence Interval","CI*Rank([rank note])","Lower CI (CI*Rank)","Upper CI (CI*Rank)","Average Annual Count","Recent Trend","Recent 5-Year Trend ([trend note]) in Incidence Rates","Lower 95% Confidence Interval","Upper 95% Confidence Interval"]
-    writer = csv.DictWriter(file, fieldnames=field_names)
-    writer.writeheader()
-    for line in countyData:
-        writer.writerow(line)
+for i in range(10):
+    x = random.choice(westCoast)
+    if x["Average Annual Count"] == "3 or fewer":
+        x["Average Annual Count"] = 2
+    print(f"What is the population of {x["County"]}?")
+    tempPop = int(input())
+    westPropSum += (int(x["Average Annual Count"])/tempPop)
+    finalWest.append(f"{x["County"]} : {x["Average Annual Count"]}")
+    westCoast.remove(x)
+westPropSum/=10
 
+print("")
 
+for i in range(10):
+    x = random.choice(eastCoast)
+    if x["Average Annual Count"] == "3 or fewer":
+        x["Average Annual Count"] = 2
+    print(f"What is the population of {x["County"]}?")
+    tempPop = int(input())
+    eastPropSum += (int(x["Average Annual Count"])/tempPop)
+    finalEast.append(f"{x["County"]} : {x["Average Annual Count"]}")
+    eastCoast.remove(x)
+eastPropSum/=10
+
+print("West Coast:")
+print("")
+for i in finalWest:
+    print(i)
+print(f"Average proportion: {westPropSum}")
+
+print("")
+print("East Coast")
+print("")
+for i in finalEast:
+    print(i)
+print(f"Average proportion: {eastPropSum}")
 
 """
 Created by statecancerprofiles.cancer.gov on 05/09/2025 4:58 pm.
