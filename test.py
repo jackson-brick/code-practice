@@ -58,7 +58,7 @@ def fart():
     eastPropSum = 0
 
 
-    for i in range(100):
+    for i in range(1):
         x = random.choice(westCoast)
         if x["Average Annual Count"] != "data not available":
             if x["Average Annual Count"] == "3 or fewer":
@@ -66,37 +66,31 @@ def fart():
             for lcv in countyPops:
                 try:
                     if lcv["Geographic Area"].replace(".","") == x["County"][:-3]:
-                        tempPop = int(lcv["2023"])
+                        tempPop = int(lcv["2023"].replace(",",""))
                 except:
-                    print("It did not work")
-                    #print(lcv)
-                    #print(x)
-                    #input()
+                    print("didnt work " + x)
             westPropSum += (int(x["Average Annual Count"])/tempPop)
             finalWest.append(f"{x["County"]} : {x["Average Annual Count"]}")
             westCoast.remove(x)
-    westPropSum/=10
+    westPropSum/=100
 
     print("")
 
-    for i in range(100):
+    for i in range(1):
         x = random.choice(eastCoast)
         if x["Average Annual Count"] != "data not available":
             if x["Average Annual Count"] == "3 or fewer":
                 x["Average Annual Count"] = 2
             for lcv in countyPops:
-                try:
+                try: 
                     if lcv["Geographic Area"].replace(".","") == x["County"][:-3]:
-                        tempPop = int(lcv["2023"])
+                        tempPop = int(lcv["2023"].replace(",",""))
                 except:
-                    print("It did not work")
-                    #print(lcv)
-                    #print(x)
-                    #input()
+                    print("didnt work " + x)
             eastPropSum += (int(x["Average Annual Count"])/tempPop)
             finalEast.append(f"{x["County"]} : {x["Average Annual Count"]}")
             eastCoast.remove(x)
-    eastPropSum/=10
+    eastPropSum/=100
 
     print("West Coast:")
     print("")
