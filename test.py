@@ -54,8 +54,10 @@ def fart():
 
     finalWest = []
     finalEast = []
-    westPropSum = 0
-    eastPropSum = 0
+    westPopSum = 0
+    eastPopSum = 0
+    westAffectedSum = 0
+    eastAffectedSum = 0
 
 
     for i in range(1):
@@ -69,7 +71,7 @@ def fart():
                         tempPop = int(lcv["2023"].replace(",",""))
                 except:
                     print("didnt work " + x)
-            westPropSum += (int(x["Average Annual Count"])/tempPop)
+            westPopSum += tempPop
             finalWest.append(f"{x["County"]} : {x["Average Annual Count"]}")
             westCoast.remove(x)
     westPropSum/=100
