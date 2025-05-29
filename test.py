@@ -60,52 +60,92 @@ def fart():
     eastAffectedSum = 0
 
 
-    for i in range(1):
-        x = random.choice(westCoast)
-        if x["Average Annual Count"] != "data not available":
-            if x["Average Annual Count"] == "3 or fewer":
-                x["Average Annual Count"] = 2
-            for lcv in countyPops:
-                try:
-                    if lcv["Geographic Area"].replace(".","") == x["County"][:-3]:
-                        tempPop = int(lcv["2023"].replace(",",""))
-                except:
-                    print("didnt work " + x)
-            westPopSum += tempPop
-            finalWest.append(f"{x["County"]} : {x["Average Annual Count"]}")
-            westCoast.remove(x)
-    westPropSum/=100
+    for i in westCoast:
+        
+        if i["Average Annual Count"] == "data not available":
+            i["Average Annual Count"] = 0
+        if i["Average Annual Count"] == "3 or fewer":
+            i["Average Annual Count"] = 2
+        westAffectedSum += int(i["Average Annual Count"])
 
-    print("")
+    print("west affected sum: " + str(westAffectedSum))
 
-    for i in range(1):
-        x = random.choice(eastCoast)
-        if x["Average Annual Count"] != "data not available":
-            if x["Average Annual Count"] == "3 or fewer":
-                x["Average Annual Count"] = 2
-            for lcv in countyPops:
-                try: 
-                    if lcv["Geographic Area"].replace(".","") == x["County"][:-3]:
-                        tempPop = int(lcv["2023"].replace(",",""))
-                except:
-                    print("didnt work " + x)
-            eastPropSum += (int(x["Average Annual Count"])/tempPop)
-            finalEast.append(f"{x["County"]} : {x["Average Annual Count"]}")
-            eastCoast.remove(x)
-    eastPropSum/=100
 
-    print("West Coast:")
-    print("")
-    for i in finalWest:
-        print(i)
-    print(f"Average proportion: {westPropSum}")
+    for i in eastCoast:
+        
+        if i["Average Annual Count"] == "data not available":
+            i["Average Annual Count"] = 0
+        if i["Average Annual Count"] == "3 or fewer":
+            i["Average Annual Count"] = 2
+        eastAffectedSum += int(i["Average Annual Count"])
+    print("east affected sum: " + str(eastAffectedSum))
 
-    print("")
-    print("East Coast")
-    print("")
-    for i in finalEast:
-        print(i)
-    print(f"Average proportion: {eastPropSum}")
+
+    for i in westCoast:
+        for lcv in countyPops:
+            if lcv["Geographic Area"].replace(".","") == i["County"][:-3]:
+                westPopSum += int(lcv["2023"].replace(",",""))
+        
+    print("west population sum: " + str(westPopSum))
+    
+    for i in eastCoast:
+        for lcv in countyPops:
+            if lcv["Geographic Area"].replace(".","") == i["County"][:-3]:
+                eastPopSum += int(lcv["2023"].replace(",",""))
+
+    print("east population sum: " +str(eastPopSum))
+
+    chooseListWest = []
+    for i in range(westAffectedSum):
+        chooseListWest.append("Affected")
+    for i in range(westPopSum-westAffectedSum):
+        chooseListWest.append("Safe")
+    print("Number of affected in west choose list: " + str(chooseListWest.count("Affected")))
+    print("Number of safe in west choose list: " + str(chooseListWest.count("Safe")))
+    
+    chooseListEast = []
+    for i in range(eastAffectedSum):
+        chooseListEast.append("Affected")
+    for i in range(eastPopSum-eastAffectedSum):
+        chooseListEast.append("Safe")
+    print("Number of affected in east choose list: " + str(chooseListEast.count("Affected")))
+    print("Number of safe in east choose list: " + str(chooseListEast.count("Safe")))
+
+    input()
+    sampleAffectedWest = 0
+    sampleAffectedEast = 0
+    for i in range(15000000):
+        x = random.choice(chooseListWest)
+        if x == "Affected":
+            sampleAffectedWest += 1
+        if i %500000 == 0:
+            print(i)
+    for i in range(15000000):
+        x = random.choice(chooseListEast)
+        if x == "Affected":
+            sampleAffectedEast +=1
+        if i %500000 == 0:
+            print(i)
+    
+    print(f"Of 15 million randomly chosen people in the West, {sampleAffectedWest} had melanoma")
+    print(f"Of 15 million randomly chosen people in the East, {sampleAffectedEast} had melanoma")
+    print(len(chooseListWest))
+    print(len(chooseListEast))
+
+    """
+    totalWest = 0
+    for i in westCoast:
+        for lcv in countyPops:
+            if lcv["Geographic Area"].replace(".","") == i["County"][:-3]:
+                totalWest += int(lcv["2023"].replace(",",""))
+    
+    totalEast = 0
+    for i in eastCoast:
+        for lcv in countyPops:
+            if lcv["Geographic Area"].replace(".","") == i["County"][:-3]:
+                totalEast += int(lcv["2023"].replace(",",""))
+    
+    """
 
 fart()
 
