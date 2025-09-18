@@ -107,6 +107,16 @@ def get_value_display(card,side):
             return f"{card[0]} "
         else:
             return int(card[:2])
+
+def calculate_score(hand):
+    aceCount=0
+    score = 0
+    for i in hand:
+        if i[:3].lower() == "ace":
+            aceCount +=1
+        else:
+            score += get_card_value(i)
+
 print("Welcome to blackjack".center(z))
 while True:
     print("How many decks do you wanna use?".center(z))
