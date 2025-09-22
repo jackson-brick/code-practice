@@ -198,7 +198,7 @@ while result == "":
     if playerScore > 21:
         for i in playerCards:
             if i[:3].lower() == "ace":
-                FINSIH LATER
+                print("FINSIH LATER")
         result = "dealerWin"
     if dealerScore > 21:
         result = "playerWin"
