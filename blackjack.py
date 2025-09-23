@@ -287,8 +287,17 @@ def hidden_flip_animation():
     print("-------   ----- ".center(z))
     time.sleep(0.3)
     os.system('clear')
-
-def stand():
+    print("_"*z)
+    print("-------  -------".center(z))
+    print(f"|   {str(get_value_display(dealerCards[0],"top"))}| |   {str(get_value_display(dealerCards[1],"top"))}| ".center(z))
+    print("|     | |     | ".center(z))
+    print(f"|   {str(get_value_display(dealerCards[0],"bottom"))}| |{str(get_value_display(dealerCards[1],"bottom"))}   | ".center(z))
+    print("-------  -------".center(z))
+    time.sleep(0.3)
+    os.system('clear')
+    print("_"*z)
+    card_display(dealerCards,"open")
+    time.sleep(0.3)
     os.system('clear')
 
     
@@ -338,6 +347,7 @@ input()
 
 result = ""
 gameStart = True
+playerTurn = True
 while result == "":
     playerScore = calculate_score(playerCards)
     dealerScore = calculate_score(dealerCards)
@@ -348,6 +358,25 @@ while result == "":
     if dealerScore > 21:
         #Dealer score only increases if the player stands
         result = "dealerBust"
+        break
+    if playerScore == 21 and gameStart:
+        os.system('clear')
+        hidden_flip_animation()
+        if playerScore == dealerScore:
+            result = "push"
+        else:
+            result = "playerWin"
+    elif playerScore==21:
+        os.system('clear')
+        hidden_flip_animation()
+        playerTurn = False
+    if not gameStart and not playerTurn and dealerScore >=17:
+        if playerScore > dealerScore:
+            result = "playerWin"
+        elif playerScore < dealerScore:
+            result = "dealerWin"
+        else:
+            result = "push"
         break
     if gameStart:
         if get_card_value(dealerCards[0]) == 10 or get_card_value(dealerCards[0]) == -1:    
@@ -362,20 +391,25 @@ while result == "":
             if dealerScore == 21:
                 #This ending will flip the dealer's card and show their blackjack
                 result = "dealerGameStartBlackjack"
-                break
+                playerTurn = False
             else:
                 print("The dealer does not have a blackjack".center(z))
                 print("Press ENTER to continue".center(z))
                 input()
     os.system('clear')
     print("_"*z)
-
-    card_display(dealerCards,"hidden")
-    print(f"Dealer's Cards:".center(z))
+    if playerTurn:
+        card_display(dealerCards,"hidden")
+        print(f"Dealer's Cards".center(z))
+    else:
+        card_display(dealerCards,"open")
+        print(f"Dealer's Cards     |    Dealer's score: {dealerScore}".center(z))
+        if result == "dealerGameStartBlackjack":
+            break
     print("\n\n\n")
     
     card_display(playerCards,"open")
-    print(f"Your cards:        Your score: {playerScore}".center(z))
+    print(f"Your cards     |    Your score: {playerScore}".center(z))
     print("")
     
     print("What would you like to do?".center(z))
@@ -383,18 +417,26 @@ while result == "":
         print("HIT   |   STAND   |   DOUBLE   |   SURRENDER   |   SPLIT".center(z))
     else:
         print("HIT   |   STAND   |   DOUBLE   |   SURRENDER".center(z))
-    if result == "":
+    if result == "" and playerTurn:
         action = input().lower()
     else:
         action = ""
-    if action == "hit":
-        playerCards.append(deal_card())
-    elif action == "stand":
-        stand()
-    elif action == "double":
-        print("double down")
-    elif action == "split" and get_card_value(playerCards[0]) == get_card_value(playerCards[1]):
-        print("split")
+    if playerTurn:
+        if action == "hit":
+            playerCards.append(deal_card())
+        elif action == "stand":
+            os.system('clear')
+            hidden_flip_animation()
+            playerTurn = False
+        elif action == "double":
+            print("double down")
+        elif action == "split" and get_card_value(playerCards[0]) == get_card_value(playerCards[1]):
+            print("split")
+    else:
+        print("Dealer is drawing...".center(z))
+        print("Press ENTER to continue".center(z))
+        input()
+        dealerCards.append(deal_card())
 
 if result == "playerBust":
     #dealer wins
@@ -412,5 +454,13 @@ elif result == "dealerGameStartBlackjack":
     else:
         #tie
         print("")
-        print("")
         print(Fore.YELLOW + Style.BRIGHT + "IT'S A TIE".center(z))
+elif result == "dealerWin":
+    print("")
+    print(Fore.RED + Style.BRIGHT + "DEALER WINS".center(z))
+elif result == "playerWin":
+    print("")
+    print(Fore.GREEN + Style.BRIGHT + "YOU WIN".center(z))
+elif result == "push":
+    print("")
+    print(Fore.YELLOW + Style.BRIGHT + "IT'S A TIE".center(z))
