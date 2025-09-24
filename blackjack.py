@@ -438,10 +438,12 @@ while gameIsRunning:
             print(f"Dealer's Cards     |    Dealer's score: {dealerScore}".center(z))
             if result == "dealerGameStartBlackjack":
                 break
-        print("\n\n")
+        print("\n")
         print(f"Your balance: ${balance}".center(z))
         card_display(playerCards,"open")
         print(f"Your cards     |    Your score: {playerScore}".center(z))
+        print("")
+        print(f"Your balance: ${balance}    |    Your current bet: ${bet}".center(z))
         print("")
         
         print("What would you like to do?".center(z))
@@ -461,7 +463,13 @@ while gameIsRunning:
                 hidden_flip_animation()
                 playerTurn = False
             elif action == "double":
-                print("double down")
+                if bet*2 <= balance:
+                    bet *= 2
+                    print(f"\nYou doubled your bet to ${bet}".center(z))
+                    time.sleep(2)
+                    print(f"The dealer will deal you one more card".center(z))
+                    playerCards.append(deal_card())
+                    playerTurn = False
             elif action == "split" and get_card_value(playerCards[0]) == get_card_value(playerCards[1]):
                 print("split")
         elif result == "":
