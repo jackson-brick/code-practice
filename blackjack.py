@@ -305,7 +305,7 @@ def hidden_flip_animation():
 
 print("Welcome to blackjack".center(z))
 while True:
-    print("How many decks do you wanna use?".center(z))
+    print("How many decks do you wanna use? (1-10)".center(z))
     numDecks = input()
     print("")
     try:
@@ -331,9 +331,8 @@ for i in range(numDecks):
     for suit in suits:
         for num in numbers:
             deckList.append(get_name_of_card(suit,num))
-gameIsRunning =True
 balance = 1000.0
-while gameIsRunning:
+while balance >0:
     while True:
         os.system('clear')
         print("How much will you bet on this hand?".center(z))
@@ -341,7 +340,7 @@ while gameIsRunning:
         bet = input()
         try:
             bet = float(bet)
-            if bet > 0 and bet < balance:
+            if bet > 0 and bet <= balance:
                 bet = round(bet,2)
                 break
             else:
@@ -375,6 +374,7 @@ while gameIsRunning:
     result = ""
     gameStart = True
     playerTurn = True
+    playerDoubled = 0
     while result == "":
         playerScore = calculate_score(playerCards)
         dealerScore = calculate_score(dealerCards)
@@ -385,7 +385,9 @@ while gameIsRunning:
         if dealerScore > 21:
             #Dealer score only increases if the player stands
             result = "dealerBust"
-            break
+            
+        if playerScore > 21 and playerDoubled == 1:
+            result = "playerDoubleBust"
         if playerScore == 21 and gameStart:
             os.system('clear')
             print("You got a BLACKJACK".center(z))
@@ -430,55 +432,84 @@ while gameIsRunning:
                     input()
         os.system('clear')
         print("_"*z)
-        if playerTurn:
+        if playerTurn and playerDoubled == 0:
             card_display(dealerCards,"hidden")
             print(f"Dealer's Cards".center(z))
-        else:
+        elif not playerTurn and playerDoubled == 0:
             card_display(dealerCards,"open")
             print(f"Dealer's Cards     |    Dealer's score: {dealerScore}".center(z))
             if result == "dealerGameStartBlackjack":
                 break
+        elif not playerTurn and playerDoubled == 1:
+            card_display(dealerCards,"hidden")
+            print(f"Dealer's Cards".center(z))
+        elif not playerTurn and playerDoubled == 2:
+            card_display(dealerCards,"open")
+            print(f"Dealer's Cards     |    Dealer's score: {dealerScore}".center(z))
+
         print("\n")
-        print(f"Your balance: ${balance}".center(z))
+        print(f"Your balance: ${balance}    |    Your current bet: ${bet}     |    Your score: {playerScore}".center(z))
         card_display(playerCards,"open")
-        print(f"Your cards     |    Your score: {playerScore}".center(z))
+        print(f"Your cards".center(z))
         print("")
-        print(f"Your balance: ${balance}    |    Your current bet: ${bet}".center(z))
-        print("")
-        
-        print("What would you like to do?".center(z))
-        if get_card_value(playerCards[0]) == get_card_value(playerCards[1]) and result == "":
-            print("HIT   |   STAND   |   DOUBLE   |   SURRENDER   |   SPLIT".center(z))
-        else:
-            print("HIT   |   STAND   |   DOUBLE   |   SURRENDER".center(z))
-        if result == "" and playerTurn:
-            action = input().lower()
-        else:
-            action = ""
-        if playerTurn:
-            if action == "hit":
-                playerCards.append(deal_card())
-            elif action == "stand":
-                os.system('clear')
-                hidden_flip_animation()
-                playerTurn = False
-            elif action == "double":
-                if bet*2 <= balance:
-                    bet *= 2
-                    print(f"\nYou doubled your bet to ${bet}".center(z))
-                    time.sleep(2)
-                    print(f"The dealer will deal you one more card".center(z))
+        if result == "dealerBust":
+            break
+        if playerDoubled == 0:
+            if playerTurn:
+                print("What would you like to do?".center(z))
+                if get_card_value(playerCards[0]) == get_card_value(playerCards[1]) and result == "":
+                    print("HIT   |   STAND   |   DOUBLE   |   SURRENDER   |   SPLIT".center(z))
+                else:
+                    print("HIT   |   STAND   |   DOUBLE   |   SURRENDER".center(z))
+            if result == "" and playerTurn:
+                action = input().lower()
+            else:
+                action = ""
+            if playerTurn:
+                if action == "hit":
                     playerCards.append(deal_card())
+                elif action == "stand":
+                    os.system('clear')
+                    hidden_flip_animation()
                     playerTurn = False
-            elif action == "split" and get_card_value(playerCards[0]) == get_card_value(playerCards[1]):
-                print("split")
-        elif result == "":
-            print("")
-            print(Fore.RED + Style.BRIGHT + "Dealer is drawing...".center(z))
-            print(Style.RESET_ALL)
+                elif action == "double":
+                    if bet*2 <= balance:
+                        bet *= 2
+                        print("")
+                        print(f"You doubled your bet to ${bet}".center(z))
+                        time.sleep(2)
+                        print(f"The dealer will deal you one more card".center(z))
+                        print("Press ENTER to continue".center(z))
+                        input()
+                        playerCards.append(deal_card())
+                        playerTurn = False
+                        playerDoubled += 1
+                elif action == "split" and get_card_value(playerCards[0]) == get_card_value(playerCards[1]):
+                    print("split")
+            elif result == "":
+                print("")
+                print(Fore.RED + Style.BRIGHT + "Dealer is drawing...".center(z))
+                print(Style.RESET_ALL)
+                print("Press ENTER to continue".center(z))
+                input()
+                dealerCards.append(deal_card())
+        elif playerDoubled == 1:
+            if result == "playerDoubleBust":
+                result = "playerBust"
+                break
+            playerDoubled += 1
             print("Press ENTER to continue".center(z))
             input()
-            dealerCards.append(deal_card())
+            os.system('clear')
+            hidden_flip_animation()
+        else:
+            if result == "":
+                print("")
+                print(Fore.RED + Style.BRIGHT + "Dealer is drawing...".center(z))
+                print(Style.RESET_ALL)
+                print("Press ENTER to continue".center(z))
+                input()
+                dealerCards.append(deal_card())
 
     if result == "playerBust":
         #dealer wins
