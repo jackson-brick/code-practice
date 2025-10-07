@@ -399,7 +399,7 @@ while balance >0:
             else:
                 result = "playerNaturalBlackjackWin"
             playerTurn = False
-        elif playerScore==21:
+        elif playerScore==21 and playerDoubled != 1:
             os.system('clear')
             hidden_flip_animation()
             playerTurn = False
@@ -412,7 +412,6 @@ while balance >0:
                 result = "push"
             
         if gameStart and result == "":
-            gameStart = False
             if get_card_value(dealerCards[0]) == 10 or get_card_value(dealerCards[0]) == -1:    
                 
                 os.system('clear')
@@ -457,10 +456,13 @@ while balance >0:
         if playerDoubled == 0:
             if playerTurn:
                 print("What would you like to do?".center(z))
-                if get_card_value(playerCards[0]) == get_card_value(playerCards[1]) and result == "":
-                    print("HIT   |   STAND   |   DOUBLE   |   SURRENDER   |   SPLIT".center(z))
+                if gameStart:
+                    if get_card_value(playerCards[0]) == get_card_value(playerCards[1]) and result == "":
+                        print("HIT   |   STAND   |   DOUBLE   |   SURRENDER   |   SPLIT".center(z))
+                    else:
+                        print("HIT   |   STAND   |   DOUBLE   |   SURRENDER".center(z))
                 else:
-                    print("HIT   |   STAND   |   DOUBLE   |   SURRENDER".center(z))
+                    print("HIT   |   STAND   ".center(z))
             if result == "" and playerTurn:
                 action = input().lower()
             else:
@@ -510,6 +512,7 @@ while balance >0:
                 print("Press ENTER to continue".center(z))
                 input()
                 dealerCards.append(deal_card())
+        gameStart = False
 
     if result == "playerBust":
         #dealer wins
