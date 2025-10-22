@@ -1,5 +1,6 @@
 import os
 import csv
+import random
 
 
 z = os.get_terminal_size()[0]
@@ -28,19 +29,57 @@ with open('wordscapesDict.csv','r') as file:
 
 
 count = 0
-for i in range(len(dictList)):
-    print(dictList[i+count])
-    action = input()
-    if action.lower().strip() == "del":
-        dictList.pop(i + count)
-        count -= 1
-    elif action.lower().strip() == "finish":
-        dictList[i+count] += "LAST FINISHED HERE"
-        break
-print(wordList)
+def manualEdit():
+    for i in range(len(wordList)):
+        print(wordList[i+count])
+        action = input()
+        if action.lower().strip() == "del":
+            wordList.pop(i + count)
+            count -= 1
+        elif action.lower().strip() == "finish":
+            wordList[i+count] += "LAST FINISHED HERE"
+            break
+    print(wordList)
 
-with open('wordscapesEditingTxt.txt','w') as file:
-    for i in dictList:
-        file.write(i)
-        file.write("\n")
-    file.write("END")
+def removeDupes():
+    for i in wordList:
+        while True:
+            if wordList.count(i) > 1:
+                wordList.remove(i)
+                print(f"removed" + i)
+            else:
+                break
+
+def removeLongWords():
+    for i in wordList:
+        while True:
+            if len(i) > 8:
+                wordList.remove(i)
+                print(f"removed" + i)
+            break
+
+def removeShortWords():
+    for i in wordList:
+        while True:
+            if len(i) < 3:
+                wordList.remove(i)
+                print(f"removed" + i)
+            break
+
+def editWords():
+    with open('wordscapesEditingTxt.txt','w') as file:
+        for i in wordList:
+            file.write(i)
+            file.write("\n")
+        file.write("END")
+
+
+while True:
+    wordChoice = random.choice(wordList)
+    if len(wordChoice) >= 7:
+        break
+wordIterations = []
+print(wordChoice)
+for i in range(len(wordChoice)):
+    tempWord = wordChoice[:i] + wordChoice[i+1:]
+    input()
