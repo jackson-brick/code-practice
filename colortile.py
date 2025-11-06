@@ -228,18 +228,21 @@ def action(keyPress,width):
     keyPress = keyPress.lower().strip()
     if keyPress == "a":
         shift("left",width)
-        moveCount-=1
     elif keyPress == "d":
         shift("right",width)
-        moveCount-=1
     elif keyPress == "w":
         shift("up",width)
-        moveCount-=1
     elif keyPress == "s":
         shift("down",width)
-        moveCount-=1
 
 def shift(direction,width): 
+    global moveCount
+    tempRowList = []
+    for i in rowList:
+        myList = []
+        for j in i:
+            myList.append(j)
+        tempRowList.append(myList)
     if direction == "up":
         for i in range(width-1):
             for j in range(width):
@@ -267,12 +270,14 @@ def shift(direction,width):
     elif direction == "right":
         for i in range(width):
             for j in range(width):
-                if j-1!=-1:
-                    #print(rowList)
-                    #print(width-j)
-                    if rowList[i][-j] == "   " and rowList[i][-j-1]!= obs:
-                        rowList[i][-j] = rowList[i][-j-1]
-                        rowList[i][-j-1] = "   "
+                
+                if j!=0 and width-j-1>=0:
+                    if rowList[i][width-j] == "   " and rowList[i][(width-j-1)]!= obs:
+                        rowList[i][width-j] = rowList[i][(width-j-1)]
+                        rowList[i][(width-j-1)] = "   "
+
+    if tempRowList != rowList:
+        moveCount -= 1
 
 
 def voidRest(width=0):
@@ -535,8 +540,9 @@ def checkCells(width):
 
 def delAnimation(givenList,width):
     global moveCount
+    moveCount += 1
     for i in givenList:
-        moveCount += 1
+        
         for j in i:
             os.system('clear')
             cell = rowList[j[0]][j[1]]
@@ -621,7 +627,16 @@ def playGame():
         checkCells(width)
         if moveCount == 0:
             os.system('clear')
-            threeXThree()
+            if width == 3:
+                threeXThree()
+            elif width == 4:
+                fourXFour()
+            elif width == 5:
+                fiveXFive()
+            elif width == 6:
+                sixXSix()
+            elif width == 7:
+                sevenXSeven()
             print("GAME OVER".center(z))
             quit()
 
@@ -690,6 +705,7 @@ playGame()
 resetCells()
 levelTenSettings()
 playGame()
+
 #level 11
 resetCells()
 levelElevenSettings()
@@ -697,6 +713,8 @@ playGame()
 
 os.system('clear')
 print("YOU BEAT THE GAME! CONGRATULATIONS".center(z))
+print("")
+input()
 #level 12
 
 #level 13
