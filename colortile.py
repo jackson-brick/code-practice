@@ -23,7 +23,7 @@ obs = Back.GREEN +Style.BRIGHT+ "///" + Style.RESET_ALL
 
 
 def findY(backColorCount,lightColorCount,brightColorCount):
-    return (int(9*backColorCount)+lightColorCount+(4*brightColorCount))
+    return (int(9*backColorCount)+lightColorCount+(4*brightColorCount)) - backColorCount%2 -(backColorCount + lightColorCount)%2
 
 def resetCells():
     global row1Color,row2Color,row3Color,row4Color,row5Color,row6Color,row7Color,row1,row2,row3,row4,row5,row6,row7,rowList
