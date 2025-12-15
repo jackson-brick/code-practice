@@ -8,27 +8,31 @@ z = os.get_terminal_size()[0]
 word = "pumpkin"
 wordList = []
 tempWord = ""
-with open('wordscapesEditingTxt.txt','r') as file:
-    for line in file.read():
-        if line != "\n":
-            if line == " ":
+dictList = []
+count = 0
+
+def openFiles():
+    with open('wordscapesEditingTxt.txt','r') as file:
+        for line in file.read():
+            if line != "\n":
+                if line == " ":
+                    wordList.append(tempWord)
+                    tempWord = ""
+                else:
+                    tempWord += line
+            else:
                 wordList.append(tempWord)
                 tempWord = ""
-            else:
-                tempWord += line
-        else:
-            wordList.append(tempWord)
-            tempWord = ""
 
 
-dictList = []
-with open('wordscapesDict.csv','r') as file:
-    reader = csv.DictReader(file)
-    for line in reader:
-        dictList.append(line["word"])
+    
+    with open('wordscapesDict.csv','r') as file:
+        reader = csv.DictReader(file)
+        for line in reader:
+            dictList.append(line["word"])
 
 
-count = 0
+
 def manualEdit():
     for i in range(len(wordList)):
         print(wordList[i+count])
@@ -73,13 +77,24 @@ def editWords():
             file.write("\n")
         file.write("END")
 
+def playGame():
+    while True:
+        wordChoice = random.choice(wordList)
+        if len(wordChoice) >= 7:
+            break
+    wordIterations = []
+    print(wordChoice)
+    for i in range(len(wordChoice)):
+        tempWord = wordChoice[:i] + wordChoice[i+1:]
+        input()
 
-while True:
-    wordChoice = random.choice(wordList)
-    if len(wordChoice) >= 7:
-        break
-wordIterations = []
-print(wordChoice)
-for i in range(len(wordChoice)):
-    tempWord = wordChoice[:i] + wordChoice[i+1:]
-    input()
+checkList = []
+correctList = []
+wordLength = 3
+while len(word)-wordLength >= 0:
+    for i in range(len(word)-wordLength):
+        workingList = word
+        iterations = 1
+        for i in range(wordLength):
+            iterations *= i+1
+        for i in range(iterations):
